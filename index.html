@@ -1046,8 +1046,8 @@ Akademie der Wissenschaften"
 
               <!-- Nav -->
               <ul
-                class="js-filter-options nav nav-pills nav-segment d-flex mx-auto"
-                style="max-width: 42rem"
+                class="js-filter-options nav nav-segment nav-pills d-flex flex-wrap justify-content-center mx-auto"
+                style="max-width: 60rem; border-radius: 0"
               >
                 <li class="nav-item">
                   <a
@@ -1063,7 +1063,8 @@ Akademie der Wissenschaften"
                     class="nav-link"
                     href="/excellence#workSection"
                     target="_blank"
-                    >Excellence</a
+                    id="excellence"
+                    >Excellence und Blog</a
                   >
                 </li>
                 <li class="nav-item">
@@ -1126,8 +1127,8 @@ Akademie der Wissenschaften"
                       Soziale Arbeit &amp; Digitalisierung
                     </h3>
                     <span class="card-subtitle text-body"
-                      >DH Craft &amp; Universität Graz, Institut für Erziehungs- und
-                      Bildungswissenschaft</span
+                      >DH Craft &amp; Universität Graz, Institut für Erziehungs-
+                      und Bildungswissenschaft</span
                     >
                   </div>
                 </a>
@@ -2477,6 +2478,8 @@ Akademie der Wissenschaften"
             "Digital Edition";
 
           document.querySelector("#teaching").innerHTML = "Teaching";
+          document.querySelector("#excellence").innerHTML =
+            "Excellence and Blog";
         }
       };
       changeLangPage();
@@ -2504,6 +2507,8 @@ Akademie der Wissenschaften"
             "Digitale Edition";
 
           document.querySelector("#teaching").innerHTML = "Lehre";
+          document.querySelector("#excellence").innerHTML =
+            "Excellence und Blog";
         }
       }
 
@@ -2528,6 +2533,8 @@ Akademie der Wissenschaften"
             "Digital Edition";
 
           document.querySelector("#teaching").innerHTML = "Teaching";
+          document.querySelector("#excellence").innerHTML =
+            "Excellence and Blog";
         }
       }
     </script>
