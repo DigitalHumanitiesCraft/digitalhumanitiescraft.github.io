@@ -1,37 +1,26 @@
 header {
   position: absolute;
   right: 20px;
-  top: 0;
+  top: 10px;
   z-index: 1030;
 }
 
+header a {
+  display: flex;
+  align-items: center;
+}
+
 header a img {
-  height: 100px; /* Default height for larger screens */
+  height: 60px;
   width: auto;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Patreon logo - 50% smaller */
-header a.header-patreon img {
-  height: 50px;
+header a:last-child img {
+  height: 80px;
 }
 
-/* Blog icon styling */
-header a.header-blog {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
-header a.header-blog i {
-  font-size: 40px;
-  color: #000;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-header a:hover img,
-header a.header-blog:hover i {
+header a:hover img {
   transform: scale(1.1);
   opacity: 0.8;
 }
@@ -39,15 +28,11 @@ header a.header-blog:hover i {
 /* Media Query for screens that are 600px wide or less */
 @media (max-width: 600px) {
   header a img {
+    height: 40px;
+  }
+
+  header a:last-child img {
     height: 50px;
-  }
-
-  header a.header-patreon img {
-    height: 25px;
-  }
-
-  header a.header-blog i {
-    font-size: 20px;
   }
 }
 
