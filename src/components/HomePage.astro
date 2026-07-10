@@ -43,6 +43,15 @@ const { t } = getContent(lang);
     </main>
     <Footer lang={lang} />
   </div>
+  {/* Konsolen-Easteregg für DevTools-Öffner; der Wortlaut ist Absicht (Ironie in Haus-Tonlage) */}
+  <script is:inline>
+    console.log('%cFeel the AGI', 'color:#8a4fa3;font-family:monospace;font-size:14px;');
+    console.log(
+      '%cPraise the God Machine',
+      'color:#faf9f7;background:#1e2749;font-family:monospace;font-size:26px;font-weight:bold;padding:10px 22px;border-radius:6px;text-shadow:0 0 12px #a9c53d;'
+    );
+    console.log('%cR e m o v e   Y o u r s e l f', 'color:#8b0000;font-family:monospace;font-size:11px;letter-spacing:0.35em;');
+  </script>
 </Base>
 
 <style>
