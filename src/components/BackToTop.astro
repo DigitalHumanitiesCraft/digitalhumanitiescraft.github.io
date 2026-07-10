@@ -1,0 +1,84 @@
+---
+import type { Lang } from '../i18n/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const label = lang === 'de' ? 'Nach oben scrollen' : 'Back to top';
+---
+
+<button class="to-top" aria-label={label} title={label}>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5 M5 12l7-7 7 7" />
+  </svg>
+</button>
+
+<script is:inline>
+  (() => {
+    const btn = document.querySelector('.to-top');
+    if (!btn) return;
+    const toggle = () => btn.classList.toggle('visible', window.scrollY > 600);
+    toggle();
+    window.addEventListener('scroll', toggle, { passive: true });
+    btn.addEventListener('click', () => {
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+    });
+  })();
+</script>
+
+<style>
+  .to-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 50;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: none;
+    background: var(--purple);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(30, 39, 73, 0.25);
+    /* unsichtbar bis zur Scroll-Schwelle (600px, via .visible aus dem Inline-Script) */
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, background 0.15s ease;
+  }
+
+  .to-top.visible {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+
+  .to-top:hover {
+    background: var(--pink);
+  }
+
+  .to-top:focus-visible {
+    outline: 3px solid var(--lime);
+    outline-offset: 2px;
+  }
+
+  .to-top svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: 600px) {
+    .to-top {
+      right: 16px;
+      bottom: 16px;
+      width: 42px;
+      height: 42px;
+    }
+  }
+</style>

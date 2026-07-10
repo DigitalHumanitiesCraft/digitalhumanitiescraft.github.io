@@ -8,6 +8,7 @@ import '@fontsource/sora/600.css';
 import '@fontsource/sora/700.css';
 import '@fontsource/sora/800.css';
 import '../styles/global.css';
+import BackToTop from '../components/BackToTop.astro';
 import type { Lang } from '../i18n/content';
 
 interface Props {
@@ -88,5 +89,6 @@ const jsonLd = {
   </head>
   <body>
     <slot />
+    <BackToTop lang={lang} />
   </body>
 </html>
