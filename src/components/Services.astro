@@ -1,0 +1,138 @@
+---
+import type { Lang } from '../i18n/content';
+import { getContent } from '../i18n/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const { t, services } = getContent(lang);
+---
+
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker">{t.servicesKicker}</div>
+      <h2>{t.servicesTitle}</h2>
+    </div>
+    <div class="grid">
+      {
+        services.map((s) => (
+          <div class="card">
+            <div class="hex icon" style={`background:${s.pillarColor}`}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d={s.icon} />
+              </svg>
+            </div>
+            <span class="pillar" style={`color:${s.pillarColor}`}>{s.pillar}</span>
+            <h3>{s.title}</h3>
+            {/* set:html, weil Kartentexte Inline-Links enthalten können (z. B. GAMS) */}
+            <p set:html={s.text} />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    position: relative;
+    padding-block: 96px;
+    background: #fff;
+    border-top: 1px solid rgba(30, 39, 73, 0.06);
+  }
+
+  .head {
+    max-width: 640px;
+    margin-bottom: 56px;
+  }
+
+  .kicker {
+    color: var(--purple);
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 40px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .card {
+    background: var(--paper);
+    border: 1px solid rgba(30, 39, 73, 0.09);
+    border-radius: 16px;
+    padding: 30px 28px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .card:hover {
+    border-color: rgba(138, 79, 163, 0.35);
+    box-shadow: 0 12px 32px rgba(30, 39, 73, 0.08);
+  }
+
+  .icon {
+    width: 56px;
+    height: 62px;
+    margin: 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .pillar {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+
+  .card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(30, 39, 73, 0.72);
+    margin: 0;
+  }
+
+  /* :global nötig: per set:html injizierte Links tragen kein Astro-Scoping-Attribut */
+  .card p :global(a) {
+    color: var(--purple);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+</style>

@@ -1,0 +1,19 @@
+{
+  "name": "dhcraft-website-prototype",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "stage": "npm run build && npx surge ./dist dhcraft-watercolor-preview.surge.sh"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource/instrument-sans": "^5.2.0",
+    "@fontsource/sora": "^5.2.0",
+    "astro": "^5.0.0",
+    "sharp": "^0.33.5"
+  }
+}

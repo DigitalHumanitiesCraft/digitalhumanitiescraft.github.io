@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+{/* GitHub Pages liefert dist/404.html automatisch für unbekannte Pfade aus (beide Sprachen, daher zweisprachiger Text) */}
+<Base
+  lang="de"
+  title="404 | Digital Humanities Craft"
+  description="Seite nicht gefunden."
+  path="/404/"
+>
+  <Nav lang="de" altPath="/" />
+  <main class="wrap notfound">
+    <h1>404</h1>
+    <p class="de">Diese Seite gibt es nicht (mehr).</p>
+    <p class="en">This page does not exist (anymore).</p>
+    <div class="links">
+      <a href="/" class="btn btn-solid">Zur Startseite</a>
+      <a href="/excellence/blog/" class="btn btn-outline">Zum Blog</a>
+    </div>
+  </main>
+  <Footer lang="de" />
+</Base>
+
+<style>
+  .notfound {
+    padding-block: 120px;
+    min-height: 55vh;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(64px, 10vw, 112px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--purple);
+    margin: 0 0 16px;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(30, 39, 73, 0.75);
+    margin: 0 0 4px;
+  }
+
+  .en {
+    color: rgba(30, 39, 73, 0.5);
+  }
+
+  .links {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+</style>

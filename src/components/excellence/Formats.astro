@@ -1,0 +1,193 @@
+---
+import type { Lang } from '../../i18n/content';
+import { getExcellenceContent } from '../../i18n/excellence';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const { t, formats } = getExcellenceContent(lang);
+// Keine eigene Promptotyping-Seite mehr (Experte, 2026-07-08): direkt Artikel + Skill verlinken
+const lisaUrl = 'https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin';
+const skillUrl = 'https://github.com/DigitalHumanitiesCraft/promptotyping-skill';
+---
+
+<section id="excellence" class="formats">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker">{t.formatsKicker}</div>
+      <h2>{t.formatsTitle}</h2>
+      <p class="intro">{t.formatsIntro}</p>
+    </div>
+    <div class="grid">
+      {
+        formats.map((f) => (
+          <div class="card">
+            <div class="duration">{f.duration}</div>
+            <h3>{f.title}</h3>
+            <p>{f.text}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="promos">
+      <div class="promo">
+        <h3>{t.promptoTitle}</h3>
+        <p>{t.promptoText}</p>
+        <div class="promo-links">
+          <a href={lisaUrl} target="_blank" rel="noopener">{t.promptoArticle} →</a>
+          <a href={skillUrl} target="_blank" rel="noopener">{t.promptoSkill} →</a>
+        </div>
+      </div>
+      <a href="https://patreon.com/DigitalHumanitiesCraft" target="_blank" rel="noopener" class="promo">
+        <h3>{t.patreonTitle}</h3>
+        <p>{t.patreonText}</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .formats {
+    padding-block: 96px;
+  }
+
+  .head {
+    max-width: 680px;
+    margin-bottom: 52px;
+  }
+
+  .kicker {
+    color: var(--purple);
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 40px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0 0 16px;
+  }
+
+  .intro {
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(30, 39, 73, 0.7);
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border: 1px solid rgba(30, 39, 73, 0.09);
+    border-radius: 16px;
+    padding: 26px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+
+  .card:hover {
+    border-color: rgba(138, 79, 163, 0.35);
+    box-shadow: 0 12px 32px rgba(30, 39, 73, 0.08);
+  }
+
+  .duration {
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--purple);
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .card p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: rgba(30, 39, 73, 0.72);
+    margin: 0;
+  }
+
+  .promos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  .promo {
+    display: block;
+    border-radius: 16px;
+    padding: 28px;
+    background: rgba(138, 79, 163, 0.06);
+    border: 1px solid rgba(138, 79, 163, 0.18);
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+
+  .promo:hover {
+    border-color: rgba(138, 79, 163, 0.4);
+    box-shadow: 0 12px 32px rgba(30, 39, 73, 0.08);
+    color: var(--ink);
+  }
+
+  .promo h3 {
+    font-size: 20px;
+    margin: 0 0 8px;
+  }
+
+  .promo p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(30, 39, 73, 0.72);
+    margin: 0;
+  }
+
+  .promo-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 14.5px;
+    font-weight: 600;
+  }
+
+  .promo-links a {
+    color: var(--purple);
+  }
+
+  .promo-links a:hover {
+    color: var(--ink);
+  }
+
+  @media (max-width: 1000px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 700px) {
+    .grid,
+    .promos {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+</style>

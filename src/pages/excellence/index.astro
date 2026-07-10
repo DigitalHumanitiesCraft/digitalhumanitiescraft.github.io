@@ -1,0 +1,21 @@
+---
+// Die eigenständige Excellence-Seite ist aufgelöst (One-Pager, 2026-07-09); Inhalte leben jetzt
+// als Sektionen auf der Startseite. Diese Route bleibt als Redirect-Stub bestehen, weil sie extern
+// verlinkt ist (GitHub Pages kann keine 301, daher Meta-Refresh + Canonical auf die Startseite).
+const target = '/#excellence';
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href="https://dhcraft.org/" />
+    <meta name="robots" content="noindex" />
+    <title>Digital Humanities Craft</title>
+    <script is:inline>window.location.replace('/#excellence');</script>
+  </head>
+  <body>
+    <p>Weiter zu <a href={target}>dhcraft.org</a></p>
+  </body>
+</html>

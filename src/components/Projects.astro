@@ -1,0 +1,186 @@
+---
+import { Image } from 'astro:assets';
+import type { Lang } from '../i18n/content';
+import { getContent } from '../i18n/content';
+import thumbSzd from '../assets/projects/szd.jpg';
+import thumbRuza from '../assets/projects/ruza.webp';
+import thumbDepcha from '../assets/projects/depcha.jpg';
+import thumbMhdbdb from '../assets/projects/mhdbdb.png';
+import thumbCrown from '../assets/projects/crown.png';
+import thumbFortunoff from '../assets/projects/fortunoff.png';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const { t, projects } = getContent(lang);
+const thumbs = { szd: thumbSzd, ruza: thumbRuza, depcha: thumbDepcha, mhdbdb: thumbMhdbdb, crown: thumbCrown, fortunoff: thumbFortunoff };
+---
+
+<section id="projects" class="projects">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker">{t.projectsKicker}</div>
+      <h2>{t.projectsTitle}</h2>
+    </div>
+    <div class="grid">
+      {
+        projects.map((p) => (
+          <a href={p.url} target="_blank" rel="noopener" class="card">
+            <div class="banner">
+              {p.thumbKey && (
+                <Image src={thumbs[p.thumbKey]} alt={`Screenshot: ${p.title}`} width={760} class="thumb" />
+              )}
+              <div class="hex banner-hex" aria-hidden="true" />
+            </div>
+            <div class="body">
+              <h3>{p.title}</h3>
+              <p class="partner">{p.partner}</p>
+              <p class="desc">{p.desc}</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    <div class="more">
+      <a href="https://github.com/DigitalHumanitiesCraft" target="_blank" rel="noopener">{t.projectsMore} →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    position: relative;
+    padding-block: 96px;
+  }
+
+  .head {
+    max-width: 640px;
+    margin-bottom: 56px;
+  }
+
+  .kicker {
+    color: var(--purple);
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 40px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .sub {
+    font-size: 16px;
+    color: rgba(30, 39, 73, 0.65);
+    max-width: 380px;
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(30, 39, 73, 0.09);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 16px 40px rgba(30, 39, 73, 0.1);
+    border-color: rgba(138, 79, 163, 0.3);
+  }
+
+  .banner {
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    background: var(--paper);
+  }
+
+  .thumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  .banner-hex {
+    position: absolute;
+    right: 22px;
+    bottom: -15px;
+    width: 28px;
+    height: 31px;
+    background: var(--ink);
+  }
+
+  .body {
+    padding: 24px 26px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .partner {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--purple);
+    margin: 0;
+  }
+
+  .desc {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: rgba(30, 39, 73, 0.7);
+    margin: 0;
+  }
+
+  .more {
+    margin-top: 36px;
+    text-align: center;
+  }
+
+  .more a {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--purple);
+    border-bottom: 2px solid rgba(138, 79, 163, 0.3);
+    padding-bottom: 2px;
+  }
+
+  .more a:hover {
+    border-color: var(--purple);
+    color: var(--purple);
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+</style>

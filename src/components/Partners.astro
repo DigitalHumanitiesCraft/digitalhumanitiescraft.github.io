@@ -1,0 +1,170 @@
+---
+import type { Lang } from '../i18n/content';
+import { getContent } from '../i18n/content';
+import logoUnigraz from '../assets/logos/unigraz-logo.png';
+import logoTugraz from '../assets/logos/TU_Graz.png';
+import logoUniwien from '../assets/logos/uniwien-logo.png';
+import logoMdw from '../assets/logos/mdw-logo.png';
+import logoYale from '../assets/logos/yaleuniv-blue.png';
+import logoKhm from '../assets/logos/khm-logo.png';
+import logoOeaw from '../assets/logos/oeaw-logo.png';
+import logoLas from '../assets/logos/las-logo.jpg';
+import logoPlus from '../assets/logos/plus-logo.png';
+import logoUnidonau from '../assets/logos/unidonau-logo.png';
+import logoClariah from '../assets/logos/clariah-logo.png';
+import logoWeimar from '../assets/logos/weimar-logo.png';
+import logoUnisaarland from '../assets/logos/unisaarland-logo.png';
+import logoBbaw from '../assets/logos/bbaw.svg';
+import logoUfr from '../assets/logos/UFR.png';
+import logoOnb from '../assets/logos/onb-logo.svg';
+import logoVetmeduni from '../assets/logos/vetmeduni-logo.jpg';
+import logoZbz from '../assets/logos/zbz-logo.svg';
+import logoMpilhlt from '../assets/logos/mpi-lhlt-logo.svg';
+import logoMuseumsbund from '../assets/logos/museumsbund-logo.svg';
+import logoLiv from '../assets/logos/liv-logo.svg';
+import logoMedunigraz from '../assets/logos/medunigraz-logo.svg';
+import logoKug from '../assets/logos/kug-logo.svg';
+import logoUniheidelberg from '../assets/logos/uniheidelberg-logo.svg';
+import logoUnimuenster from '../assets/logos/unimuenster-logo.svg';
+import logoUniwuerzburg from '../assets/logos/uniwuerzburg-logo.svg';
+import logoUnitrier from '../assets/logos/unitrier-logo.svg';
+import logoBergbaumuseum from '../assets/logos/bergbaumuseum-logo.svg';
+import logoUniforlife from '../assets/logos/uniforlife-logo.svg';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const { t, partners } = getContent(lang);
+
+const logos: Record<string, ImageMetadata> = {
+  unigraz: logoUnigraz,
+  tugraz: logoTugraz,
+  uniwien: logoUniwien,
+  mdw: logoMdw,
+  yale: logoYale,
+  khm: logoKhm,
+  oeaw: logoOeaw,
+  las: logoLas,
+  plus: logoPlus,
+  unidonau: logoUnidonau,
+  clariah: logoClariah,
+  weimar: logoWeimar,
+  unisaarland: logoUnisaarland,
+  bbaw: logoBbaw,
+  ufr: logoUfr,
+  onb: logoOnb,
+  vetmeduni: logoVetmeduni,
+  zbz: logoZbz,
+  mpilhlt: logoMpilhlt,
+  museumsbund: logoMuseumsbund,
+  liv: logoLiv,
+  medunigraz: logoMedunigraz,
+  kug: logoKug,
+  uniheidelberg: logoUniheidelberg,
+  unimuenster: logoUnimuenster,
+  uniwuerzburg: logoUniwuerzburg,
+  unitrier: logoUnitrier,
+  bergbaumuseum: logoBergbaumuseum,
+  uniforlife: logoUniforlife,
+};
+---
+
+<section id="partners" class="partners">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker">{t.partnersKicker}</div>
+      <h2>{t.partnersTitle}</h2>
+    </div>
+    <ul class="logos">
+      {
+        partners.map((p) => (
+          <li>
+            <img
+              src={logos[p.logoKey].src}
+              alt={p.name}
+              title={p.name}
+              class:list={['logo', { wide: ['mpilhlt', 'museumsbund', 'bergbaumuseum'].includes(p.logoKey) }]}
+              loading="lazy"
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .partners {
+    padding-block: 72px;
+    background: #fff;
+    border-top: 1px solid rgba(30, 39, 73, 0.06);
+  }
+
+  .head {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .kicker {
+    color: var(--purple);
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .logos {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 36px 56px;
+    max-width: 1040px;
+  }
+
+  .logos li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* feste Höhe statt max-height: SVGs ohne width/height-Attribute kollabieren
+     sonst im Flex-Layout auf 0×0 (Chrome) */
+  .logo {
+    height: 60px;
+    width: auto;
+    max-width: 170px;
+    object-fit: contain;
+  }
+
+  /* sehr breite Wortmarken-Logos bekommen mehr Platz, sonst werden sie unlesbar klein */
+  .logo.wide {
+    max-width: 250px;
+  }
+
+  @media (max-width: 900px) {
+    .logos {
+      gap: 24px 36px;
+    }
+
+    .logo {
+      height: 44px;
+      max-width: 130px;
+    }
+
+    .logo.wide {
+      max-width: 190px;
+    }
+  }
+</style>

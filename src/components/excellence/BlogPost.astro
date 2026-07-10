@@ -1,0 +1,510 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+const d = post.data;
+
+const lang = d.citation?.language ?? 'de';
+const path = `/excellence/blog/${post.id}/`;
+const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://dhcraft.org';
+const url = `${site}${path}`;
+const author = d.author;
+const rights = d.dublin_core?.rights ?? 'CC BY 4.0';
+const description = d.dublin_core?.description ?? d.citation?.abstract ?? '';
+const abstract = d.citation?.abstract;
+const subjects = d.dublin_core?.subject ?? [];
+const blogPath = lang === 'de' ? '/excellence/blog/' : '/en/excellence/blog/';
+const markdownUrl = `https://raw.githubusercontent.com/DigitalHumanitiesCraft/excellence/refs/heads/main/blog/${post.id}.md`;
+const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
+
+const dateDisplay = d.date.toLocaleDateString('de-AT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+// APA-Datum wie im Altsystem: "2026, February 09"
+const apaDate = `${d.date.getFullYear()}, ${d.date.toLocaleDateString('en-US', { month: 'long' })} ${String(d.date.getDate()).padStart(2, '0')}`;
+const lastName = author.split(' ').at(-1);
+const initial = author.split(' ')[0]?.[0];
+const apaCitation = `${lastName}, ${initial}. (${apaDate}). ${d.title}. Digital Humanities Craft. ${url}`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': d.schema_type,
+  headline: d.title,
+  author: { '@type': 'Person', name: author },
+  datePublished: d.date.toISOString(),
+  dateModified: (d.last_modified_at ?? d.date).toISOString(),
+  description: description.slice(0, 160),
+  ...(abstract ? { abstract } : {}),
+  url,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  publisher: { '@type': 'Organization', name: 'Digital Humanities Craft', url: site },
+  ...(d.keywords ? { keywords: d.keywords } : {}),
+  inLanguage: lang,
+  license: rights,
+};
+
+// COinS für Zotero (Parität zum alten Post-Layout)
+const coins = new URLSearchParams({
+  ctx_ver: 'Z39.88-2004',
+  rft_val_fmt: 'info:ofi/fmt:kev:mtx:dc',
+  rfr_id: 'info:sid/dhcraft.org:generator',
+  'rft.type': 'blogPost',
+  'rft.title': d.title,
+  'rft.creator': author,
+  'rft.publisher': 'Digital Humanities Craft',
+  'rft.source': 'Digital Humanities Craft',
+  'rft.date': d.date.toISOString().slice(0, 10),
+  'rft.identifier': url,
+  'rft.language': lang,
+  'rft.rights': rights,
+}).toString();
+
+const ui =
+  lang === 'de'
+    ? {
+        toc: 'Inhalt',
+        abstract: 'Abstract',
+        keywords: 'Schlagwörter',
+        author: 'Autor',
+        published: 'Veröffentlicht',
+        license: 'Lizenz',
+        back: '← Zurück zur Blogübersicht',
+        print: 'Als PDF drucken',
+        markdown: 'Markdown',
+        citationTitle: 'Zitiervorschlag (APA)',
+        copy: 'Zitiervorschlag kopieren',
+        copied: 'Kopiert! ✓',
+        skipLink: 'Zum Inhalt springen',
+      }
+    : {
+        toc: 'Contents',
+        abstract: 'Abstract',
+        keywords: 'Keywords',
+        author: 'Author',
+        published: 'Published',
+        license: 'License',
+        back: '← Back to blog overview',
+        print: 'Print as PDF',
+        markdown: 'Markdown',
+        citationTitle: 'Suggested citation (APA)',
+        copy: 'Copy citation',
+        copied: 'Copied! ✓',
+        skipLink: 'Skip to content',
+      };
+---
+
+<Base lang={lang} title={`${d.title} | Digital Humanities Craft`} description={description.slice(0, 160)} path={path}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <meta name="DC.title" content={d.title} />
+    <meta name="DC.creator" content={d.dublin_core?.creator ?? author} />
+    <meta name="DC.date" content={d.date.toISOString()} />
+    <meta name="DC.publisher" content={d.dublin_core?.publisher ?? 'Digital Humanities Craft'} />
+    {description && <meta name="DC.description" content={description} />}
+    <meta name="DC.language" content={lang} />
+    <meta name="DC.type" content={d.dublin_core?.type ?? 'Blogpost'} />
+    <meta name="DC.format" content="text/html" />
+    <meta name="DC.rights" content={rights} />
+    <meta name="DC.identifier" content={url} />
+    {subjects.map((s) => <meta name="DC.subject" content={s} />)}
+    <meta name="citation_title" content={d.title} />
+    <meta name="citation_author" content={author} />
+    <meta name="citation_publication_date" content={d.date.toISOString().slice(0, 10).replaceAll('-', '/')} />
+    <meta name="citation_journal_title" content="Digital Humanities Craft" />
+    <meta name="citation_publisher" content="Digital Humanities Craft" />
+    <meta name="citation_abstract_html_url" content={url} />
+    <meta name="citation_fulltext_html_url" content={url} />
+    <meta name="citation_language" content={lang} />
+    {abstract && <meta name="citation_abstract" content={abstract} />}
+  </Fragment>
+
+  <a href="#main" class="skip-link">{ui.skipLink}</a>
+  <div class="page">
+    <Nav lang={lang} altPath={lang === 'de' ? '/en/' : '/'} homeHref={lang === 'de' ? '/' : '/en/'} />
+    <main id="main">
+      <div class="wrap layout">
+        {
+          toc.length > 0 && (
+            <aside class="toc-sidebar" aria-label={ui.toc}>
+              <nav class="toc">
+                <span class="toc-label">{ui.toc}</span>
+                <a href="#top" class="toc-link toc-top">
+                  {d.short_title ?? d.title}
+                </a>
+                {toc.map((h) => (
+                  <a href={`#${h.slug}`} class:list={['toc-link', { sub: h.depth === 3 }]}>
+                    {h.text}
+                  </a>
+                ))}
+              </nav>
+            </aside>
+          )
+        }
+        <article class="post" id="top">
+          <span class="Z3988" title={coins} aria-hidden="true"></span>
+          <header class="post-header">
+            <h1>{d.title}</h1>
+            {
+              abstract && (
+                <div class="abstract">
+                  <strong>{ui.abstract}:</strong> {abstract}
+                </div>
+              )
+            }
+            {
+              d.keywords && (
+                <p class="keywords">
+                  <strong>{ui.keywords}:</strong> {d.keywords.join(', ')}
+                </p>
+              )
+            }
+            <div class="meta">
+              <span><strong>{ui.author}:</strong> {author}</span>
+              <span class="sep" aria-hidden="true">•</span>
+              <span><strong>{ui.published}:</strong> {dateDisplay}</span>
+              <span class="sep" aria-hidden="true">•</span>
+              <span><strong>{ui.license}:</strong> {rights}</span>
+            </div>
+            <div class="actions">
+              <a href={blogPath} class="btn btn-outline action">{ui.back}</a>
+              <button type="button" class="btn btn-outline action" onclick="window.print()">{ui.print}</button>
+              <a href={markdownUrl} target="_blank" rel="noopener" class="btn btn-outline action">{ui.markdown} ↗</a>
+            </div>
+          </header>
+
+          <div class="content">
+            <Content />
+          </div>
+
+          <footer class="citation">
+            <h2>{ui.citationTitle}</h2>
+            <p class="citation-text" id="citation-apa">
+              {lastName}, {initial}. ({apaDate}). {d.title}. <em>Digital Humanities Craft</em>. {url}
+            </p>
+            <button type="button" class="btn btn-outline action" id="copy-citation" data-copied={ui.copied}>{ui.copy}</button>
+          </footer>
+        </article>
+      </div>
+    </main>
+    <Footer lang={lang} />
+  </div>
+</Base>
+
+<script is:inline>
+  document.getElementById('copy-citation')?.addEventListener('click', function () {
+    const btn = this;
+    const text = document.getElementById('citation-apa').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+      const original = btn.textContent;
+      btn.textContent = btn.dataset.copied;
+      setTimeout(() => {
+        btn.textContent = original;
+      }, 2000);
+    });
+  });
+</script>
+
+<style>
+  .page {
+    min-height: 100vh;
+    overflow: clip;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 720px);
+    gap: 56px;
+    justify-content: center;
+    padding-block: 64px 96px;
+  }
+
+  .toc-sidebar {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+  }
+
+  .toc {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-left: 2px solid rgba(30, 39, 73, 0.08);
+    padding-left: 16px;
+  }
+
+  .toc-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(30, 39, 73, 0.5);
+    margin-bottom: 4px;
+  }
+
+  .toc-link {
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: rgba(30, 39, 73, 0.7);
+  }
+
+  .toc-link:hover {
+    color: var(--purple);
+  }
+
+  .toc-top {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .toc-link.sub {
+    padding-left: 14px;
+    font-size: 13px;
+  }
+
+  .post-header h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3.2vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+
+  .abstract {
+    background: #fff;
+    border: 1px solid rgba(30, 39, 73, 0.09);
+    border-left: 3px solid var(--purple);
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(30, 39, 73, 0.8);
+    margin: 0 0 16px;
+  }
+
+  .keywords {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(30, 39, 73, 0.65);
+    margin: 0 0 16px;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+    color: rgba(30, 39, 73, 0.7);
+    margin-bottom: 20px;
+  }
+
+  .sep {
+    color: rgba(30, 39, 73, 0.3);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(30, 39, 73, 0.08);
+  }
+
+  .action {
+    padding: 8px 16px;
+    font-size: 13.5px;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    font-family: inherit;
+    color: inherit;
+  }
+
+  .content {
+    padding-top: 28px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .content :global(h2) {
+    font-family: var(--font-display);
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    margin: 44px 0 16px;
+  }
+
+  .content :global(h3) {
+    font-family: var(--font-display);
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 600;
+    margin: 32px 0 12px;
+  }
+
+  .content :global(p) {
+    margin: 0 0 16px;
+  }
+
+  .content :global(a) {
+    color: var(--purple);
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: rgba(138, 79, 163, 0.35);
+    text-underline-offset: 3px;
+  }
+
+  .content :global(a:hover) {
+    color: var(--pink);
+  }
+
+  .content :global(img),
+  .content :global(video) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(30, 39, 73, 0.09);
+    margin: 8px 0;
+  }
+
+  .content :global(blockquote) {
+    border-left: 3px solid var(--lime);
+    margin: 20px 0;
+    padding: 4px 0 4px 20px;
+    color: rgba(30, 39, 73, 0.75);
+    font-style: italic;
+  }
+
+  .content :global(code) {
+    background: rgba(30, 39, 73, 0.06);
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 0.9em;
+  }
+
+  .content :global(pre) {
+    background: var(--ink-deep);
+    color: #f5f5f0;
+    border-radius: 12px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .content :global(pre code) {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+  }
+
+  .content :global(ul),
+  .content :global(ol) {
+    margin: 0 0 16px;
+    padding-left: 26px;
+  }
+
+  .content :global(li) {
+    margin-bottom: 6px;
+  }
+
+  .content :global(table) {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 14.5px;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .content :global(th),
+  .content :global(td) {
+    border: 1px solid rgba(30, 39, 73, 0.12);
+    padding: 8px 12px;
+    text-align: left;
+  }
+
+  .content :global(th) {
+    background: rgba(30, 39, 73, 0.04);
+    font-weight: 600;
+  }
+
+  .content :global(hr) {
+    border: none;
+    border-top: 1px solid rgba(30, 39, 73, 0.1);
+    margin: 36px 0;
+  }
+
+  .citation {
+    margin-top: 48px;
+    background: #fff;
+    border: 1px solid rgba(30, 39, 73, 0.09);
+    border-radius: 16px;
+    padding: 24px 28px;
+  }
+
+  .citation h2 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 12px;
+  }
+
+  .citation-text {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: rgba(30, 39, 73, 0.8);
+    margin: 0 0 16px;
+    word-break: break-word;
+  }
+
+  @media (max-width: 1000px) {
+    .layout {
+      grid-template-columns: minmax(0, 720px);
+    }
+
+    .toc-sidebar {
+      display: none;
+    }
+  }
+
+  @media print {
+    :global(.nav),
+    :global(.footer),
+    .toc-sidebar,
+    .actions,
+    .citation button,
+    :global(.skip-link) {
+      display: none !important;
+    }
+
+    .layout {
+      display: block;
+      padding: 0;
+    }
+
+    .content :global(pre) {
+      background: #fff;
+      color: #000;
+      border: 1px solid #ccc;
+    }
+
+    .citation {
+      border: 1px solid #ccc;
+    }
+
+    a {
+      color: #000;
+    }
+  }
+</style>

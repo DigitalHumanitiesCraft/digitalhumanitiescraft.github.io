@@ -1,0 +1,92 @@
+---
+import '@fontsource/instrument-sans/400.css';
+import '@fontsource/instrument-sans/500.css';
+import '@fontsource/instrument-sans/600.css';
+import '@fontsource/sora/400.css';
+import '@fontsource/sora/500.css';
+import '@fontsource/sora/600.css';
+import '@fontsource/sora/700.css';
+import '@fontsource/sora/800.css';
+import '../styles/global.css';
+import type { Lang } from '../i18n/content';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** Pfad der jeweils anderen Sprachversion, z. B. "/en/"; fehlt bei einsprachigen Seiten (Blog-Posts) */
+  altPath?: string;
+  /** Pfad dieser Seite, z. B. "/" */
+  path: string;
+}
+
+const { lang, title, description, altPath, path } = Astro.props;
+const altLang = lang === 'de' ? 'en' : 'de';
+const site = Astro.site?.href.replace(/\/$/, '') ?? '';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Digital Humanities Craft OG',
+  alternateName: 'DHCraft',
+  url: 'https://dhcraft.org',
+  logo: `${site}/og-image.png`,
+  email: 'office@dhcraft.org',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Hönigtaler Straße 1/1',
+    addressLocality: 'Kainbach bei Graz',
+    postalCode: '8010',
+    addressCountry: 'AT',
+  },
+  founder: [
+    { '@type': 'Person', name: 'Christian Steiner' },
+    { '@type': 'Person', name: 'Christopher Pollin' },
+  ],
+  sameAs: [
+    'https://www.linkedin.com/company/dhcraft',
+    'https://github.com/DigitalHumanitiesCraft',
+    'https://bsky.app/profile/dhcraft.bsky.social',
+    'https://fedihum.org/@dhcraft',
+    'https://patreon.com/DigitalHumanitiesCraft',
+  ],
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={`${site}${path}`} />
+    {
+      altPath && (
+        <>
+          <link rel="alternate" hreflang={lang} href={`${site}${path}`} />
+          <link rel="alternate" hreflang={altLang} href={`${site}${altPath}`} />
+          <link rel="alternate" hreflang="x-default" href={`${site}/`} />
+        </>
+      )
+    }
+    <slot name="head" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/dhcraft_logo_invert.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`${site}${path}`} />
+    <meta property="og:site_name" content="Digital Humanities Craft" />
+    <meta property="og:image" content={`${site}/og-image.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${site}/og-image.png`} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

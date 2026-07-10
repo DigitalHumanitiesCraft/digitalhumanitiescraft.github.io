@@ -1,0 +1,54 @@
+---
+// Die Promptotyping-Apps sind aus dem excellence-Repo ins Repo "demos" umgezogen
+// (Migration 2026-07). Diese Route erzeugt Redirect-Stubs für alle alten URLs
+// /excellence/promptotyping/<app>/ (GitHub Pages kann keine 301, daher Meta-Refresh
+// + Canonical + JS-Fallback, Muster wie ../index.astro).
+//
+// getStaticPaths läuft in Astro isoliert (kein Zugriff auf Frontmatter-Konstanten),
+// daher liegt die Liste in der Funktion und das Ziel wandert als props zur Seite.
+//
+// SONDERFALL 'badisches-woerterbuch': Der Live-Pfad ist NFD-codiert (o + U+0308),
+// Astro normalisiert Routen-Params aber zu NFC. Deshalb liegen NFD- UND NFC-Stub
+// als statische Dateien unter public/excellence/promptotyping/ (verbatim kopiert),
+// NICHT hier in der Route.
+export function getStaticPaths() {
+  // [Stub-Slug, Ziel-Slug im demos-Repo]; undefined = Übersichtsseite
+  const entries = [
+    [undefined, ''],
+    ['ChSl', 'ChSl'],
+    ['crown-dashboard-json-webapp', 'crown-dashboard-json-webapp'],
+    ['disco-invert', 'disco-invert'],
+    ['hamlet-digital-edition-tei-to-frontend-webapp', 'hamlet-digital-edition-tei-to-frontend-webapp'],
+    ['imareal-room-object-webapp', 'imareal-room-object-webapp'],
+    ['novela', 'novela'],
+    ['subject-verb-inversion-finder', 'subject-verb-inversion-finder'],
+    ['szd-annotation-timeline', 'szd-annotation-timeline'],
+    ['szd-dashboard', 'szd-dashboard'],
+    ['the-one-snake-vibe-coding', 'the-one-snake-vibe-coding'],
+    ['web-diagram-webpage-workflow', 'web-diagram-webpage-workflow'],
+  ];
+  return entries.map(([slug, targetSlug]) => ({
+    params: { slug },
+    props: { target: targetSlug ? `/demos/${targetSlug}/` : '/demos/' },
+  }));
+}
+
+const { target } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href={`https://dhcraft.org${target}`} />
+    <meta name="robots" content="noindex" />
+    <title>Digital Humanities Craft</title>
+    <script is:inline define:vars={{ target }}>
+      window.location.replace(target);
+    </script>
+  </head>
+  <body>
+    <p>Diese App ist umgezogen: <a href={target}>dhcraft.org{target}</a></p>
+  </body>
+</html>

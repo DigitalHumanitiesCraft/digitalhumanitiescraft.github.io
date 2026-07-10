@@ -1,0 +1,140 @@
+---
+import { Image } from 'astro:assets';
+import type { Lang } from '../i18n/content';
+import { getContent } from '../i18n/content';
+import watercolor from '../assets/dhcraft_logo_watercolor_transparent.png';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const { t } = getContent(lang);
+---
+
+<section id="hero" class="hero wrap">
+  <div class="wash" aria-hidden="true"></div>
+  <div class="copy">
+    <div class="kicker-row">research software · nerdy stuff · data workflows</div>
+    <h1>
+      {t.heroTitle1}<br />
+      <span class="accent-line">{t.heroTitle2}</span>
+    </h1>
+    <p class="sub">{t.heroSub}</p>
+    <div class="ctas">
+      <a href="#services" class="btn btn-solid">{t.heroCta1}</a>
+      <a href="#projects" class="btn btn-outline">{t.heroCta2}</a>
+    </div>
+  </div>
+  <div class="visual">
+    <Image src={watercolor} alt="DHCraft Watercolor Hexagon" width={840} densities={[1, 2]} loading="eager" />
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding-block: 88px 96px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .wash {
+    position: absolute;
+    inset: -120px -300px 0 -300px;
+    pointer-events: none;
+    background: radial-gradient(ellipse 620px 440px at 82% 30%, rgba(138, 79, 163, 0.1), transparent 68%);
+    filter: blur(30px);
+  }
+
+  .copy {
+    position: relative;
+    /* entkoppelt die Spaltenbreite vom min-content langer Wörter, sonst quetscht
+       „Geisteswissenschaften." die Logo-Spalte */
+    min-width: 0;
+  }
+
+  .kicker-row {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--purple);
+    margin-bottom: 22px;
+  }
+
+  /* Die Headline ist in beiden Sprachen ein ganzer Satz: kleinere Obergrenze als beim
+     alten Zweiwort-Claim, plus balance gegen hängende Einzelwörter am Zeilenende */
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 4.3vw, 52px);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    margin: 0 0 24px;
+    text-wrap: balance;
+  }
+
+  .accent-line {
+    color: var(--purple);
+  }
+
+  .sub {
+    font-size: 18px;
+    line-height: 1.65;
+    color: rgba(30, 39, 73, 0.75);
+    max-width: 520px;
+    margin: 0 0 34px;
+  }
+
+  .ctas {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .ctas .btn {
+    padding: 14px 28px;
+    font-size: 15.5px;
+  }
+
+  .visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .visual img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    filter: drop-shadow(0 24px 48px rgba(30, 39, 73, 0.18));
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      grid-template-columns: 1fr;
+      padding-block: 56px 64px;
+    }
+
+    .visual {
+      order: -1;
+    }
+
+    .visual img {
+      max-width: 280px;
+    }
+  }
+
+  /* Schmale Screens: kleinere Schrift + Silbentrennung als Sicherheitsnetz gegen Überlauf */
+  @media (max-width: 520px) {
+    h1 {
+      font-size: clamp(29px, 8.5vw, 36px);
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
+  }
+</style>

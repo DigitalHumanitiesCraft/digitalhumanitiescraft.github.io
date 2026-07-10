@@ -1,0 +1,109 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  lang="en"
+  title="Imprint | Digital Humanities Craft"
+  description="Imprint of Digital Humanities Craft OG, Kainbach bei Graz, Austria."
+  path="/en/imprint/"
+  altPath="/imprint/"
+>
+  <main class="wrap legal">
+    <h1>Imprint</h1>
+    <p class="firm">
+      Digital Humanities Craft OG<br />
+      Hönigtaler Straße 1/1<br />
+      8010 Kainbach bei Graz, Austria
+    </p>
+    <dl>
+      <dt>Phone</dt>
+      <dd><a href="tel:+436781269242">+43 678 12 69 242</a></dd>
+      <dt>E-mail</dt>
+      <dd><a href="mailto:office@dhcraft.org">office@dhcraft.org</a></dd>
+      <dt>Web</dt>
+      <dd><a href="https://dhcraft.org">https://dhcraft.org</a></dd>
+      <dt>Company number</dt>
+      <dd>573227g</dd>
+      <dt>Competent court</dt>
+      <dd>Landesgericht für Zivilsachen Graz, Marburger Kai 49, 8010 Graz</dd>
+      <dt>VAT ID</dt>
+      <dd>ATU77781928</dd>
+      <dt>Line of business</dt>
+      <dd>IT services in automatic data processing and information technology</dd>
+      <dt>Legal form</dt>
+      <dd>Offene Gesellschaft (general partnership)</dd>
+    </dl>
+    <p>
+      <a
+        href="https://www.wkoecg.at/Ecg.aspx?FirmaID=9636d72a-a61d-483f-9303-3c4f87630a63"
+        target="_blank"
+        rel="noopener">Company register of the Austrian Economic Chambers →</a
+      >
+    </p>
+    <p class="back"><a href="/en/">← Back to home</a></p>
+  </main>
+</Base>
+
+<style>
+  .legal {
+    padding-block: 96px;
+    max-width: 720px;
+    min-height: 60vh;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    margin: 0 0 28px;
+  }
+
+  .firm {
+    font-size: 17px;
+    line-height: 1.6;
+    font-weight: 600;
+    margin: 0 0 28px;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px 32px;
+    margin: 0 0 28px;
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+
+  dt {
+    font-weight: 600;
+    color: rgba(30, 39, 73, 0.6);
+  }
+
+  dd {
+    margin: 0;
+  }
+
+  a {
+    color: var(--purple);
+    font-weight: 600;
+  }
+
+  a:hover {
+    color: var(--pink);
+  }
+
+  .back {
+    margin-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    dl {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+
+    dd {
+      margin-bottom: 12px;
+    }
+  }
+</style>

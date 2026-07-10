@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+
+# Nur lokal: Migrations-Doku und Claude-Arbeitsverzeichnis (Entscheidung 2026-07-10)
+migration/
+.claude/

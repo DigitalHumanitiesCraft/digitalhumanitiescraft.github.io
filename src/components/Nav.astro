@@ -1,0 +1,225 @@
+---
+import type { Lang } from '../i18n/content';
+import { getContent } from '../i18n/content';
+import logo from '../assets/dhcraft_logo_invert.svg';
+
+interface Props {
+  lang: Lang;
+  altPath: string;
+  /** Präfix für die Sprungmarken: '' auf der Startseite, '/' bzw. '/en/' auf Unterseiten */
+  homeHref?: string;
+}
+
+const { lang, altPath, homeHref = '' } = Astro.props;
+const { t } = getContent(lang);
+const a = (id: string) => `${homeHref}#${id}`;
+---
+
+<header class="nav">
+  <div class="wrap inner">
+    <a href={homeHref || '#hero'} class="brand">
+      <img src={logo.src} alt="DHCraft" width="38" height="38" />
+      <span class="brand-name">Digital Humanities <span class="accent">Craft</span></span>
+    </a>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-menu" aria-label="Menü">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+    <nav class="links" id="site-menu" aria-label="Hauptnavigation">
+      <a href={a('services')}>{t.navServices}</a>
+      <a href={a('projects')}>{t.navProjects}</a>
+      <a href={a('team')}>Team</a>
+      <a href={a('excellence')}>{t.navWebinars}</a>
+      <a href={a('blog')}>Blog</a>
+      <a href={a('videos')}>Videos</a>
+      <a href={a('contact')} class="btn btn-solid cta">{t.navContact}</a>
+      <div class="lang-toggle">
+        {
+          lang === 'de' ? (
+            <span class="lang-btn active" aria-current="true">DE</span>
+          ) : (
+            <a href={altPath} class="lang-btn">DE</a>
+          )
+        }
+        {
+          lang === 'en' ? (
+            <span class="lang-btn active" aria-current="true">EN</span>
+          ) : (
+            <a href={altPath} class="lang-btn">EN</a>
+          )
+        }
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.nav .menu-btn');
+  const menu = document.querySelector<HTMLElement>('.nav .links');
+  btn?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('open') ?? false;
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  });
+  menu?.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => {
+      menu.classList.remove('open');
+      btn?.classList.remove('open');
+      btn?.setAttribute('aria-expanded', 'false');
+    })
+  );
+</script>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(253, 252, 248, 0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(30, 39, 73, 0.08);
+  }
+
+  .inner {
+    position: relative;
+    padding-block: 14px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand img {
+    height: 38px;
+    width: auto;
+    display: block;
+  }
+
+  .brand-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+
+  .accent {
+    color: var(--purple);
+  }
+
+  .menu-btn {
+    display: none;
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    color: var(--ink);
+  }
+
+  .menu-btn svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+  }
+
+  .menu-btn .icon-close,
+  .menu-btn.open .icon-open {
+    display: none;
+  }
+
+  .menu-btn.open .icon-close {
+    display: block;
+  }
+
+  .links {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    font-size: 14.5px;
+    font-weight: 500;
+  }
+
+  .links a:hover {
+    color: var(--purple);
+  }
+
+  .links a.cta {
+    padding: 9px 18px;
+  }
+
+  .links a.cta:hover {
+    color: #fff;
+  }
+
+  .lang-toggle {
+    display: flex;
+    background: rgba(30, 39, 73, 0.07);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .lang-btn {
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 999px;
+    color: rgba(30, 39, 73, 0.55);
+  }
+
+  .lang-btn.active {
+    background: var(--ink);
+    color: #fff;
+  }
+
+  a.lang-btn:hover {
+    color: var(--purple);
+  }
+
+  @media (max-width: 900px) {
+    .menu-btn {
+      display: block;
+    }
+
+    .links {
+      display: none;
+    }
+
+    .links.open {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      background: var(--paper);
+      border-bottom: 1px solid rgba(30, 39, 73, 0.1);
+      box-shadow: 0 16px 32px rgba(30, 39, 73, 0.08);
+      padding: 12px 32px 20px;
+      font-size: 16px;
+    }
+
+    .links.open a {
+      padding: 10px 0;
+      width: 100%;
+    }
+
+    .links.open a.cta {
+      width: auto;
+      padding: 10px 20px;
+      margin-top: 6px;
+    }
+
+    .links.open .lang-toggle {
+      margin-top: 12px;
+    }
+  }
+</style>

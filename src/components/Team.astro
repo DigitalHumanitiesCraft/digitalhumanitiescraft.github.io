@@ -1,0 +1,175 @@
+---
+import { Image } from 'astro:assets';
+import type { Lang } from '../i18n/content';
+import { getContent } from '../i18n/content';
+import photoChristian from '../assets/chris-solo-website.png';
+import photoChristopher from '../assets/christopher-solo-website.png';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const { t, team } = getContent(lang);
+const photos = { christian: photoChristian, christopher: photoChristopher };
+---
+
+<section id="team" class="team">
+  <div class="wash" aria-hidden="true"></div>
+  <div class="wrap inner">
+    <div class="head">
+      <div class="kicker">Team</div>
+      <h2>{t.teamTitle}</h2>
+    </div>
+    <div class="grid">
+      {
+        team.map((m) => (
+          <div class="card">
+            <div class="frame">
+              <Image src={photos[m.photoKey]} alt={m.name} width={176} height={176} densities={[1, 2]} />
+            </div>
+            <h3>{m.name}</h3>
+            <p class="role">{m.role}</p>
+            <p class="bio">{m.bio}</p>
+            <div class="links">
+              <a href={m.mail}>E-Mail</a>
+              <a href={m.link} target="_blank" rel="noopener">
+                {m.linkLabel}
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .team {
+    padding-block: 96px;
+    background: var(--ink);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wash {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 620px 420px at 85% 12%, rgba(138, 79, 163, 0.22), transparent 68%);
+    filter: blur(26px);
+  }
+
+  .inner {
+    position: relative;
+  }
+
+  .head {
+    max-width: 640px;
+    margin: 0 auto 56px;
+    text-align: center;
+  }
+
+  .kicker {
+    color: #c2a0dd;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 40px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    margin: 0 0 16px;
+    color: #fff;
+  }
+
+  .sub {
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 30px 28px;
+  }
+
+  .frame {
+    width: 88px;
+    height: 88px;
+    margin: 0 0 20px;
+    padding: 3px;
+    border-radius: 20px;
+    box-sizing: content-box;
+    background: linear-gradient(135deg, #8a4fa3, #5b3a78);
+  }
+
+  .frame img {
+    width: 88px;
+    height: 88px;
+    object-fit: cover;
+    border-radius: 17px;
+    display: block;
+    background: var(--paper);
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: #fff;
+  }
+
+  .role {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #c2a0dd;
+    margin: 0 0 12px;
+  }
+
+  .bio {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0 0 18px;
+  }
+
+  .links {
+    display: flex;
+    gap: 14px;
+    font-size: 13.5px;
+    font-weight: 600;
+  }
+
+  .links a {
+    color: #c2a0dd;
+  }
+
+  .links a:hover {
+    color: #fff;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+</style>
