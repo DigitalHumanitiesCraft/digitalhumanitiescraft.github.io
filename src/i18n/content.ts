@@ -81,6 +81,7 @@ const t = {
     footerCompany: 'Unternehmen',
     footerLegal: 'Rechtliches',
     footerImprint: 'Impressum',
+    footerPress: 'Presse',
     footerAi: 'Unsere Position zu KI-Einsatz',
     metaTitle: 'Digital Humanities Craft | KI-Weiterbildung, Beratung und Forschungssoftware',
     metaDescription:
@@ -114,6 +115,7 @@ const t = {
     footerCompany: 'Company',
     footerLegal: 'Legal',
     footerImprint: 'Imprint',
+    footerPress: 'Press',
     footerAi: 'Our position on AI use',
     metaTitle: 'Digital Humanities Craft | AI training, consulting and research software',
     metaDescription:

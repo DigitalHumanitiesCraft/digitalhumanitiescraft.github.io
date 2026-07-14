@@ -12,6 +12,7 @@ const { t } = getContent(lang);
 // KI-Position vorerst ausgeblendet (2026-07-10), Seite selbst bleibt erreichbar
 // const kiPositionPath = lang === 'de' ? '/ki-position/' : '/en/ki-position/';
 const blogPath = lang === 'de' ? '/excellence/blog/' : '/en/excellence/blog/';
+const pressPath = lang === 'de' ? '/press/' : '/en/press/';
 // Anker auf die Startseite qualifizieren, damit sie auch von Unterseiten (z. B. Blog) funktionieren
 const home = lang === 'de' ? '/' : '/en/';
 ---
@@ -31,6 +32,7 @@ const home = lang === 'de' ? '/' : '/en/';
           <a href={`${home}#excellence`}>{t.navWebinars}</a>
           <a href={`${home}#team`}>Team</a>
           <a href={blogPath}>Blog</a>
+          <a href={pressPath}>{t.footerPress}</a>
         </div>
         <div class="group">
           <span class="label">Social</span>
