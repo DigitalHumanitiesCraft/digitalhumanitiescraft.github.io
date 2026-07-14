@@ -51,9 +51,9 @@ Kopien aus dem brand-assets-Klon nach `public/press/`, dabei URL-sichere Namen o
 
 ### 1. Intro
 
-- DE: "Logos, Kurzbeschreibungen und Fakten zu Digital Humanities Craft: für Presse,
+- DE: "Logos und Kurzbeschreibung von Digital Humanities Craft: für Presse,
   Veranstalter und Kooperationspartner."
-- EN: "Logos, boilerplate and facts about Digital Humanities Craft, for press,
+- EN: "Logos and boilerplate for Digital Humanities Craft, for press,
   event organisers and partners."
 
 ### 2. Logos
@@ -75,60 +75,31 @@ im Brand-Assets-Repository auf GitHub." Link auf
 
 ### 3. Boilerplate
 
-Zwei Textblöcke zum direkten Übernehmen (jede Sprachseite zeigt nur ihre Sprache).
+Ein kurzer Textblock zum direkten Übernehmen (jede Sprachseite zeigt nur ihre Sprache).
+Bewusst keine Langversion und keine Fakten-Liste: Referenzen und Details stehen auf
+der Landing Page, weniger ist mehr.
 
-**DE Kurzversion:**
+**DE:**
 
 > Digital Humanities Craft OG entwickelt Forschungssoftware und Datenworkflows für die
 > Geisteswissenschaften und schult Universitäten, Bibliotheken und Institutionen im
 > Umgang mit generativer KI. Geleitet wird das Unternehmen von Dr. Christopher Pollin
 > und Mag. Christian Steiner, Sitz ist Kainbach bei Graz.
 
-**DE Langversion:**
-
-> Digital Humanities Craft OG entwickelt Forschungssoftware und Datenworkflows an der
-> Schnittstelle von Geisteswissenschaften und Informatik. Zu den Referenzprojekten zählen
-> das Fortunoff Video Archive for Holocaust Testimonies der Yale University, CROWN am
-> Kunsthistorischen Museum Wien, die Mittelhochdeutsche Begriffsdatenbank (MHDBDB) und
-> Stefan Zweig Digital. Das Team hat über 200 Workshops zu generativer KI und Prompt
-> Engineering gehalten, unterrichtet an den Universitäten Graz, Wien, Klagenfurt und
-> Ostrava und arbeitet mit Promptotyping, einer selbst entwickelten Methode für
-> LLM-gestützte Forschungsanwendungen. Geleitet wird das Unternehmen von Dr. Christopher
-> Pollin und Mag. Christian Steiner, Sitz ist Kainbach bei Graz.
-
-**EN Kurzversion:**
+**EN:**
 
 > Digital Humanities Craft OG builds research software and data workflows for the
 > humanities and trains universities, libraries and other institutions in working with
 > generative AI. The company is led by Dr. Christopher Pollin and Mag. Christian Steiner
 > and based in Kainbach bei Graz, Austria.
 
-**EN Langversion:**
+Darunter eine Hintergrund-Zeile mit Link auf den Gründungsbericht der Universität Graz
+(<https://digital-humanities.uni-graz.at/de/neuigkeiten/dh-craft-gegruendet/>):
 
-> Digital Humanities Craft OG builds research software and data workflows at the
-> intersection of the humanities and computer science. Reference projects include the
-> Fortunoff Video Archive for Holocaust Testimonies at Yale University, CROWN at the
-> Kunsthistorisches Museum Vienna, the Middle High German Conceptual Database (MHDBDB)
-> and Stefan Zweig Digital. The team has delivered more than 200 workshops on generative
-> AI and prompt engineering, teaches at the universities of Graz, Vienna, Klagenfurt and
-> Ostrava, and works with Promptotyping, its own method for LLM-assisted research
-> applications. The company is led by Dr. Christopher Pollin and Mag. Christian Steiner
-> and based in Kainbach bei Graz, Austria.
+- DE: "Zur Gründung 2022: Bericht der Universität Graz."
+- EN: "On the founding in 2022: report by the University of Graz (in German)."
 
-### 4. Fakten
-
-Kompakte Liste (DE, EN sinngemäß):
-
-- Leitung: Dr. Christopher Pollin und Mag. Christian Steiner
-- Sitz: Kainbach bei Graz, Österreich
-- Über 200 Workshops zu generativer KI und Prompt Engineering
-- Lehre an den Universitäten Graz, Wien, Klagenfurt und Ostrava
-  (u. a. Data-Steward-Kurse, Library and Information Studies)
-- Ausgewählte Referenzen: Yale Fortunoff Video Archive, CROWN (Kunsthistorisches
-  Museum Wien), MHDBDB, Stefan Zweig Digital
-- Methode: Promptotyping (LLM-gestützte Entwicklung von Forschungsanwendungen)
-
-### 5. Kontakt
+### 4. Kontakt
 
 - E-Mail office@dhcraft.org, Verweis aufs Impressum für Firmendaten.
 
