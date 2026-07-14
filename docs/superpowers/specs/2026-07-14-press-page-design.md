@@ -67,6 +67,11 @@ Sechs Karten in einem Grid (2 Spalten Desktop, 1 Spalte mobil), je mit Vorschau 
 Download-Buttons (SVG + PNG; Aquarell nur PNG). Die weiße Variante bekommt eine dunkle
 Vorschau-Kachel (`var(--ink-deep)` wie der Footer). Download-Links mit `download`-Attribut.
 
+Die Vorschaubilder sind getrimmte, auf 240 px Höhe verkleinerte WebPs in
+`public/press/preview/`, generiert per `node scripts/press-previews.mjs` (die
+Original-PNGs haben unterschiedlich viel transparenten Rand und sind als
+Vorschau zu schwer; Downloads bleiben die unveränderten Originale).
+
 Nutzungshinweise unter dem Grid:
 
 - DE: "SVG für Web und Präsentationen bevorzugen, PNG als Fallback. Bitte das Logo
