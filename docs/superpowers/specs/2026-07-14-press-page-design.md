@@ -70,7 +70,10 @@ Vorschau-Kachel (`var(--ink-deep)` wie der Footer). Download-Links mit `download
 Die Vorschaubilder sind getrimmte, auf 240 px Höhe verkleinerte WebPs in
 `public/press/preview/`, generiert per `node scripts/press-previews.mjs` (die
 Original-PNGs haben unterschiedlich viel transparenten Rand und sind als
-Vorschau zu schwer; Downloads bleiben die unveränderten Originale).
+Vorschau zu schwer; Downloads bleiben die unveränderten Originale). Die
+Anzeigehöhe ist pro Variante festgelegt (`h` im logos-Array), damit das Hexagon
+in allen Karten ähnlich groß wirkt: Lockups mit Schriftzug unterm Logo bekommen
+mehr Höhe (165 bis 170 px statt 100 px), die Kachel ist einheitlich hoch.
 
 Nutzungshinweise unter dem Grid:
 

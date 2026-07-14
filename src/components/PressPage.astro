@@ -26,13 +26,15 @@ const texts = {
     intro:
       'Logos und Kurzbeschreibung von Digital Humanities Craft: für Presse, Veranstalter und Kooperationspartner.',
     logosTitle: 'Logos',
+    // h = Vorschauhöhe in px, so gewählt, dass das Hexagon in allen Karten ähnlich groß wirkt
+    // (Lockups mit Schriftzug brauchen mehr Höhe, weil der Text mit hinein muss)
     logos: [
-      { label: 'Primärlogo', base: 'dhcraft_logo_invert', svg: true, dark: false },
-      { label: 'Weiß, für dunkle Hintergründe', base: 'dhcraft_logo_invert_white', svg: true, dark: true },
-      { label: 'Mit Schriftzug, horizontal', base: 'dhcraft_logo_invert-text-horizontal', svg: true, dark: false },
-      { label: 'Mit Schriftzug, vertikal', base: 'dhcraft_logo_invert-text-vertical', svg: true, dark: false },
-      { label: 'Aquarell', base: 'dhcraft_logo_watercolor_transparent', svg: false, dark: false },
-      { label: 'Aquarell mit Schriftzug', base: 'dhcraft_logo_watercolor-text_transparent', svg: false, dark: false },
+      { label: 'Primärlogo', base: 'dhcraft_logo_invert', svg: true, dark: false, h: 100 },
+      { label: 'Weiß, für dunkle Hintergründe', base: 'dhcraft_logo_invert_white', svg: true, dark: true, h: 100 },
+      { label: 'Mit Schriftzug, horizontal', base: 'dhcraft_logo_invert-text-horizontal', svg: true, dark: false, h: 100 },
+      { label: 'Mit Schriftzug, vertikal', base: 'dhcraft_logo_invert-text-vertical', svg: true, dark: false, h: 165 },
+      { label: 'Aquarell', base: 'dhcraft_logo_watercolor_transparent', svg: false, dark: false, h: 100 },
+      { label: 'Aquarell mit Schriftzug', base: 'dhcraft_logo_watercolor-text_transparent', svg: false, dark: false, h: 170 },
     ],
     usageNote:
       'SVG für Web und Präsentationen bevorzugen, PNG als Fallback. Bitte das Logo nicht verändern: nicht verzerren, umfärben oder beschneiden.',
@@ -59,12 +61,12 @@ const texts = {
       'Logos and boilerplate for Digital Humanities Craft, for press, event organisers and partners.',
     logosTitle: 'Logos',
     logos: [
-      { label: 'Primary logo', base: 'dhcraft_logo_invert', svg: true, dark: false },
-      { label: 'White, for dark backgrounds', base: 'dhcraft_logo_invert_white', svg: true, dark: true },
-      { label: 'With wordmark, horizontal', base: 'dhcraft_logo_invert-text-horizontal', svg: true, dark: false },
-      { label: 'With wordmark, vertical', base: 'dhcraft_logo_invert-text-vertical', svg: true, dark: false },
-      { label: 'Watercolor', base: 'dhcraft_logo_watercolor_transparent', svg: false, dark: false },
-      { label: 'Watercolor with wordmark', base: 'dhcraft_logo_watercolor-text_transparent', svg: false, dark: false },
+      { label: 'Primary logo', base: 'dhcraft_logo_invert', svg: true, dark: false, h: 100 },
+      { label: 'White, for dark backgrounds', base: 'dhcraft_logo_invert_white', svg: true, dark: true, h: 100 },
+      { label: 'With wordmark, horizontal', base: 'dhcraft_logo_invert-text-horizontal', svg: true, dark: false, h: 100 },
+      { label: 'With wordmark, vertical', base: 'dhcraft_logo_invert-text-vertical', svg: true, dark: false, h: 165 },
+      { label: 'Watercolor', base: 'dhcraft_logo_watercolor_transparent', svg: false, dark: false, h: 100 },
+      { label: 'Watercolor with wordmark', base: 'dhcraft_logo_watercolor-text_transparent', svg: false, dark: false, h: 170 },
     ],
     usageNote:
       'Prefer SVG for web and presentations, PNG as a fallback. Please do not alter the logo: no distorting, recolouring or cropping.',
@@ -100,7 +102,7 @@ const x = texts[lang];
           x.logos.map((l) => (
             <div class="card">
               <div class={`preview${l.dark ? ' dark' : ''}`}>
-                <img src={`/press/preview/${l.base}.webp`} alt={l.label} loading="lazy" />
+                <img src={`/press/preview/${l.base}.webp`} alt={l.label} loading="lazy" style={`height: ${l.h}px`} />
               </div>
               <div class="meta">
                 <span class="name">{l.label}</span>
@@ -189,12 +191,11 @@ const x = texts[lang];
   .preview {
     display: grid;
     place-items: center;
-    padding: 28px;
-    min-height: 150px;
+    padding: 20px;
+    height: 212px;
   }
 
   .preview img {
-    max-height: 96px;
     max-width: 100%;
     width: auto;
   }
