@@ -24,6 +24,14 @@ import Footer from '../components/Footer.astro';
   <Footer lang="de" />
 </Base>
 
+<script is:inline>
+  // GitHub Pages ist case-sensitive; Deep-Links mit falscher Schreibweise auf die
+  // Promptotyping-Projekt-Site (/promptotyping/...) korrigieren statt 404 zu zeigen.
+  if (/^\/promptotyping(\/|$)/.test(location.pathname)) {
+    location.replace('/Promptotyping' + location.pathname.slice('/promptotyping'.length) + location.search + location.hash);
+  }
+</script>
+
 <style>
   .notfound {
     padding-block: 120px;

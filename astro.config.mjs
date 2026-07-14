@@ -9,8 +9,10 @@ export default defineConfig({
   },
   // Alte Excellence-Guides-URL (extern verlinkt); static output erzeugt daraus
   // eine Meta-Refresh-Seite mit noindex + canonical.
+  // /promptotyping: GitHub Pages ist case-sensitive, die Projekt-Site heißt /Promptotyping/.
   redirects: {
     '/excellence/guides': '/#excellence',
+    '/promptotyping': '/Promptotyping/',
   },
   integrations: [
     sitemap({
@@ -18,6 +20,7 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/excellence/promptotyping') &&
         !page.includes('/excellence/guides') &&
+        page !== 'https://dhcraft.org/promptotyping/' &&
         page !== 'https://dhcraft.org/excellence/' &&
         page !== 'https://dhcraft.org/en/excellence/',
     }),
