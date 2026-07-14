@@ -26,7 +26,10 @@ Boilerplate-Texten, Fakten und Kontakt, plus ein Footer-Link darauf.
 2. **Asset-Quelle:** Kopien im Site-Repo unter `public/press/`. Same-origin, damit
    das `download`-Attribut greift und die URLs stabil bleiben. Fürs komplette Set
    (PDF, Favicons, Social-Media-Varianten) verweist die Seite aufs Repo.
-3. **Inhalte inline** pro Sprachseite (wie beim Impressum), keine Content Collection.
+3. **Inhalte in einer gemeinsamen Komponente** `src/components/PressPage.astro` mit den
+   Texten beider Sprachen (Muster: `BlogIndexPage.astro`), keine Content Collection.
+   Die Seiten `/press/` und `/en/press/` sind dünne Wrapper. Anders als beim Impressum
+   lohnt Duplizieren hier nicht: Logo-Karten-Markup und Styles wären doppelt zu pflegen.
 
 ## Routen und Navigation
 
