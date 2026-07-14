@@ -76,6 +76,10 @@ Um das Tool methodisch präzise und wissenschaftlich belastbar weiterzuentwickel
 
 In zukünftigen Beiträgen werden wir konkrete Workflows Schritt für Schritt dokumentieren sowie methodische Ansätze zur systematischen Evaluation und zum Benchmarking von Promptotyping diskutieren. Eine seriöse Evaluation ist eine harte Nuss, die es zu knacken gilt. Daraus könnten sich neue Impulse für generelle Prompting-Techniken ergeben, die sich auch auf andere Bereiche wie Modellierung oder Forschungsprozesse übertragen lassen – insbesondere da LLM im Jahr 2025 bereits erhebliche Fortschritte gemacht haben und weitere folgen werden.
 
+---
+
+*Update (Juli 2026): Die Methode ist inzwischen ausführlich ausgearbeitet. Das interaktive Methodenpaper mit Vorlagen, Glossar und Use Cases steht auf [dhcraft.org/Promptotyping](https://dhcraft.org/Promptotyping/), der publizierte Artikel dazu im [L.I.S.A. Wissenschaftsportal der Gerda Henkel Stiftung](https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin). Zitierbar ist Promptotyping über Zenodo: [doi.org/10.5281/zenodo.14160875](https://doi.org/10.5281/zenodo.14160875)*
+
 [^1]:  Siehe dazu meinen Beitrag: “Haters gonna hate”: Warum die Kritik an Vibe Coding berechtigt ist – und welche Proto-AGI-Potenziale sie übersieht. [https://dhcraft.org/excellence/blog/Vibe-Coding](https://dhcraft.org/excellence/blog/Vibe-Coding)
 
 [^2]:  Strukturierte Prompts sind tendenziell besser. Strukturierte Promptformate (Markdown, JSON, YAML) erzielen tendenziell bessere Ergebnisse gegenüber einfachem Plain-Text-Format. Jedoch gibt es keine universell optimale Struktur; die Wahl des besten Formats ist stets abhängig vom spezifischen Anwendungskontext und Modell. He, Jia, Mukund Rungta, David Koleczek, Arshdeep Sekhon, Franklin X. Wang, and Sadid Hasan. ‘Does Prompt Formatting Have Any Impact on LLM Performance?’ arXiv, 15 November 2024\. [https://doi.org/10.48550/arXiv.2411.10541](https://doi.org/10.48550/arXiv.2411.10541)

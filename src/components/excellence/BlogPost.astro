@@ -100,7 +100,7 @@ const ui =
       };
 ---
 
-<Base lang={lang} title={`${d.title} | Digital Humanities Craft`} description={description.slice(0, 160)} path={path}>
+<Base lang={lang} title={`${d.title} | Digital Humanities Craft`} description={description.slice(0, 160)} path={path} ogType="article">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <meta name="DC.title" content={d.title} />
