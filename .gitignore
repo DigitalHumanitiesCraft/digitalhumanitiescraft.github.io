@@ -5,3 +5,6 @@ dist/
 # Nur lokal: Migrations-Doku und Claude-Arbeitsverzeichnis (Entscheidung 2026-07-10)
 migration/
 .claude/
+
+# Nur lokal: interne Arbeitsdokumente (Skill-Ausgaben), nicht ins öffentliche Repo (2026-07-14)
+docs/
