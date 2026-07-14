@@ -50,6 +50,7 @@ Kopien aus dem brand-assets-Klon nach `public/press/`, dabei URL-sichere Namen o
 | Mit Schriftzug (horizontal) | `svg/dhcraft_logo_invert+text-horizontal.svg`, `png/dhcraft_logo_invert+text-horizontal.png` | `dhcraft_logo_invert-text-horizontal.svg` / `.png` |
 | Mit Schriftzug (vertikal) | `svg/dhcraft_logo_invert+text-vertical.svg`, `png/dhcraft_logo_invert+text-vertical.png` | `dhcraft_logo_invert-text-vertical.svg` / `.png` |
 | Aquarell (transparent) | `png/dhcraft_logo_watercolor_transparent.png` | `dhcraft_logo_watercolor_transparent.png` (nur PNG) |
+| Aquarell mit Schriftzug (transparent) | `png/dhcraft_logo_watercolor+text_transparent.png` | `dhcraft_logo_watercolor-text_transparent.png` (nur PNG) |
 
 ## Seiteninhalt
 
@@ -62,7 +63,7 @@ Kopien aus dem brand-assets-Klon nach `public/press/`, dabei URL-sichere Namen o
 
 ### 2. Logos
 
-Fünf Karten in einem Grid (2 Spalten Desktop, 1 Spalte mobil), je mit Vorschau und
+Sechs Karten in einem Grid (2 Spalten Desktop, 1 Spalte mobil), je mit Vorschau und
 Download-Buttons (SVG + PNG; Aquarell nur PNG). Die weiße Variante bekommt eine dunkle
 Vorschau-Kachel (`var(--ink-deep)` wie der Footer). Download-Links mit `download`-Attribut.
 
@@ -118,7 +119,7 @@ im bestehenden Link-Stil (`var(--purple)`, Hover `var(--pink)`).
 - `npm run build` läuft ohne Fehler durch.
 - Preview: beide Sprachseiten erreichbar, Sprachumschalter (altPath) funktioniert
   in beide Richtungen, Footer-Link erscheint auf DE- und EN-Seiten.
-- Alle 9 Download-Links liefern die Dateien same-origin aus `public/press/`.
+- Alle 10 Download-Links liefern die Dateien same-origin aus `public/press/`.
 - Vorschauen sichtbar, insbesondere die weiße Variante auf der dunklen Kachel.
 
 ## Nicht im Umfang
