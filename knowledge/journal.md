@@ -35,3 +35,17 @@ Erste Fassung war ein Meta-Arbeitsbericht der Session selbst ("Promptotyping in 
 ### Dead Ends
 
 Der Meta-Arbeitsbericht als eigenständiges Blog-Genre. Er dokumentiert Praxis, erklärt aber nichts; sein Ort ist das Journal und der Transparenzhinweis, für Leser trägt die Methode selbst den Text.
+
+## 2026-07-19 — Dritter Zuschnitt: Methodenvorstellung wird Tutorial
+
+### Ziel
+
+Operator-Review der zweiten Fassung ergab einen neuen Zuschnitt. Der Beitrag soll ein Tutorial sein, eine volle Ausarbeitung, wie man ein Promptotyping-Projekt anlegt; die Methodendefinition trägt das Paper, die Site trägt Vorlagen und Spezifikation.
+
+### Verlauf
+
+Quellenlage im Obsidian-Vault geprüft. Ein zusammenhängendes Tutorial existierte dort nicht, die Bausteine schon, der Anwendungsabschnitt der Konvention Promptotyping Documents (Funktionen prüfen, auf Dokumente abbilden, Vorlagen befüllen), das Screencast-Atom zur Klawiter-Bibliographie als vollständiger Session-Durchlauf, der Master-Foliensatz Knowledge und Context Engineering (Einrichtung, CLAUDE.md, Auftragsformulierung) und das Atom zu Standalone-Forschungsdaten als Architektur-Standard. Daraus die dritte Fassung als Sieben-Schritte-Tutorial gebaut, Repository und Wissensbasis, Materialsammlung, CLAUDE.md, Exploration, Destillation, Implementation, Verifikation und Publikation, ergänzt um Diagnoseraster, Screencast-Beispiel und Grenzen. Definition und Herkunft der Methode bleiben als kompakter Einstieg erhalten, URL und Dateiname unverändert.
+
+### Ergebnis
+
+`src/content/blog/Was-ist-Promptotyping.md` als Tutorial neu geschrieben, Titel und Metadaten angepasst.
