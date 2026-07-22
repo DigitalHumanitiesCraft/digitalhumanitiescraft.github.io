@@ -396,13 +396,15 @@ const ui =
     height: auto;
     border-radius: 12px;
     border: 1px solid rgba(30, 39, 73, 0.09);
-    margin: 8px 0;
+    /* Großzügiger Abstand nach unten; bei Bildern MIT Caption zieht die
+       Caption sich per negativem oberen Rand wieder dicht ans Bild. */
+    margin: 20px 0 24px;
   }
 
   /* Bildunterschrift: kleiner, gedämpft, zentriert, direkt unter dem Bild */
   .content :global(.image-caption) {
     display: block;
-    margin: -2px 0 24px;
+    margin: -20px 0 28px;
     font-size: 13.5px;
     line-height: 1.5;
     color: rgba(30, 39, 73, 0.6);
@@ -697,7 +699,7 @@ const ui =
       max-height: 88mm;
       width: auto;
       height: auto;
-      margin: 8pt auto 3pt;
+      margin: 8pt auto 15pt;
       border-radius: 0;
     }
 
@@ -707,7 +709,10 @@ const ui =
       font-size: 8pt;
       font-style: italic;
       color: #333;
-      margin-bottom: 10pt;
+      /* negativer oberer Rand hebt den vergrößerten Bild-Unterrand auf,
+         damit die Caption dicht unter dem Bild sitzt; Bilder OHNE Caption
+         behalten den großzügigen Abstand zum folgenden Fließtext. */
+      margin: -12pt 0 12pt;
     }
 
     .content :global(pre) {
