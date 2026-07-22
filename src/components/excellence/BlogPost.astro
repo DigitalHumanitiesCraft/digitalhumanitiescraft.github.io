@@ -23,7 +23,8 @@ const description = d.dublin_core?.description ?? d.citation?.abstract ?? '';
 const abstract = d.citation?.abstract;
 const subjects = d.dublin_core?.subject ?? [];
 const blogPath = lang === 'de' ? '/excellence/blog/' : '/en/excellence/blog/';
-const markdownUrl = `https://raw.githubusercontent.com/DigitalHumanitiesCraft/excellence/refs/heads/main/blog/${post.id}.md`;
+// Quelltext liegt seit der Migration im Home-Repo (src/content/blog/), nicht mehr im alten excellence-Repo.
+const markdownUrl = `https://raw.githubusercontent.com/DigitalHumanitiesCraft/digitalhumanitiescraft.github.io/refs/heads/main/src/content/blog/${post.id}.md`;
 const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
 const dateDisplay = d.date.toLocaleDateString('de-AT', { day: '2-digit', month: '2-digit', year: 'numeric' });
