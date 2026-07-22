@@ -399,6 +399,23 @@ const ui =
     margin: 8px 0;
   }
 
+  /* Bildunterschrift: kleiner, gedämpft, zentriert, direkt unter dem Bild */
+  .content :global(.image-caption) {
+    display: block;
+    margin: -2px 0 24px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: rgba(30, 39, 73, 0.6);
+    text-align: center;
+    font-style: italic;
+  }
+
+  .content :global(.image-caption a) {
+    color: rgba(30, 39, 73, 0.6);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
   .content :global(blockquote) {
     border-left: 3px solid var(--lime);
     margin: 20px 0;

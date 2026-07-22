@@ -101,7 +101,7 @@ const postsBase = [
     postLang: 'DE' as const,
     color: '#85aede',
     title: 'OpenAI’s Deep Research und erste "Task-A(G)I" Systeme?',
-    thumb: null,
+    thumb: '/excellence/blog/img/task-agi.webp',
   },
   {
     url: '/excellence/blog/New-Year-New-AI-IdeaLab-25/',
