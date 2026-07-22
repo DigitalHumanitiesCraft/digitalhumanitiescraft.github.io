@@ -670,12 +670,17 @@ const ui =
       break-inside: avoid;
     }
 
+    /* Abbildungen wie im Journal proportionieren: moderate Höhe, zentriert.
+       Quadratische/hochformatige Bilder würden bei voller Textbreite sonst
+       fast seitenhoch. Höhendeckel greift zuerst, Breite skaliert mit. */
     .content :global(img),
     .content :global(video) {
       display: block;
       max-width: 100%;
-      max-height: 190mm;
-      margin: 10pt auto 2pt;
+      max-height: 88mm;
+      width: auto;
+      height: auto;
+      margin: 8pt auto 3pt;
       border-radius: 0;
     }
 
