@@ -500,32 +500,291 @@ const ui =
     }
   }
 
+  /* ================================================================
+     PDF-/Druckausgabe im Journal-Stil (zweispaltig, Serifenschrift,
+     Blocksatz, vollbreite Abbildungen). Ziel: LaTeX-artiges Offprint.
+     ================================================================ */
   @media print {
+    @page {
+      size: A4;
+      margin: 17mm 15mm 18mm;
+    }
+
+    :global(html),
+    :global(body) {
+      background: #fff !important;
+    }
+
     :global(.nav),
     :global(.footer),
     .toc-sidebar,
     .actions,
     .citation button,
+    :global(.to-top),
     :global(.skip-link) {
       display: none !important;
+    }
+
+    .page {
+      overflow: visible;
     }
 
     .layout {
       display: block;
       padding: 0;
+      max-width: none;
+    }
+
+    /* Serifen-Grundschrift des ganzen Beitrags */
+    .post {
+      font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, 'Times New Roman', serif;
+      color: #000;
+    }
+
+    /* --- Masthead: Journal-Name, Titel, Autor:innen, Abstract (vollbreit) --- */
+    .post-header {
+      text-align: center;
+      border-bottom: 1.1pt solid #000;
+      padding-bottom: 11pt;
+      margin-bottom: 15pt;
+    }
+
+    .post-header::before {
+      content: 'Digital Humanities Craft';
+      display: block;
+      font-variant: small-caps;
+      letter-spacing: 0.14em;
+      font-size: 8.5pt;
+      color: #000;
+      padding-bottom: 9pt;
+      margin-bottom: 11pt;
+      border-bottom: 0.4pt solid #777;
+    }
+
+    .post-header h1 {
+      font-family: inherit;
+      font-size: 20pt;
+      line-height: 1.15;
+      letter-spacing: 0;
+      font-weight: 700;
+      margin: 0 0 9pt;
+    }
+
+    .abstract {
+      background: none;
+      border: none;
+      border-radius: 0;
+      max-width: 84%;
+      margin: 11pt auto 7pt;
+      padding: 0;
+      font-size: 8.7pt;
+      line-height: 1.5;
+      color: #000;
+      text-align: justify;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+
+    .abstract strong {
+      font-variant: small-caps;
+      letter-spacing: 0.05em;
+    }
+
+    .keywords {
+      max-width: 84%;
+      margin: 0 auto;
+      font-size: 8.4pt;
+      color: #000;
+      text-align: center;
+    }
+
+    .meta {
+      justify-content: center;
+      gap: 6pt;
+      font-size: 8.4pt;
+      color: #000;
+      margin: 9pt 0 0;
+    }
+
+    .meta .sep {
+      color: #000;
+    }
+
+    /* --- Zweispaltiger Fließtext im Blocksatz --- */
+    .content {
+      column-count: 2;
+      column-gap: 7mm;
+      padding-top: 0;
+      font-size: 9.4pt;
+      line-height: 1.48;
+      text-align: justify;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+      orphans: 3;
+      widows: 3;
+    }
+
+    .content :global(p) {
+      margin: 0;
+      text-indent: 1.1em;
+    }
+
+    /* Erster Absatz und Absätze direkt nach Überschriften ohne Einzug (LaTeX-Konvention) */
+    .content :global(p:first-child),
+    .content :global(h2 + p),
+    .content :global(h3 + p),
+    .content :global(figure + p),
+    .content :global(pre + p),
+    .content :global(table + p),
+    .content :global(blockquote + p) {
+      text-indent: 0;
+    }
+
+    .content :global(h2) {
+      font-family: inherit;
+      font-size: 11pt;
+      font-weight: 700;
+      letter-spacing: 0;
+      margin: 12pt 0 4pt;
+      break-after: avoid;
+    }
+
+    .content :global(h3) {
+      font-family: inherit;
+      font-size: 9.8pt;
+      font-weight: 700;
+      font-style: italic;
+      margin: 9pt 0 3pt;
+      break-after: avoid;
+    }
+
+    /* Vollbreite Elemente überspannen beide Spalten und werden nicht getrennt */
+    .content :global(figure),
+    .content :global(img),
+    .content :global(video),
+    .content :global(table),
+    .content :global(pre),
+    .content :global(.image-caption),
+    .content :global(figcaption) {
+      column-span: all;
+      break-inside: avoid;
+    }
+
+    .content :global(img),
+    .content :global(video) {
+      display: block;
+      max-width: 100%;
+      max-height: 190mm;
+      margin: 10pt auto 2pt;
+      border-radius: 0;
+    }
+
+    .content :global(.image-caption),
+    .content :global(figcaption) {
+      text-align: center;
+      font-size: 8pt;
+      font-style: italic;
+      color: #333;
+      margin-bottom: 10pt;
     }
 
     .content :global(pre) {
       background: #fff;
       color: #000;
-      border: 1px solid #ccc;
+      border: 0.5pt solid #999;
+      font-size: 7.8pt;
+      line-height: 1.35;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      padding: 6pt 8pt;
+      margin: 9pt 0;
+      border-radius: 0;
     }
 
+    .content :global(code) {
+      background: none;
+      font-size: 0.92em;
+    }
+
+    .content :global(table) {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.2pt;
+      margin: 9pt 0;
+    }
+
+    .content :global(th),
+    .content :global(td) {
+      border: 0.5pt solid #999;
+      padding: 3pt 5pt;
+    }
+
+    .content :global(th) {
+      background: #ededed;
+    }
+
+    .content :global(blockquote) {
+      border-left: 1.5pt solid #999;
+      padding-left: 8pt;
+      margin: 8pt 0;
+      font-style: italic;
+      color: #222;
+      break-inside: avoid;
+    }
+
+    .content :global(ul),
+    .content :global(ol) {
+      margin: 4pt 0;
+      padding-left: 1.3em;
+    }
+
+    .content :global(li) {
+      margin: 1pt 0;
+    }
+
+    /* Fußnoten/Referenzblock (rehype) kleiner und vollbreit */
+    .content :global(.footnotes) {
+      column-span: all;
+      border-top: 0.5pt solid #999;
+      margin-top: 12pt;
+      padding-top: 5pt;
+      font-size: 8pt;
+      line-height: 1.4;
+    }
+
+    .content :global(sup) {
+      font-size: 0.72em;
+    }
+
+    a,
+    .content :global(a) {
+      color: #000;
+      text-decoration: none;
+    }
+
+    /* --- „Cite as"-Fußblock im Journal-Stil --- */
     .citation {
-      border: 1px solid #ccc;
+      break-inside: avoid;
+      background: none;
+      border: none;
+      border-top: 1.1pt solid #000;
+      border-radius: 0;
+      margin-top: 15pt;
+      padding: 8pt 0 0;
     }
 
-    a {
+    .citation h2 {
+      font-family: inherit;
+      font-variant: small-caps;
+      letter-spacing: 0.06em;
+      font-size: 9pt;
+      font-weight: 700;
+      margin: 0 0 4pt;
+    }
+
+    .citation-text {
+      font-size: 8.5pt;
+      line-height: 1.45;
       color: #000;
     }
   }
