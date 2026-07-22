@@ -123,6 +123,9 @@ const ui =
         copied: 'Copied! ✓',
         skipLink: 'Skip to content',
       };
+
+// Bei mehreren Autor:innen die Beschriftung entsprechend pluralisieren.
+const authorLabel = authorNames.length > 1 ? (lang === 'de' ? 'Autor:innen' : 'Authors') : ui.author;
 ---
 
 <Base lang={lang} title={`${d.title} | Digital Humanities Craft`} description={description.slice(0, 160)} path={path} altPath={altPath} ogType="article">
@@ -191,7 +194,7 @@ const ui =
               )
             }
             <div class="meta">
-              <span><strong>{ui.author}:</strong> {author}</span>
+              <span><strong>{authorLabel}:</strong> {author}</span>
               <span class="sep" aria-hidden="true">•</span>
               <span><strong>{ui.published}:</strong> {dateDisplay}</span>
               <span class="sep" aria-hidden="true">•</span>
