@@ -139,13 +139,6 @@ const channelUpdates: ChannelUpdate[] = [
     linkTitle: 'Agentic Engineering und digitale Edition mit Claude Code und Fable 5 (Live Demo)',
     source: 'youtube.com',
   },
-  {
-    date: '2026-07-01',
-    text: 'Fable 5 is coming back. And GPT-5.6 is a new model family (Solar, Terra, Luna); GPT-5.6 Solar Ultra is a Mythos/Fable-tier model.',
-    url: 'https://www.anthropic.com/news/redeploying-fable-5',
-    linkTitle: 'Redeploying Claude Fable 5',
-    source: 'anthropic.com',
-  },
 ];
 
 // Lernpfad „Zum Einstieg": kuratiert und nummeriert (Grundlagen → Methode → Praxis),
