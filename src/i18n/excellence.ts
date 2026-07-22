@@ -126,6 +126,13 @@ const statsLabels = {
 // bewusst pflegearm (die Vortrags-Timeline aus dem Mockup war zu pflegeintensiv, Experte 2026-07-08).
 const channelUpdates: ChannelUpdate[] = [
   {
+    date: '2026-07-22',
+    text: 'Neuer Blogbeitrag: „Asymmetric Amplifications and Epistemic Infrastructures". Wie LLMs und KI-Agenten computergestützte Forschungsarbeit asymmetrisch verstärken. Essay von Pollin, Sackl-Sharif, Klinger & Steiner.',
+    url: 'https://dhcraft.org/excellence/blog/Asymmetric-Amplifications-Epistemic-Infrastructures',
+    linkTitle: 'Asymmetric Amplifications and Epistemic Infrastructures. How LLMs and AI Agents Are Changing Computer-Based Scholarly Work',
+    source: 'dhcraft.org',
+  },
+  {
     date: '2026-07-08',
     text: 'Neues Video: Live-Demo zu Agentic Engineering und digitaler Edition mit Claude Code und Fable 5.',
     url: 'https://www.youtube.com/watch?v=kQaTu4oFjSo',
