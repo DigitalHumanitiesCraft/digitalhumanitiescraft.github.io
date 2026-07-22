@@ -218,6 +218,14 @@ const postsText = {
 };
 
 export function getBlogContent(lang: Lang) {
-  const posts: BlogPost[] = postsBase.map((p, i) => ({ ...p, ...postsText[lang][i] }));
+  // Interne Blog-Posts unter /en verlinken, damit man aus dem EN-Index in der EN-Chrome-
+  // Variante des Beitrags landet (die Detailseite hat pro Sprache eine Route). Externe
+  // Links (absolute URLs) bleiben unverändert.
+  const isExternal = (u: string) => /^https?:/.test(u);
+  const posts: BlogPost[] = postsBase.map((p, i) => ({
+    ...p,
+    ...postsText[lang][i],
+    url: lang === 'en' && !isExternal(p.url) ? `/en${p.url}` : p.url,
+  }));
   return { t: t[lang], posts };
 }

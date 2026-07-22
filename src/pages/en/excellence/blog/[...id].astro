@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPost from '../../../../components/excellence/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => data.published);
+  return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+// Englische Chrome-Variante desselben Beitrags. Gleiche Route-ID wie /excellence/blog/…,
+// nur mit /en-Präfix; so bleibt der Sprachumschalter auf demselben Artikel.
+const path = `/en/excellence/blog/${post.id}/`;
+const altPath = `/excellence/blog/${post.id}/`;
+---
+
+<BlogPost post={post} lang="en" path={path} altPath={altPath} />

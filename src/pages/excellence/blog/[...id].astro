@@ -8,6 +8,10 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+// Deutsche Chrome-Variante. Die andere Sprachvariante liegt unter /en/…; der Artikeltext
+// selbst kann eine andere Sprache haben (contentLang wird in BlogPost separat behandelt).
+const path = `/excellence/blog/${post.id}/`;
+const altPath = `/en/excellence/blog/${post.id}/`;
 ---
 
-<BlogPost post={post} />
+<BlogPost post={post} lang="de" path={path} altPath={altPath} />
