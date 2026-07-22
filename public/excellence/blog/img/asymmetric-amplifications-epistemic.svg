@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="Asymmetric amplification: a sequence of hexagons growing to the right">
+<defs>
+<radialGradient id="wash" cx="82%" cy="22%" r="78%">
+<stop offset="0%" stop-color="#8a4fa3" stop-opacity="0.14"/>
+<stop offset="55%" stop-color="#8a4fa3" stop-opacity="0.05"/>
+<stop offset="100%" stop-color="#8a4fa3" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="wedge" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0%" stop-color="#8a4fa3" stop-opacity="0"/>
+<stop offset="100%" stop-color="#8a4fa3" stop-opacity="0.18"/>
+</linearGradient>
+</defs>
+<rect width="1200" height="600" fill="#fdfcf8"/>
+<rect width="1200" height="600" fill="url(#wash)"/>
+<polygon points="120,305 1140,155 1140,455" fill="url(#wedge)" opacity="0.5"/>
+<polygon points="1150,107 1161.7,113.5 1161.7,126.5 1150,133 1138.3,126.5 1138.3,113.5" fill="#c06bb0" fill-opacity="0.5"/><polygon points="70,459 79.9,464.5 79.9,475.5 70,481 60.1,475.5 60.1,464.5" fill="#85aede" fill-opacity="0.5"/><polygon points="540,101 548.1,105.5 548.1,114.5 540,119 531.9,114.5 531.9,105.5" fill="#f2b95c" fill-opacity="0.7"/>
+<polygon points="150,324 170.7,335.5 170.7,358.5 150,370 129.3,358.5 129.3,335.5" fill="#8a4fa3" fill-opacity="0.16"/><polygon points="292,243 320.8,259 320.8,291 292,307 263.2,291 263.2,259" fill="#8a4fa3" fill-opacity="0.26"/><polygon points="452,290 492.5,312.5 492.5,357.5 452,380 411.5,357.5 411.5,312.5" fill="#8a4fa3" fill-opacity="0.42"/><polygon points="640,227 694,257 694,317 640,347 586,317 586,257" fill="#7a44a0" fill-opacity="0.6"/><polygon points="858,248 929.1,287.5 929.1,366.5 858,406 786.9,366.5 786.9,287.5" fill="#6a3f8c" fill-opacity="0.82"/><polygon points="1084,192 1178.5,244.5 1178.5,349.5 1084,402 989.5,349.5 989.5,244.5" fill="#5b3a78" fill-opacity="1"/><polygon points="1084,192 1178.5,244.5 1178.5,349.5 1084,402 989.5,349.5 989.5,244.5" fill="none" stroke="#f2b95c" stroke-width="6" stroke-opacity="0.9"/>
+<text x="150" y="545" font-family="Sora, Instrument Sans, system-ui, sans-serif" font-size="30" font-weight="600" letter-spacing="4" fill="#1e2749" fill-opacity="0.85">ASYMMETRIC AMPLIFICATION</text>
+</svg>

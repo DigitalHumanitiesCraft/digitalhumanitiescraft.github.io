@@ -29,15 +29,27 @@ const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
 const dateDisplay = d.date.toLocaleDateString('de-AT', { day: '2-digit', month: '2-digit', year: 'numeric' });
 // APA-Datum wie im Altsystem: "2026, February 09"
 const apaDate = `${d.date.getFullYear()}, ${d.date.toLocaleDateString('en-US', { month: 'long' })} ${String(d.date.getDate()).padStart(2, '0')}`;
-const lastName = author.split(' ').at(-1);
-const initial = author.split(' ')[0]?.[0];
-const apaCitation = `${lastName}, ${initial}. (${apaDate}). ${d.title}. Digital Humanities Craft. ${url}`;
+// Autor:innen-Feld kann mehrere Namen als "First Last, First Last, …" enthalten.
+const authorNames = author.split(',').map((n) => n.trim()).filter(Boolean);
+// Ein Name "First … Last" → "Last, F." (Initialen aller Vornamen).
+const apaName = (name: string) => {
+  const parts = name.split(/\s+/);
+  const last = parts.at(-1);
+  const initials = parts.slice(0, -1).map((p) => `${p[0].toUpperCase()}.`).join(' ');
+  return initials ? `${last}, ${initials}` : last;
+};
+// APA-Autor:innenliste: 1 Name; 2 mit "& "; ab 3 mit ", & " vor dem letzten.
+const apaAuthors =
+  authorNames.length <= 1
+    ? apaName(author)
+    : `${authorNames.slice(0, -1).map(apaName).join(', ')}, & ${apaName(authorNames.at(-1)!)}`;
+const apaCitation = `${apaAuthors} (${apaDate}). ${d.title}. Digital Humanities Craft. ${url}`;
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': d.schema_type,
   headline: d.title,
-  author: { '@type': 'Person', name: author },
+  author: authorNames.length > 1 ? authorNames.map((name) => ({ '@type': 'Person', name })) : { '@type': 'Person', name: author },
   datePublished: d.date.toISOString(),
   dateModified: (d.last_modified_at ?? d.date).toISOString(),
   description: description.slice(0, 160),
@@ -115,7 +127,7 @@ const ui =
     <meta name="DC.identifier" content={url} />
     {subjects.map((s) => <meta name="DC.subject" content={s} />)}
     <meta name="citation_title" content={d.title} />
-    <meta name="citation_author" content={author} />
+    {authorNames.map((name) => <meta name="citation_author" content={name} />)}
     <meta name="citation_publication_date" content={d.date.toISOString().slice(0, 10).replaceAll('-', '/')} />
     <meta name="citation_journal_title" content="Digital Humanities Craft" />
     <meta name="citation_publisher" content="Digital Humanities Craft" />
@@ -186,7 +198,7 @@ const ui =
           <footer class="citation">
             <h2>{ui.citationTitle}</h2>
             <p class="citation-text" id="citation-apa">
-              {lastName}, {initial}. ({apaDate}). {d.title}. <em>Digital Humanities Craft</em>. {url}
+              {apaAuthors} ({apaDate}). {d.title}. <em>Digital Humanities Craft</em>. {url}
             </p>
             <button type="button" class="btn btn-outline action" id="copy-citation" data-copied={ui.copied}>{ui.copy}</button>
           </footer>
