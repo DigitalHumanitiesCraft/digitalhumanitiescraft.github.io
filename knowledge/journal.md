@@ -77,3 +77,7 @@ Umsetzung der Redaktionsaufgaben aus der Wissensbasis nach der Operator-Entschei
 ### Ergebnis
 
 v2 wartet auf Author-Review gegen die Abnahmekriterien der Wissensbasis; offene Punkte vor Release stehen im Changelog (Pachocki-Zitat primär belegen, Vignetten M³GIM und Notker nach Paper-Erscheinen, Hero-Bild, Release-Dateitausch).
+
+### Nachtrag Operator-Review
+
+Vorgabe aus dem laufenden Review: v2 präsentiert Promptotyping konzeptionell als Methode und hängt die Darstellung an keinem Einzelbeispiel mehr auf. Sektion 9 entsprechend ausgebaut (Definition, Wissensbasis als Organisationsstruktur, Distillation als pragmatische Modellierung, Write-back, Promptotype als Abnahme-Einheit); die Fallgeschichten bleiben beim Paper.

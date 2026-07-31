@@ -54,6 +54,7 @@ Editorial mapping between the workshop version (v1, published 2026-02-09) and th
 - The Latour-based reversibility argument and epistemic infrastructure, imported from the co-authored essay with explicit attribution.
 - The talks-back section with two grounded vignettes (Deep Research selection divergence from the co-authored project; the anonymised edition-pipeline case of an agent closing its own verification gate).
 - Bounded acceptance and the promptotype notion in blog-compatible form.
+- Conceptual treatment of Promptotyping as a method (definition, knowledge base, distillation as pragmatic modelling, write-back, promptotype), replacing the example-bound presentation of v1; operator decision 2026-07-31.
 - The critique-does-not-cancel-power section.
 
 ## Open points before release
