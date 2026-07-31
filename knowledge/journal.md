@@ -6,7 +6,7 @@ project:
 status: active
 language: de
 created: 2026-07-19
-updated: 2026-07-19
+updated: 2026-07-31
 authors: [Christopher Pollin]
 generated-with: Claude Code mit Claude Fable 5
 method:
@@ -49,3 +49,17 @@ Quellenlage im Obsidian-Vault geprüft. Ein zusammenhängendes Tutorial existier
 ### Ergebnis
 
 `src/content/blog/Was-ist-Promptotyping.md` als Tutorial neu geschrieben, Titel und Metadaten angepasst.
+
+## 2026-07-31 — Asymmetric Amplification: Wissensbasis für Versionierung und v2 übernommen
+
+### Ziel
+
+Der Blogpost v1 vom 2026-02-09 bleibt als datierte Erstfassung erhalten, eine überarbeitete v2 entsteht als lineares Essay über multiple Asymmetrien, und die Versionierung wird auf der Website sichtbar dokumentiert. Die methodische Synthese trägt das Promptotyping-Paper; die drei Publikationen bleiben getrennt geschnitten.
+
+### Verlauf
+
+Die in einer claude.ai-Session erarbeitete Wissensbasis (Publikationsstrategie, zwölf Asymmetrien, Stil- und Belegregeln, Redaktionsaufgaben, Abnahmekriterien) wurde als `knowledge/asymmetric-amplification.md` übernommen. Angepasst wurden das Frontmatter auf den Pflichtkern der Promptotyping-Konvention und ein neuer, verifizierter Abschnitt Repository Context, der die Publikationsrealität nach der Juli-Migration festhält. Das alte excellence-Repo wurde am 2026-07-14 als Knowledge-Repo neu gestartet, die Blog-Quellen liegen seither als Content-Collection in diesem Repo; die Redaktionsarbeit hat damit genau einen Arbeitsort.
+
+### Ergebnis
+
+`knowledge/asymmetric-amplification.md` angelegt. Zwei Entscheidungen bleiben beim Operator. Erstens das URL-Schema der Versionierung; empfohlen ist, dass der kanonische Slug die jeweils aktuelle Fassung trägt und ein eigener `-v1`-Eintrag die Erstfassung archiviert. Zweitens der Zuschnitt des Verifikationsfrage-Strangs; empfohlen ist, ihn als eigenen deutschen Post neben v2 zu führen und in v2 nur die Verification Asymmetry daraus zu speisen.
