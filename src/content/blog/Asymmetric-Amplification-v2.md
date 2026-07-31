@@ -39,7 +39,7 @@ keywords: ["Applied Generative AI", "LLM", "Asymmetric Amplification", "Epistemi
 
 ## The Claim of Automated Research
 
-"The big goal that we are working towards is automating research." Jakub Pachocki, OpenAI's chief scientist, said this in late 2025, and the surrounding investment decisions suggest that it should be read literally. The leading AI laboratories are building systems intended to develop the next model architecture, generate and evaluate their own training data, and improve themselves. To get there, these systems need to be extraordinarily good at programming, at mathematics, and at operating as autonomous agents in digital environments. These are exactly the capabilities that, as a side effect, transform computer-based research work across disciplines, because coding, data analysis, literature synthesis, and formal reasoning are core tasks of contemporary research.
+OpenAI's chief scientist describes the company's research as "building towards automating scientific research" (MIT Technology Review, 2026). In an October 2025 livestream, he and OpenAI's CEO put dates on that goal, an automated research intern by September 2026 and a fully automated AI researcher by March 2028 (TechCrunch, 2025). The surrounding investment decisions suggest that these statements should be read literally. The leading AI laboratories are building systems intended to develop the next model architecture, generate and evaluate their own training data, and improve themselves. To get there, these systems need to be extraordinarily good at programming, at mathematics, and at operating as autonomous agents in digital environments. These are exactly the capabilities that, as a side effect, transform computer-based research work across disciplines, because coding, data analysis, literature synthesis, and formal reasoning are core tasks of contemporary research.
 
 The capability gains are documented and dated. In February 2026, Anthropic released Claude Opus 4.6 with a one-million-token context window and coordinated multi-agent "agent teams", and OpenAI released GPT-5.3-Codex, which according to the company debugged its own training runs and was the first OpenAI model classified as "high capability risk" for cybersecurity (Anthropic, 2026; OpenAI, 2026). Later evidence reaches beyond product announcements. LLM systems have assisted in formalising mathematical proofs (Tao, 2026) and contributed to solving open combinatorial problems that experts had worked on for weeks (Knuth, 2026).
 
@@ -169,6 +169,8 @@ Knuth, D. E. (2026, February 28). *Claude's cycles*. Stanford University. https:
 
 Latour, B. (1999). *Pandora's hope: Essays on the reality of science studies*. Harvard University Press.
 
+MIT Technology Review. (2026, March 20). *OpenAI is throwing everything into building a fully automated researcher*. https://www.technologyreview.com/2026/03/20/1134438/openai-is-throwing-everything-into-building-a-fully-automated-researcher/
+
 OpenAI. (2026, February 5). *GPT-5.3-Codex system card*. https://openai.com/index/gpt-5-3-codex-system-card/
 
 Pollin, C. (2026a, February 9). Asymmetric amplification. Why AI does not automate research — but disruptively amplifies computer-based research work (Version 1). *Digital Humanities Craft*. https://dhcraft.org/excellence/blog/Asymmetric-Amplification-v1/
@@ -178,5 +180,7 @@ Pollin, C., Sackl-Sharif, S., Klinger, S., & Steiner, C. (2026, July 22). Asymme
 Sapkota, R., Roumeliotis, K. I., & Karkee, M. (2025). AI agents vs. agentic AI: A conceptual taxonomy, applications and challenges. *Information Fusion*, 126, 103599.
 
 Summerfield, C. (2025). *These strange new minds: How AI learned to talk and what it means*. Viking.
+
+TechCrunch. (2025, October 28). *Sam Altman says OpenAI will have a "legitimate AI researcher" by 2028*. https://techcrunch.com/2025/10/28/sam-altman-says-openai-will-have-a-legitimate-ai-researcher-by-2028/
 
 Tao, T. (2026, March 7). *Formalizing a proof in Lean using Claude Code* [Video]. YouTube.

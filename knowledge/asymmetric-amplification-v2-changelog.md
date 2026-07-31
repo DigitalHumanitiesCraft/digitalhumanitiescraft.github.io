@@ -62,7 +62,7 @@ Editorial mapping between the workshop version (v1, published 2026-02-09) and th
 1. Author review against the acceptance criteria in `knowledge/asymmetric-amplification.md`.
 2. The vignettes for M³GIM (modelling consequences) and Notker (bounded acceptance) are named in the knowledge base but not yet written, because their case histories live in the Promptotyping paper manuscript; decide whether v2 ships with two vignettes or waits for these.
 3. The edition-pipeline vignette stays anonymised until the Promptotyping paper is published, then it can reference the case directly (rule inherited from the AGI verification-question knowledge document).
-4. Verify the Pachocki quotation wording and date against a primary source; v1 carries it without footnote.
+4. Resolved 2026-07-31: the exact epigraph wording of v1 ("The big goal that we are working towards is automating research") could not be verified against a transcript. v2 now opens with two sourced statements instead, the MIT Technology Review interview quote ("building towards automating scientific research", 2026-03-20) and the roadmap from the October 2025 livestream (research intern September 2026, automated researcher March 2028, via TechCrunch). v1 keeps its epigraph unchanged as historical text.
 5. Hero image: v1 references `[image1]`; v2 currently has no image. Decide on a new hero or none.
 6. A German-language companion thread (the AGI question as a verification question) remains a separate planned post; v2 deliberately does not absorb it.
 
