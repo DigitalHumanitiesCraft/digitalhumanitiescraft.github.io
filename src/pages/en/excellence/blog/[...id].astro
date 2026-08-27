@@ -3,8 +3,7 @@ import { getCollection } from 'astro:content';
 import BlogPost from '../../../../components/excellence/BlogPost.astro';
 
 export async function getStaticPaths() {
-  // Drafts (published: false) render only in dev; production builds stay unchanged.
-  const posts = await getCollection('blog', ({ data }) => import.meta.env.DEV || data.published);
+  const posts = await getCollection('blog', ({ data }) => data.published);
   return posts.map((post) => ({ params: { id: post.id }, props: { post } }));
 }
 
