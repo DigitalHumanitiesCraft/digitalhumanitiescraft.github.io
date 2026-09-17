@@ -49,7 +49,7 @@ const t = {
 const postsBase = [
   {
     url: '/excellence/blog/Asymmetric-Amplifications-Epistemic-Infrastructures/',
-    date: '2026-07-22',
+    date: '2026-05-12',
     postLang: 'EN' as const,
     color: '#5b3a78',
     title: 'Asymmetric Amplifications and Epistemic Infrastructures',
@@ -128,7 +128,7 @@ const postsText = {
     {
       tag: 'Forschung & KI',
       teaser:
-        'Ein koautorierter Essay aus Digital Humanities und Sozialwissenschaften zur ÖAW-Preisfrage 2026: Wie LLMs und KI-Agenten computergestützte Forschungsarbeit asymmetrisch verstärken, und warum epistemische Infrastruktur die methodische Antwort ist.',
+        'Ein koautorierter Essay aus Digital Humanities und Sozialwissenschaften: Wie LLMs und KI-Agenten computergestützte Forschungsarbeit und Journalismus asymmetrisch verstärken, und warum epistemische Infrastruktur die methodische Antwort ist.',
     },
     {
       tag: 'Forschung & KI',
@@ -174,7 +174,7 @@ const postsText = {
     {
       tag: 'Research & AI',
       teaser:
-        'A co-authored essay from Digital Humanities and the social sciences for the OeAW Prize Question 2026: how LLMs and AI agents asymmetrically amplify computer-based scholarly work, and why epistemic infrastructure is the methodological response.',
+        'A co-authored essay from Digital Humanities and the social sciences: how LLMs and AI agents asymmetrically amplify computer-based scholarly work and journalism, and why epistemic infrastructure is the methodological response.',
     },
     {
       tag: 'Research & AI',
