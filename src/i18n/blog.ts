@@ -52,7 +52,7 @@ const postsBase = [
     date: '2026-06-15',
     postLang: 'DE' as const,
     color: '#b5476a',
-    title: 'Regelbasierte, lernende und generative KI im Journalismus',
+    title: 'Regelbasierte, prädiktive und generative KI im Journalismus',
     thumb: null,
   },
   {
