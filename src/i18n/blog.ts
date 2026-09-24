@@ -1,4 +1,4 @@
-// Blog-Index: Karten-Metadaten (Teaser DE/EN, Tags) der 7 Posts. Die Posts selbst sind portiert
+// Blog-Index: Karten-Metadaten (Teaser DE/EN, Tags) der Posts. Die Posts selbst sind portiert
 // (Content Collection src/content/blog, Routen /excellence/blog/<Dateiname>/, Erhaltungs-Constraint).
 // Videos kommen zur Buildzeit aus dem Kanal-RSS dazu (src/lib/videos.ts).
 
@@ -47,6 +47,14 @@ const t = {
 };
 
 const postsBase = [
+  {
+    url: '/excellence/blog/KI-Typen-Journalismus-Bias/',
+    date: '2026-06-15',
+    postLang: 'DE' as const,
+    color: '#b5476a',
+    title: 'Regelbasierte, lernende und generative KI im Journalismus',
+    thumb: null,
+  },
   {
     url: '/excellence/blog/Asymmetric-Amplifications-Epistemic-Infrastructures/',
     date: '2026-05-12',
@@ -126,6 +134,11 @@ const postsBase = [
 const postsText = {
   de: [
     {
+      tag: 'Journalismus & KI',
+      teaser:
+        'Regelbasierte Automatisierung, ML-Prognosen und generative KI tragen Bias an verschiedenen Stellen: eine Ordnung an Beispielen aus dem österreichischen Journalismus, und warum Redaktionen Feminist AI Literacies brauchen.',
+    },
+    {
       tag: 'Forschung & KI',
       teaser:
         'Ein koautorierter Essay aus Digital Humanities und Sozialwissenschaften: Wie LLMs und KI-Agenten computergestützte Forschungsarbeit und Journalismus asymmetrisch verstärken, und warum epistemische Infrastruktur die methodische Antwort ist.',
@@ -171,6 +184,11 @@ const postsText = {
     },
   ],
   en: [
+    {
+      tag: 'Journalism & AI',
+      teaser:
+        'Rule-based automation, machine-learning predictions and generative AI carry bias in different places: a map built on examples from Austrian journalism, and why newsrooms need feminist AI literacies. In German.',
+    },
     {
       tag: 'Research & AI',
       teaser:
