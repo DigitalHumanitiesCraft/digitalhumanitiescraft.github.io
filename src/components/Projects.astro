@@ -8,6 +8,7 @@ import thumbDepcha from '../assets/projects/depcha.jpg';
 import thumbMhdbdb from '../assets/projects/mhdbdb.png';
 import thumbCrown from '../assets/projects/crown.png';
 import thumbFortunoff from '../assets/projects/fortunoff.png';
+import thumbM3gim from '../assets/projects/m3gim.jpg';
 
 interface Props {
   lang: Lang;
@@ -15,7 +16,7 @@ interface Props {
 
 const { lang } = Astro.props;
 const { t, projects } = getContent(lang);
-const thumbs = { szd: thumbSzd, ruza: thumbRuza, depcha: thumbDepcha, mhdbdb: thumbMhdbdb, crown: thumbCrown, fortunoff: thumbFortunoff };
+const thumbs = { szd: thumbSzd, ruza: thumbRuza, depcha: thumbDepcha, mhdbdb: thumbMhdbdb, crown: thumbCrown, fortunoff: thumbFortunoff, m3gim: thumbM3gim };
 ---
 
 <section id="projects" class="projects">

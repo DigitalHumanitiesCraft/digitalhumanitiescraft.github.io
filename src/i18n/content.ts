@@ -21,7 +21,7 @@ export interface Project {
   c2: string;
   c3: string;
   /** Key für Screenshot in src/assets/projects/, null = Watercolor-Banner */
-  thumbKey: 'szd' | 'ruza' | 'depcha' | 'mhdbdb' | 'crown' | 'fortunoff' | null;
+  thumbKey: 'szd' | 'ruza' | 'depcha' | 'mhdbdb' | 'crown' | 'fortunoff' | 'm3gim' | null;
 }
 
 export interface Partner {
@@ -181,13 +181,14 @@ const servicesText = {
 };
 
 // Finale 6er-Auswahl (Experte, 2026-07-08): Kriterium = belegt Angebotskarten + Sektor-/Ortsmix; Rotation jährlich, Strashun ersetzt Fortunoff bei Launch
+// 2026-09-25: Mapping Mobile Musicians (KUG) ersetzt DEPCHA (Experte); Strashun noch nicht live
 const projectsBase = [
   { title: 'MHDBDB', url: 'https://dhcraft.org/mhdbdb-tei-only/', c1: '#85aede', c2: '#4a7ab8', c3: '#a9c53d', thumbKey: 'mhdbdb' as const },
   { title: 'Stefan Zweig Digital', url: 'https://gams.uni-graz.at/context:szd', c1: '#8a4fa3', c2: '#c06bb0', c3: '#85aede', thumbKey: 'szd' as const },
   { title: 'Fortunoff Video Archive', url: 'https://fortunoff.library.yale.edu/', c1: '#5c9e4a', c2: '#a9c53d', c3: '#85aede', thumbKey: 'fortunoff' as const },
   { title: 'CROWN', url: 'https://www.projekt-reichskrone.at', c1: '#f2b95c', c2: '#e08a2a', c3: '#c06bb0', thumbKey: 'crown' as const },
   { title: 'Ružake gila', url: 'https://ruzakegila.mdw.ac.at/', c1: '#c06bb0', c2: '#8a4fa3', c3: '#f2b95c', thumbKey: 'ruza' as const },
-  { title: 'DEPCHA', url: 'https://gams.uni-graz.at/context:depcha', c1: '#4a7ab8', c2: '#85aede', c3: '#5c9e4a', thumbKey: 'depcha' as const },
+  { title: 'Mapping Mobile Musicians', url: 'https://dhcraft.org/m3gim/', c1: '#4a7ab8', c2: '#85aede', c3: '#5c9e4a', thumbKey: 'm3gim' as const },
 ];
 
 const projectsText = {
@@ -197,7 +198,7 @@ const projectsText = {
     { partner: 'Yale University', desc: 'Über 4.400 Video-Zeugnisse von Überlebenden und Zeitzeugen des Holocaust, gesammelt seit 1979. Consulting, Support und Weiterentwicklung der DH-Tools des Archivs.' },
     { partner: 'Kunsthistorisches Museum Wien', desc: 'Datenmodellierung und Webentwicklung zur Erforschung der Wiener Reichskrone.' },
     { partner: 'mdw Wien · MMRC', desc: 'Custom Theme für Omeka S, Consulting und Support.' },
-    { partner: 'Universität Graz · Andrew W. Mellon Foundation', desc: 'Bookkeeping-Ontologie und Publikationsplattform für historische Rechnungsbücher, hervorgegangen aus Christophers Dissertation.' },
+    { partner: 'Kunstuniversität Graz', desc: 'Pilotstudie zu Mobilität und Wissensproduktion der Mezzosopranistin Ira Malaniuk: Nachlassdokumente als Linked Data, jede Angabe bis zur Quelle nachvollziehbar.' },
   ],
   en: [
     { partner: 'University of Salzburg', desc: 'The Middle High German Conceptual Database on a new foundation: 667 TEI texts, semantic search and an open data infrastructure.' },
@@ -205,7 +206,7 @@ const projectsText = {
     { partner: 'Yale University', desc: "More than 4,400 video testimonies of Holocaust survivors and witnesses, recorded since 1979. Consulting, support and further development of the archive's DH tools." },
     { partner: 'Kunsthistorisches Museum Wien', desc: 'Data modeling and web development for the study of the Vienna Imperial Crown.' },
     { partner: 'mdw Wien · MMRC', desc: 'Custom Omeka S theme, consulting and support.' },
-    { partner: 'University of Graz · Andrew W. Mellon Foundation', desc: "Bookkeeping ontology and publishing platform for historical account books, grown out of Christopher's doctoral research." },
+    { partner: 'University of Music and Performing Arts Graz', desc: 'Pilot study on the mobility and knowledge production of mezzo-soprano Ira Malaniuk: estate documents as linked data, every statement traceable to its source.' },
   ],
 };
 
