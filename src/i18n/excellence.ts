@@ -61,6 +61,7 @@ const t = {
     promptoTitle: 'Promptotyping',
     promptoText:
       'Context Engineering trifft Rapid Prototyping: Lernen Sie promptotypen, oder lassen Sie uns die Arbeit machen.',
+    promptoSpec: 'Die Methodenspezifikation',
     promptoArticle: 'Der Grundlagentext im L.I.S.A.-Portal',
     promptoSkill: 'Promptotyping-Skill auf GitHub',
     patreonTitle: 'Patreon Membership',
@@ -96,6 +97,7 @@ const t = {
       'Excellence is our area for generative AI: webinars, workshops and intensive days, plus consulting and Promptotyping, for research, culture and business.',
     promptoTitle: 'Promptotyping',
     promptoText: 'Context engineering meets rapid prototyping: learn how to promptotype, or let us do the work.',
+    promptoSpec: 'The method specification',
     promptoArticle: 'The foundational text in the L.I.S.A. portal',
     promptoSkill: 'Promptotyping skill on GitHub',
     patreonTitle: 'Patreon Membership',
@@ -124,19 +126,41 @@ const statsLabels = {
 // Aus dem AI-Channel: kurze Updates im Chat-Stil (Vorbild: Christophers Posts im Instituts-Channel).
 // Einsprachig wie gepostet, gleiche Liste auf beiden Sprachrouten; ein Eintrag = wenige Zeilen,
 // bewusst pflegearm (die Vortrags-Timeline aus dem Mockup war zu pflegeintensiv, Experte 2026-07-08).
+// 2026-09-25: die fünf neuesten Posts aus dem Patreon-Kanal seit Juli, je mit öffentlichem Link (Experte)
 const channelUpdates: ChannelUpdate[] = [
   {
-    date: '2026-07-22',
-    text: 'Neuer Blogbeitrag: „Asymmetric Amplifications and Epistemic Infrastructures". Wie LLMs und KI-Agenten computergestützte Forschungsarbeit asymmetrisch verstärken. Essay von Pollin, Sackl-Sharif, Klinger & Steiner.',
-    url: 'https://dhcraft.org/excellence/blog/Asymmetric-Amplifications-Epistemic-Infrastructures',
-    linkTitle: 'Asymmetric Amplifications and Epistemic Infrastructures. How LLMs and AI Agents Are Changing Computer-Based Scholarly Work',
+    date: '2026-09-24',
+    text: 'Christopher zu Gast im Podcast PHastForward Geschichte Digital: wie LLMs und KI-Agenten computerbasierte Forschung unterstützen, mit Blick auf Geschichtsforschung und Geschichtsdidaktik.',
+    url: 'https://open.spotify.com/episode/2JUkpUrzuAlPqCdZYDjDFj',
+    linkTitle: '19 - Dr. Christopher Pollin (KI in der Geschichtsforschung | Digital Humanities)',
+    source: 'spotify.com',
+  },
+  {
+    date: '2026-09-24',
+    text: 'Neuer Blogbeitrag von Sackl-Sharif & Steiner: Wo steckt der Bias bei regelbasierter, prädiktiver und generativer KI, und wie können Redaktionen damit umgehen?',
+    url: 'https://dhcraft.org/excellence/blog/KI-Typen-Journalismus-Bias',
+    linkTitle: 'Regelbasierte, prädiktive und generative KI: Wie Bias im Journalismus entsteht und wie Redaktionen damit umgehen können',
     source: 'dhcraft.org',
   },
   {
-    date: '2026-07-08',
-    text: 'Neues Video: Live-Demo zu Agentic Engineering und digitaler Edition mit Claude Code und Fable 5.',
-    url: 'https://www.youtube.com/watch?v=kQaTu4oFjSo',
-    linkTitle: 'Agentic Engineering und digitale Edition mit Claude Code und Fable 5 (Live Demo)',
+    date: '2026-09-18',
+    text: 'Vier Sessions an der Summer School „Gender – Knowledge – Mobility. Digital Perspectives in Musicology“ der Kunstuniversität Graz. Slides, Lecture Notes und Übungsmaterialien sind offen verfügbar.',
+    url: 'https://chpollin.github.io/summer-school-musicology-2026/',
+    linkTitle: 'Summer School Musicology 2026 · Research Data Workflows and LLMs',
+    source: 'github.io',
+  },
+  {
+    date: '2026-09-08',
+    text: 'Neues Video: die Agentic Edition Pipeline mit GPT-6 Astra in Codex, von historischen Digitalisaten über TEI-XML bis zur eigenen Korrekturoberfläche.',
+    url: 'https://www.youtube.com/watch?v=krL-xMxTa_c',
+    linkTitle: 'Agentic Edition Pipeline mit GPT-6 Astra | Live-Demo',
+    source: 'youtube.com',
+  },
+  {
+    date: '2026-08-12',
+    text: 'Neues Video: Entity Linking mit GND in einer digitalen Edition, als hybrider Workflow aus deterministischen Verfahren, LLMs, Subagenten und menschlicher Verifikation.',
+    url: 'https://www.youtube.com/watch?v=TvGYsjTYC-I',
+    linkTitle: 'Agentic Engineering für digitale Editionen mit Claude Code, TEI und GND | Live Demo',
     source: 'youtube.com',
   },
 ];

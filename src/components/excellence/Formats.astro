@@ -8,7 +8,9 @@ interface Props {
 
 const { lang } = Astro.props;
 const { t, formats } = getExcellenceContent(lang);
-// Keine eigene Promptotyping-Seite mehr (Experte, 2026-07-08): direkt Artikel + Skill verlinken
+// Keine eigene Promptotyping-Seite mehr (Experte, 2026-07-08): direkt Artikel + Skill verlinken,
+// seit 2026-09-25 zuerst die Methodenspezifikation (Projektseite, Stand 0.9 vom Juli 2026)
+const specUrl = 'https://dhcraft.org/Promptotyping/';
 const lisaUrl = 'https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin';
 const skillUrl = 'https://github.com/DigitalHumanitiesCraft/promptotyping-skill';
 ---
@@ -36,6 +38,7 @@ const skillUrl = 'https://github.com/DigitalHumanitiesCraft/promptotyping-skill'
         <h3>{t.promptoTitle}</h3>
         <p>{t.promptoText}</p>
         <div class="promo-links">
+          <a href={specUrl} target="_blank" rel="noopener">{t.promptoSpec} →</a>
           <a href={lisaUrl} target="_blank" rel="noopener">{t.promptoArticle} →</a>
           <a href={skillUrl} target="_blank" rel="noopener">{t.promptoSkill} →</a>
         </div>
