@@ -209,7 +209,7 @@ Verstehen und Denken sind Eigenschaften, die wir Menschen vorbehalten wollen und
 
 [^30]:  Ein lokales Optimum ist ein Ergebnis, das im unmittelbaren Umfeld schon das Beste ist – wenn man nur einen kleinen Schritt nach links, rechts, oben oder unten macht, wird es nicht besser. Doch weiter weg könnte es noch ein besseres Ergebnis geben.
 
-[^31]:  Lee Boonstra. Prompt Engineering. [https://www.gptaiflow.tech/assets/files/2025-01-18-pdf-1-TechAI-Google-whitepaper\_Prompt%20Engineering\_v4-af36dcc7a49bb7269a58b1c9b89a8ae1.pdf](https://www.gptaiflow.tech/assets/files/2025-01-18-pdf-1-TechAI-Google-whitepaper_Prompt%20Engineering_v4-af36dcc7a49bb7269a58b1c9b89a8ae1.pdf)
+[^31]:  Lee Boonstra. Prompt Engineering. [https://www.kaggle.com/whitepaper-prompt-engineering](https://www.kaggle.com/whitepaper-prompt-engineering)
 
 [^32]:  Ilya Sutskever (OpenAI Chief Scientist) \- Why Next-Token Prediction Could Surpass Human Intelligence. [https://youtu.be/Yf1o0TQzry8](https://youtu.be/Yf1o0TQzry8?si=lj8B8UaESaDjTFgM). Why next-token prediction is enough for AGI \- Ilya Sutskever (OpenAI Chief Scientist). [https://youtu.be/YEUclZdj\_Sc](https://youtu.be/YEUclZdj_Sc)
 
@@ -229,7 +229,7 @@ Verstehen und Denken sind Eigenschaften, die wir Menschen vorbehalten wollen und
 
 [^40]:  Zhao, Rosie, Tian Qin, David Alvarez-Melis, Sham Kakade, und Naomi Saphra. "Distributional Scaling for Emergent Capabilities“. arXiv, 27. Mai 2025. [https://doi.org/10.48550/arXiv.2502.17356](https://doi.org/10.48550/arXiv.2502.17356).
 
-[^41]:  AI Explained. Emergent Behaviors and Grokking. [https://www.coursera.org/learn/8-most-controversial-terms-in-ai-explained/lecture/uo7Y4/emergent-behaviors-and-grokking-part-1](https://www.coursera.org/learn/8-most-controversial-terms-in-ai-explained/lecture/uo7Y4/emergent-behaviors-and-grokking-part-1). Power, Alethea, Yuri Burda, Harri Edwards, Igor Babuschkin, and Vedant Misra. ‘Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets’. Accessed 3 June 2025. [https://arxiv.org/abs/2201.02177](https://arxiv.org/abs/2201.02177). 
+[^41]:  AI Explained. Emergent Behaviors and Grokking. [https://www.coursera.org/learn/8-most-controversial-terms-in-ai-explained](https://www.coursera.org/learn/8-most-controversial-terms-in-ai-explained). Power, Alethea, Yuri Burda, Harri Edwards, Igor Babuschkin, and Vedant Misra. ‘Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets’. Accessed 3 June 2025. [https://arxiv.org/abs/2201.02177](https://arxiv.org/abs/2201.02177). 
 
 [^42]:  Ruis, Laura, Maximilian Mozes, Juhan Bae, Siddhartha Rao Kamalakara, Dwarak Talupuru, Acyr Locatelli, Robert Kirk, Tim Rocktäschel, Edward Grefenstette, und Max Bartolo. 2025. "Procedural Knowledge in Pretraining Drives Reasoning in Large Language Models“. arXiv. [https://doi.org/10.48550/arXiv.2411.12580](https://doi.org/10.48550/arXiv.2411.12580).
 

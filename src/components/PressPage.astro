@@ -45,7 +45,7 @@ const texts = {
       'Digital Humanities Craft OG entwickelt Forschungssoftware und Datenworkflows für die Geisteswissenschaften und schult Universitäten, Bibliotheken und Institutionen im Umgang mit generativer KI. Geleitet wird das Unternehmen von Dr. Christopher Pollin und Mag. Christian Steiner, Sitz ist Kainbach bei Graz.',
     foundingPre: 'Zur Gründung 2022:',
     foundingLabel: 'Bericht der Universität Graz',
-    foundingPost: '.',
+    foundingPost: ' (archiviert).',
     contactTitle: 'Kontakt',
     contactPre: 'Presseanfragen an',
     imprintPre: 'Firmendaten im',
@@ -77,7 +77,7 @@ const texts = {
       'Digital Humanities Craft OG builds research software and data workflows for the humanities and trains universities, libraries and other institutions in working with generative AI. The company is led by Dr. Christopher Pollin and Mag. Christian Steiner and based in Kainbach bei Graz, Austria.',
     foundingPre: 'On the founding in 2022:',
     foundingLabel: 'report by the University of Graz',
-    foundingPost: ' (in German).',
+    foundingPost: ' (archived, in German).',
     contactTitle: 'Contact',
     contactPre: 'Press enquiries to',
     imprintPre: 'Company details in the',
@@ -125,8 +125,9 @@ const x = texts[lang];
       <blockquote class="boilerplate">{x.boilerplate}</blockquote>
       <p class="note">
         {x.foundingPre}
+        <!-- Original offline (404, geprüft 2026-09-25), daher Wayback-Snapshot vom 04.10.2022 -->
         <a
-          href="https://digital-humanities.uni-graz.at/de/neuigkeiten/dh-craft-gegruendet/"
+          href="https://web.archive.org/web/20221004194936/https://informationsmodellierung.uni-graz.at/de/neuigkeiten/detail/article/dh-craft-gegruendet/"
           target="_blank"
           rel="noopener">{x.foundingLabel}</a
         >{x.foundingPost}
