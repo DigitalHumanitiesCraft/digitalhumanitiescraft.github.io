@@ -141,7 +141,7 @@ const servicesText = {
     },
     {
       title: 'Forschungssoftware & Digitale Editionen',
-      text: 'Web-Interfaces, Dashboards und Digitale Editionen für Forschungsprojekte, wann immer möglich kompatibel mit Linked Open Data. Langzeitarchivierung inklusive: in Kooperation mit dem <a href="https://digital-humanities.uni-graz.at/de/" target="_blank" rel="noopener">Institut für Digitale Geisteswissenschaften</a> der Universität Graz im OAIS-konformen, zertifizierten Repositorium <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>.',
+      text: 'Web-Interfaces, Dashboards und Digitale Editionen für Forschungsprojekte, wann immer möglich kompatibel mit Linked Open Data. Langzeitarchivierung inklusive: in Kooperation mit dem <a href="https://digital-humanities.uni-graz.at/de/" target="_blank" rel="noopener">Institut für Digitale Geisteswissenschaften</a> der Universität Graz im OAIS-konformen, zertifizierten Repositorium <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>. Werkzeuge zum Anpassen zeigt <a href="https://dhcraft.org/fancy-research-tools/">fancy (research) tools!</a>',
     },
     {
       title: 'Datenmodellierung & KI-gestützte Erschließung',
@@ -167,7 +167,7 @@ const servicesText = {
     },
     {
       title: 'Research Software & Digital Editions',
-      text: 'Web interfaces, dashboards and digital editions for research projects, compatible with Linked Open Data whenever possible. Long-term preservation included, in cooperation with the <a href="https://digital-humanities.uni-graz.at/en/" target="_blank" rel="noopener">Department of Digital Humanities</a> at the University of Graz and its certified, OAIS-compliant repository <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>.',
+      text: 'Web interfaces, dashboards and digital editions for research projects, compatible with Linked Open Data whenever possible. Long-term preservation included, in cooperation with the <a href="https://digital-humanities.uni-graz.at/en/" target="_blank" rel="noopener">Department of Digital Humanities</a> at the University of Graz and its certified, OAIS-compliant repository <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>. Adaptable tools are shown at <a href="https://dhcraft.org/fancy-research-tools/en/">fancy (research) tools!</a>',
     },
     {
       title: 'Data Modeling & AI-Assisted Digitization',
