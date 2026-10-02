@@ -270,27 +270,27 @@ const text = {
     claims: [
       {
         title: 'Dokumentierte Anforderungen',
-        html: 'Nach der Methode Promptotyping stehen Anforderungen, Datenmodell und Entwurfsentscheidungen in einer Wissensbasis im Repository und werden mit dem Code versioniert. Wer später etwas ändert, findet dort die Gründe.',
+        html: 'Nach der Methode Promptotyping werden Anforderungen, Datenmodell und Entwurfsentscheidungen in einer projekteigenen Wissensbasis festgehalten und gemeinsam mit dem Code versioniert. Jede Entscheidung bleibt so mit ihrer Begründung nachvollziehbar, auch für eine spätere Weiterentwicklung durch Dritte.',
       },
       {
         title: 'Tests mit Ihrem Material',
-        html: 'Wir testen automatisiert mit Beispieldateien aus Ihrem Bestand. Verändert ein Werkzeug Ihre Dateien, prüfen die Tests, dass beim Speichern nichts verloren geht und das Ergebnis gegen Ihr Schema gültig bleibt. Testläufe und bekannte Grenzen stehen im Projektjournal.',
+        html: 'Automatisierte Tests arbeiten mit ausgewählten Dateien aus Ihrem Bestand. Wo ein Werkzeug Daten verändert, sichern sie die verlustfreie Speicherung und die Gültigkeit gegenüber Ihrem Schema. Testläufe und bekannte Einschränkungen werden im Projektjournal dokumentiert.',
       },
       {
         title: 'Geprüfter Code',
-        html: 'Coding-Agenten schreiben den Großteil des Codes. Vor der Übergabe sucht eine eigene Prüfrunde gezielt nach den Fehlern, die bei generiertem Code gehäuft auftreten, etwa ungeschützter Ausgabe von Daten, still verschluckten Fehlern und Funktionen, die nur die Dokumentation beschreibt. Die zentralen Arbeitsabläufe testen wir im Browser.',
+        html: 'Der Code entsteht überwiegend mit Coding-Agenten. Vor der Übergabe wird er gezielt auf die für generierten Code typischen Fehlerklassen geprüft, darunter unzureichend abgesicherte Datenausgabe, nicht gemeldete Fehlerzustände und dokumentierte, aber nicht umgesetzte Funktionen. Die zentralen Arbeitsabläufe werden im Browser getestet.',
       },
       {
         title: 'Offene Formate',
-        html: 'Ergebnisse liegen in offenen Formaten vor, je nach Material TEI, PAGE XML, METS/MODS, JSON-LD oder CSV. Bilder binden die Werkzeuge über IIIF ein. So bleiben Ihre Daten auch ohne das Werkzeug lesbar und lassen sich in andere Systeme und Archive übernehmen.',
+        html: 'Ergebnisse liegen in offenen, dokumentierten Formaten vor, je nach Material TEI, PAGE XML, METS/MODS, JSON-LD oder CSV. Bilddaten lassen sich über IIIF einbinden. Die Daten bleiben damit unabhängig vom Werkzeug lesbar und lassen sich in andere Systeme und Repositorien überführen.',
       },
       {
         title: 'Fachliche Kontrolle',
-        html: 'Arbeitet ein Werkzeug mit Large Language Models, bleibt erkennbar, was ein Modell erzeugt hat, was ein Agent geprüft hat und was Ihre Fachleute bestätigt haben. Als gesichert gilt nur, was Ihre Fachleute bestätigt haben.',
+        html: 'Beim Einsatz von Large Language Models bleibt für jeden Inhalt erkennbar, ob er maschinell erzeugt, von einem Agenten geprüft oder von Ihren Fachleuten bestätigt wurde. Als gesichert gelten ausschließlich fachlich bestätigte Inhalte.',
       },
       {
         title: 'Übergabe',
-        html: 'Sie erhalten den vollständigen Quellcode und eine Wissensbasis, mit der Ihr Team, eine externe Entwicklerin oder ein KI-Assistent weiterarbeiten kann. Für Forschungsdaten bieten wir die Langzeitarchivierung im zertifizierten Repositorium <a href="https://gams.uni-graz.at/">GAMS</a> an, über einen Rahmenvertrag mit dem <a href="https://digital-humanities.uni-graz.at/de/">Institut für Digitale Geisteswissenschaften</a> der Universität Graz.',
+        html: 'Sie erhalten den vollständigen Quellcode und die Wissensbasis des Projekts, auf deren Grundlage Ihr Team, externe Entwicklerinnen und Entwickler oder KI-Assistenten die Arbeit fortführen können. Für Forschungsdaten bieten wir die Langzeitarchivierung im zertifizierten Repositorium <a href="https://gams.uni-graz.at/">GAMS</a> an, über einen Rahmenvertrag mit dem <a href="https://digital-humanities.uni-graz.at/de/">Institut für Digitale Geisteswissenschaften</a> der Universität Graz.',
       },
     ],
     aboutTitle: 'Wer wir sind',
@@ -479,27 +479,27 @@ const text = {
     claims: [
       {
         title: 'Documented requirements',
-        html: 'Following the Promptotyping method, requirements, data model and design decisions are kept in a knowledge base in the repository and versioned with the code. Whoever changes something later finds the reasons there.',
+        html: 'Following the Promptotyping method, requirements, data model and design decisions are recorded in a project knowledge base and versioned together with the code. Every decision thus remains traceable with its rationale, including for later development by third parties.',
       },
       {
         title: 'Tests with your material',
-        html: 'We test automatically with sample files from your holdings. Where a tool changes your files, the tests check that nothing is lost on saving and that the result stays valid against your schema. Test runs and known limits are recorded in the project journal.',
+        html: 'Automated tests work with selected files from your holdings. Where a tool modifies data, they ensure lossless saving and validity against your schema. Test runs and known limitations are documented in the project journal.',
       },
       {
         title: 'Reviewed code',
-        html: 'Coding agents write most of the code. Before handover a review round of our own looks specifically for the errors that occur frequently in generated code, such as unprotected output of data, silently swallowed errors and functions that only the documentation describes. We test the central workflows in the browser.',
+        html: 'The code is developed predominantly with coding agents. Before handover it is reviewed specifically for the classes of error typical of generated code, among them insufficiently secured data output, unreported error states and functions that are documented but not implemented. The central workflows are tested in the browser.',
       },
       {
         title: 'Open formats',
-        html: 'Results are kept in open formats, depending on the material TEI, PAGE XML, METS/MODS, JSON-LD or CSV. The tools load images through IIIF. Your data therefore remain readable without the tool and can move on to other systems and archives.',
+        html: 'Results are held in open, documented formats, depending on the material TEI, PAGE XML, METS/MODS, JSON-LD or CSV. Image data can be integrated via IIIF. The data thus remain readable independently of the tool and can be transferred to other systems and repositories.',
       },
       {
         title: 'Expert control',
-        html: 'Where a tool works with large language models, it stays visible what a model produced, what an agent checked and what your experts confirmed. Only what your experts have confirmed counts as established.',
+        html: 'Where large language models are used, it remains discernible for every item whether it was generated by a model, checked by an agent or confirmed by your experts. Only content confirmed by your experts counts as established.',
       },
       {
         title: 'Handover',
-        html: 'You receive the complete source code and a knowledge base with which your team, an external developer or an AI assistant can continue the work. For research data we offer long-term archiving in the certified repository <a href="https://gams.uni-graz.at/">GAMS</a>, through a framework agreement with the <a href="https://digital-humanities.uni-graz.at/en/">Department of Digital Humanities</a> at the University of Graz.',
+        html: 'You receive the complete source code and the project knowledge base, on the basis of which your team, external developers or AI assistants can continue the work. For research data we offer long-term archiving in the certified repository <a href="https://gams.uni-graz.at/">GAMS</a>, through a framework agreement with the <a href="https://digital-humanities.uni-graz.at/en/">Department of Digital Humanities</a> at the University of Graz.',
       },
     ],
     aboutTitle: 'Who we are',
