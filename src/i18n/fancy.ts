@@ -177,9 +177,9 @@ const text = {
     costs:
       'Die Abrechnung richtet sich nach der Aufgabe, nach Stunden, nach Arbeitstagen oder als Pauschale. Ausgangspunkt ist Ihr Budgetrahmen. Nach einer ersten Sichtung legen wir dar, was in diesem Rahmen möglich ist, und Sie entscheiden nach jedem Arbeitsschritt über die Fortsetzung.',
     costsList: [
-      'Da der Code überwiegend mit Coding-Agenten entsteht, liegt der Aufwand vor allem in Projektverständnis, Konzeption und fachlicher Abstimmung.',
-      'Für die Software fallen keine Lizenzkosten an. Setzt ein Werkzeug Sprachmodelle ein, entstehen Nutzungskosten beim jeweiligen Anbieter oder für den eigenen Betrieb.',
-      'Viele Werkzeuge laufen im Browser und benötigen keinen eigenen Server.',
+      'Den Code schreiben überwiegend Coding-Agenten. Der Aufwand liegt vor allem darin, Ihr Projekt gemeinsam mit Ihnen zu verstehen und die entstehenden Systeme verständlich zu machen.',
+      'Für die Software fallen keine Lizenzkosten an. Kosten für die Nutzung von Sprachmodellen können je nach Umfang des Projekts gesondert anfallen.',
+      'Wo der Anwendungsfall es erlaubt, laufen Werkzeuge im Browser und kommen ohne eigenen Server aus.',
       'Ein kleiner Rahmen begrenzt den Umfang, etwa auf einen einzelnen Arbeitsschritt.',
     ],
     toolsTitle: 'Werkzeuge zum Anpassen',
@@ -388,9 +388,9 @@ const text = {
     costs:
       'Billing depends on the task, by the hour, by working day or as a flat fee. The starting point is your budget. After an initial assessment we set out what is possible within it, and you decide after each step whether to continue.',
     costsList: [
-      'As the code is developed predominantly with coding agents, the effort lies mainly in understanding the project, conception and coordination on the subject matter.',
-      'There are no licence fees for the software. Where a tool uses language models, usage costs arise with the respective provider or for own operation.',
-      'Many tools run in the browser and need no server of their own.',
+      'The code is written predominantly by coding agents. The effort lies mainly in understanding your project together with you and in making the resulting systems comprehensible.',
+      'There are no licence fees for the software. Costs for the use of language models may be charged separately, depending on the scope of the project.',
+      'Where the use case allows, tools run in the browser and require no server of their own.',
       'A small budget limits the scope, for example to a single work step.',
     ],
     toolsTitle: 'Tools to adapt',
