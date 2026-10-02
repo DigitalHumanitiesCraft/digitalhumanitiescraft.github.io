@@ -42,6 +42,14 @@ const t = {
 
 const postsBase = [
   {
+    url: '/excellence/blog/Was-ist-Promptotyping/',
+    date: '2026-07-19',
+    postLang: 'DE' as const,
+    color: '#5c9e4a',
+    title: 'Ein Promptotyping-Projekt anlegen',
+    thumb: '/excellence/blog/img/promptotyping-wiiw-phases.png',
+  },
+  {
     url: '/excellence/blog/KI-Typen-Journalismus-Bias/',
     date: '2026-06-15',
     postLang: 'DE' as const,
@@ -128,6 +136,11 @@ const postsBase = [
 const postsText = {
   de: [
     {
+      tag: 'Promptotyping',
+      teaser:
+        'Das praktische Tutorial zur Methode auf dem Stand von Mitte 2026, vom Repository mit knowledge-Ordner über Materialsammlung, CLAUDE.md, Exploration und Destillation bis zur Implementation mit Verification Milestones und zur Publikation.',
+    },
+    {
       tag: 'Journalismus & KI',
       teaser:
         'Regelbasierte Automatisierung, ML-Prognosen und generative KI tragen Bias an verschiedenen Stellen: eine Ordnung an Beispielen aus dem österreichischen Journalismus, und warum Redaktionen Feminist AI Literacies brauchen.',
@@ -178,6 +191,11 @@ const postsText = {
     },
   ],
   en: [
+    {
+      tag: 'Promptotyping',
+      teaser:
+        'The hands-on tutorial for the method as of mid-2026, from a repository with a knowledge folder via material collection, CLAUDE.md, exploration and distillation to implementation with verification milestones and publication. In German.',
+    },
     {
       tag: 'Journalism & AI',
       teaser:

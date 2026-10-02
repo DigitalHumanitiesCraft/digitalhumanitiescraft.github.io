@@ -5,6 +5,7 @@ import Footer from '../Footer.astro';
 import type { Lang } from '../../i18n/content';
 import { getBlogContent, isExternal, fmtDate } from '../../i18n/blog';
 import { getChannelVideos } from '../../lib/videos';
+import { getCollection } from 'astro:content';
 
 interface Props {
   lang: Lang;
@@ -15,6 +16,15 @@ interface Props {
 const { lang, path, altPath } = Astro.props;
 const { t, posts } = getBlogContent(lang);
 const homeHref = lang === 'de' ? '/' : '/en/';
+
+// postsBase wird von Hand gepflegt; ein veröffentlichter Post ohne Eintrag fehlte schon einmal
+// unbemerkt in Index und Startseite, daher bricht der Build in diesem Fall ab.
+const unlisted = (await getCollection('blog', ({ data }) => data.published)).filter(
+  (e) => !posts.some((p) => p.url.endsWith(`/excellence/blog/${e.id}/`))
+);
+if (unlisted.length) {
+  throw new Error(`[blog] Veröffentlicht, aber nicht in postsBase (src/i18n/blog.ts): ${unlisted.map((e) => e.id).join(', ')}`);
+}
 
 // Artikel zuerst, Videos als eigener Abschnitt darunter (Experte, 2026-07-08); je absteigend nach Datum
 const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
