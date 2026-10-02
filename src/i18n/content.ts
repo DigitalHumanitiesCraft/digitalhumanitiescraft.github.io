@@ -279,14 +279,15 @@ const teamBase = [
 
 const teamRole = { de: 'Gründer und Gesellschafter', en: 'Co-founder and partner' };
 
+// Nach den Selbstdarstellungen auf chsteiner.github.io und chpollin.github.io, geprüft 2026-10-02.
 const teamBio = {
   de: [
-    'Masterabschluss in Übersetzen/Dolmetschen und Digital Humanities. Seit 2012 am Institut für Digitale Geisteswissenschaften der Universität Graz, nun vollständig für DHCraft tätig.',
-    'Promotion in Digital Humanities, Masterabschluss in Geschichte. Seit 2016 am Institut für Digitale Geisteswissenschaften der Universität Graz, nun vollständig für DHCraft tätig.',
+    'Masterabschlüsse in Übersetzen und in Digital Humanities an der Universität Graz, dort Doktorand in Digital Humanities. Von 2012 bis 2024 am Institut für Digitale Geisteswissenschaften der Universität Graz, seit 2018 Lehrbeauftragter, derzeit an den Universitäten Graz, Wien und Klagenfurt.',
+    'Studium der Geschichte und des Digital Cultural Heritage (EuroMACHS) und 2025 Promotion in Digital Humanities an der Universität Graz. Von 2017 bis 2024 am Zentrum für Informationsmodellierung der Universität Graz, 2022 Mitgründer von DHCraft.',
   ],
   en: [
-    "Master's degree in translation/interpreting and Digital Humanities. At the Department of Digital Humanities, University of Graz since 2012, now fully dedicated to DHCraft.",
-    "Doctoral degree in Digital Humanities, master's degree in History. At the Department of Digital Humanities, University of Graz since 2016, now fully dedicated to DHCraft.",
+    "Master's degrees in Translation and in Digital Humanities from the University of Graz, where he is pursuing a PhD in Digital Humanities. At the Department of Digital Humanities of the University of Graz from 2012 to 2024, external lecturer since 2018, currently at the Universities of Graz, Vienna and Klagenfurt.",
+    'Studied History and Digital Cultural Heritage (EuroMACHS) and completed a PhD in Digital Humanities at the University of Graz in 2025. At the Centre for Information Modelling of the University of Graz from 2017 to 2024, co-founder of DHCraft in 2022.',
   ],
 };
 
