@@ -187,7 +187,7 @@ const text = {
     traits: {
       llm: 'LLM-gestützt',
       llmLocal: 'LLM-gestützt, Modell wählbar bis zum lokalen Modell',
-      review: 'Fachliche Prüfung jeder Änderung',
+      review: 'Fachliche Prüfung im Werkzeug',
       overview: 'Überblick über den ganzen Bestand',
       readable: 'Lesbarer Text statt Tags',
       browser: 'Läuft im Browser ohne eigenen Server',
@@ -270,27 +270,27 @@ const text = {
     claims: [
       {
         title: 'Dokumentierte Anforderungen',
-        html: 'Wir arbeiten nach der Methode Promptotyping. Anforderungen, Datenmodell und Entwurfsentscheidungen stehen schriftlich im Projekt und bleiben für spätere Änderungen nachvollziehbar.',
+        html: 'Nach der Methode Promptotyping stehen Anforderungen, Datenmodell und Entwurfsentscheidungen in einer Wissensbasis im Repository und werden mit dem Code versioniert. Wer später etwas ändert, findet dort die Gründe.',
       },
       {
         title: 'Tests mit Ihrem Material',
-        html: 'Geprüft wird mit Ihren eigenen Dateien, besonders das verlustfreie Zurückschreiben in die Ausgangsdateien, Grenzfälle und die Validierung gegen Ihr Schema. Die Ergebnisse protokollieren wir.',
+        html: 'Wir testen automatisiert mit Beispieldateien aus Ihrem Bestand. Verändert ein Werkzeug Ihre Dateien, prüfen die Tests, dass beim Speichern nichts verloren geht und das Ergebnis gegen Ihr Schema gültig bleibt. Testläufe und bekannte Grenzen stehen im Projektjournal.',
       },
       {
         title: 'Geprüfter Code',
-        html: 'Coding-Agenten schreiben den Großteil des Codes. Wir prüfen ihn gezielt auf die Fehler, die bei agentisch erzeugter Software gehäuft auftreten, etwa ungeschützte Ausgabe von Daten, still verschluckte Fehler und Funktionen, die nur die Dokumentation kennt, und erproben jedes Werkzeug im echten Browser.',
+        html: 'Coding-Agenten schreiben den Großteil des Codes. Vor der Übergabe sucht eine eigene Prüfrunde gezielt nach den Fehlern, die bei generiertem Code gehäuft auftreten, etwa ungeschützter Ausgabe von Daten, still verschluckten Fehlern und Funktionen, die nur die Dokumentation beschreibt. Die zentralen Arbeitsabläufe testen wir im Browser.',
       },
       {
         title: 'Offene Formate',
-        html: 'Wir speichern in offenen Formaten, in der Forschung etwa TEI, IIIF und RDF. Ihre Daten bleiben damit auch ohne das Werkzeug nutzbar.',
+        html: 'Ergebnisse liegen in offenen Formaten vor, je nach Material TEI, PAGE XML, METS/MODS, JSON-LD oder CSV. Bilder binden die Werkzeuge über IIIF ein. So bleiben Ihre Daten auch ohne das Werkzeug lesbar und lassen sich in andere Systeme und Archive übernehmen.',
       },
       {
         title: 'Fachliche Kontrolle',
-        html: 'Setzt ein Werkzeug Large Language Models ein, sind deren Vorschläge gekennzeichnet und werden erst mit der Zustimmung Ihrer Fachleute übernommen.',
+        html: 'Arbeitet ein Werkzeug mit Large Language Models, bleibt erkennbar, was ein Modell erzeugt hat, was ein Agent geprüft hat und was Ihre Fachleute bestätigt haben. Als gesichert gilt nur, was Ihre Fachleute bestätigt haben.',
       },
       {
         title: 'Übergabe',
-        html: 'Sie erhalten den vollständigen Quellcode und eine Dokumentation, mit der Ihr Team, eine externe Entwicklerin oder ein KI-Assistent weiterarbeiten kann. Forschungsdaten archivieren wir auf Wunsch langfristig im zertifizierten Repositorium <a href="https://gams.uni-graz.at/">GAMS</a>, in Kooperation mit dem <a href="https://digital-humanities.uni-graz.at/de/">Institut für Digitale Geisteswissenschaften</a> der Universität Graz.',
+        html: 'Sie erhalten den vollständigen Quellcode und eine Wissensbasis, mit der Ihr Team, eine externe Entwicklerin oder ein KI-Assistent weiterarbeiten kann. Für Forschungsdaten bieten wir die Langzeitarchivierung im zertifizierten Repositorium <a href="https://gams.uni-graz.at/">GAMS</a> an, über einen Rahmenvertrag mit dem <a href="https://digital-humanities.uni-graz.at/de/">Institut für Digitale Geisteswissenschaften</a> der Universität Graz.',
       },
     ],
     aboutTitle: 'Wer wir sind',
@@ -397,7 +397,7 @@ const text = {
     traits: {
       llm: 'LLM-assisted',
       llmLocal: 'LLM-assisted, model of your choice up to a local model',
-      review: 'Expert review of every change',
+      review: 'Expert review in the tool',
       overview: 'Overview of the whole collection',
       readable: 'Readable text instead of tags',
       browser: 'Runs in the browser without a server of its own',
@@ -479,27 +479,27 @@ const text = {
     claims: [
       {
         title: 'Documented requirements',
-        html: 'We work according to the Promptotyping method. Requirements, data model and design decisions are recorded in writing within the project and remain traceable for later changes.',
+        html: 'Following the Promptotyping method, requirements, data model and design decisions are kept in a knowledge base in the repository and versioned with the code. Whoever changes something later finds the reasons there.',
       },
       {
         title: 'Tests with your material',
-        html: 'Testing uses your own files, in particular lossless writing back into the source files, edge cases and validation against your schema. We record the results.',
+        html: 'We test automatically with sample files from your holdings. Where a tool changes your files, the tests check that nothing is lost on saving and that the result stays valid against your schema. Test runs and known limits are recorded in the project journal.',
       },
       {
         title: 'Reviewed code',
-        html: 'Coding agents write most of the code. We review it specifically for the errors that occur frequently in agentically generated software, such as unprotected output of data, silently swallowed errors and functions that exist only in the documentation, and we try out every tool in a real browser.',
+        html: 'Coding agents write most of the code. Before handover a review round of our own looks specifically for the errors that occur frequently in generated code, such as unprotected output of data, silently swallowed errors and functions that only the documentation describes. We test the central workflows in the browser.',
       },
       {
         title: 'Open formats',
-        html: 'We store data in open formats, in research for example TEI, IIIF and RDF. Your data therefore remain usable without the tool.',
+        html: 'Results are kept in open formats, depending on the material TEI, PAGE XML, METS/MODS, JSON-LD or CSV. The tools load images through IIIF. Your data therefore remain readable without the tool and can move on to other systems and archives.',
       },
       {
         title: 'Expert control',
-        html: 'Where a tool uses large language models, their suggestions are labelled and adopted only with the approval of your experts.',
+        html: 'Where a tool works with large language models, it stays visible what a model produced, what an agent checked and what your experts confirmed. Only what your experts have confirmed counts as established.',
       },
       {
         title: 'Handover',
-        html: 'You receive the complete source code and documentation with which your team, an external developer or an AI assistant can continue the work. On request we archive research data for the long term in the certified repository <a href="https://gams.uni-graz.at/">GAMS</a>, in cooperation with the <a href="https://digital-humanities.uni-graz.at/en/">Department of Digital Humanities</a> at the University of Graz.',
+        html: 'You receive the complete source code and a knowledge base with which your team, an external developer or an AI assistant can continue the work. For research data we offer long-term archiving in the certified repository <a href="https://gams.uni-graz.at/">GAMS</a>, through a framework agreement with the <a href="https://digital-humanities.uni-graz.at/en/">Department of Digital Humanities</a> at the University of Graz.',
       },
     ],
     aboutTitle: 'Who we are',
