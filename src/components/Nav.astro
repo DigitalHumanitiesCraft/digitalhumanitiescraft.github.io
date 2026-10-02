@@ -27,12 +27,13 @@ const a = (id: string) => `${homeHref}#${id}`;
     </button>
     <nav class="links" id="site-menu" aria-label="Hauptnavigation">
       <a href={a('services')}>{t.navServices}</a>
-      <a href={lang === 'de' ? '/fancy-research-tools/' : '/en/fancy-research-tools/'}>{t.navAgentic}</a>
+      <a href={a('excellence')}>{t.navWebinars}</a>
       <a href={a('projects')}>{t.navProjects}</a>
       <a href={a('team')}>Team</a>
-      <a href={a('excellence')}>{t.navWebinars}</a>
-      <a href={a('blog')}>Blog</a>
-      <a href={a('videos')}>Videos</a>
+      <a href={a('blog')}>{t.navNews}</a>
+      <a href={lang === 'de' ? '/fancy-research-tools/' : '/en/fancy-research-tools/'} class="fancy">
+        <span class="fancy-hex" aria-hidden="true"></span><span>fancy <span class="fancy-paren">(research)</span> tools</span>
+      </a>
       <a href={a('contact')} class="btn btn-solid cta">{t.navContact}</a>
       <div class="lang-toggle">
         {
@@ -158,6 +159,40 @@ const a = (id: string) => `${homeHref}#${id}`;
     padding: 9px 18px;
   }
 
+  /* The offer page gets its own mark in the header, a pill with a border in the colours of the watercolour logo. */
+  .links a.fancy {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 15px 7px 11px;
+    border: 1.5px solid transparent;
+    border-radius: 999px;
+    background:
+      linear-gradient(var(--paper), var(--paper)) padding-box,
+      linear-gradient(100deg, #8a4fa3, #4a7ab8 55%, #5c9e4a) border-box;
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    transition: box-shadow 0.15s ease;
+  }
+
+  .links a.fancy:hover {
+    color: var(--ink);
+    box-shadow: 0 6px 18px rgba(138, 79, 163, 0.22);
+  }
+
+  .fancy-paren {
+    font-weight: 400;
+    color: var(--purple);
+  }
+
+  .fancy-hex {
+    width: 11px;
+    height: 12px;
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background: linear-gradient(160deg, #c06bb0, #4a7ab8 60%, #a9c53d);
+  }
+
   .links a.cta:hover {
     color: #fff;
   }
@@ -188,7 +223,7 @@ const a = (id: string) => `${homeHref}#${id}`;
     color: var(--purple);
   }
 
-  /* 1120 statt 900: seit dem Punkt "Agentic Engineering" brauchen Marke und Links in einer Zeile
+  /* 1120 statt 900: Marke, Links und der Pill für die fancy-Seite brauchen in einer Zeile
      etwa 1050px plus Seitenrand, darunter würde der Sprachumschalter abgeschnitten */
   @media (max-width: 1120px) {
     .menu-btn {
@@ -215,9 +250,16 @@ const a = (id: string) => `${homeHref}#${id}`;
       font-size: 16px;
     }
 
-    .links.open a {
+    /* Not the language links, the rule would stretch them out of the toggle. */
+    .links.open a:not(.lang-btn) {
       padding: 10px 0;
       width: 100%;
+    }
+
+    .links.open a.fancy {
+      width: auto;
+      padding: 8px 16px 8px 12px;
+      margin-top: 6px;
     }
 
     .links.open a.cta {

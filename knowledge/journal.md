@@ -75,3 +75,17 @@ Hero-Untertitel, Meta-Titel und Meta-Beschreibung nennen Forschungssoftware, dig
 ### Offen
 
 Fortunoff- und CROWN-Karte, Partnerliste, Teamrollen und Bios warten auf Fakten des Operators. Datum und Quellangabe im Patreon-Feed verfehlen weiterhin den Farbkontrast.
+
+## 2026-10-02 Startseite, zweite Runde
+
+### Ziel
+
+Die Startseite nach der Durchsicht vom 2026-10-02 kürzen, Belege bereinigen und die Angebotsseite im Kopf hervorheben.
+
+### Ergebnis
+
+Die Formate stehen direkt unter dem Angebot. Blog und Videos teilen sich den Abschnitt Neues, der Patreon-Strom entfällt samt seinen Komponenten und Daten, Patreon bleibt als Kasten bei den Formaten und im Footer. Das Menü heißt Angebot, Weiterbildung, Projekte, Team, Neues, dazu die Angebotsseite als Pill mit dem Namen fancy (research) tools und dem Farbverlauf des Aquarell-Logos. CROWN ist samt Bild und KHM-Logo entfernt, Fortunoff wegen der unbelegten Rolle ebenso. Neu sind M³GIM unter diesem Namen und Feministische AI Literacies mit Screenshot des Wissensnetzes. Jede Projektkarte nennt erst das Projekt, dann den Beitrag. Die Teamrolle lautet Gründer und Gesellschafter, der Firmenname in den Bios DHCraft. Die Forschungssoftware-Karte nennt Daten-Workflows, der Kontakt verweist auf die Abrechnung der Angebotsseite. Die Blogkarte ohne Bild zeigt das Aquarell-Logo statt einer leeren Fläche.
+
+### Offen
+
+Die Logoleiste enthält weiterhin Institutionen ohne belegten Auftrag. Die Ružake-gila-Karte nennt nur den Beitrag, weil eine Projektbeschreibung fehlt. Die Seiten von Feministische AI Literacies werden aus `docs/` ausgeliefert, der Wechsel auf `build/site/` ist im Projekt offen.

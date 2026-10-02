@@ -7,8 +7,6 @@ import Projects from './Projects.astro';
 import Partners from './Partners.astro';
 import Team from './Team.astro';
 import Formats from './excellence/Formats.astro';
-import Videos from './excellence/Videos.astro';
-import ChannelUpdates from './excellence/ChannelUpdates.astro';
 import BlogTeasers from './BlogTeasers.astro';
 import Contact from './Contact.astro';
 import Footer from './Footer.astro';
@@ -32,13 +30,11 @@ const { t } = getContent(lang);
     <main id="main">
       <Hero lang={lang} />
       <Services lang={lang} />
+      <Formats lang={lang} />
       <Projects lang={lang} />
       <Partners lang={lang} />
       <Team lang={lang} />
-      <Formats lang={lang} />
       <BlogTeasers lang={lang} />
-      <Videos lang={lang} />
-      <ChannelUpdates lang={lang} />
       <Contact lang={lang} />
     </main>
     <Footer lang={lang} />

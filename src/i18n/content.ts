@@ -20,7 +20,7 @@ export interface Project {
   c2: string;
   c3: string;
   /** Key für Screenshot in src/assets/projects/, null = Watercolor-Banner */
-  thumbKey: 'szd' | 'ruza' | 'depcha' | 'mhdbdb' | 'crown' | 'fortunoff' | 'm3gim' | null;
+  thumbKey: 'szd' | 'ruza' | 'depcha' | 'mhdbdb' | 'm3gim' | 'femprompt' | null;
 }
 
 export interface Partner {
@@ -55,9 +55,10 @@ const iconOrder = ['ai', 'consult', 'teach', 'web', 'data', 'partner'];
 const t = {
   de: {
     navServices: 'Angebot',
-    navAgentic: 'Agentic Engineering',
+    navAgentic: 'fancy (research) tools',
     navProjects: 'Projekte',
-    navWebinars: 'Excellence',
+    navWebinars: 'Weiterbildung',
+    navNews: 'Neues',
     navContact: 'Kontakt',
     heroTitle1: 'Digitales Handwerk aus der Forschung,',
     heroTitle2: 'für alle, die mit Wissen arbeiten.',
@@ -70,10 +71,11 @@ const t = {
     projectsMore: 'Mehr Projekte auf GitHub',
     partnersTitle: 'Institutionen, für die wir gearbeitet haben',
     teamTitle: 'Team',
-    blogTitle: 'Blog',
+    newsTitle: 'Neues',
     blogAll: 'Alle Beiträge',
+    videosAll: 'Alle Videos',
     contactTitle: 'Kontakt',
-    contactSub: 'Beschreiben Sie uns kurz Ihr Vorhaben, Ihre Daten und Ihren Budgetrahmen.',
+    contactSub: 'Beschreiben Sie uns kurz Ihr Vorhaben, Ihre Daten und Ihren Budgetrahmen. Wie wir Aufträge abrechnen, steht unter <a href="/fancy-research-tools/#kosten">fancy (research) tools</a>.',
     contactCta: 'Kontakt aufnehmen',
     contactPlace: 'Kainbach bei Graz, Österreich',
     footerPlace: 'Kainbach bei Graz',
@@ -90,9 +92,10 @@ const t = {
   },
   en: {
     navServices: 'Services',
-    navAgentic: 'Agentic Engineering',
+    navAgentic: 'fancy (research) tools',
     navProjects: 'Work',
-    navWebinars: 'Excellence',
+    navWebinars: 'Training',
+    navNews: 'News',
     navContact: 'Contact',
     heroTitle1: 'Digital craftsmanship from research,',
     heroTitle2: 'for everyone who works with knowledge.',
@@ -105,10 +108,11 @@ const t = {
     projectsMore: 'More projects on GitHub',
     partnersTitle: 'Institutions we have worked for',
     teamTitle: 'Team',
-    blogTitle: 'Blog',
+    newsTitle: 'News',
     blogAll: 'All posts',
+    videosAll: 'All videos',
     contactTitle: 'Contact',
-    contactSub: 'Briefly describe your project, your data and your budget.',
+    contactSub: 'Briefly describe your project, your data and your budget. How we bill our work is described under <a href="/en/fancy-research-tools/#kosten">fancy (research) tools</a>.',
     contactCta: 'Get in touch',
     contactPlace: 'Kainbach near Graz, Austria',
     footerPlace: 'Kainbach near Graz',
@@ -130,19 +134,19 @@ const servicesText = {
   de: [
     {
       title: 'KI-Weiterbildung',
-      text: 'Weiterbildung zu AI Literacies sowie zu <a href="https://www.youtube.com/@DigitalHumanitiesCraft" target="_blank" rel="noopener">Knowledge und Agentic Engineering</a> für Wissenschaft, Kultur und Wirtschaft, als Vortrag, Webinar, Workshop oder Beitrag zu mehrtägigen Schools.',
+      text: 'Weiterbildung zu AI Literacies sowie zu <a href="https://www.youtube.com/@DigitalHumanitiesCraft" target="_blank" rel="noopener">Knowledge und Agentic Engineering</a> für Wissenschaft, Kultur und Wirtschaft. Wir bieten sie als Vortrag, Webinar, Workshop oder als Beitrag zu mehrtägigen Schools an.',
     },
     {
       title: 'KI-Beratung und Agentic Engineering',
-      text: 'Beratung zu KI-Strategie und zum Einsatz generativer KI in Institutionen. Werkzeuge, Workflows und Wissensbasen entwickeln wir mit Coding-Agenten im Auftrag, gemeinsam mit Ihrem Team oder im Training, beschrieben unter <a href="/fancy-research-tools/">Agentic Engineering</a>.',
+      text: 'Beratung zum Einsatz generativer KI in Institutionen. Werkzeuge, Workflows und Wissensbasen entwickeln wir mit Coding-Agenten im Auftrag, gemeinsam mit Ihrem Team oder im Training, beschrieben unter <a href="/fancy-research-tools/">fancy (research) tools</a>.',
     },
     {
       title: 'Lehre, Schools und Curricula',
       text: 'Wir lehren an Universitäten in Österreich und Deutschland, unterrichten auf Winter- und Summer Schools und wirken an Curricula und Studiengangsgutachten mit.',
     },
     {
-      title: 'Forschungssoftware und digitale Editionen',
-      text: 'Web-Interfaces, Dashboards und digitale Editionen für Forschungsprojekte, nach Möglichkeit als Linked Open Data nachnutzbar. Für die Langzeitarchivierung von Forschungsdaten bieten wir das zertifizierte Repositorium <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a> an, über einen Rahmenvertrag mit dem <a href="https://digital-humanities.uni-graz.at/de/" target="_blank" rel="noopener">Institut für Digitale Geisteswissenschaften</a> der Universität Graz.',
+      title: 'Forschungssoftware, Daten-Workflows und digitale Editionen',
+      text: 'Web-Interfaces, Dashboards, digitale Editionen und Workflows für Forschungsdaten, nach Möglichkeit als Linked Open Data nachnutzbar. Für die Langzeitarchivierung bieten wir das zertifizierte Repositorium <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a> der Universität Graz an.',
     },
     {
       title: 'Datenmodellierung und KI-gestützte Erschließung',
@@ -156,19 +160,19 @@ const servicesText = {
   en: [
     {
       title: 'AI training',
-      text: 'Training in AI literacies and in <a href="https://www.youtube.com/@DigitalHumanitiesCraft" target="_blank" rel="noopener">knowledge and agentic engineering</a> for research, culture and business, as a talk, webinar, workshop or contribution to multi-day schools.',
+      text: 'Training in AI literacies and in <a href="https://www.youtube.com/@DigitalHumanitiesCraft" target="_blank" rel="noopener">knowledge and agentic engineering</a> for research, culture and business. We offer it as a talk, webinar, workshop or as a contribution to multi-day schools.',
     },
     {
       title: 'AI consulting and agentic engineering',
-      text: 'Consulting on AI strategy and on the use of generative AI in institutions. We develop tools, workflows and knowledge bases with coding agents on commission, together with your team or in training, as described under <a href="/en/fancy-research-tools/">Agentic Engineering</a>.',
+      text: 'Consulting on the use of generative AI in institutions. We develop tools, workflows and knowledge bases with coding agents on commission, together with your team or in training, as described under <a href="/en/fancy-research-tools/">fancy (research) tools</a>.',
     },
     {
       title: 'Teaching, schools and curricula',
       text: 'We teach at universities in Austria and Germany, teach at winter and summer schools and contribute to curricula and degree programme reviews.',
     },
     {
-      title: 'Research software and digital editions',
-      text: 'Web interfaces, dashboards and digital editions for research projects, reusable as Linked Open Data wherever possible. For the long-term archiving of research data we offer the certified repository <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>, through a framework agreement with the <a href="https://digital-humanities.uni-graz.at/en/" target="_blank" rel="noopener">Department of Digital Humanities</a> at the University of Graz.',
+      title: 'Research software, data workflows and digital editions',
+      text: 'Web interfaces, dashboards, digital editions and research data workflows, reusable as Linked Open Data wherever possible. For long-term archiving we offer the certified repository <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a> of the University of Graz.',
     },
     {
       title: 'Data modelling and AI-assisted digitisation',
@@ -181,33 +185,30 @@ const servicesText = {
   ],
 };
 
-// Finale 6er-Auswahl (Experte, 2026-07-08): Kriterium = belegt Angebotskarten + Sektor-/Ortsmix; Rotation jährlich, Strashun ersetzt Fortunoff bei Launch
-// 2026-09-25: Mapping Mobile Musicians (KUG) ersetzt DEPCHA (Experte); Strashun noch nicht live
+// 2026-10-02: CROWN und Fortunoff entfernt (Rolle nicht belegt), Feministische AI Literacies aufgenommen.
+// Jede Beschreibung nennt erst das Projekt, dann den Beitrag von DHCraft.
 const projectsBase = [
   { title: 'MHDBDB', url: 'https://dhcraft.org/mhdbdb-tei-only/', c1: '#85aede', c2: '#4a7ab8', c3: '#a9c53d', thumbKey: 'mhdbdb' as const },
   { title: 'Stefan Zweig Digital', url: 'https://gams.uni-graz.at/context:szd', c1: '#8a4fa3', c2: '#c06bb0', c3: '#85aede', thumbKey: 'szd' as const },
-  { title: 'Fortunoff Video Archive', url: 'https://fortunoff.library.yale.edu/', c1: '#5c9e4a', c2: '#a9c53d', c3: '#85aede', thumbKey: 'fortunoff' as const },
-  { title: 'CROWN', url: 'https://www.projekt-reichskrone.at', c1: '#f2b95c', c2: '#e08a2a', c3: '#c06bb0', thumbKey: 'crown' as const },
+  { title: 'M³GIM', url: 'https://dhcraft.org/m3gim/', c1: '#4a7ab8', c2: '#85aede', c3: '#5c9e4a', thumbKey: 'm3gim' as const },
+  { title: 'Feministische AI Literacies', url: 'https://chpollin.github.io/FemPrompt_SozArb/', c1: '#5c9e4a', c2: '#a9c53d', c3: '#85aede', thumbKey: 'femprompt' as const },
   { title: 'Ružake gila', url: 'https://ruzakegila.mdw.ac.at/', c1: '#c06bb0', c2: '#8a4fa3', c3: '#f2b95c', thumbKey: 'ruza' as const },
-  { title: 'Mapping Mobile Musicians', url: 'https://dhcraft.org/m3gim/', c1: '#4a7ab8', c2: '#85aede', c3: '#5c9e4a', thumbKey: 'm3gim' as const },
 ];
 
 const projectsText = {
   de: [
-    { partner: 'Universität Salzburg', desc: 'Die Mittelhochdeutsche Begriffsdatenbank auf neuer Grundlage, mit TEI-Texten, Suche über Lemmata und das Begriffssystem und offener Dateninfrastruktur.' },
-    { partner: 'Literaturarchiv Salzburg', desc: 'Digitales Archiv und laufende Erweiterung der Plattform.' },
-    { partner: 'Yale University', desc: 'Über 4.400 Video-Zeugnisse von Überlebenden und Zeitzeugen des Holocaust, gesammelt seit 1979. Consulting, Support und Weiterentwicklung der DH-Tools des Archivs.' },
-    { partner: 'Kunsthistorisches Museum Wien', desc: 'Datenmodellierung und Webentwicklung zur Erforschung der Wiener Reichskrone.' },
-    { partner: 'mdw Wien, Music and Minorities Research Center', desc: 'Eigenes Theme für Omeka S, Beratung und Betreuung.' },
-    { partner: 'Kunstuniversität Graz', desc: 'Pilotstudie zu Mobilität und Wissensproduktion der Mezzosopranistin Ira Malaniuk, mit Nachlassdokumenten als Linked Data, in denen jede Angabe bis zur Quelle nachvollziehbar ist.' },
+    { partner: 'Universität Salzburg', desc: 'Die Mittelhochdeutsche Begriffsdatenbank erschließt mittelhochdeutsche Texte über Lemmata und ein Begriffssystem. Wir haben sie auf eine neue Grundlage mit TEI-Texten und offener Dateninfrastruktur gestellt.' },
+    { partner: 'Literaturarchiv Salzburg', desc: 'Stefan Zweig Digital führt den weltweit verstreuten Nachlass Stefan Zweigs digital zusammen. Wir entwickeln das digitale Archiv und erweitern die Plattform laufend.' },
+    { partner: 'Kunstuniversität Graz', desc: 'Mapping Mobile Musicians ist eine Pilotstudie zu Mobilität und Wissensproduktion der Mezzosopranistin Ira Malaniuk. Wir haben ihren Teilnachlass als Linked Data modelliert und die öffentliche Forschungsvorschau gebaut, in der jede Angabe bis zur Quelle nachvollziehbar ist.' },
+    { partner: 'Universität Graz, Elisabeth List Fellowship', desc: 'Ein Literaturreview zum verantwortungsvollen Einsatz von Sprachmodellen in der Sozialen Arbeit. Wir haben den Workflow gebaut, in dem Beiträge von KI-Agenten und Entscheidungen der Fachleute bis zu ihren Quellen nachvollziehbar bleiben.' },
+    { partner: 'mdw Wien, Music and Minorities Research Center', desc: 'Für das Projekt haben wir ein eigenes Theme für Omeka S entwickelt und begleiten es mit Beratung und Betreuung.' },
   ],
   en: [
-    { partner: 'University of Salzburg', desc: 'The Middle High German Conceptual Database on a new foundation, with TEI texts, search by lemma and by the conceptual system, and an open data infrastructure.' },
-    { partner: 'Literature Archive Salzburg', desc: 'Digital archive and ongoing expansion of the platform.' },
-    { partner: 'Yale University', desc: "More than 4,400 video testimonies of Holocaust survivors and witnesses, recorded since 1979. Consulting, support and further development of the archive's DH tools." },
-    { partner: 'Kunsthistorisches Museum Wien', desc: 'Data modeling and web development for the study of the Vienna Imperial Crown.' },
-    { partner: 'mdw Vienna, Music and Minorities Research Center', desc: 'Custom Omeka S theme, consulting and support.' },
-    { partner: 'University of Music and Performing Arts Graz', desc: 'Pilot study on the mobility and knowledge production of mezzo-soprano Ira Malaniuk, with estate documents as linked data in which every statement can be traced to its source.' },
+    { partner: 'University of Salzburg', desc: 'The Middle High German Conceptual Database opens up Middle High German texts by lemma and by a conceptual system. We put it on a new foundation with TEI texts and an open data infrastructure.' },
+    { partner: 'Literature Archive Salzburg', desc: "Stefan Zweig Digital brings together Stefan Zweig's papers, scattered across the world, in one digital collection. We develop the digital archive and keep extending the platform." },
+    { partner: 'University of Music and Performing Arts Graz', desc: 'Mapping Mobile Musicians is a pilot study on the mobility and knowledge production of mezzo-soprano Ira Malaniuk. We modelled her papers as linked data and built the public research preview in which every statement can be traced to its source.' },
+    { partner: 'University of Graz, Elisabeth List Fellowship', desc: 'A literature review on the responsible use of language models in social work. We built the workflow in which contributions of AI agents and decisions of the domain experts remain traceable to their sources.' },
+    { partner: 'mdw Vienna, Music and Minorities Research Center', desc: 'We developed a custom Omeka S theme for the project and support it with consulting and maintenance.' },
   ],
 };
 
@@ -224,7 +225,6 @@ const partnersData = {
     { name: 'mdw (Universität für Musik und darstellende Kunst Wien)', logoKey: 'mdw' },
     { name: 'Veterinärmedizinische Universität Wien', logoKey: 'vetmeduni' },
     { name: 'Yale University', logoKey: 'yale' },
-    { name: 'Kunsthistorisches Museum Wien', logoKey: 'khm' },
     { name: 'Österreichische Akademie der Wissenschaften', logoKey: 'oeaw' },
     { name: 'Zentralbibliothek Zürich', logoKey: 'zbz' },
     { name: 'Literaturarchiv Salzburg', logoKey: 'las' },
@@ -255,7 +255,6 @@ const partnersData = {
     { name: 'mdw (University of Music and Performing Arts Vienna)', logoKey: 'mdw' },
     { name: 'University of Veterinary Medicine Vienna', logoKey: 'vetmeduni' },
     { name: 'Yale University', logoKey: 'yale' },
-    { name: 'Kunsthistorisches Museum Wien', logoKey: 'khm' },
     { name: 'Austrian Academy of Sciences', logoKey: 'oeaw' },
     { name: 'Zentralbibliothek Zürich', logoKey: 'zbz' },
     { name: 'Literature Archive Salzburg', logoKey: 'las' },
@@ -280,7 +279,6 @@ const partnersData = {
 const teamBase = [
   {
     name: 'Christian Steiner',
-    role: 'Founder / CEO',
     photoKey: 'christian' as const,
     c1: '#a9c53d',
     c2: '#5c9e4a',
@@ -290,7 +288,6 @@ const teamBase = [
   },
   {
     name: 'Dr. Christopher Pollin',
-    role: 'Founder / CEO',
     photoKey: 'christopher' as const,
     c1: '#c06bb0',
     c2: '#8a4fa3',
@@ -300,14 +297,16 @@ const teamBase = [
   },
 ];
 
+const teamRole = { de: 'Gründer und Gesellschafter', en: 'Co-founder and partner' };
+
 const teamBio = {
   de: [
-    'Masterabschluss in Übersetzen/Dolmetschen und Digital Humanities. Seit 2012 am Institut für Digitale Geisteswissenschaften der Universität Graz, nun vollständig für DH Craft tätig.',
-    'Doktortitel in Digital Humanities, Masterabschluss in Geschichte. Seit 2016 am Institut für Digitale Geisteswissenschaften der Universität Graz, nun vollständig für DH Craft tätig.',
+    'Masterabschluss in Übersetzen/Dolmetschen und Digital Humanities. Seit 2012 am Institut für Digitale Geisteswissenschaften der Universität Graz, nun vollständig für DHCraft tätig.',
+    'Promotion in Digital Humanities, Masterabschluss in Geschichte. Seit 2016 am Institut für Digitale Geisteswissenschaften der Universität Graz, nun vollständig für DHCraft tätig.',
   ],
   en: [
-    "Master's degree in translation/interpreting and Digital Humanities. At the Department of Digital Humanities, University of Graz since 2012, now fully dedicated to DH Craft.",
-    "Doctoral degree in Digital Humanities, master's degree in History. At the Department of Digital Humanities, University of Graz since 2016, now fully dedicated to DH Craft.",
+    "Master's degree in translation/interpreting and Digital Humanities. At the Department of Digital Humanities, University of Graz since 2012, now fully dedicated to DHCraft.",
+    "Doctoral degree in Digital Humanities, master's degree in History. At the Department of Digital Humanities, University of Graz since 2016, now fully dedicated to DHCraft.",
   ],
 };
 
@@ -328,6 +327,7 @@ export function getContent(lang: Lang) {
 
   const team: TeamMember[] = teamBase.map((m, i) => ({
     ...m,
+    role: teamRole[lang],
     bio: teamBio[lang][i],
   }));
 

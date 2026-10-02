@@ -2,6 +2,9 @@
 import type { Lang } from '../i18n/content';
 import { getContent } from '../i18n/content';
 import { getBlogContent } from '../i18n/blog';
+import { getChannelVideos } from '../lib/videos';
+import { Image } from 'astro:assets';
+import watercolor from '../assets/dhcraft_logo_watercolor_transparent.png';
 
 interface Props {
   lang: Lang;
@@ -11,24 +14,33 @@ const { lang } = Astro.props;
 const { t } = getContent(lang);
 const blogUrl = lang === 'de' ? '/excellence/blog/' : '/en/excellence/blog/';
 
-// Nur die 3 neuesten Artikel als Teaser (Videos haben ihre eigene Sektion); Rest über den Button
+// Blog und Videos teilen sich seit 2026-10-02 einen Abschnitt, je die drei neuesten Einträge.
 const { posts } = getBlogContent(lang);
 const teaserPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
 const isExternal = (u: string) => /^https?:/.test(u);
+const videos = (await getChannelVideos()).sort((a, b) => b.published.localeCompare(a.published)).slice(0, 3);
+const allVideosUrl = lang === 'de' ? '/excellence/blog/#videos' : '/en/excellence/blog/#videos';
+const fmtDate = (iso: string) => {
+  const [y, m, d] = iso.slice(0, 10).split('-');
+  return `${d}.${m}.${y}`;
+};
 ---
 
 <section id="blog" class="blog">
   <div class="wrap">
     <div class="head">
-      <h2>{t.blogTitle}</h2>
+      <h2>{t.newsTitle}</h2>
     </div>
     <div class="grid">
       {
         teaserPosts.map((b) => (
           <a href={b.url} class="card" target={isExternal(b.url) ? '_blank' : undefined} rel={isExternal(b.url) ? 'noopener' : undefined}>
             <div class="banner">
-              {b.thumb ? <img src={b.thumb} alt="" loading="lazy" class="thumb" /> : null}
-              <div class="hex banner-hex" aria-hidden="true" />
+              {b.thumb ? (
+                <img src={b.thumb} alt="" loading="lazy" class="thumb" />
+              ) : (
+                <Image src={watercolor} alt="" width={88} densities={[1, 2]} class="placeholder" />
+              )}
             </div>
             <div class="body">
               <h3>{b.title}</h3>
@@ -37,8 +49,28 @@ const isExternal = (u: string) => /^https?:/.test(u);
         ))
       }
     </div>
+    <div class="grid videos">
+      {
+        videos.map((v) => (
+          <a href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noopener" class="card">
+            <div class="banner video">
+              <img src={`https://i.ytimg.com/vi/${v.id}/mqdefault.jpg`} alt="" loading="lazy" class="thumb" />
+              <span class="play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z" /></svg>
+              </span>
+            </div>
+            <div class="body">
+              <h3>{v.title}</h3>
+              <p class="date">{fmtDate(v.published)}</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
     <div class="more">
       <a href={blogUrl} class="btn btn-outline">{t.blogAll} →</a>
+      <a href={allVideosUrl} class="btn btn-outline">{t.videosAll} →</a>
+      <a href="https://www.youtube.com/@DigitalHumanitiesCraft" target="_blank" rel="noopener" class="btn btn-outline">YouTube</a>
     </div>
   </div>
 </section>
@@ -102,13 +134,52 @@ const isExternal = (u: string) => /^https?:/.test(u);
     object-position: top center;
   }
 
-  .banner-hex {
+  .placeholder {
     position: absolute;
-    right: 22px;
-    bottom: -15px;
-    width: 28px;
-    height: 31px;
-    background: var(--ink);
+    inset: 0;
+    margin: auto;
+    width: 88px;
+    height: auto;
+    opacity: 0.85;
+  }
+
+  .videos {
+    margin-top: 24px;
+  }
+
+  .banner.video {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background: var(--ink-deep);
+  }
+
+  .banner.video .thumb {
+    object-position: center;
+  }
+
+  .play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(22, 29, 56, 0.82);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .play svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+  }
+
+  .date {
+    font-size: 13.5px;
+    color: rgba(30, 39, 73, 0.7);
+    margin: 6px 0 0;
   }
 
   .body {
@@ -127,7 +198,10 @@ const isExternal = (u: string) => /^https?:/.test(u);
 
   .more {
     margin-top: 40px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 
   .more .btn {
