@@ -201,14 +201,14 @@ const projectsText = {
     { partner: 'Literaturarchiv Salzburg', desc: 'Stefan Zweig Digital führt den weltweit verstreuten Nachlass Stefan Zweigs digital zusammen. Wir entwickeln das digitale Archiv und erweitern die Plattform laufend.' },
     { partner: 'Kunstuniversität Graz', desc: 'Mapping Mobile Musicians ist eine Pilotstudie zu Mobilität und Wissensproduktion der Mezzosopranistin Ira Malaniuk. Wir haben ihren Teilnachlass als Linked Data modelliert und die öffentliche Forschungsvorschau gebaut, in der jede Angabe bis zur Quelle nachvollziehbar ist.' },
     { partner: 'Universität Graz, Elisabeth List Fellowship', desc: 'Ein Literaturreview zum verantwortungsvollen Einsatz von Sprachmodellen in der Sozialen Arbeit. Wir haben den Workflow gebaut, in dem Beiträge von KI-Agenten und Entscheidungen der Fachleute bis zu ihren Quellen nachvollziehbar bleiben.' },
-    { partner: 'mdw Wien, Music and Minorities Research Center', desc: 'Für das Projekt haben wir ein eigenes Theme für Omeka S entwickelt und begleiten es mit Beratung und Betreuung.' },
+    { partner: 'mdw Wien, Music and Minorities Research Center', desc: 'Ružake gila ist eine digitale Ausstellung zum musikalischen Erbe der Roma-Sängerin Ruža Nikolić-Lakatos. Wir haben dafür ein eigenes Theme für Omeka S entwickelt und begleiten das Projekt mit Beratung und Betreuung.' },
   ],
   en: [
     { partner: 'University of Salzburg', desc: 'The Middle High German Conceptual Database opens up Middle High German texts by lemma and by a conceptual system. We put it on a new foundation with TEI texts and an open data infrastructure.' },
     { partner: 'Literature Archive Salzburg', desc: "Stefan Zweig Digital brings together Stefan Zweig's papers, scattered across the world, in one digital collection. We develop the digital archive and keep extending the platform." },
     { partner: 'University of Music and Performing Arts Graz', desc: 'Mapping Mobile Musicians is a pilot study on the mobility and knowledge production of mezzo-soprano Ira Malaniuk. We modelled her papers as linked data and built the public research preview in which every statement can be traced to its source.' },
     { partner: 'University of Graz, Elisabeth List Fellowship', desc: 'A literature review on the responsible use of language models in social work. We built the workflow in which contributions of AI agents and decisions of the domain experts remain traceable to their sources.' },
-    { partner: 'mdw Vienna, Music and Minorities Research Center', desc: 'We developed a custom Omeka S theme for the project and support it with consulting and maintenance.' },
+    { partner: 'mdw Vienna, Music and Minorities Research Center', desc: 'Ružake gila is a digital exhibition on the musical heritage of the Roma singer Ruža Nikolić-Lakatos. We developed a custom Omeka S theme for it and support the project with consulting and maintenance.' },
   ],
 };
 
