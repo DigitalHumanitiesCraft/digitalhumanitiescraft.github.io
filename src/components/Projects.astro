@@ -4,7 +4,6 @@ import type { Lang } from '../i18n/content';
 import { getContent } from '../i18n/content';
 import thumbSzd from '../assets/projects/szd.jpg';
 import thumbRuza from '../assets/projects/ruza.webp';
-import thumbDepcha from '../assets/projects/depcha.jpg';
 import thumbMhdbdb from '../assets/projects/mhdbdb.png';
 import thumbM3gim from '../assets/projects/m3gim.jpg';
 import thumbFemprompt from '../assets/projects/femprompt.jpg';
@@ -15,7 +14,7 @@ interface Props {
 
 const { lang } = Astro.props;
 const { t, projects } = getContent(lang);
-const thumbs = { szd: thumbSzd, ruza: thumbRuza, depcha: thumbDepcha, mhdbdb: thumbMhdbdb, m3gim: thumbM3gim, femprompt: thumbFemprompt };
+const thumbs = { szd: thumbSzd, ruza: thumbRuza, mhdbdb: thumbMhdbdb, m3gim: thumbM3gim, femprompt: thumbFemprompt };
 ---
 
 <section id="projects" class="projects">
@@ -28,9 +27,7 @@ const thumbs = { szd: thumbSzd, ruza: thumbRuza, depcha: thumbDepcha, mhdbdb: th
         projects.map((p) => (
           <a href={p.url} target="_blank" rel="noopener" class="card">
             <div class="banner">
-              {p.thumbKey && (
-                <Image src={thumbs[p.thumbKey]} alt={`Screenshot: ${p.title}`} width={760} class="thumb" />
-              )}
+              <Image src={thumbs[p.thumbKey]} alt="" width={760} class="thumb" />
               <div class="hex banner-hex" aria-hidden="true" />
             </div>
             <div class="body">
@@ -65,13 +62,6 @@ const thumbs = { szd: thumbSzd, ruza: thumbRuza, depcha: thumbDepcha, mhdbdb: th
     line-height: 1.12;
     letter-spacing: -0.02em;
     font-weight: 700;
-    margin: 0;
-  }
-
-  .sub {
-    font-size: 16px;
-    color: rgba(30, 39, 73, 0.65);
-    max-width: 380px;
     margin: 0;
   }
 

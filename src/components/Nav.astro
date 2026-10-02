@@ -13,6 +13,8 @@ interface Props {
 const { lang, altPath, homeHref = '' } = Astro.props;
 const { t } = getContent(lang);
 const a = (id: string) => `${homeHref}#${id}`;
+// Das Label bleibt in content.ts, nur der Klammerteil bekommt im Pill eine eigene Auszeichnung.
+const [fancyHead, fancyTail] = t.navFancy.split('(research)');
 ---
 
 <header class="nav">
@@ -21,18 +23,18 @@ const a = (id: string) => `${homeHref}#${id}`;
       <img src={logo.src} alt="DHCraft" width="38" height="38" />
       <span class="brand-name">Digital Humanities <span class="accent">Craft</span></span>
     </a>
-    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-menu" aria-label="Menü">
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-menu" aria-label={t.navMenu}>
       <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
       <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
     </button>
-    <nav class="links" id="site-menu" aria-label="Hauptnavigation">
+    <nav class="links" id="site-menu" aria-label={t.navMain}>
       <a href={a('services')}>{t.navServices}</a>
       <a href={a('excellence')}>{t.navWebinars}</a>
       <a href={a('projects')}>{t.navProjects}</a>
       <a href={a('team')}>Team</a>
       <a href={a('blog')}>{t.navNews}</a>
       <a href={lang === 'de' ? '/fancy-research-tools/' : '/en/fancy-research-tools/'} class="fancy">
-        <span class="fancy-hex" aria-hidden="true"></span><span>fancy <span class="fancy-paren">(research)</span> tools</span>
+        <span class="hex fancy-hex" aria-hidden="true"></span><span>{fancyHead}<span class="fancy-paren">(research)</span>{fancyTail}</span>
       </a>
       <a href={a('contact')} class="btn btn-solid cta">{t.navContact}</a>
       <div class="lang-toggle">
@@ -169,7 +171,7 @@ const a = (id: string) => `${homeHref}#${id}`;
     border-radius: 999px;
     background:
       linear-gradient(var(--paper), var(--paper)) padding-box,
-      linear-gradient(100deg, #8a4fa3, #4a7ab8 55%, #5c9e4a) border-box;
+      linear-gradient(100deg, var(--purple), var(--blue-deep) 55%, var(--green)) border-box;
     font-family: var(--font-display);
     font-weight: 600;
     letter-spacing: -0.01em;
@@ -189,8 +191,7 @@ const a = (id: string) => `${homeHref}#${id}`;
   .fancy-hex {
     width: 11px;
     height: 12px;
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-    background: linear-gradient(160deg, #c06bb0, #4a7ab8 60%, #a9c53d);
+    background: linear-gradient(160deg, var(--pink), var(--blue-deep) 60%, var(--lime));
   }
 
   .links a.cta:hover {

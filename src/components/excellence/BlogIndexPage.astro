@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import Nav from '../Nav.astro';
 import Footer from '../Footer.astro';
 import type { Lang } from '../../i18n/content';
-import { getBlogContent } from '../../i18n/blog';
+import { getBlogContent, isExternal, fmtDate } from '../../i18n/blog';
 import { getChannelVideos } from '../../lib/videos';
 
 interface Props {
@@ -19,12 +19,6 @@ const homeHref = lang === 'de' ? '/' : '/en/';
 // Artikel zuerst, Videos als eigener Abschnitt darunter (Experte, 2026-07-08); je absteigend nach Datum
 const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
 const videos = (await getChannelVideos()).sort((a, b) => b.published.localeCompare(a.published));
-const isExternal = (u: string) => /^https?:/.test(u);
-
-const fmtDate = (iso: string) => {
-  const [y, m, d] = iso.slice(0, 10).split('-');
-  return `${d}.${m}.${y}`;
-};
 ---
 
 <Base lang={lang} title={t.metaTitle} description={t.metaDescription} path={path} altPath={altPath}>

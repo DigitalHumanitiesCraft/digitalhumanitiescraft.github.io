@@ -33,7 +33,7 @@ ${(post.data.dublin_core?.subject ?? []).map((s) => `    <category term="${esc(s
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="de">
   <generator>Astro</generator>
   <link href="${base}/excellence/feed.xml" rel="self" type="application/atom+xml"/>
-  <link href="${base}/excellence/" rel="alternate" type="text/html"/>
+  <link href="${base}/excellence/blog/" rel="alternate" type="text/html"/>
   <updated>${posts[0]?.data.date.toISOString() ?? new Date().toISOString()}</updated>
   <id>${base}/excellence/feed.xml</id>
   <title>Digital Humanities Craft</title>

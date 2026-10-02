@@ -1,4 +1,4 @@
-// Kanal-Videos zur Buildzeit aus dem YouTube-RSS-Feed (kein API-Key nötig, siehe implementation.md).
+// Kanal-Videos zur Buildzeit aus dem YouTube-RSS-Feed (kein API-Key nötig).
 // Robustheit (2026-07-09, nach realem Feed-Ausfall mit 404): zwei Feed-Varianten mit Retries,
 // bei Erfolg wird videos-cache.json aktualisiert, bei Ausfall springt der Cache ein.
 // Grenze: Der Feed liefert nur die ~15 neuesten Videos.

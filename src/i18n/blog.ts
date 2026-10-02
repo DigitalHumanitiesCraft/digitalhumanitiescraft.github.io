@@ -20,8 +20,6 @@ export interface BlogPost {
 const t = {
   de: {
     title: 'Alle Beiträge.',
-    sub: 'Blogartikel zum Lesen, Videos zum Nachschauen: Promptotyping, generative KI und Digital Humanities.',
-    backToExcellence: '← Zurück zu Excellence',
     jumpVideos: 'Zu den Videos ↓',
     sectionPosts: 'Artikel',
     sectionVideos: 'Videos',
@@ -32,8 +30,6 @@ const t = {
   },
   en: {
     title: 'All posts.',
-    sub: 'Blog articles for reading, videos for watching: Promptotyping, generative AI and Digital Humanities.',
-    backToExcellence: '← Back to Excellence',
     jumpVideos: 'Jump to videos ↓',
     sectionPosts: 'Articles',
     sectionVideos: 'Videos',
@@ -233,11 +229,18 @@ const postsText = {
   ],
 };
 
+export const isExternal = (u: string) => /^https?:/.test(u);
+
+/** ISO-Datum als dd.mm.yyyy, ohne Date-Objekt, damit keine Zeitzone den Tag verschiebt */
+export const fmtDate = (iso: string) => {
+  const [y, m, d] = iso.slice(0, 10).split('-');
+  return `${d}.${m}.${y}`;
+};
+
 export function getBlogContent(lang: Lang) {
   // Interne Blog-Posts unter /en verlinken, damit man aus dem EN-Index in der EN-Chrome-
   // Variante des Beitrags landet (die Detailseite hat pro Sprache eine Route). Externe
   // Links (absolute URLs) bleiben unverändert.
-  const isExternal = (u: string) => /^https?:/.test(u);
   const posts: BlogPost[] = postsBase.map((p, i) => ({
     ...p,
     ...postsText[lang][i],

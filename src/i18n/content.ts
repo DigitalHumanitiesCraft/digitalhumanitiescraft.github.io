@@ -1,6 +1,3 @@
-// Inhalte 1:1 aus dem Design "DHCraft Website.dc.html" (Claude Design, Projekt "Watercolor Website Design").
-// Die DE/EN-State-Umschaltung des Designs wird hier zu echten Sprachrouten (/ und /en/).
-
 export type Lang = 'de' | 'en';
 
 export interface Service {
@@ -16,11 +13,8 @@ export interface Project {
   partner: string;
   desc: string;
   url: string;
-  c1: string;
-  c2: string;
-  c3: string;
-  /** Key für Screenshot in src/assets/projects/, null = Watercolor-Banner */
-  thumbKey: 'szd' | 'ruza' | 'depcha' | 'mhdbdb' | 'm3gim' | 'femprompt' | null;
+  /** Key für Screenshot in src/assets/projects/ */
+  thumbKey: 'szd' | 'ruza' | 'mhdbdb' | 'm3gim' | 'femprompt';
 }
 
 export interface Partner {
@@ -33,8 +27,6 @@ export interface TeamMember {
   name: string;
   role: string;
   photoKey: 'christian' | 'christopher';
-  c1: string;
-  c2: string;
   mail: string;
   link: string;
   linkLabel: string;
@@ -44,7 +36,6 @@ export interface TeamMember {
 const icons: Record<string, string> = {
   web: 'M8.5 6.5L3 12l5.5 5.5 M15.5 6.5L21 12l-5.5 5.5',
   data: 'M4 8h13 M17 8l-3-3 M17 8l-3 3 M20 16H7 M7 16l3-3 M7 16l3 3',
-  chart: 'M5 20v-6 M12 20V6 M19 20v-10 M3 20h18',
   ai: 'M12 3l1.9 5.6L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.4L12 3 M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16',
   teach: 'M12 4L2 9l10 5 10-5-10-5 M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5 M22 9v5',
   consult: 'M21 11.5a8 8 0 0 1-8.5 8L7 21l1.2-3.4A8 8 0 1 1 21 11.5 M8.5 11.5h.01 M12.5 11.5h.01 M16.5 11.5h.01',
@@ -55,11 +46,13 @@ const iconOrder = ['ai', 'consult', 'teach', 'web', 'data', 'partner'];
 const t = {
   de: {
     navServices: 'Angebot',
-    navAgentic: 'fancy (research) tools',
+    navFancy: 'fancy (research) tools',
     navProjects: 'Projekte',
     navWebinars: 'Weiterbildung',
     navNews: 'Neues',
     navContact: 'Kontakt',
+    navMenu: 'Menü',
+    navMain: 'Hauptnavigation',
     heroTitle1: 'Digitales Handwerk aus der Forschung,',
     heroTitle2: 'für alle, die mit Wissen arbeiten.',
     heroSub:
@@ -92,11 +85,13 @@ const t = {
   },
   en: {
     navServices: 'Services',
-    navAgentic: 'fancy (research) tools',
+    navFancy: 'fancy (research) tools',
     navProjects: 'Work',
     navWebinars: 'Training',
     navNews: 'News',
     navContact: 'Contact',
+    navMenu: 'Menu',
+    navMain: 'Main navigation',
     heroTitle1: 'Digital craftsmanship from research,',
     heroTitle2: 'for everyone who works with knowledge.',
     heroSub:
@@ -129,7 +124,7 @@ const t = {
   },
 };
 
-// Neuzuschnitt 2026-07-08 auf Basis geschaeftskontext.md: Karten 1 bis 3 = Säule Excellence, 4 bis 6 = Säule Entwicklung
+// Die Reihenfolge trägt die Farbcodierung in getContent, Karten 1 bis 3 Weiterbildung und Beratung, 4 bis 6 Entwicklung.
 const servicesText = {
   de: [
     {
@@ -188,11 +183,11 @@ const servicesText = {
 // 2026-10-02: CROWN und Fortunoff entfernt (Rolle nicht belegt), Feministische AI Literacies aufgenommen.
 // Jede Beschreibung nennt erst das Projekt, dann den Beitrag von DHCraft.
 const projectsBase = [
-  { title: 'MHDBDB', url: 'https://dhcraft.org/mhdbdb-tei-only/', c1: '#85aede', c2: '#4a7ab8', c3: '#a9c53d', thumbKey: 'mhdbdb' as const },
-  { title: 'Stefan Zweig Digital', url: 'https://gams.uni-graz.at/context:szd', c1: '#8a4fa3', c2: '#c06bb0', c3: '#85aede', thumbKey: 'szd' as const },
-  { title: 'M³GIM', url: 'https://dhcraft.org/m3gim/', c1: '#4a7ab8', c2: '#85aede', c3: '#5c9e4a', thumbKey: 'm3gim' as const },
-  { title: 'Feministische AI Literacies', url: 'https://chpollin.github.io/FemPrompt_SozArb/', c1: '#5c9e4a', c2: '#a9c53d', c3: '#85aede', thumbKey: 'femprompt' as const },
-  { title: 'Ružake gila', url: 'https://ruzakegila.mdw.ac.at/', c1: '#c06bb0', c2: '#8a4fa3', c3: '#f2b95c', thumbKey: 'ruza' as const },
+  { title: 'MHDBDB', url: 'https://dhcraft.org/mhdbdb-tei-only/', thumbKey: 'mhdbdb' as const },
+  { title: 'Stefan Zweig Digital', url: 'https://gams.uni-graz.at/context:szd', thumbKey: 'szd' as const },
+  { title: 'M³GIM', url: 'https://dhcraft.org/m3gim/', thumbKey: 'm3gim' as const },
+  { title: 'Feministische AI Literacies', url: 'https://chpollin.github.io/FemPrompt_SozArb/', thumbKey: 'femprompt' as const },
+  { title: 'Ružake gila', url: 'https://ruzakegila.mdw.ac.at/', thumbKey: 'ruza' as const },
 ];
 
 const projectsText = {
@@ -260,8 +255,6 @@ const teamBase = [
   {
     name: 'Christian Steiner',
     photoKey: 'christian' as const,
-    c1: '#a9c53d',
-    c2: '#5c9e4a',
     mail: 'mailto:christian.steiner@dhcraft.org',
     link: 'https://chsteiner.github.io/',
     linkLabel: 'chsteiner.github.io',
@@ -269,8 +262,6 @@ const teamBase = [
   {
     name: 'Dr. Christopher Pollin',
     photoKey: 'christopher' as const,
-    c1: '#c06bb0',
-    c2: '#8a4fa3',
     mail: 'mailto:christopher.pollin@dhcraft.org',
     link: 'https://chpollin.github.io/',
     linkLabel: 'chpollin.github.io',
@@ -291,13 +282,13 @@ const teamBio = {
   ],
 };
 
-// Blog-Teaser der Startseite kommen aus src/i18n/blog.ts + Kanal-RSS (2 neueste Artikel + neuestes Video)
+// Blog-Teaser der Startseite kommen aus src/i18n/blog.ts und dem Kanal-RSS (neueste Artikel und Videos, siehe BlogTeasers.astro)
 
 export function getContent(lang: Lang) {
   const services: Service[] = servicesText[lang].map((s, i) => ({
     ...s,
     icon: icons[iconOrder[i]],
-    // Zwei Säulen als Navy/Violett codiert (Farbreduktion 2026-07-09), das Säulen-Label entfällt seit 2026-10-02
+    // Karten 1 bis 3 (Weiterbildung und Beratung) violett, 4 bis 6 (Entwicklung) navy
     iconColor: i < 3 ? '#8a4fa3' : '#1e2749',
   }));
 

@@ -1,5 +1,4 @@
-// Inhalte aus dem Design "Excellence.dc.html" (Claude Design, Projekt "Watercolor Website Design").
-// Textkonventionen angewandt (design.md): keine Gedankenstriche, "Context Engineering" statt "Prompt Engineering".
+// Textkonventionen: keine Gedankenstriche, "Context Engineering" statt "Prompt Engineering".
 // Die Videos der Startseite kommen zur Buildzeit aus dem Kanal-RSS (src/lib/videos.ts), nicht aus dieser Datei.
 
 import type { Lang } from './content';
@@ -7,7 +6,6 @@ import type { Lang } from './content';
 export interface Format {
   title: string;
   duration: string;
-  color: string;
   text: string;
 }
 
@@ -41,25 +39,21 @@ const formatsData = {
     {
       title: 'Webinar',
       duration: 'bis 2 Stunden',
-      color: '#85aede',
       text: 'Einführung in ein Thema mit Beispielen aus der Praxis.',
     },
     {
       title: 'Workshop',
       duration: '3 bis 3,5 Stunden',
-      color: '#5c9e4a',
       text: 'Vortrag und angeleitete Übungen, in denen die Teilnehmenden die Verfahren selbst anwenden.',
     },
     {
       title: 'Ganztägig',
       duration: '1 Tag',
-      color: '#e39a3b',
       text: 'Arbeit an eigenen Daten mit Beratung vor Ort.',
     },
     {
       title: 'Mehrtägig und Beratung',
       duration: 'nach Vereinbarung',
-      color: '#8a4fa3',
       text: 'Mehrtägige Workshops und individuelle Beratung.',
     },
   ],
@@ -67,25 +61,21 @@ const formatsData = {
     {
       title: 'Webinar',
       duration: 'up to 2 hours',
-      color: '#85aede',
       text: 'Introduction to a topic with practical examples.',
     },
     {
       title: 'Workshop',
       duration: '3 to 3.5 hours',
-      color: '#5c9e4a',
       text: 'Talk and guided exercises in which participants apply the methods themselves.',
     },
     {
       title: 'Full day',
       duration: '1 day',
-      color: '#e39a3b',
       text: 'Work on your own data with on-site guidance.',
     },
     {
       title: 'Multi-day and consulting',
       duration: 'by arrangement',
-      color: '#8a4fa3',
       text: 'Multi-day workshops and individual consulting.',
     },
   ],

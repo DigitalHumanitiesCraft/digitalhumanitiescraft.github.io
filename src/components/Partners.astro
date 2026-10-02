@@ -62,7 +62,7 @@ const logos: Record<string, ImageMetadata> = {
               src={logos[p.logoKey].src}
               alt={p.name}
               title={p.name}
-              class:list={['logo', { wide: ['mpilhlt', 'museumsbund', 'bergbaumuseum'].includes(p.logoKey) }]}
+              class:list={['logo', { wide: p.logoKey === 'museumsbund' }]}
               loading="lazy"
             />
           </li>
