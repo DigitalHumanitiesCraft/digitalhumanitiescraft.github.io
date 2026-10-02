@@ -36,7 +36,8 @@ const skillUrl = 'https://github.com/DigitalHumanitiesCraft/promptotyping-skill'
     <div class="promos">
       <div class="promo">
         <h3>{t.promptoTitle}</h3>
-        <p>{t.promptoText}</p>
+        {/* set:html, weil der Text einen Inline-Link auf die Agentic-Engineering-Seite trägt */}
+        <p set:html={t.promptoText} />
         <div class="promo-links">
           <a href={specUrl} target="_blank" rel="noopener">{t.promptoSpec} →</a>
           <a href={lisaUrl} target="_blank" rel="noopener">{t.promptoArticle} →</a>
@@ -158,6 +159,13 @@ const skillUrl = 'https://github.com/DigitalHumanitiesCraft/promptotyping-skill'
     line-height: 1.6;
     color: rgba(30, 39, 73, 0.72);
     margin: 0;
+  }
+
+  /* :global nötig: per set:html injizierte Links tragen kein Astro-Scoping-Attribut */
+  .promo p :global(a) {
+    color: var(--purple);
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
   .promo-links {

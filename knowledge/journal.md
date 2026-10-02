@@ -6,7 +6,7 @@ project:
 status: active
 language: de
 created: 2026-07-19
-updated: 2026-07-19
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Claude Code mit Claude Fable 5
 method:
@@ -49,3 +49,15 @@ Quellenlage im Obsidian-Vault geprüft. Ein zusammenhängendes Tutorial existier
 ### Ergebnis
 
 `src/content/blog/Was-ist-Promptotyping.md` als Tutorial neu geschrieben, Titel und Metadaten angepasst.
+
+## 2026-10-02 Dienstleistungsseite fancy (research) tools! als Unterseite
+
+### Ziel
+
+Die statische Dienstleistungsseite aus dem Repo DigitalHumanitiesCraft/fancy-research-tools wird Teil dieser Site und mit ihr gebaut und ausgeliefert.
+
+### Ergebnis
+
+Die Seite liegt unter `/fancy-research-tools/` und `/en/fancy-research-tools/`, ihre Datenschutzerklärung unter `/fancy-research-tools/datenschutz/` und `/en/fancy-research-tools/privacy/`. Texte und strukturierte Daten stehen in `src/i18n/fancy.ts` und werden von `src/components/fancy/` mit Base, Nav und Footer der Site gerendert. Wortlaut, Reihenfolge und Fragment-Identifier entsprechen der Quellseite. Die früheren englischen Adressen unter `/fancy-research-tools/en/` leiten per Redirect-Stub auf die neuen Routen. Die Navigation führt den Punkt Agentic Engineering, die Angebotskarten und die Promptotyping-Box verlinken die Unterseite.
+
+Die Entscheidungen der Seite zu Wortlaut, Reifegraden, Bildern und Positionierung bleiben in der Wissensbasis des Repos fancy-research-tools dokumentiert, in `knowledge/specification.md` mit ADR-001 bis ADR-013.

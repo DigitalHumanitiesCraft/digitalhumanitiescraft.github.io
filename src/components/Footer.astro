@@ -5,9 +5,11 @@ import logoWhite from '../assets/dhcraft_logo_invert_white.svg';
 
 interface Props {
   lang: Lang;
+  /** Eigene Datenschutzerklärung einer Unterseite (fancy research tools), sonst kein Link */
+  privacyPath?: string;
 }
 
-const { lang } = Astro.props;
+const { lang, privacyPath } = Astro.props;
 const { t } = getContent(lang);
 // KI-Position vorerst ausgeblendet (2026-07-10), Seite selbst bleibt erreichbar
 // const kiPositionPath = lang === 'de' ? '/ki-position/' : '/en/ki-position/';
@@ -45,6 +47,7 @@ const home = lang === 'de' ? '/' : '/en/';
           <span class="label">{t.footerLegal}</span>
           <a href={lang === 'de' ? '/imprint/' : '/en/imprint/'}>{t.footerImprint}</a>
           {/* <a href={kiPositionPath}>{t.footerAi}</a> */}
+          {privacyPath && <a href={privacyPath}>{t.footerPrivacy}</a>}
           <a href="mailto:office@dhcraft.org">{t.navContact}</a>
         </div>
       </div>

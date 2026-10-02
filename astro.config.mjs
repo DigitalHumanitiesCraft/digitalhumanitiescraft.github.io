@@ -41,9 +41,12 @@ export default defineConfig({
   // Alte Excellence-Guides-URL (extern verlinkt); static output erzeugt daraus
   // eine Meta-Refresh-Seite mit noindex + canonical.
   // /promptotyping: GitHub Pages ist case-sensitive, die Projekt-Site heißt /Promptotyping/.
+  // /fancy-research-tools/en/: englische Adressen aus der Zeit als eigenes Repo, EN lebt jetzt unter /en/.
   redirects: {
     '/excellence/guides': '/#excellence',
     '/promptotyping': '/Promptotyping/',
+    '/fancy-research-tools/en': '/en/fancy-research-tools/',
+    '/fancy-research-tools/en/privacy': '/en/fancy-research-tools/privacy/',
   },
   integrations: [
     sitemap({
@@ -53,7 +56,8 @@ export default defineConfig({
         !page.includes('/excellence/guides') &&
         page !== 'https://dhcraft.org/promptotyping/' &&
         page !== 'https://dhcraft.org/excellence/' &&
-        page !== 'https://dhcraft.org/en/excellence/',
+        page !== 'https://dhcraft.org/en/excellence/' &&
+        !page.startsWith('https://dhcraft.org/fancy-research-tools/en/'),
     }),
   ],
 });

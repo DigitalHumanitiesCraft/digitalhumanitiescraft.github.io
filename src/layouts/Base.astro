@@ -21,9 +21,13 @@ interface Props {
   path: string;
   /** og:type, z. B. "article" für Blog-Posts */
   ogType?: string;
+  /** Kürzerer Titel für Link-Vorschauen, Default ist title */
+  ogTitle?: string;
+  /** Pfad eines eigenen Vorschaubilds; Maße und Alt-Text liefert die Seite über den head-Slot */
+  ogImage?: string;
 }
 
-const { lang, title, description, altPath, path, ogType = 'website' } = Astro.props;
+const { lang, title, description, altPath, path, ogType = 'website', ogTitle = title, ogImage = '/og-image.png' } = Astro.props;
 const altLang = lang === 'de' ? 'en' : 'de';
 const site = Astro.site?.href.replace(/\/$/, '') ?? '';
 
@@ -78,16 +82,16 @@ const jsonLd = {
     <link rel="icon" href="/dhcraft_logo_invert.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="alternate" type="application/rss+xml" title="Digital Humanities Craft Blog" href="/excellence/feed.xml" />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={`${site}${path}`} />
     <meta property="og:site_name" content="Digital Humanities Craft" />
-    <meta property="og:image" content={`${site}/og-image.png`} />
+    <meta property="og:image" content={`${site}${ogImage}`} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${site}/og-image.png`} />
+    <meta name="twitter:image" content={`${site}${ogImage}`} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
   <body>

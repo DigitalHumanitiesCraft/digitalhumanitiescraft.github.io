@@ -1,0 +1,95 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import type { Lang } from '../../i18n/content';
+import { getContent } from '../../i18n/content';
+import { getFancyContent, fancyPaths } from '../../i18n/fancy';
+
+interface Props {
+  lang: Lang;
+  path: string;
+  altPath: string;
+}
+
+const { lang, path, altPath } = Astro.props;
+const { t: site } = getContent(lang);
+const p = getFancyContent(lang).privacy;
+const homeHref = lang === 'de' ? '/' : '/en/';
+---
+
+<Base lang={lang} title={p.title} description={p.description} path={path} altPath={altPath}>
+  <a href="#main" class="skip-link">{site.skipLink}</a>
+  <div class="page">
+    <Nav lang={lang} altPath={altPath} homeHref={homeHref} />
+    <main id="main" class="wrap legal">
+      <h1>{p.h1}</h1>
+      {p.note && <p>{p.note}</p>}
+      {
+        p.sections.map((s) => (
+          <>
+            <h2>{s.title}</h2>
+            {/* set:html, weil Absätze Zeilenumbrüche und Links tragen */}
+            {s.paragraphs.map((html) => <p set:html={html} />)}
+          </>
+        ))
+      }
+      <p class="legal-date">{p.date}</p>
+    </main>
+    <Footer lang={lang} privacyPath={fancyPaths[lang].privacy} />
+  </div>
+</Base>
+
+<style>
+  .page {
+    min-height: 100vh;
+    overflow: clip;
+  }
+
+  .legal {
+    padding-block: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+    font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    line-height: 1.55;
+  }
+
+  .legal > * {
+    max-width: 62ch;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 1.5rem + 1.6vw, 2.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: 0 0 clamp(2rem, 1.6rem + 2vw, 3.5rem);
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 1.07rem + 0.4vw, 1.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    margin: clamp(2rem, 1.6rem + 2vw, 3.5rem) 0 0.5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 0.75rem;
+  }
+
+  /* :global nötig: per set:html injizierte Links tragen kein Astro-Scoping-Attribut */
+  .legal p :global(a) {
+    color: var(--purple);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  .legal-date {
+    margin-top: clamp(2rem, 1.6rem + 2vw, 3.5rem);
+    color: rgba(30, 39, 73, 0.74);
+    font-size: clamp(0.875rem, 0.85rem + 0.1vw, 0.94rem);
+  }
+</style>

@@ -1,0 +1,1094 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../Nav.astro';
+import Footer from '../Footer.astro';
+import type { Lang } from '../../i18n/content';
+import { getContent } from '../../i18n/content';
+import { getFancyContent, fancyIcons, fancyPaths } from '../../i18n/fancy';
+
+interface Props {
+  lang: Lang;
+  path: string;
+  altPath: string;
+}
+
+const { lang, path, altPath } = Astro.props;
+const { t: site } = getContent(lang);
+const f = getFancyContent(lang);
+const t = f.t;
+const homeHref = lang === 'de' ? '/' : '/en/';
+---
+
+<Base
+  lang={lang}
+  title={t.title}
+  description={t.description}
+  path={path}
+  altPath={altPath}
+  ogTitle={t.ogTitle}
+  ogImage={f.ogImage}
+>
+  <Fragment slot="head">
+    <meta property="og:locale" content={t.ogLocale} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t.ogImageAlt} />
+  </Fragment>
+  <a href="#main" class="skip-link">{site.skipLink}</a>
+  <div class="page">
+    <Nav lang={lang} altPath={altPath} homeHref={homeHref} />
+    <main id="main" class="fancy">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="wrap hero-grid">
+          <div>
+            <h1 id="hero-title">fancy (research) tools<span class="bang">!</span><span class="accent-line">{t.heroLine}</span></h1>
+            <p class="lede">{t.lede}</p>
+            <div class="actions">
+              <a class="button primary" href="#kontakt">{t.heroCta}</a>
+              <a class="button" href="#angebot">{t.heroOffer}</a>
+            </div>
+          </div>
+
+          <div class="motif hero-motif" aria-hidden="true">
+            <svg viewBox="380 0 820 300" preserveAspectRatio="xMidYMid meet">
+              <path class="m-beam" d="M0 168 L548 158"></path>
+              <g>
+                <path class="m-band b1" d="M652 150 L1200 40 L1200 72 L654 155 Z"></path>
+                <path class="m-band b2" d="M654 155 L1200 72 L1200 104 L656 160 Z"></path>
+                <path class="m-band b3" d="M656 160 L1200 104 L1200 136 L658 165 Z"></path>
+                <path class="m-band b4" d="M658 165 L1200 136 L1200 168 L660 170 Z"></path>
+                <path class="m-band b5" d="M660 170 L1200 168 L1200 200 L662 175 Z"></path>
+                <path class="m-band b6" d="M662 175 L1200 200 L1200 232 L664 180 Z"></path>
+                <path class="m-band b7" d="M664 180 L1200 232 L1200 264 L666 185 Z"></path>
+              </g>
+              <path class="m-prism" d="M600 30 L700 250 L500 250 Z"></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="angebot" aria-labelledby="angebot-title">
+        <div class="wrap">
+          <h2 id="angebot-title" class="section-title">{t.offerTitle}</h2>
+          <ul class="offers" role="list">
+            {
+              f.offers.map((o) => (
+                <li class="offer" id={o.id}>
+                  <h3>
+                    <svg class="claim-icon" viewBox="0 0 24 24" aria-hidden="true" set:html={fancyIcons[o.icon]} />
+                    {o.title}
+                  </h3>
+                  <p>{o.text}</p>
+                  <p class="tool-links">
+                    <a href={o.href}>{o.link}</a>
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="paths terms">
+            <div class="path" id="modelle">
+              <h3>{t.modelsTitle}</h3>
+              {t.models.map((p) => <p>{p}</p>)}
+            </div>
+            <div class="path" id="kosten">
+              <h3>{t.costsTitle}</h3>
+              <p>{t.costs}</p>
+              <ul class="fit-list yes" role="list">
+                {t.costsList.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tinted" id="werkzeuge" aria-labelledby="werkzeuge-title">
+        <div class="wrap">
+          <h2 id="werkzeuge-title" class="section-title">{t.toolsTitle}</h2>
+          <ul class="legend" role="list" aria-label={t.legendLabel}>
+            {
+              f.legend.map((l) => (
+                <li>
+                  <svg class="trait-icon" viewBox="0 0 24 24" aria-hidden="true" set:html={fancyIcons[l.icon]} />
+                  {l.label}
+                </li>
+              ))
+            }
+          </ul>
+          <ul class="tools" role="list">
+            {
+              f.tools.map((tool) => (
+                <li class="tool">
+                  <article class="tool-grid" aria-labelledby={tool.id}>
+                    <figure class="shot">
+                      <img
+                        src={tool.src}
+                        srcset={tool.srcset}
+                        sizes="(min-width: 60rem) 45vw, 100vw"
+                        width="1440"
+                        height="900"
+                        loading="lazy"
+                        decoding="async"
+                        alt={tool.alt}
+                      />
+                    </figure>
+                    <div class="tool-body">
+                      <h3 id={tool.id}>{tool.title}</h3>
+                      <p class="solution">{tool.solution}</p>
+                      <div class="tool-meta">
+                        <span class={`maturity ${tool.maturityClass}`}>{tool.maturityLabel}</span>
+                        <ul class="traits" role="list">
+                          {tool.traits.map((tr) => (
+                            <li title={tr.label}>
+                              <svg class="trait-icon" viewBox="0 0 24 24" aria-hidden="true" set:html={fancyIcons[tr.icon]} />
+                              <span class="visually-hidden">{tr.label}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <p class="tool-links">
+                        <a class="button primary" href={tool.open}>{t.toolOpen}</a>
+                        <a href={tool.code}>{t.toolCode}</a>
+                        <a href={tool.evidence}>{t.toolEvidence}</a>
+                        <a href={tool.mail}>{t.toolRequest}</a>
+                      </p>
+                    </div>
+                  </article>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="methoden" aria-labelledby="methoden-title">
+        <div class="wrap">
+          <h2 id="methoden-title" class="section-title">{t.methodsTitle}</h2>
+          <ul class="methods" role="list">
+            {
+              f.methods.map((m) => (
+                <li class="method" id={m.id}>
+                  <figure class="method-figure">
+                    <a href={m.large}>
+                      <img
+                        src={m.src}
+                        srcset={m.srcset}
+                        sizes="(min-width: 60rem) 36rem, 100vw"
+                        width="1440"
+                        height="900"
+                        loading="lazy"
+                        decoding="async"
+                        alt={m.alt}
+                      />
+                    </a>
+                    <figcaption>{t.methodCaption}</figcaption>
+                  </figure>
+                  <h3>{m.title}</h3>
+                  <p class="solution">{m.solution}</p>
+                  <div class="tool-meta">
+                    <span class={`maturity ${m.maturityClass}`}>{m.maturityLabel}</span>
+                  </div>
+                  <p class="tool-links">
+                    {m.links.map((l, i) => (
+                      <a class={i === 0 ? 'button primary' : undefined} href={l.href}>
+                        {l.label}
+                      </a>
+                    ))}
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </section>
+
+      <section class="section tinted" id="qualitaet" aria-labelledby="qualitaet-title">
+        <div class="wrap">
+          <h2 id="qualitaet-title" class="section-title">{t.qualityTitle}</h2>
+          <ul class="claims" role="list">
+            {
+              f.claims.map((c) => (
+                <li>
+                  <details>
+                    <summary>
+                      <svg class="claim-icon" viewBox="0 0 24 24" aria-hidden="true" set:html={fancyIcons[c.icon]} />
+                      {c.title}
+                    </summary>
+                    <p set:html={c.html} />
+                  </details>
+                </li>
+              ))
+            }
+          </ul>
+
+          <div class="about">
+            <h3>{t.aboutTitle}</h3>
+            <p>
+              {t.about} <a href={f.aboutHref}>{t.aboutLink}</a>
+            </p>
+          </div>
+
+          <div class="clients">
+            <h3>{t.clientsTitle}</h3>
+            <ul role="list">
+              {t.clients.map((c) => <li>{c}</li>)}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="vorgehen" aria-labelledby="vorgehen-title">
+        <div class="wrap">
+          <h2 id="vorgehen-title" class="section-title">{t.processTitle}</h2>
+          <ol class="steps" role="list">
+            {
+              t.steps.map((s) => (
+                <li>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                </li>
+              ))
+            }
+          </ol>
+
+          <div class="fit">
+            <div>
+              <h3>{t.fitYesTitle}</h3>
+              <ul class="fit-list yes">
+                {t.fitYes.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+            <div>
+              <h3>{t.fitNoTitle}</h3>
+              <ul class="fit-list no">
+                {t.fitNo.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta" id="kontakt" aria-labelledby="kontakt-title">
+        <div class="wrap">
+          <h2 id="kontakt-title" class="section-title">{t.contactTitle}</h2>
+          <div class="paths">
+            <div class="path">
+              <h3>{t.talkTitle}</h3>
+              <p>{t.talkText}</p>
+              <ol class="ask" role="list">
+                {t.talkQuestions.map((q) => <li>{q}</li>)}
+              </ol>
+              <div class="actions">
+                <a class="button primary" href={t.talkMail}>{t.talkMailLabel}</a>
+                <a class="button" href={f.tel.href}>{f.tel.label}</a>
+              </div>
+              <p class="address">{f.address}</p>
+            </div>
+            <div class="path">
+              <h3>{t.docsTitle}</h3>
+              <p>{t.docsText}</p>
+              <ul class="ask bullets" role="list">
+                {t.docsItems.map((d) => <li>{d}</li>)}
+              </ul>
+              <div class="actions">
+                <a class="button" href={t.docsMail}>{t.docsMailLabel}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer lang={lang} privacyPath={fancyPaths[lang].privacy} />
+  </div>
+</Base>
+
+<style>
+  /* Ported from fancy-research-tools/assets/style.css. The source sorted its rules into cascade
+     layers; here base rules stay on bare elements so that every class rule outranks them, which
+     reproduces the layer order under Astro's attribute scoping. Tokens the site lacks are defined
+     on the page root instead of globally. */
+  .page {
+    min-height: 100vh;
+    overflow: clip;
+  }
+
+  .fancy {
+    --rule: rgba(30, 39, 73, 0.1);
+    --text-muted: rgba(30, 39, 73, 0.74);
+    --raised: #fff;
+    --wash: rgba(138, 79, 163, 0.1);
+    --ok: oklch(55% 0.14 150);
+    --radius: 1rem;
+    --radius-control: 999px;
+    --measure: 62ch;
+    --shadow: 0 1.5rem 3rem -1.5rem rgba(30, 39, 73, 0.18);
+    --step--1: clamp(0.875rem, 0.85rem + 0.1vw, 0.94rem);
+    --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    --step-1: clamp(1.15rem, 1.07rem + 0.4vw, 1.4rem);
+    --step-2: clamp(1.9rem, 1.5rem + 1.6vw, 2.5rem);
+    --step-3: clamp(2.3rem, 1.6rem + 3vw, 3.4rem);
+    --space-xs: 0.5rem;
+    --space-s: 0.75rem;
+    --space-m: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
+    --space-l: clamp(2rem, 1.6rem + 2vw, 3.5rem);
+    --space-section: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+
+    font-size: var(--step-0);
+    line-height: 1.55;
+  }
+
+  .fancy,
+  .fancy *,
+  .fancy *::before,
+  .fancy *::after {
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3, p, figure, ol, ul {
+    margin: 0;
+  }
+
+  ol[role='list'],
+  ul[role='list'] {
+    list-style: none;
+    padding: 0;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  a {
+    color: var(--purple);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+  }
+
+  a:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  /* :global nötig: per set:html injizierte Links tragen kein Astro-Scoping-Attribut */
+  .claims p :global(a) {
+    color: var(--purple);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--purple);
+    outline-offset: 3px;
+    border-radius: 0.25rem;
+  }
+
+  .section {
+    padding-block: var(--space-section);
+  }
+
+  .section.tinted {
+    background: #fff;
+    border-block-start: 1px solid var(--rule);
+  }
+
+  .section-title {
+    font-size: var(--step-2);
+    margin-block-end: var(--space-l);
+  }
+
+  .bang {
+    color: var(--purple);
+  }
+
+  /* The hero fills the first screen so the request button never sits above an empty band. */
+  .hero {
+    display: grid;
+    align-content: center;
+    min-block-size: min(50rem, calc(100svh - 4rem));
+    padding-block: var(--space-l);
+    overflow: clip;
+    position: relative;
+    isolation: isolate;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(ellipse 40rem 28rem at 82% 30%, var(--wash), transparent 68%);
+    filter: blur(30px);
+  }
+
+  .hero-grid {
+    display: grid;
+    gap: var(--space-l);
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+  }
+
+  .hero h1 {
+    font-size: var(--step-3);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.06;
+  }
+
+  .accent-line {
+    display: block;
+    color: var(--purple);
+    font-size: 0.62em;
+    margin-block-start: 0.35em;
+  }
+
+  .lede {
+    margin-block: var(--space-m) var(--space-l);
+    max-inline-size: 40ch;
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+    align-items: center;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    min-block-size: 3rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--radius-control);
+    border: 1.5px solid var(--rule);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 150ms, background-color 150ms, border-color 150ms;
+  }
+
+  .button:hover {
+    border-color: var(--purple);
+    color: var(--purple);
+    text-decoration: none;
+  }
+
+  .button.primary {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+  }
+
+  .button.primary::after {
+    content: '→';
+  }
+
+  .button.primary:hover {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: #fff;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .button:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  /* The prism motif in the watercolour palette, softened like the hero wash. */
+  .motif {
+    margin-block-end: var(--space-l);
+  }
+
+  .motif svg {
+    inline-size: 100%;
+    block-size: clamp(7rem, 4rem + 14vw, 16rem);
+  }
+
+  .m-beam {
+    fill: none;
+    stroke: var(--ink);
+    stroke-width: 3;
+    stroke-linecap: round;
+  }
+
+  .m-prism {
+    fill: #fff;
+    stroke: var(--ink);
+    stroke-width: 2.5;
+    stroke-linejoin: round;
+  }
+
+  .m-band {
+    fill: var(--c);
+    opacity: 0.7;
+  }
+
+  .b1 { --c: var(--pink); }
+  .b2 { --c: var(--orange); }
+  .b3 { --c: var(--gold); }
+  .b4 { --c: var(--green); }
+  .b5 { --c: var(--lime); }
+  .b6 { --c: var(--blue); }
+  .b7 { --c: var(--purple); }
+
+  /* The prism as the page's own image, a tool that makes knowledge visible. */
+  .hero-motif {
+    margin: 0;
+    align-self: center;
+  }
+
+  .hero-motif svg {
+    block-size: auto;
+    aspect-ratio: 820 / 300;
+  }
+
+  @media (max-width: 30rem) {
+    .hero-motif {
+      display: none;
+    }
+  }
+
+  /* The three ways of working as cards, the hexagon icon names the way. */
+  .offers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+    gap: var(--space-m);
+  }
+
+  .offer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    padding: var(--space-m);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: 0 0 0 1px var(--rule);
+  }
+
+  .offer h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    font-size: var(--step-1);
+  }
+
+  .offer > p:not(.tool-links) {
+    color: var(--text-muted);
+  }
+
+  .offer .tool-links {
+    margin-block-start: auto;
+  }
+
+  .paths {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+    gap: var(--space-l);
+  }
+
+  .path {
+    padding: var(--space-m) var(--space-l) var(--space-l);
+    border-radius: var(--radius);
+    background: #fff;
+    box-shadow: 0 0 0 1px var(--rule);
+  }
+
+  .path h3 {
+    font-size: var(--step-1);
+  }
+
+  .path > p {
+    margin-block-start: var(--space-xs);
+    color: var(--text-muted);
+  }
+
+  .terms {
+    margin-block-start: var(--space-m);
+    gap: var(--space-m);
+    align-items: start;
+  }
+
+  .terms .path {
+    padding: var(--space-m);
+  }
+
+  .terms .path > p + p {
+    margin-block-start: var(--space-s);
+  }
+
+  .terms .fit-list {
+    margin-block-start: var(--space-m);
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    margin-block: calc(-1 * var(--space-m)) var(--space-l);
+    font-size: var(--step--1);
+    color: var(--text-muted);
+  }
+
+  .legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .tools {
+    display: grid;
+    gap: var(--space-section);
+  }
+
+  .tool {
+    container-type: inline-size;
+  }
+
+  .tool-grid {
+    display: grid;
+    gap: var(--space-m) var(--space-l);
+    align-items: center;
+  }
+
+  @container (inline-size > 52rem) {
+    .tool-grid {
+      grid-template-columns: 1.2fr 1fr;
+    }
+
+    .tool:nth-child(even) .shot {
+      order: 2;
+    }
+  }
+
+  .shot {
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--raised);
+    box-shadow: 0 0 0 1px var(--rule), var(--shadow);
+  }
+
+  .shot img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top left;
+  }
+
+  .tool-body > * + * {
+    margin-block-start: var(--space-s);
+  }
+
+  .tool h3 {
+    font-size: var(--step-2);
+  }
+
+  .tool .solution {
+    color: var(--text-muted);
+    max-inline-size: var(--measure);
+  }
+
+  /* The abilities as small hexagons, so a row can be scanned. */
+  .traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    font-size: var(--step--1);
+    font-weight: 500;
+  }
+
+  .traits li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .trait-icon {
+    flex: none;
+    inline-size: 1.6rem;
+    block-size: 1.75rem;
+    padding: 0.38rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: var(--purple);
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .legend .trait-icon {
+    inline-size: 1.35rem;
+    block-size: 1.5rem;
+    padding: 0.32rem;
+  }
+
+  /* Maturity in one word, the colour repeats what the word says and never carries it alone. */
+  .maturity {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.1rem 0.65rem;
+    border-radius: 999px;
+    background: color-mix(in oklch, var(--c) 18%, white);
+    color: var(--ink);
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .maturity::before {
+    content: '';
+    inline-size: 0.5rem;
+    block-size: 0.5rem;
+    border-radius: 50%;
+    background: var(--c);
+  }
+
+  .m-use { --c: var(--green); }
+  .m-rc { --c: var(--blue); }
+  .m-preview { --c: var(--orange); }
+  .m-experiment { --c: var(--pink); }
+
+  .tool-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+  }
+
+  .tool-meta .traits {
+    gap: 0.3rem;
+  }
+
+  .tool-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.1rem;
+    margin-block-start: var(--space-s);
+    font-size: var(--step--1);
+    font-weight: 500;
+  }
+
+  .tool-links .button {
+    min-block-size: 2.75rem;
+    padding: 0.5rem 1.1rem;
+  }
+
+  /* Cards as in the services grid of dhcraft.org. */
+  .methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+    gap: var(--space-l) var(--space-m);
+  }
+
+  .method {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    padding: var(--space-m);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+
+  .method:hover {
+    border-color: rgba(138, 79, 163, 0.35);
+    box-shadow: 0 0.75rem 2rem rgba(30, 39, 73, 0.08);
+  }
+
+  .method h3 {
+    font-size: 1.35rem;
+  }
+
+  .method .solution {
+    color: var(--text-muted);
+  }
+
+  .method .tool-links {
+    margin-block-start: auto;
+    padding-block-start: var(--space-xs);
+  }
+
+  .method-figure a {
+    display: block;
+    border-radius: var(--radius);
+  }
+
+  .method-figure img {
+    inline-size: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    border-radius: var(--radius);
+    background: #fff;
+  }
+
+  .method-figure figcaption {
+    margin-block-start: 0.35rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .claims {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    gap: var(--space-s);
+    align-items: start;
+  }
+
+  .claims > li {
+    padding: var(--space-s) var(--space-m);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+  }
+
+  .claims summary {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+    cursor: pointer;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    list-style: none;
+  }
+
+  .claims summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .claims summary::after {
+    content: '+';
+    margin-inline-start: auto;
+    color: var(--purple);
+  }
+
+  .claims details[open] summary::after {
+    content: '−';
+  }
+
+  .claims p {
+    margin-block-start: var(--space-xs);
+    color: var(--text-muted);
+  }
+
+  .claim-icon {
+    flex: none;
+    inline-size: 2.4rem;
+    block-size: 2.6rem;
+    padding: 0.6rem;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: var(--ink);
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .about {
+    margin-block-start: var(--space-section);
+    max-inline-size: var(--measure);
+  }
+
+  .about h3,
+  .clients h3 {
+    font-size: var(--step-1);
+  }
+
+  .about p {
+    margin-block-start: var(--space-xs);
+    font-size: var(--step-0);
+    color: var(--text-muted);
+  }
+
+  .clients {
+    margin-block-start: var(--space-l);
+  }
+
+  .clients h3 {
+    font-size: var(--step-0);
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .clients ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s) var(--space-l);
+    margin-block-start: var(--space-m);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+    gap: var(--space-l) var(--space-m);
+    counter-reset: step;
+  }
+
+  .steps li {
+    counter-increment: step;
+  }
+
+  .steps li::before {
+    content: counter(step);
+    display: grid;
+    place-items: center;
+    inline-size: 3rem;
+    block-size: 3rem;
+    margin-block-end: var(--space-s);
+    border-radius: 50%;
+    background: var(--purple);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--step-1);
+  }
+
+  .steps p {
+    margin-block-start: var(--space-xs);
+    color: var(--text-muted);
+  }
+
+  .fit {
+    margin-block-start: var(--space-section);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: var(--space-l);
+  }
+
+  .fit-list {
+    margin-block-start: var(--space-s);
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-xs);
+  }
+
+  .fit-list li {
+    display: flex;
+    gap: 0.6rem;
+  }
+
+  .fit-list li::before {
+    flex: none;
+    font-weight: 700;
+    inline-size: 1.2rem;
+  }
+
+  .fit-list.yes li::before {
+    content: '✓';
+    color: var(--ok);
+  }
+
+  .fit-list.no li::before {
+    content: '✕';
+    color: var(--text-muted);
+  }
+
+  /* Contact as on dhcraft.org, a light ground with a purple wash. */
+  .cta {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    inset: -5rem;
+    background: radial-gradient(ellipse 35rem 25rem at 50% 40%, rgba(138, 79, 163, 0.12), transparent 68%);
+    filter: blur(32px);
+    pointer-events: none;
+  }
+
+  .cta .wrap {
+    position: relative;
+  }
+
+  .cta .section-title {
+    font-size: var(--step-3);
+    letter-spacing: -0.03em;
+    margin-block-end: var(--space-l);
+  }
+
+  .cta .actions {
+    margin-block-start: var(--space-m);
+  }
+
+  .ask {
+    margin-block-start: var(--space-m);
+    display: grid;
+    gap: var(--space-xs);
+    counter-reset: ask;
+    font-size: var(--step-0);
+  }
+
+  .ask li {
+    counter-increment: ask;
+    display: flex;
+    gap: var(--space-s);
+  }
+
+  .ask li::before {
+    content: counter(ask);
+    color: var(--purple);
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  .ask.bullets li::before {
+    content: '•';
+  }
+
+  .address {
+    margin-block-start: var(--space-s);
+    user-select: all;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  @media print {
+    details > :not(summary) {
+      display: block;
+    }
+
+    .actions {
+      display: none;
+    }
+
+    .section {
+      padding-block: 1.5rem;
+    }
+  }
+</style>

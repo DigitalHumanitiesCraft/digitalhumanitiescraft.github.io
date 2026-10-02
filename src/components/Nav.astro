@@ -27,6 +27,7 @@ const a = (id: string) => `${homeHref}#${id}`;
     </button>
     <nav class="links" id="site-menu" aria-label="Hauptnavigation">
       <a href={a('services')}>{t.navServices}</a>
+      <a href={lang === 'de' ? '/fancy-research-tools/' : '/en/fancy-research-tools/'}>{t.navAgentic}</a>
       <a href={a('projects')}>{t.navProjects}</a>
       <a href={a('team')}>Team</a>
       <a href={a('excellence')}>{t.navWebinars}</a>
@@ -145,6 +146,10 @@ const a = (id: string) => `${homeHref}#${id}`;
     font-weight: 500;
   }
 
+  .links a {
+    white-space: nowrap;
+  }
+
   .links a:hover {
     color: var(--purple);
   }
@@ -170,7 +175,8 @@ const a = (id: string) => `${homeHref}#${id}`;
     font-weight: 700;
     padding: 5px 12px;
     border-radius: 999px;
-    color: rgba(30, 39, 73, 0.55);
+    /* 0.7 statt 0.55: erst damit erreicht der inaktive Sprachlink auf dem Toggle-Grund 4.5:1 (axe color-contrast) */
+    color: rgba(30, 39, 73, 0.7);
   }
 
   .lang-btn.active {
@@ -182,7 +188,9 @@ const a = (id: string) => `${homeHref}#${id}`;
     color: var(--purple);
   }
 
-  @media (max-width: 900px) {
+  /* 1120 statt 900: seit dem Punkt "Agentic Engineering" brauchen Marke und Links in einer Zeile
+     etwa 1050px plus Seitenrand, darunter würde der Sprachumschalter abgeschnitten */
+  @media (max-width: 1120px) {
     .menu-btn {
       display: block;
     }

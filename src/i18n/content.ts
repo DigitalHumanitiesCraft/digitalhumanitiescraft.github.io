@@ -56,6 +56,7 @@ const iconOrder = ['ai', 'consult', 'teach', 'web', 'data', 'partner'];
 const t = {
   de: {
     navServices: 'Angebot',
+    navAgentic: 'Agentic Engineering',
     navProjects: 'Projekte',
     navWebinars: 'Excellence',
     navContact: 'Kontakt',
@@ -82,6 +83,7 @@ const t = {
     footerLegal: 'Rechtliches',
     footerImprint: 'Impressum',
     footerPress: 'Presse',
+    footerPrivacy: 'Datenschutz',
     footerAi: 'Unsere Position zu KI-Einsatz',
     metaTitle: 'Digital Humanities Craft | KI-Weiterbildung, Beratung und Forschungssoftware',
     metaDescription:
@@ -90,6 +92,7 @@ const t = {
   },
   en: {
     navServices: 'Services',
+    navAgentic: 'Agentic Engineering',
     navProjects: 'Work',
     navWebinars: 'Excellence',
     navContact: 'Contact',
@@ -116,6 +119,7 @@ const t = {
     footerLegal: 'Legal',
     footerImprint: 'Imprint',
     footerPress: 'Press',
+    footerPrivacy: 'Privacy',
     footerAi: 'Our position on AI use',
     metaTitle: 'Digital Humanities Craft | AI training, consulting and research software',
     metaDescription:
@@ -133,7 +137,7 @@ const servicesText = {
     },
     {
       title: 'KI-Beratung & Co-Intelligence',
-      text: 'KI-Strategie und angewandte generative KI für Institutionen: Promptotyping, agentische Systeme und Workflows, die Expertise verstärken statt ersetzen.',
+      text: 'KI-Strategie und angewandte generative KI für Institutionen: Promptotyping, <a href="/fancy-research-tools/">agentische Systeme</a> und Workflows, die Expertise verstärken statt ersetzen.',
     },
     {
       title: 'Lehre, Schools & Curricula',
@@ -141,7 +145,7 @@ const servicesText = {
     },
     {
       title: 'Forschungssoftware & Digitale Editionen',
-      text: 'Web-Interfaces, Dashboards und Digitale Editionen für Forschungsprojekte, wann immer möglich kompatibel mit Linked Open Data. Langzeitarchivierung inklusive: in Kooperation mit dem <a href="https://digital-humanities.uni-graz.at/de/" target="_blank" rel="noopener">Institut für Digitale Geisteswissenschaften</a> der Universität Graz im OAIS-konformen, zertifizierten Repositorium <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>. Werkzeuge zum Anpassen zeigt <a href="https://dhcraft.org/fancy-research-tools/">fancy (research) tools!</a>',
+      text: 'Web-Interfaces, Dashboards und Digitale Editionen für Forschungsprojekte, wann immer möglich kompatibel mit Linked Open Data. Langzeitarchivierung inklusive: in Kooperation mit dem <a href="https://digital-humanities.uni-graz.at/de/" target="_blank" rel="noopener">Institut für Digitale Geisteswissenschaften</a> der Universität Graz im OAIS-konformen, zertifizierten Repositorium <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>. Werkzeuge zum Anpassen zeigt <a href="/fancy-research-tools/">fancy (research) tools!</a>',
     },
     {
       title: 'Datenmodellierung & KI-gestützte Erschließung',
@@ -159,7 +163,7 @@ const servicesText = {
     },
     {
       title: 'AI Consulting & Co-Intelligence',
-      text: 'AI strategy and applied generative AI for institutions: Promptotyping, agentic systems and workflows that amplify expertise instead of replacing it.',
+      text: 'AI strategy and applied generative AI for institutions: Promptotyping, <a href="/en/fancy-research-tools/">agentic systems</a> and workflows that amplify expertise instead of replacing it.',
     },
     {
       title: 'Teaching, Schools & Curricula',
@@ -167,7 +171,7 @@ const servicesText = {
     },
     {
       title: 'Research Software & Digital Editions',
-      text: 'Web interfaces, dashboards and digital editions for research projects, compatible with Linked Open Data whenever possible. Long-term preservation included, in cooperation with the <a href="https://digital-humanities.uni-graz.at/en/" target="_blank" rel="noopener">Department of Digital Humanities</a> at the University of Graz and its certified, OAIS-compliant repository <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>. Adaptable tools are shown at <a href="https://dhcraft.org/fancy-research-tools/en/">fancy (research) tools!</a>',
+      text: 'Web interfaces, dashboards and digital editions for research projects, compatible with Linked Open Data whenever possible. Long-term preservation included, in cooperation with the <a href="https://digital-humanities.uni-graz.at/en/" target="_blank" rel="noopener">Department of Digital Humanities</a> at the University of Graz and its certified, OAIS-compliant repository <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>. Adaptable tools are shown at <a href="/en/fancy-research-tools/">fancy (research) tools!</a>',
     },
     {
       title: 'Data Modeling & AI-Assisted Digitization',

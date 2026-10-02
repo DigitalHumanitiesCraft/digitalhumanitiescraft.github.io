@@ -60,7 +60,7 @@ const t = {
       'Excellence ist unser Bereich für generative KI: Webinare, Workshops und Intensivtage, dazu Beratung und Promptotyping, für Wissenschaft, Kultur und Wirtschaft.',
     promptoTitle: 'Promptotyping',
     promptoText:
-      'Context Engineering trifft Rapid Prototyping: Lernen Sie promptotypen, oder lassen Sie uns die Arbeit machen.',
+      'Context Engineering trifft Rapid Prototyping: Lernen Sie promptotypen, oder <a href="/fancy-research-tools/">lassen Sie uns die Arbeit machen</a>.',
     promptoSpec: 'Die Methodenspezifikation',
     promptoArticle: 'Der Grundlagentext im L.I.S.A.-Portal',
     promptoSkill: 'Promptotyping-Skill auf GitHub',
@@ -96,7 +96,7 @@ const t = {
     formatsIntro:
       'Excellence is our area for generative AI: webinars, workshops and intensive days, plus consulting and Promptotyping, for research, culture and business.',
     promptoTitle: 'Promptotyping',
-    promptoText: 'Context engineering meets rapid prototyping: learn how to promptotype, or let us do the work.',
+    promptoText: 'Context engineering meets rapid prototyping: learn how to promptotype, or <a href="/en/fancy-research-tools/">let us do the work</a>.',
     promptoSpec: 'The method specification',
     promptoArticle: 'The foundational text in the L.I.S.A. portal',
     promptoSkill: 'Promptotyping skill on GitHub',
