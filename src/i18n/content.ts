@@ -62,7 +62,7 @@ const t = {
     heroTitle1: 'Digitales Handwerk aus der Forschung,',
     heroTitle2: 'für alle, die mit Wissen arbeiten.',
     heroSub:
-      'Wir entwickeln Forschungssoftware, digitale Editionen und mit Coding-Agenten gebaute Werkzeuge und bieten Weiterbildung und Beratung zu generativer KI, für Universitäten, Kultureinrichtungen, Unternehmen und Verwaltung.',
+      'Wir entwickeln Forschungssoftware, Workflows für Forschungsdaten und digitale Editionen, bauen Werkzeuge mit Coding-Agenten und bieten Weiterbildung und Beratung zu generativer KI für Universitäten, Kultureinrichtungen, Unternehmen und Verwaltung.',
     heroCta1: 'Unser Angebot',
     heroCta2: 'Projekte ansehen',
     servicesTitle: 'Angebot',
@@ -85,7 +85,7 @@ const t = {
     footerAi: 'Unsere Position zu KI-Einsatz',
     metaTitle: 'Digital Humanities Craft | Forschungssoftware, Agentic Engineering und KI-Weiterbildung',
     metaDescription:
-      'Forschungssoftware, digitale Editionen und Agentic Engineering sowie Weiterbildung und Beratung zu generativer KI für Universitäten, Kultureinrichtungen, Unternehmen und Verwaltung, aus Kainbach bei Graz.',
+      'Forschungssoftware, Workflows für Forschungsdaten, digitale Editionen und Agentic Engineering sowie Weiterbildung und Beratung zu generativer KI für Universitäten, Kultureinrichtungen, Unternehmen und Verwaltung, aus Kainbach bei Graz.',
     skipLink: 'Zum Inhalt springen',
   },
   en: {
@@ -97,7 +97,7 @@ const t = {
     heroTitle1: 'Digital craftsmanship from research,',
     heroTitle2: 'for everyone who works with knowledge.',
     heroSub:
-      'We develop research software, digital editions and tools built with coding agents, and offer training and consulting on generative AI, for universities, cultural institutions, companies and public administration.',
+      'We develop research software, research data workflows and digital editions, build tools with coding agents and offer training and consulting on generative AI for universities, cultural institutions, companies and public administration.',
     heroCta1: 'What we do',
     heroCta2: 'See our work',
     servicesTitle: 'Services',
@@ -120,7 +120,7 @@ const t = {
     footerAi: 'Our position on AI use',
     metaTitle: 'Digital Humanities Craft | Research software, agentic engineering and AI training',
     metaDescription:
-      'Research software, digital editions and agentic engineering, plus training and consulting on generative AI for universities, cultural institutions, companies and public administration, from Kainbach near Graz, Austria.',
+      'Research software, research data workflows, digital editions and agentic engineering, plus training and consulting on generative AI for universities, cultural institutions, companies and public administration, from Kainbach near Graz, Austria.',
     skipLink: 'Skip to content',
   },
 };
@@ -130,7 +130,7 @@ const servicesText = {
   de: [
     {
       title: 'KI-Weiterbildung',
-      text: 'Weiterbildung zu Context Engineering, AI Literacy und Agentic Engineering für Wissenschaft, Kultur und Wirtschaft, als Vortrag, Webinar, Workshop oder Beitrag zu mehrtägigen Schools.',
+      text: 'Weiterbildung zu AI Literacies sowie zu Knowledge und Agentic Engineering für Wissenschaft, Kultur und Wirtschaft, als Vortrag, Webinar, Workshop oder Beitrag zu mehrtägigen Schools.',
     },
     {
       title: 'KI-Beratung und Agentic Engineering',
@@ -146,7 +146,7 @@ const servicesText = {
     },
     {
       title: 'Datenmodellierung und KI-gestützte Erschließung',
-      text: 'Datenmodellierung mit TEI und RDF, Schema-Entwicklung sowie KI-gestützte Texterkennung (OCR/HTR) für Drucke und Handschriften, die daraus strukturierte, nachnutzbare Daten macht.',
+      text: 'Modellierung von Forschungsdaten, in den Digital Humanities etwa mit TEI für Editionen und mit RDF für Linked Open Data, ebenso für Daten anderer Fächer und für die Bestände von Unternehmen und Institutionen. Dazu kommen Schema-Entwicklung und KI-gestützte Texterkennung (OCR/HTR), die aus Quellen strukturierte, nachnutzbare Daten macht.',
     },
     {
       title: 'Partnerschaft in Förderprojekten',
@@ -156,7 +156,7 @@ const servicesText = {
   en: [
     {
       title: 'AI training',
-      text: 'Training in context engineering, AI literacy and agentic engineering for research, culture and business, as a talk, webinar, workshop or contribution to multi-day schools.',
+      text: 'Training in AI literacies and in knowledge and agentic engineering for research, culture and business, as a talk, webinar, workshop or contribution to multi-day schools.',
     },
     {
       title: 'AI consulting and agentic engineering',
@@ -172,7 +172,7 @@ const servicesText = {
     },
     {
       title: 'Data modelling and AI-assisted digitisation',
-      text: 'Data modelling with TEI and RDF, schema development and AI-assisted text recognition (OCR/HTR) for prints and manuscripts that turns them into structured, reusable data.',
+      text: 'Modelling of research data, in the Digital Humanities for instance with TEI for editions and with RDF for Linked Open Data, and equally for data from other disciplines and for the holdings of companies and institutions. This includes schema development and AI-assisted text recognition (OCR/HTR) that turns sources into structured, reusable data.',
     },
     {
       title: 'Partnership in funded projects',
