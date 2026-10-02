@@ -15,7 +15,6 @@ const { t } = getContent(lang);
 <section id="hero" class="hero wrap">
   <div class="wash" aria-hidden="true"></div>
   <div class="copy">
-    <div class="kicker-row">research software · nerdy stuff · data workflows</div>
     <h1>
       {t.heroTitle1}<br />
       <span class="accent-line">{t.heroTitle2}</span>
@@ -54,15 +53,6 @@ const { t } = getContent(lang);
     /* entkoppelt die Spaltenbreite vom min-content langer Wörter, sonst quetscht
        „Geisteswissenschaften." die Logo-Spalte */
     min-width: 0;
-  }
-
-  .kicker-row {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--purple);
-    margin-bottom: 22px;
   }
 
   /* Die Headline ist in beiden Sprachen ein ganzer Satz: kleinere Obergrenze als beim

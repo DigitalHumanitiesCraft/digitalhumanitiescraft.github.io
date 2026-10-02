@@ -1,14 +1,8 @@
 // Inhalte aus dem Design "Excellence.dc.html" (Claude Design, Projekt "Watercolor Website Design").
 // Textkonventionen angewandt (design.md): keine Gedankenstriche, "Context Engineering" statt "Prompt Engineering".
-// Videos: die drei neuesten aus dem Kanal-RSS (Stand 2026-07-08); Titel verbatim von YouTube.
+// Die Videos der Startseite kommen zur Buildzeit aus dem Kanal-RSS (src/lib/videos.ts), nicht aus dieser Datei.
 
 import type { Lang } from './content';
-
-export interface Stat {
-  value: string;
-  label: string;
-  color: string;
-}
 
 export interface ChannelUpdate {
   /** ISO-Datum */
@@ -21,14 +15,6 @@ export interface ChannelUpdate {
   source: string;
 }
 
-export interface Video {
-  /** YouTube-Video-ID, Thumbnail via i.ytimg.com/vi/<id>/hqdefault.jpg */
-  id: string;
-  tag: string;
-  color: string;
-  title: string;
-}
-
 export interface Format {
   title: string;
   duration: string;
@@ -38,89 +24,35 @@ export interface Format {
 
 const t = {
   de: {
-    navUpdates: 'AI-Channel',
-    navVideos: 'Videos',
-    navFormats: 'Angebot',
-    navBlog: 'Blog',
-    navBack: '← dhcraft.org',
-    navContact: 'Kontakt',
-    heroKicker: 'dhcraft.org/excellence',
-    heroTitle: 'Best Practice, Forschung und Ausbildung für Generative KI.',
-    heroSub:
-      'Unser Exzellenzzentrum verbindet zeiteffizientes Lernen mit praxisnahem Know-how: spezialisiert auf generative KI, Context Engineering, Digital Humanities, Forschungsmanagement, Data Science und Programmierung.',
-    updatesKicker: 'Aus dem AI-Channel',
-    updatesTitle: 'Was gerade passiert.',
-    updatesCta: 'Kuratiert auf Patreon',
-    videosKicker: 'Videos',
-    videosTitle: 'Aus unserem YouTube-Kanal.',
+    updatesTitle: 'Neues aus dem Patreon-Kanal',
+    updatesCta: 'Zum Kanal auf Patreon',
+    videosTitle: 'Videos',
     videosAll: 'Alle Videos',
-    formatsKicker: 'Excellence',
-    formatsTitle: 'Weiterbildung und KI-Beratung.',
-    formatsIntro:
-      'Excellence ist unser Bereich für generative KI: Webinare, Workshops und Intensivtage, dazu Beratung und Promptotyping, für Wissenschaft, Kultur und Wirtschaft.',
+    formatsTitle: 'Weiterbildung und Beratung',
     promptoTitle: 'Promptotyping',
     promptoText:
-      'Context Engineering trifft Rapid Prototyping: Lernen Sie promptotypen, oder <a href="/fancy-research-tools/">lassen Sie uns die Arbeit machen</a>.',
+      'Promptotyping ist eine Methode des Context Engineering, die Forschungsartefakte mit KI-Agenten aus einer gepflegten Wissensbasis heraus entwickelt. Wir vermitteln sie in Workshops und setzen sie in Projekten ein, wenn sie zum Vorhaben passt, neben anderen Methoden unter <a href="/fancy-research-tools/">Agentic Engineering</a>.',
     promptoSpec: 'Die Methodenspezifikation',
-    promptoArticle: 'Der Grundlagentext im L.I.S.A.-Portal',
+    promptoArticle: 'Grundlagentext im Wissenschaftsportal L.I.S.A. der Gerda Henkel Stiftung',
     promptoSkill: 'Promptotyping-Skill auf GitHub',
     patreonTitle: 'Patreon Membership',
-    patreonText:
-      'Aktuelle Entwicklungen, praktische Ausarbeitungen und viel Prompting: kuratiert, aufbereitet, teils gratis.',
-    ctaTitle: 'Wir freuen uns auf Ihre Anfrage!',
-    ctaSub: 'Ob Webinar, Workshop oder individuelles Consulting: Wir schneiden das Format auf Ihre Fragen zu.',
-    metaTitle: 'Excellence | Digital Humanities Craft: Best Practice, Forschung und Ausbildung für Generative KI',
-    metaDescription:
-      'Das DHCraft-Exzellenzzentrum für generative KI: Webinare, Workshops, Intensivtage und Consulting für Forschung, Kultur und Wirtschaft. Context Engineering, AI Literacy und Promptotyping aus Graz.',
-    skipLink: 'Zum Inhalt springen',
+    patreonText: 'Auf Patreon teilen wir erweiterte Tutorials, Live-Demos und Materialien, teils exklusiv für Mitglieder.',
   },
   en: {
-    navUpdates: 'AI channel',
-    navVideos: 'Videos',
-    navFormats: 'Services',
-    navBlog: 'Blog',
-    navBack: '← dhcraft.org',
-    navContact: 'Contact',
-    heroKicker: 'dhcraft.org/excellence',
-    heroTitle: 'Best practice, research and training for generative AI.',
-    heroSub:
-      'Our center of excellence combines time-efficient learning with practical know-how: specialized in generative AI, context engineering, Digital Humanities, research management, data science and programming.',
-    updatesKicker: 'From the AI channel',
-    updatesTitle: 'What is happening now.',
-    updatesCta: 'Curated on Patreon',
-    videosKicker: 'Videos',
-    videosTitle: 'From our YouTube channel.',
+    updatesTitle: 'News from the Patreon channel',
+    updatesCta: 'Go to the Patreon channel',
+    videosTitle: 'Videos',
     videosAll: 'All videos',
-    formatsKicker: 'Excellence',
-    formatsTitle: 'Training and AI consulting.',
-    formatsIntro:
-      'Excellence is our area for generative AI: webinars, workshops and intensive days, plus consulting and Promptotyping, for research, culture and business.',
+    formatsTitle: 'Training and consulting',
     promptoTitle: 'Promptotyping',
-    promptoText: 'Context engineering meets rapid prototyping: learn how to promptotype, or <a href="/en/fancy-research-tools/">let us do the work</a>.',
+    promptoText:
+      'Promptotyping is a context engineering method that develops research artefacts with AI agents from a maintained knowledge base. We teach it in workshops and use it in projects where it fits, alongside other methods described under <a href="/en/fancy-research-tools/">Agentic Engineering</a>.',
     promptoSpec: 'The method specification',
-    promptoArticle: 'The foundational text in the L.I.S.A. portal',
+    promptoArticle: 'Foundational article on the L.I.S.A. science portal of the Gerda Henkel Foundation',
     promptoSkill: 'Promptotyping skill on GitHub',
     patreonTitle: 'Patreon Membership',
-    patreonText: 'Current developments, practical elaborations and extensive prompting: curated, prepared, partly free.',
-    ctaTitle: 'We look forward to your inquiry!',
-    ctaSub: 'Webinar, workshop or individual consulting: we tailor the format to your questions.',
-    metaTitle: 'Excellence | Digital Humanities Craft: best practice, research and training for generative AI',
-    metaDescription:
-      'The DHCraft center of excellence for generative AI: webinars, workshops, intensive days and consulting for research, culture and business. Context engineering, AI literacy and Promptotyping from Graz, Austria.',
-    skipLink: 'Skip to content',
+    patreonText: 'On Patreon we share extended tutorials, live demos and materials, some of them exclusive to members.',
   },
-};
-
-// Zahlen vom Experten bestätigt (2026-07-08): 200+ / 40+ / 10+
-const statsBase = [
-  { value: '200+', color: '#a9c53d' },
-  { value: '40+', color: '#8a4fa3' },
-  { value: '10+', color: '#e39a3b' },
-];
-
-const statsLabels = {
-  de: ['Workshops durchgeführt', 'Partnerinstitutionen', 'Jahre Lehrerfahrung'],
-  en: ['Workshops delivered', 'Partner institutions', 'Years of teaching experience'],
 };
 
 // Aus dem AI-Channel: kurze Updates im Chat-Stil (Vorbild: Christophers Posts im Instituts-Channel).
@@ -165,96 +97,65 @@ const channelUpdates: ChannelUpdate[] = [
   },
 ];
 
-// Lernpfad „Zum Einstieg": kuratiert und nummeriert (Grundlagen → Methode → Praxis),
-// bewusst ohne Datum, damit die Sektion nicht veraltet; Titel verbatim von YouTube.
-// Aktualität liefern der AI-Channel-Feed und die Blog-Seite, nicht diese Sektion.
-const videosBase = [
-  {
-    id: 'u4RRxi5tgTA',
-    color: '#85aede',
-    title: 'Wie LLMs funktionieren',
-  },
-  {
-    id: '8sUe4Jkh3uQ',
-    color: '#5c9e4a',
-    title: 'Einführung in Promptotyping. (Teil 1)',
-  },
-  {
-    id: 'kQaTu4oFjSo',
-    color: '#c06bb0',
-    title: 'Agentic Engineering und digitale Edition mit Claude Code und Fable 5 (Live Demo)',
-  },
-];
-
-const videoTags = {
-  de: ['1 · Grundlagen', '2 · Methode', '3 · Praxis'],
-  en: ['1 · Foundations', '2 · Method', '3 · Practice'],
-};
-
 const formatsData = {
   de: [
     {
-      title: 'Webinare',
-      duration: '60–90 Minuten',
+      title: 'Webinar',
+      duration: 'bis 2 Stunden',
       color: '#85aede',
-      text: 'Kompakte Themendarstellung mit praktischen Beispielen: schneller Überblick und Einstieg.',
+      text: 'Einführung in ein Thema mit Beispielen aus der Praxis.',
     },
     {
-      title: 'Workshops',
-      duration: '3 Stunden',
+      title: 'Workshop',
+      duration: '3 bis 3,5 Stunden',
       color: '#5c9e4a',
-      text: 'Vortrag, Einblicke und praktische Übungen: vertiefendes Verständnis und Anwendung.',
+      text: 'Vortrag und angeleitete Übungen, in denen die Teilnehmenden die Verfahren selbst anwenden.',
     },
     {
-      title: 'Intensives',
+      title: 'Ganztägig',
       duration: '1 Tag',
       color: '#e39a3b',
-      text: 'Expertenwissen im Live-Setting: Arbeit mit eigenen Daten, Live-Beratung, Train the Trainer.',
+      text: 'Arbeit an eigenen Daten mit Beratung vor Ort.',
     },
     {
-      title: 'Consulting',
-      duration: 'Auf Anfrage',
+      title: 'Mehrtägig und Beratung',
+      duration: 'nach Vereinbarung',
       color: '#8a4fa3',
-      text: 'Individuelles Consulting und mehrtägige Workshops, jederzeit auf Anfrage möglich.',
+      text: 'Mehrtägige Workshops und individuelle Beratung.',
     },
   ],
   en: [
     {
-      title: 'Webinars',
-      duration: '60–90 minutes',
+      title: 'Webinar',
+      duration: 'up to 2 hours',
       color: '#85aede',
-      text: 'Concise topic presentation with practical examples: quick overview and introduction.',
+      text: 'Introduction to a topic with practical examples.',
     },
     {
-      title: 'Workshops',
-      duration: '3 hours',
+      title: 'Workshop',
+      duration: '3 to 3.5 hours',
       color: '#5c9e4a',
-      text: 'Lectures, insights and practical exercises: in-depth understanding and application.',
+      text: 'Talk and guided exercises in which participants apply the methods themselves.',
     },
     {
-      title: 'Intensives',
+      title: 'Full day',
       duration: '1 day',
       color: '#e39a3b',
-      text: 'Expert knowledge in a live setting: work with your own data, live consultation, train the trainer.',
+      text: 'Work on your own data with on-site guidance.',
     },
     {
-      title: 'Consulting',
-      duration: 'On request',
+      title: 'Multi-day and consulting',
+      duration: 'by arrangement',
       color: '#8a4fa3',
-      text: 'Individual consulting and multi-day workshops, available at any time upon request.',
+      text: 'Multi-day workshops and individual consulting.',
     },
   ],
 };
 
 export function getExcellenceContent(lang: Lang) {
-  const stats: Stat[] = statsBase.map((s, i) => ({ ...s, label: statsLabels[lang][i] }));
-  const videos: Video[] = videosBase.map((v, i) => ({ ...v, tag: videoTags[lang][i] }));
-
   return {
     t: t[lang],
-    stats,
     updates: channelUpdates,
-    videos,
     formats: formatsData[lang] as Format[],
   };
 }

@@ -61,3 +61,17 @@ Die statische Dienstleistungsseite aus dem Repo DigitalHumanitiesCraft/fancy-res
 Die Seite liegt unter `/fancy-research-tools/` und `/en/fancy-research-tools/`, ihre Datenschutzerklärung unter `/fancy-research-tools/datenschutz/` und `/en/fancy-research-tools/privacy/`. Texte und strukturierte Daten stehen in `src/i18n/fancy.ts` und werden von `src/components/fancy/` mit Base, Nav und Footer der Site gerendert. Wortlaut, Reihenfolge und Fragment-Identifier entsprechen der Quellseite. Die früheren englischen Adressen unter `/fancy-research-tools/en/` leiten per Redirect-Stub auf die neuen Routen. Die Navigation führt den Punkt Agentic Engineering, die Angebotskarten und die Promptotyping-Box verlinken die Unterseite.
 
 Die Entscheidungen der Seite zu Wortlaut, Reifegraden, Bildern und Positionierung bleiben in der Wissensbasis des Repos fancy-research-tools dokumentiert, in `knowledge/specification.md` mit ADR-001 bis ADR-013.
+
+## 2026-10-02 Startseitentexte überarbeitet
+
+### Ziel
+
+Die Texte der Startseite (DE und EN) nach der vom Operator freigegebenen Liste sachlich neu fassen und Eyebrows entfernen.
+
+### Ergebnis
+
+Hero-Untertitel, Meta-Titel und Meta-Beschreibung nennen Forschungssoftware, digitale Editionen und Agentic Engineering neben Weiterbildung und Beratung. Die sechs Angebotskarten, drei Projektkarten (MHDBDB, Ružake gila, Mapping Mobile Musicians), die Sektionstitel sowie Kontakt und Footer mit Standort Kainbach bei Graz sind neu formuliert. Die Formate heißen Webinar, Workshop, Ganztägig und Mehrtägig und Beratung, die Dauer steht als normale Zeile unter dem Titel. Kicker-Zeilen, Säulen-Labels über den Angebotskarten und die Kicker der Blog-Übersicht sind samt globaler `.kicker`-Regel entfernt, die Farbcodierung der Icons bleibt als `iconColor`. Aus `src/i18n/excellence.ts` sind die nicht mehr gerenderten Strings der früheren Excellence-Seite, der Statistikblock und die Video-Lernpfad-Daten gelöscht.
+
+### Offen
+
+Fortunoff- und CROWN-Karte, Partnerliste, Teamrollen und Bios warten auf Fakten des Operators. Datum und Quellangabe im Patreon-Feed verfehlen weiterhin den Farbkontrast.

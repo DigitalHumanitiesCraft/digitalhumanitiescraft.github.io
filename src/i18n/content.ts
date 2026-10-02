@@ -7,9 +7,8 @@ export interface Service {
   title: string;
   text: string;
   icon: string;
-  /** Säulen-Label (Zwei-Säulen-IA): Excellence oder Entwicklung */
-  pillar: string;
-  pillarColor: string;
+  /** Hexagon-Farbe des Icons: violett für Weiterbildung und Beratung, navy für Entwicklung */
+  iconColor: string;
 }
 
 export interface Project {
@@ -63,31 +62,30 @@ const t = {
     heroTitle1: 'Digitales Handwerk aus der Forschung,',
     heroTitle2: 'für alle, die mit Wissen arbeiten.',
     heroSub:
-      'Weiterbildung, Beratung und Forschungssoftware rund um generative KI. Für Universitäten, Kultureinrichtungen, Unternehmen und Verwaltung.',
+      'Wir entwickeln Forschungssoftware, digitale Editionen und mit Coding-Agenten gebaute Werkzeuge und bieten Weiterbildung und Beratung zu generativer KI, für Universitäten, Kultureinrichtungen, Unternehmen und Verwaltung.',
     heroCta1: 'Unser Angebot',
     heroCta2: 'Projekte ansehen',
-    servicesKicker: 'Angebot',
-    servicesTitle: 'Was wir machen.',
-    projectsKicker: 'Referenzen',
-    projectsTitle: 'Eine Auswahl unserer Arbeit.',
+    servicesTitle: 'Angebot',
+    projectsTitle: 'Ausgewählte Projekte',
     projectsMore: 'Mehr Projekte auf GitHub',
-    partnersKicker: 'Partner & Auftraggeber',
-    partnersTitle: 'Institutionen, die uns vertrauen.',
-    teamTitle: 'Das Team.',
-    blogTitle: 'Was uns beschäftigt.',
+    partnersTitle: 'Institutionen, für die wir gearbeitet haben',
+    teamTitle: 'Team',
+    blogTitle: 'Blog',
     blogAll: 'Alle Beiträge',
-    contactTitle: 'Finden Sie Ihre persönliche Lösung.',
-    contactSub: 'Fragen Sie nach unseren Angeboten. Wir melden uns rasch und unkompliziert.',
+    contactTitle: 'Kontakt',
+    contactSub: 'Beschreiben Sie uns kurz Ihr Vorhaben, Ihre Daten und Ihren Budgetrahmen.',
     contactCta: 'Kontakt aufnehmen',
+    contactPlace: 'Kainbach bei Graz, Österreich',
+    footerPlace: 'Kainbach bei Graz',
     footerCompany: 'Unternehmen',
     footerLegal: 'Rechtliches',
     footerImprint: 'Impressum',
     footerPress: 'Presse',
     footerPrivacy: 'Datenschutz',
     footerAi: 'Unsere Position zu KI-Einsatz',
-    metaTitle: 'Digital Humanities Craft | KI-Weiterbildung, Beratung und Forschungssoftware',
+    metaTitle: 'Digital Humanities Craft | Forschungssoftware, Agentic Engineering und KI-Weiterbildung',
     metaDescription:
-      'Weiterbildung, Beratung und Forschungssoftware rund um generative KI. Für Universitäten, Kultureinrichtungen, Unternehmen und Verwaltung. Context Engineering, AI Literacy und Digitale Editionen aus Graz.',
+      'Forschungssoftware, digitale Editionen und Agentic Engineering sowie Weiterbildung und Beratung zu generativer KI für Universitäten, Kultureinrichtungen, Unternehmen und Verwaltung, aus Kainbach bei Graz.',
     skipLink: 'Zum Inhalt springen',
   },
   en: {
@@ -99,31 +97,30 @@ const t = {
     heroTitle1: 'Digital craftsmanship from research,',
     heroTitle2: 'for everyone who works with knowledge.',
     heroSub:
-      'Training, consulting and research software around generative AI. For universities, cultural institutions, companies and public administration.',
+      'We develop research software, digital editions and tools built with coding agents, and offer training and consulting on generative AI, for universities, cultural institutions, companies and public administration.',
     heroCta1: 'What we do',
     heroCta2: 'See our work',
-    servicesKicker: 'Services',
-    servicesTitle: 'What we do.',
-    projectsKicker: 'Selected work',
-    projectsTitle: 'A selection of our work.',
+    servicesTitle: 'Services',
+    projectsTitle: 'Selected projects',
     projectsMore: 'More projects on GitHub',
-    partnersKicker: 'Partners & clients',
-    partnersTitle: 'Institutions that trust us.',
-    teamTitle: 'The team.',
-    blogTitle: "What's on our minds.",
+    partnersTitle: 'Institutions we have worked for',
+    teamTitle: 'Team',
+    blogTitle: 'Blog',
     blogAll: 'All posts',
-    contactTitle: 'Find the right solution.',
-    contactSub: 'Ask about our offers. We respond quickly and without fuss.',
+    contactTitle: 'Contact',
+    contactSub: 'Briefly describe your project, your data and your budget.',
     contactCta: 'Get in touch',
+    contactPlace: 'Kainbach near Graz, Austria',
+    footerPlace: 'Kainbach near Graz',
     footerCompany: 'Company',
     footerLegal: 'Legal',
     footerImprint: 'Imprint',
     footerPress: 'Press',
     footerPrivacy: 'Privacy',
     footerAi: 'Our position on AI use',
-    metaTitle: 'Digital Humanities Craft | AI training, consulting and research software',
+    metaTitle: 'Digital Humanities Craft | Research software, agentic engineering and AI training',
     metaDescription:
-      'Training, consulting and research software around generative AI. For universities, cultural institutions, companies and public administration. Context engineering, AI literacy and digital editions from Graz, Austria.',
+      'Research software, digital editions and agentic engineering, plus training and consulting on generative AI for universities, cultural institutions, companies and public administration, from Kainbach near Graz, Austria.',
     skipLink: 'Skip to content',
   },
 };
@@ -132,54 +129,54 @@ const t = {
 const servicesText = {
   de: [
     {
-      title: 'KI-Workshops & Weiterbildung',
-      text: 'Context Engineering, AI Literacy und Agentic Engineering für Wissenschaft, Kultur und Wirtschaft. Als Impulsvortrag, Hands-on-Workshop oder mehrtägige School.',
+      title: 'KI-Weiterbildung',
+      text: 'Weiterbildung zu Context Engineering, AI Literacy und Agentic Engineering für Wissenschaft, Kultur und Wirtschaft, als Vortrag, Webinar, Workshop oder Beitrag zu mehrtägigen Schools.',
     },
     {
-      title: 'KI-Beratung & Co-Intelligence',
-      text: 'KI-Strategie und angewandte generative KI für Institutionen: Promptotyping, <a href="/fancy-research-tools/">agentische Systeme</a> und Workflows, die Expertise verstärken statt ersetzen.',
+      title: 'KI-Beratung und Agentic Engineering',
+      text: 'Beratung zu KI-Strategie und zum Einsatz generativer KI in Institutionen. Werkzeuge, Workflows und Wissensbasen entwickeln wir mit Coding-Agenten im Auftrag, gemeinsam mit Ihrem Team oder im Training, beschrieben unter <a href="/fancy-research-tools/">Agentic Engineering</a>.',
     },
     {
-      title: 'Lehre, Schools & Curricula',
-      text: 'Wir unterrichten an Universitäten in ganz Europa und gestalten Curricula mit. Und Schools geben wir zu jeder Jahreszeit: Winter, Spring, Summer und Autumn.',
+      title: 'Lehre, Schools und Curricula',
+      text: 'Wir lehren an Universitäten in Österreich und Deutschland, unterrichten auf Winter- und Summer Schools und wirken an Curricula und Studiengangsgutachten mit.',
     },
     {
-      title: 'Forschungssoftware & Digitale Editionen',
-      text: 'Web-Interfaces, Dashboards und Digitale Editionen für Forschungsprojekte, wann immer möglich kompatibel mit Linked Open Data. Langzeitarchivierung inklusive: in Kooperation mit dem <a href="https://digital-humanities.uni-graz.at/de/" target="_blank" rel="noopener">Institut für Digitale Geisteswissenschaften</a> der Universität Graz im OAIS-konformen, zertifizierten Repositorium <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>. Werkzeuge zum Anpassen zeigt <a href="/fancy-research-tools/">fancy (research) tools!</a>',
+      title: 'Forschungssoftware und digitale Editionen',
+      text: 'Web-Interfaces, Dashboards und digitale Editionen für Forschungsprojekte, nach Möglichkeit als Linked Open Data nachnutzbar. Für die Langzeitarchivierung von Forschungsdaten bieten wir das zertifizierte Repositorium <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a> an, über einen Rahmenvertrag mit dem <a href="https://digital-humanities.uni-graz.at/de/" target="_blank" rel="noopener">Institut für Digitale Geisteswissenschaften</a> der Universität Graz.',
     },
     {
-      title: 'Datenmodellierung & KI-gestützte Erschließung',
-      text: 'TEI, RDF und Schema-Entwicklung sowie KI-gestützte OCR/HTR-Pipelines, die Handschriften zu strukturierten, nachnutzbaren Daten machen.',
+      title: 'Datenmodellierung und KI-gestützte Erschließung',
+      text: 'Datenmodellierung mit TEI und RDF, Schema-Entwicklung sowie KI-gestützte Texterkennung (OCR/HTR) für Drucke und Handschriften, die daraus strukturierte, nachnutzbare Daten macht.',
     },
     {
-      title: 'Forschungsprojekt-Partnerschaft',
-      text: 'DHCraft als Projektpartner: Konsortialpartnerschaft in Förderprojekten jeder Art. Dazu Antragsunterstützung und die digitale Komponente für Ihr Forschungsvorhaben.',
+      title: 'Partnerschaft in Förderprojekten',
+      text: 'DHCraft arbeitet als technischer Partner und Auftragnehmer in Förderprojekten, unterstützt bei der Antragstellung und übernimmt die digitale Komponente des Vorhabens.',
     },
   ],
   en: [
     {
-      title: 'AI Workshops & Training',
-      text: 'Context engineering, AI literacy and agentic engineering for research, culture and business. As a keynote, hands-on workshop or multi-day school.',
+      title: 'AI training',
+      text: 'Training in context engineering, AI literacy and agentic engineering for research, culture and business, as a talk, webinar, workshop or contribution to multi-day schools.',
     },
     {
-      title: 'AI Consulting & Co-Intelligence',
-      text: 'AI strategy and applied generative AI for institutions: Promptotyping, <a href="/en/fancy-research-tools/">agentic systems</a> and workflows that amplify expertise instead of replacing it.',
+      title: 'AI consulting and agentic engineering',
+      text: 'Consulting on AI strategy and on the use of generative AI in institutions. We develop tools, workflows and knowledge bases with coding agents on commission, together with your team or in training, as described under <a href="/en/fancy-research-tools/">Agentic Engineering</a>.',
     },
     {
-      title: 'Teaching, Schools & Curricula',
-      text: 'We teach at universities across Europe and help shape curricula. And we run schools in every season: winter, spring, summer and autumn.',
+      title: 'Teaching, schools and curricula',
+      text: 'We teach at universities in Austria and Germany, teach at winter and summer schools and contribute to curricula and degree programme reviews.',
     },
     {
-      title: 'Research Software & Digital Editions',
-      text: 'Web interfaces, dashboards and digital editions for research projects, compatible with Linked Open Data whenever possible. Long-term preservation included, in cooperation with the <a href="https://digital-humanities.uni-graz.at/en/" target="_blank" rel="noopener">Department of Digital Humanities</a> at the University of Graz and its certified, OAIS-compliant repository <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>. Adaptable tools are shown at <a href="/en/fancy-research-tools/">fancy (research) tools!</a>',
+      title: 'Research software and digital editions',
+      text: 'Web interfaces, dashboards and digital editions for research projects, reusable as Linked Open Data wherever possible. For the long-term archiving of research data we offer the certified repository <a href="https://gams.uni-graz.at/" target="_blank" rel="noopener">GAMS</a>, through a framework agreement with the <a href="https://digital-humanities.uni-graz.at/en/" target="_blank" rel="noopener">Department of Digital Humanities</a> at the University of Graz.',
     },
     {
-      title: 'Data Modeling & AI-Assisted Digitization',
-      text: 'TEI, RDF and schema development plus AI-assisted OCR/HTR pipelines that turn manuscripts into structured, reusable data.',
+      title: 'Data modelling and AI-assisted digitisation',
+      text: 'Data modelling with TEI and RDF, schema development and AI-assisted text recognition (OCR/HTR) for prints and manuscripts that turns them into structured, reusable data.',
     },
     {
-      title: 'Research Project Partnership',
-      text: 'DHCraft as project partner: consortium partner in funded projects of any kind, plus proposal support and the digital component of your research project.',
+      title: 'Partnership in funded projects',
+      text: 'DHCraft works as a technical partner and contractor in funded projects, supports proposal writing and takes on the digital component of the project.',
     },
   ],
 };
@@ -197,20 +194,20 @@ const projectsBase = [
 
 const projectsText = {
   de: [
-    { partner: 'Universität Salzburg', desc: 'Die Mittelhochdeutsche Begriffsdatenbank auf neuer Basis: 667 TEI-Texte, semantische Suche und offene Dateninfrastruktur.' },
+    { partner: 'Universität Salzburg', desc: 'Die Mittelhochdeutsche Begriffsdatenbank auf neuer Grundlage, mit TEI-Texten, Suche über Lemmata und das Begriffssystem und offener Dateninfrastruktur.' },
     { partner: 'Literaturarchiv Salzburg', desc: 'Digitales Archiv und laufende Erweiterung der Plattform.' },
     { partner: 'Yale University', desc: 'Über 4.400 Video-Zeugnisse von Überlebenden und Zeitzeugen des Holocaust, gesammelt seit 1979. Consulting, Support und Weiterentwicklung der DH-Tools des Archivs.' },
     { partner: 'Kunsthistorisches Museum Wien', desc: 'Datenmodellierung und Webentwicklung zur Erforschung der Wiener Reichskrone.' },
-    { partner: 'mdw Wien · MMRC', desc: 'Custom Theme für Omeka S, Consulting und Support.' },
-    { partner: 'Kunstuniversität Graz', desc: 'Pilotstudie zu Mobilität und Wissensproduktion der Mezzosopranistin Ira Malaniuk: Nachlassdokumente als Linked Data, jede Angabe bis zur Quelle nachvollziehbar.' },
+    { partner: 'mdw Wien, Music and Minorities Research Center', desc: 'Eigenes Theme für Omeka S, Beratung und Betreuung.' },
+    { partner: 'Kunstuniversität Graz', desc: 'Pilotstudie zu Mobilität und Wissensproduktion der Mezzosopranistin Ira Malaniuk, mit Nachlassdokumenten als Linked Data, in denen jede Angabe bis zur Quelle nachvollziehbar ist.' },
   ],
   en: [
-    { partner: 'University of Salzburg', desc: 'The Middle High German Conceptual Database on a new foundation: 667 TEI texts, semantic search and an open data infrastructure.' },
+    { partner: 'University of Salzburg', desc: 'The Middle High German Conceptual Database on a new foundation, with TEI texts, search by lemma and by the conceptual system, and an open data infrastructure.' },
     { partner: 'Literature Archive Salzburg', desc: 'Digital archive and ongoing expansion of the platform.' },
     { partner: 'Yale University', desc: "More than 4,400 video testimonies of Holocaust survivors and witnesses, recorded since 1979. Consulting, support and further development of the archive's DH tools." },
     { partner: 'Kunsthistorisches Museum Wien', desc: 'Data modeling and web development for the study of the Vienna Imperial Crown.' },
-    { partner: 'mdw Wien · MMRC', desc: 'Custom Omeka S theme, consulting and support.' },
-    { partner: 'University of Music and Performing Arts Graz', desc: 'Pilot study on the mobility and knowledge production of mezzo-soprano Ira Malaniuk: estate documents as linked data, every statement traceable to its source.' },
+    { partner: 'mdw Vienna, Music and Minorities Research Center', desc: 'Custom Omeka S theme, consulting and support.' },
+    { partner: 'University of Music and Performing Arts Graz', desc: 'Pilot study on the mobility and knowledge production of mezzo-soprano Ira Malaniuk, with estate documents as linked data in which every statement can be traced to its source.' },
   ],
 };
 
@@ -320,9 +317,8 @@ export function getContent(lang: Lang) {
   const services: Service[] = servicesText[lang].map((s, i) => ({
     ...s,
     icon: icons[iconOrder[i]],
-    pillar: i < 3 ? 'Excellence' : lang === 'de' ? 'Entwicklung' : 'Development',
-    // Zwei Säulen als Navy/Violett codiert (Farbreduktion 2026-07-09): Excellence violett, Entwicklung navy
-    pillarColor: i < 3 ? '#8a4fa3' : '#1e2749',
+    // Zwei Säulen als Navy/Violett codiert (Farbreduktion 2026-07-09), das Säulen-Label entfällt seit 2026-10-02
+    iconColor: i < 3 ? '#8a4fa3' : '#1e2749',
   }));
 
   const projects: Project[] = projectsBase.map((p, i) => ({

@@ -19,7 +19,6 @@ export interface BlogPost {
 
 const t = {
   de: {
-    kicker: 'Blog · dhcraft.org/excellence',
     title: 'Alle Beiträge.',
     sub: 'Blogartikel zum Lesen, Videos zum Nachschauen: Promptotyping, generative KI und Digital Humanities.',
     backToExcellence: '← Zurück zu Excellence',
@@ -32,7 +31,6 @@ const t = {
     skipLink: 'Zum Inhalt springen',
   },
   en: {
-    kicker: 'Blog · dhcraft.org/excellence',
     title: 'All posts.',
     sub: 'Blog articles for reading, videos for watching: Promptotyping, generative AI and Digital Humanities.',
     backToExcellence: '← Back to Excellence',

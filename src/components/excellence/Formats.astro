@@ -18,16 +18,14 @@ const skillUrl = 'https://github.com/DigitalHumanitiesCraft/promptotyping-skill'
 <section id="excellence" class="formats">
   <div class="wrap">
     <div class="head">
-      <div class="kicker">{t.formatsKicker}</div>
       <h2>{t.formatsTitle}</h2>
-      <p class="intro">{t.formatsIntro}</p>
     </div>
     <div class="grid">
       {
         formats.map((f) => (
           <div class="card">
-            <div class="duration">{f.duration}</div>
             <h3>{f.title}</h3>
+            <p class="duration">{f.duration}</p>
             <p>{f.text}</p>
           </div>
         ))
@@ -62,23 +60,12 @@ const skillUrl = 'https://github.com/DigitalHumanitiesCraft/promptotyping-skill'
     margin-bottom: 52px;
   }
 
-  .kicker {
-    color: var(--purple);
-  }
-
   h2 {
     font-family: var(--font-display);
     font-size: 40px;
     line-height: 1.12;
     letter-spacing: -0.02em;
     font-weight: 700;
-    margin: 0 0 16px;
-  }
-
-  .intro {
-    font-size: 17px;
-    line-height: 1.6;
-    color: rgba(30, 39, 73, 0.7);
     margin: 0;
   }
 
@@ -104,14 +91,6 @@ const skillUrl = 'https://github.com/DigitalHumanitiesCraft/promptotyping-skill'
     box-shadow: 0 12px 32px rgba(30, 39, 73, 0.08);
   }
 
-  .duration {
-    font-size: 12.5px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--purple);
-  }
-
   h3 {
     font-family: var(--font-display);
     font-size: 19px;
@@ -125,6 +104,12 @@ const skillUrl = 'https://github.com/DigitalHumanitiesCraft/promptotyping-skill'
     line-height: 1.6;
     color: rgba(30, 39, 73, 0.72);
     margin: 0;
+  }
+
+  .card .duration {
+    font-weight: 600;
+    color: var(--purple);
+    margin-top: -4px;
   }
 
   .promos {
