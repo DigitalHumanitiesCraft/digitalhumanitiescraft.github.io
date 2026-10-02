@@ -94,3 +94,47 @@ a {
   left: 0;
   color: #fff;
 }
+
+/* Eigene Klassennamen statt .card/.section-title: beide sind in anderen Komponenten
+   (Services, Team, Formats, Presse, Fancy) mit abweichenden Regeln belegt und würden
+   global Eigenschaften erben. Komponenten überschreiben per Scoping-Attribut. */
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Karte mit Bildbanner (Projekte, Startseite Neues, Blog-Index) */
+.media-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid rgba(30, 39, 73, 0.09);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.media-card:hover {
+  box-shadow: 0 16px 40px rgba(30, 39, 73, 0.1);
+  border-color: rgba(138, 79, 163, 0.3);
+}
+
+.media-card .banner {
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.media-card .thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}

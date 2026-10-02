@@ -99,3 +99,17 @@ Jedes Logo wurde gegen Vault und Repositorien geprüft. Entfernt sind TU Graz, M
 ### Offen
 
 Museumsmanagement Niederösterreich und die Göttinger Digitale Akademie fehlen, das erste mangels sauberer Logodatei, das zweite, weil der Workshop erst am 2026-10-15 stattfindet. Krems kommt zurück, sobald die Vertragspartei der Lehre belegt ist.
+
+## 2026-10-02 Blogindex, YouTube-Vorschaubilder und Kartenstile
+
+### Ziel
+
+Das Promptotyping-Tutorial in Blogindex und Neues zeigen, YouTube-Vorschaubilder ohne Anfrage des Besucher-Browsers an Google ausliefern und die doppelten Kartenstile zusammenführen.
+
+### Ergebnis
+
+Das Tutorial steht in `postsBase` mit dem Phasendiagramm als Vorschaubild. Der Blogindex bricht den Build ab, sobald ein veröffentlichter Post dort fehlt. Die Vorschaubilder lädt der Build über astro:assets herunter und liefert sie von dhcraft.org aus. Weil Astro bei jedem fehlgeschlagenen Bildabruf den Build abbricht, prüft `videos.ts` jedes Bild vorab und rendert die Karte sonst ohne Bild, der Offline-Build läuft durch. Die Postkarte ohne Bild zeigt auch im Blogindex das Aquarell-Logo. Kartenbasis und Abschnittsüberschrift liegen als `.media-card` und `.section-heading` in `global.css`, eigene Namen, weil `.card` und `.section-title` anderswo abweichend belegt sind. Die Screenshots vor und nach der Zusammenführung sind pixelgleich. Das Datum der Blogindex-Karten ist dunkler, weil es den Kontrasttest nicht bestand.
+
+### Offen
+
+Die Abschnittsüberschrift schaltet in den Formaten bei 700 px auf die kleine Größe, in den übrigen Abschnitten bei 900 px. Die Breakpoints bleiben daher in den Komponenten.
