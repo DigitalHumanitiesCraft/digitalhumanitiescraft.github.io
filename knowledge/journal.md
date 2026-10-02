@@ -88,4 +88,14 @@ Die Formate stehen direkt unter dem Angebot. Blog und Videos teilen sich den Abs
 
 ### Offen
 
-Die Logoleiste enthält weiterhin Institutionen ohne belegten Auftrag. Die Ružake-gila-Karte nennt nur den Beitrag, weil eine Projektbeschreibung fehlt. Die Seiten von Feministische AI Literacies werden aus `docs/` ausgeliefert, der Wechsel auf `build/site/` ist im Projekt offen.
+Die Seiten von Feministische AI Literacies werden aus `docs/` ausgeliefert, der Wechsel auf `build/site/` ist im Projekt offen.
+
+## 2026-10-02 Logoleiste belegt
+
+### Ergebnis
+
+Jedes Logo wurde gegen Vault und Repositorien geprüft. Entfernt sind TU Graz, MedUni Graz, Österreichische Nationalbibliothek, Yale, MPI für Rechtsgeschichte, Münster, Würzburg, Bergbau-Museum Bochum, Saarland und BBAW ohne Beleg sowie Krems, weil offen ist, ob die Lehre dort über DHCraft lief. Neu ist das wiiw mit dem gemeinfreien Logo von Wikimedia Commons. Der Titel lautet „Institutionen, mit denen wir gearbeitet haben“, weil die Klassik Stiftung Weimar eine Kooperation ohne Auftrag ist. Die Ružake-gila-Karte beschreibt das Projekt nach der Ausstellungsseite, deren Footer „Theme by DH Craft“ nennt.
+
+### Offen
+
+Museumsmanagement Niederösterreich und die Göttinger Digitale Akademie fehlen, das erste mangels sauberer Logodatei, das zweite, weil der Workshop erst am 2026-10-15 stattfindet. Krems kommt zurück, sobald die Vertragspartei der Lehre belegt ist.
