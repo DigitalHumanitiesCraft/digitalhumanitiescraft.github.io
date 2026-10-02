@@ -1,7 +1,6 @@
-// Inhalte der Dienstleistungsseite "fancy (research) tools!", wortgleich übernommen aus dem Repo
-// DigitalHumanitiesCraft/fancy-research-tools (index.html, en/index.html, datenschutz/, en/privacy/).
-// Begründungen für Wortlaut, Reifegrade und Bilder stehen dort in knowledge/specification.md
-// (ADR-001 bis ADR-013); Änderungen am Text zuerst dort klären.
+// Inhalte der Unterseite "fancy (research) tools!". Wissensbasis mit Entscheidungen zu Wortlaut,
+// Reifegraden, Bildern und Grundsätzen, Werkzeugen für Bildschirmfotos und Prüfungen liegt im Repo
+// DigitalHumanitiesCraft/fancy-research-tools (knowledge/, tools/). Textänderungen zuerst dort klären.
 
 import type { Lang } from './content';
 
