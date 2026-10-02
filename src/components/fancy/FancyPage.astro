@@ -48,22 +48,6 @@ const homeHref = lang === 'de' ? '/' : '/en/';
               <a class="button" href="#angebot">{t.heroOffer}</a>
             </div>
           </div>
-
-          <div class="motif hero-motif" aria-hidden="true">
-            <svg viewBox="380 0 820 300" preserveAspectRatio="xMidYMid meet">
-              <path class="m-beam" d="M0 168 L548 158"></path>
-              <g>
-                <path class="m-band b1" d="M652 150 L1200 40 L1200 72 L654 155 Z"></path>
-                <path class="m-band b2" d="M654 155 L1200 72 L1200 104 L656 160 Z"></path>
-                <path class="m-band b3" d="M656 160 L1200 104 L1200 136 L658 165 Z"></path>
-                <path class="m-band b4" d="M658 165 L1200 136 L1200 168 L660 170 Z"></path>
-                <path class="m-band b5" d="M660 170 L1200 168 L1200 200 L662 175 Z"></path>
-                <path class="m-band b6" d="M662 175 L1200 200 L1200 232 L664 180 Z"></path>
-                <path class="m-band b7" d="M664 180 L1200 232 L1200 264 L666 185 Z"></path>
-              </g>
-              <path class="m-prism" d="M600 30 L700 250 L500 250 Z"></path>
-            </svg>
-          </div>
         </div>
       </section>
 
@@ -435,11 +419,15 @@ const homeHref = lang === 'de' ? '/' : '/en/';
     filter: blur(30px);
   }
 
+  /* In the grid of .hero the auto margins of .wrap would shrink it to the text and centre it. */
   .hero-grid {
-    display: grid;
-    gap: var(--space-l);
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+    box-sizing: border-box;
+    inline-size: 100%;
+  }
+
+  /* Text in the left half, the right side stays empty. */
+  .hero-grid > div {
+    max-inline-size: 36rem;
   }
 
   .hero h1 {
@@ -510,60 +498,6 @@ const homeHref = lang === 'de' ? '/' : '/en/';
   @media (prefers-reduced-motion: no-preference) {
     .button:hover {
       transform: translateY(-2px);
-    }
-  }
-
-  /* The prism motif in the watercolour palette, softened like the hero wash. */
-  .motif {
-    margin-block-end: var(--space-l);
-  }
-
-  .motif svg {
-    inline-size: 100%;
-    block-size: clamp(7rem, 4rem + 14vw, 16rem);
-  }
-
-  .m-beam {
-    fill: none;
-    stroke: var(--ink);
-    stroke-width: 3;
-    stroke-linecap: round;
-  }
-
-  .m-prism {
-    fill: #fff;
-    stroke: var(--ink);
-    stroke-width: 2.5;
-    stroke-linejoin: round;
-  }
-
-  .m-band {
-    fill: var(--c);
-    opacity: 0.7;
-  }
-
-  .b1 { --c: var(--pink); }
-  .b2 { --c: var(--orange); }
-  .b3 { --c: var(--gold); }
-  .b4 { --c: var(--green); }
-  .b5 { --c: var(--lime); }
-  .b6 { --c: var(--blue); }
-  .b7 { --c: var(--purple); }
-
-  /* The prism as the page's own image, a tool that makes knowledge visible. */
-  .hero-motif {
-    margin: 0;
-    align-self: center;
-  }
-
-  .hero-motif svg {
-    block-size: auto;
-    aspect-ratio: 820 / 300;
-  }
-
-  @media (max-width: 30rem) {
-    .hero-motif {
-      display: none;
     }
   }
 

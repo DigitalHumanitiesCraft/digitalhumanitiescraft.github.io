@@ -157,7 +157,7 @@ const text = {
       'Agentic Engineering von Digital Humanities Craft. Wir bauen mit Frontier-Sprachmodellen und Coding-Agenten Werkzeuge, Workflows und Wissensbasen für Forschung, Kultureinrichtungen, Unternehmen und Verwaltung, für Sie, mit Ihnen oder im Training.',
     ogLocale: 'de_AT',
     ogImageAlt:
-      'Kopfbereich der Seite fancy (research) tools! mit Titel und einem Prisma, das einen Lichtstrahl in die Farben des Spektrums zerlegt',
+      'Kopfbereich der Seite fancy (research) tools! mit dem Titel, der Zeile Agentic Engineering für alle, die mit Wissen arbeiten, und dem Knopf Projekt anfragen',
     heroLine: 'Agentic Engineering für alle, die mit Wissen arbeiten.',
     lede: 'Wir bauen mit Frontier-Sprachmodellen und Coding-Agenten Werkzeuge, Workflows und Wissensbasen für Ihren Arbeitsablauf, für Sie, mit Ihnen oder in einem Training. Jedes Ergebnis wird an Ihren Daten geprüft und so dokumentiert, dass andere daran weiterarbeiten können.',
     heroCta: 'Projekt anfragen',
@@ -367,7 +367,7 @@ const text = {
       'Agentic engineering by Digital Humanities Craft. With frontier language models and coding agents we build tools, workflows and knowledge bases for research, cultural institutions, companies and public administration, for you, with you or in training.',
     ogLocale: 'en_GB',
     ogImageAlt:
-      'Header of the page fancy (research) tools! with its title and a prism splitting a ray of light into the colours of the spectrum',
+      'Header of the page fancy (research) tools! with its title, the line Agentic engineering for everyone who works with knowledge, and the button Request a project',
     heroLine: 'Agentic engineering for everyone who works with knowledge.',
     lede: 'With frontier language models and coding agents we build tools, workflows and knowledge bases for your workflow, for you, with you or in a training course. Every result is tested on your data and documented so that others can continue working on it.',
     heroCta: 'Request a project',
