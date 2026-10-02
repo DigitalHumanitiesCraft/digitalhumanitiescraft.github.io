@@ -6,6 +6,8 @@ import type { Lang } from '../../i18n/content';
 import { getBlogContent, isExternal, fmtDate } from '../../i18n/blog';
 import { getChannelVideos } from '../../lib/videos';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import watercolor from '../../assets/dhcraft_logo_watercolor_transparent.png';
 
 interface Props {
   lang: Lang;
@@ -51,7 +53,11 @@ const videos = (await getChannelVideos()).sort((a, b) => b.published.localeCompa
               sortedPosts.map((p) => (
                 <a href={p.url} class="card post-card" target={isExternal(p.url) ? '_blank' : undefined} rel={isExternal(p.url) ? 'noopener' : undefined}>
                   <div class="banner">
-                    {p.thumb ? <img src={p.thumb} alt="" loading="lazy" class="thumb" /> : null}
+                    {p.thumb ? (
+                      <img src={p.thumb} alt="" loading="lazy" class="thumb" />
+                    ) : (
+                      <Image src={watercolor} alt="" width={88} densities={[1, 2]} class="placeholder" />
+                    )}
                     <div class="hex banner-hex" aria-hidden="true" />
                   </div>
                   <div class="body">
@@ -72,7 +78,7 @@ const videos = (await getChannelVideos()).sort((a, b) => b.published.localeCompa
               videos.map((v) => (
                 <a href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noopener" class="card video-card">
                   <div class="thumb-wrap">
-                    <img src={`https://i.ytimg.com/vi/${v.id}/mqdefault.jpg`} alt="" loading="lazy" />
+                    {v.thumb && <Image src={v.thumb} alt="" width={320} height={180} loading="lazy" />}
                     <div class="play" aria-hidden="true">
                       <span class="play-btn">
                         <svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z" /></svg>
@@ -193,6 +199,15 @@ const videos = (await getChannelVideos()).sort((a, b) => b.published.localeCompa
     height: 100%;
     object-fit: cover;
     object-position: top center;
+  }
+
+  .placeholder {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 88px;
+    height: auto;
+    opacity: 0.85;
   }
 
   .banner-hex {

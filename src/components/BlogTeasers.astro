@@ -49,7 +49,7 @@ const allVideosUrl = lang === 'de' ? '/excellence/blog/#videos' : '/en/excellenc
         videos.map((v) => (
           <a href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noopener" class="card">
             <div class="banner video">
-              <img src={`https://i.ytimg.com/vi/${v.id}/mqdefault.jpg`} alt="" loading="lazy" class="thumb" />
+              {v.thumb && <Image src={v.thumb} alt="" width={320} height={180} loading="lazy" class="thumb" />}
               <span class="play" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z" /></svg>
               </span>

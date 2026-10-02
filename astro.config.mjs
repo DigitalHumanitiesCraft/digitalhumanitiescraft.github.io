@@ -31,6 +31,11 @@ function rehypeLocalizeFootnotes() {
 
 export default defineConfig({
   site: 'https://dhcraft.org',
+  // YouTube-Vorschaubilder lädt der Build herunter und liefert sie von dhcraft.org aus,
+  // damit der Besucher-Browser keine Anfrage an Google stellt.
+  image: {
+    domains: ['i.ytimg.com'],
+  },
   markdown: {
     rehypePlugins: [rehypeLocalizeFootnotes],
   },
