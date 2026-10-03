@@ -8,3 +8,6 @@ migration/
 
 # Nur lokal: interne Arbeitsdokumente (Skill-Ausgaben), nicht ins öffentliche Repo (2026-07-14)
 docs/
+
+# fancy (research) tools!: generated source images stay local, their prompt logs (*.txt) are committed
+knowledge/fancy-research-tools/image-prompts/*.png
