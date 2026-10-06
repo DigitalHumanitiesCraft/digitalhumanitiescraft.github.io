@@ -7,6 +7,7 @@ import thumbRuza from '../assets/projects/ruza.webp';
 import thumbMhdbdb from '../assets/projects/mhdbdb.png';
 import thumbM3gim from '../assets/projects/m3gim.jpg';
 import thumbFemprompt from '../assets/projects/femprompt.jpg';
+import thumbFortunoff from '../assets/projects/fortunoff.png';
 
 interface Props {
   lang: Lang;
@@ -14,7 +15,7 @@ interface Props {
 
 const { lang } = Astro.props;
 const { t, projects } = getContent(lang);
-const thumbs = { szd: thumbSzd, ruza: thumbRuza, mhdbdb: thumbMhdbdb, m3gim: thumbM3gim, femprompt: thumbFemprompt };
+const thumbs = { szd: thumbSzd, ruza: thumbRuza, mhdbdb: thumbMhdbdb, m3gim: thumbM3gim, femprompt: thumbFemprompt, fortunoff: thumbFortunoff };
 ---
 
 <section id="projects" class="projects">

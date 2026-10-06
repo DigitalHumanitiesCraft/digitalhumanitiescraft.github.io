@@ -14,7 +14,7 @@ export interface Project {
   desc: string;
   url: string;
   /** Key für Screenshot in src/assets/projects/ */
-  thumbKey: 'szd' | 'ruza' | 'mhdbdb' | 'm3gim' | 'femprompt';
+  thumbKey: 'szd' | 'ruza' | 'mhdbdb' | 'm3gim' | 'femprompt' | 'fortunoff';
 }
 
 export interface Partner {
@@ -181,10 +181,12 @@ const servicesText = {
 };
 
 // 2026-10-02: CROWN und Fortunoff entfernt (Rolle nicht belegt), Feministische AI Literacies aufgenommen.
+// 2026-10-06: Fortunoff zurück, belegter DHCraft-Auftrag (Christian Steiner). CROWN ist ebenfalls belegt, bleibt aber für zwei volle Reihen draußen.
 // Jede Beschreibung nennt erst das Projekt, dann den Beitrag von DHCraft.
 const projectsBase = [
   { title: 'MHDBDB', url: 'https://dhcraft.org/mhdbdb-tei-only/', thumbKey: 'mhdbdb' as const },
   { title: 'Stefan Zweig Digital', url: 'https://gams.uni-graz.at/context:szd', thumbKey: 'szd' as const },
+  { title: 'Fortunoff Video Archive', url: 'https://fortunoff.library.yale.edu/', thumbKey: 'fortunoff' as const },
   { title: 'M³GIM', url: 'https://dhcraft.org/m3gim/', thumbKey: 'm3gim' as const },
   { title: 'Feministische AI Literacies', url: 'https://chpollin.github.io/FemPrompt_SozArb/', thumbKey: 'femprompt' as const },
   { title: 'Ružake gila', url: 'https://ruzakegila.mdw.ac.at/', thumbKey: 'ruza' as const },
@@ -194,6 +196,7 @@ const projectsText = {
   de: [
     { partner: 'Universität Salzburg', desc: 'Die Mittelhochdeutsche Begriffsdatenbank erschließt mittelhochdeutsche Texte über Lemmata und ein Begriffssystem. Wir haben sie auf eine neue Grundlage mit TEI-Texten und offener Dateninfrastruktur gestellt.' },
     { partner: 'Literaturarchiv Salzburg', desc: 'Stefan Zweig Digital führt den weltweit verstreuten Nachlass Stefan Zweigs digital zusammen. Wir entwickeln das digitale Archiv und erweitern die Plattform laufend.' },
+    { partner: 'Yale University', desc: 'Das Fortunoff Video Archive sammelt seit 1979 Video-Zeugnisse von Überlebenden und Zeitzeugen des Holocaust, heute über 4.400. Wir beraten das Archiv, betreuen seine DH-Tools und entwickeln sie weiter.' },
     { partner: 'Kunstuniversität Graz', desc: 'Mapping Mobile Musicians ist eine Pilotstudie zu Mobilität und Wissensproduktion der Mezzosopranistin Ira Malaniuk. Wir haben ihren Teilnachlass als Linked Data modelliert und die öffentliche Forschungsvorschau gebaut, in der jede Angabe bis zur Quelle nachvollziehbar ist.' },
     { partner: 'Universität Graz, Elisabeth List Fellowship', desc: 'Ein Literaturreview zum verantwortungsvollen Einsatz von Sprachmodellen in der Sozialen Arbeit. Wir haben den Workflow gebaut, in dem Beiträge von KI-Agenten und Entscheidungen der Fachleute bis zu ihren Quellen nachvollziehbar bleiben.' },
     { partner: 'mdw Wien, Music and Minorities Research Center', desc: 'Ružake gila ist eine digitale Ausstellung zum musikalischen Erbe der Roma-Sängerin Ruža Nikolić-Lakatos. Wir haben dafür ein eigenes Theme für Omeka S entwickelt und begleiten das Projekt mit Beratung und Betreuung.' },
@@ -201,6 +204,7 @@ const projectsText = {
   en: [
     { partner: 'University of Salzburg', desc: 'The Middle High German Conceptual Database opens up Middle High German texts by lemma and by a conceptual system. We put it on a new foundation with TEI texts and an open data infrastructure.' },
     { partner: 'Literature Archive Salzburg', desc: "Stefan Zweig Digital brings together Stefan Zweig's papers, scattered across the world, in one digital collection. We develop the digital archive and keep extending the platform." },
+    { partner: 'Yale University', desc: 'The Fortunoff Video Archive has been recording video testimonies of Holocaust survivors and witnesses since 1979 and now holds more than 4,400. We advise the archive and support and further develop its DH tools.' },
     { partner: 'University of Music and Performing Arts Graz', desc: 'Mapping Mobile Musicians is a pilot study on the mobility and knowledge production of mezzo-soprano Ira Malaniuk. We modelled her papers as linked data and built the public research preview in which every statement can be traced to its source.' },
     { partner: 'University of Graz, Elisabeth List Fellowship', desc: 'A literature review on the responsible use of language models in social work. We built the workflow in which contributions of AI agents and decisions of the domain experts remain traceable to their sources.' },
     { partner: 'mdw Vienna, Music and Minorities Research Center', desc: 'Ružake gila is a digital exhibition on the musical heritage of the Roma singer Ruža Nikolić-Lakatos. We developed a custom Omeka S theme for it and support the project with consulting and maintenance.' },
