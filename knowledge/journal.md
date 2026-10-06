@@ -113,3 +113,9 @@ Das Tutorial steht in `postsBase` mit dem Phasendiagramm als Vorschaubild. Der B
 ### Offen
 
 Die Abschnittsüberschrift schaltet in den Formaten bei 700 px auf die kleine Größe, in den übrigen Abschnitten bei 900 px. Die Breakpoints bleiben daher in den Komponenten.
+
+## 2026-10-06 Logoleiste wiederhergestellt
+
+### Ergebnis
+
+Die zwölf am 2026-10-02 entfernten Logos sind zurück: TU Graz, MedUni Graz, Österreichische Nationalbibliothek, Yale, MPI für Rechtsgeschichte, Münster, Würzburg, Bergbau-Museum Bochum, Saarland, BBAW, Krems und das Kunsthistorische Museum Wien. Laut Christian Steiner sind alle zwölf belegte DHCraft-Aufträge. Sie fehlten nur in dem Vault, gegen den am 2026-10-02 geprüft wurde, und das Fehlen dort war kein Beleg gegen den Auftrag. Das wiiw bleibt dabei.
