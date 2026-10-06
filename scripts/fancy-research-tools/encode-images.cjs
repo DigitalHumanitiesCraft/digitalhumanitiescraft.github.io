@@ -1,6 +1,6 @@
 // Encodes a chosen source image as WebP in 1440 and 720 width for the page, through the browser's
 // canvas, so no image library is needed. Source PNGs stay local under assets/img/source/.
-//   PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=msedge node scripts/fancy-research-tools/encode-images.cjs <source.png> <target-slug>
+//   PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=chrome node scripts/fancy-research-tools/encode-images.cjs <source.png> <target-slug>
 // writes <target-slug>-1440.webp and -720.webp into public/fancy-research-tools/img/ of this site.
 const fs = require("fs");
 const path = require("path");

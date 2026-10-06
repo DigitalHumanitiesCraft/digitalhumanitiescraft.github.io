@@ -2,7 +2,7 @@
 // at 1440 by 900 CSS pixels and double pixel density, and writes WebP files in 1440 and 720 width
 // into public/fancy-research-tools/img/ of this site.
 // Needs Playwright from an existing installation and network access to the demos:
-//   PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=msedge node scripts/fancy-research-tools/shoot-tools.cjs [id ...]
+//   PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=chrome node scripts/fancy-research-tools/shoot-tools.cjs [id ...]
 // The teiCrafter recipe loads a synthetic sample from a local teiCrafter clone, set TEICRAFTER_SAMPLE.
 const fs = require("fs");
 const path = require("path");

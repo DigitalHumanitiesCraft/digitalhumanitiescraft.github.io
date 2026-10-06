@@ -63,7 +63,7 @@ With the preview running:
 
 ```
 for f in scripts/fancy-research-tools/*.cjs; do node --check "$f" || exit 1; done
-PLAYWRIGHT=/path/to/node_modules/playwright AXE=/path/to/axe-core/axe.min.js CHANNEL=msedge LINKS=1 node scripts/fancy-research-tools/check.cjs
+PLAYWRIGHT=/path/to/node_modules/playwright AXE=/path/to/axe-core/axe.min.js CHANNEL=chrome LINKS=1 node scripts/fancy-research-tools/check.cjs
 ```
 
 The check ends with `all checks passed` or with the count of problems and exit code 1.
@@ -72,7 +72,7 @@ Environment variables of the scripts:
 
 - `PLAYWRIGHT`: path to an installed Playwright package.
 - `AXE`: path to `axe.min.js` of an installed axe-core.
-- `CHANNEL`: browser channel for Playwright, for example `msedge`.
+- `CHANNEL`: browser channel for Playwright, for example `chrome`.
 - `BASE`: address of the site, by default `http://localhost:4399`, the address `astro preview` binds, which may be IPv6 only, set to `https://dhcraft.org` to check the live pages.
 - `PAGES`: comma-separated routes to check instead of the four default routes.
 - `LINKS`: any value adds the external link check.
@@ -82,9 +82,9 @@ Environment variables of the scripts:
 The image scripts write into `public/fancy-research-tools/img/`:
 
 ```
-PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=msedge TEICRAFTER_SAMPLE=/path/to/zbz-hersch-synthetic.xml node scripts/fancy-research-tools/shoot-tools.cjs [id ...]
-PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=msedge node scripts/fancy-research-tools/shoot-og.cjs
-PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=msedge node scripts/fancy-research-tools/encode-images.cjs knowledge/fancy-research-tools/image-prompts/<file>.png <slug>
+PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=chrome TEICRAFTER_SAMPLE=/path/to/zbz-hersch-synthetic.xml node scripts/fancy-research-tools/shoot-tools.cjs [id ...]
+PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=chrome node scripts/fancy-research-tools/shoot-og.cjs
+PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=chrome node scripts/fancy-research-tools/encode-images.cjs knowledge/fancy-research-tools/image-prompts/<file>.png <slug>
 ```
 
 `shoot-og.cjs` renders the share image from the running preview, `shoot-tools.cjs` needs network access to the live demos.

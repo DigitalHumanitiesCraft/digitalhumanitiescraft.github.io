@@ -1,7 +1,7 @@
 // Renders the link preview image for sharing (JPEG, 1200 by 630) from the hero of the German subpage
 // and writes it into public/fancy-research-tools/img/ of this site. Needs Playwright from an
 // existing installation and the site served, by default the site's `npx astro preview --port 4399`:
-//   PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=msedge node scripts/fancy-research-tools/shoot-og.cjs
+//   PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=chrome node scripts/fancy-research-tools/shoot-og.cjs
 const path = require("path");
 const { chromium } = require(process.env.PLAYWRIGHT || "playwright");
 

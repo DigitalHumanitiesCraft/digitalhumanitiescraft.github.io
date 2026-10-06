@@ -3,7 +3,7 @@
 // With LINKS=1 it also checks every external link of both language versions for HTTP 200.
 // Needs Playwright and axe-core from an existing installation and the site served, by default the
 // site's `npx astro preview --port 4399`. BASE=https://dhcraft.org checks the live pages.
-//   PLAYWRIGHT=/path/to/node_modules/playwright AXE=/path/to/axe-core/axe.min.js CHANNEL=msedge node scripts/fancy-research-tools/check.cjs
+//   PLAYWRIGHT=/path/to/node_modules/playwright AXE=/path/to/axe-core/axe.min.js CHANNEL=chrome node scripts/fancy-research-tools/check.cjs
 const { chromium } = require(process.env.PLAYWRIGHT || "playwright");
 
 const base = process.env.BASE || "http://localhost:4399";
