@@ -301,12 +301,12 @@ const teamRole = { de: 'Gründer und Gesellschafter', en: 'Co-founder and partne
 // Nach den Selbstdarstellungen auf chsteiner.github.io und chpollin.github.io, geprüft 2026-10-02.
 const teamBio = {
   de: [
-    'Masterabschlüsse in Übersetzen und in Digital Humanities an der Universität Graz, dort Doktorand in Digital Humanities. Von 2012 bis 2024 am Institut für Digitale Geisteswissenschaften der Universität Graz, seit 2018 Lehrbeauftragter, derzeit an den Universitäten Graz, Wien und Klagenfurt.',
-    'Studium der Geschichte und des Digital Cultural Heritage (EuroMACHS) und 2025 Promotion in Digital Humanities an der Universität Graz. Von 2017 bis 2024 am Zentrum für Informationsmodellierung der Universität Graz, 2022 Mitgründer von DHCraft.',
+    'Masterabschlüsse in Übersetzen und in Digital Humanities an der Universität Graz. Von 2012 bis 2024 am Institut für Digitale Geisteswissenschaften (vormals Zentrum für Informationsmodellierung) der Universität Graz, seit 2018 Lehrbeauftragter, derzeit an den Universitäten Graz, Wien und Klagenfurt.',
+    'Studium der Geschichte und des Digital Cultural Heritage (EuroMACHS) und 2025 Promotion in Digital Humanities an der Universität Graz. Von 2017 bis 2024 am Institut für Digitale Geisteswissenschaften (vormals Zentrum für Informationsmodellierung) der Universität Graz, 2022 Mitgründer von DHCraft.',
   ],
   en: [
-    "Master's degrees in Translation and in Digital Humanities from the University of Graz, where he is pursuing a PhD in Digital Humanities. At the Department of Digital Humanities of the University of Graz from 2012 to 2024, external lecturer since 2018, currently at the Universities of Graz, Vienna and Klagenfurt.",
-    'Studied History and Digital Cultural Heritage (EuroMACHS) and completed a PhD in Digital Humanities at the University of Graz in 2025. At the Centre for Information Modelling of the University of Graz from 2017 to 2024, co-founder of DHCraft in 2022.',
+    "Master's degrees in Translation and in Digital Humanities from the University of Graz. At the Department of Digital Humanities (formerly Centre for Information Modelling) of the University of Graz from 2012 to 2024, external lecturer since 2018, currently at the Universities of Graz, Vienna and Klagenfurt.",
+    'Studied History and Digital Cultural Heritage (EuroMACHS) and completed a PhD in Digital Humanities at the University of Graz in 2025. At the Department of Digital Humanities (formerly Centre for Information Modelling) of the University of Graz from 2017 to 2024, co-founder of DHCraft in 2022.',
   ],
 };
 
