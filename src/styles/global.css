@@ -23,6 +23,12 @@ html {
   scroll-margin-top: 84px;
 }
 
+/* Sektionen bringen eigenen Innenabstand mit und schließen direkt unter dem Header an (67 px),
+   sonst blitzt beim Sprung der Rand der vorigen Sektion durch, sichtbar bei Team vor Blog. */
+section[id] {
+  scroll-margin-top: 64px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
