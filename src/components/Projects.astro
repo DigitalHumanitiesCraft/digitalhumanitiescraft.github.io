@@ -65,7 +65,9 @@ const thumbs = { szd: thumbSzd, ruza: thumbRuza, mhdbdb: thumbMhdbdb, m3gim: thu
     gap: 24px;
   }
 
+  /* border-box, sonst schiebt der Kartenrahmen die dritte Karte in die nächste Reihe. */
   .grid > .media-card {
+    box-sizing: border-box;
     flex: 0 1 calc((100% - 48px) / 3);
   }
 
