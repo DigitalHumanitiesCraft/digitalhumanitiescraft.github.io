@@ -299,6 +299,7 @@ const teamBase = [
 const teamRole = { de: 'Gründer und Gesellschafter', en: 'Co-founder and partner' };
 
 // Nach den Selbstdarstellungen auf chsteiner.github.io und chpollin.github.io, geprüft 2026-10-02.
+// 2026-10-06: Institut mit früherem Namen, Doktorat bei Christian Steiner gestrichen (seine Angabe).
 const teamBio = {
   de: [
     'Masterabschlüsse in Übersetzen und in Digital Humanities an der Universität Graz. Von 2012 bis 2024 am Institut für Digitale Geisteswissenschaften (vormals Zentrum für Informationsmodellierung) der Universität Graz, seit 2018 Lehrbeauftragter, derzeit an den Universitäten Graz, Wien und Klagenfurt.',

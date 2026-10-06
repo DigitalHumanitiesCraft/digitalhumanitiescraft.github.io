@@ -113,7 +113,7 @@ a {
   margin: 0;
 }
 
-/* Karte mit Bildbanner (Projekte, Startseite Neues, Blog-Index) */
+/* Karte mit Bildbanner (Projekte, Startseite Blog, Blog-Index) */
 .media-card {
   display: flex;
   flex-direction: column;
