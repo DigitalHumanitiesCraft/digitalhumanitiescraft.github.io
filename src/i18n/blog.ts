@@ -50,16 +50,8 @@ const postsBase = [
     thumb: '/excellence/blog/img/promptotyping-wiiw-phases.png',
   },
   {
-    url: '/excellence/blog/KI-Typen-Journalismus-Bias/',
-    date: '2026-06-15',
-    postLang: 'DE' as const,
-    color: '#b5476a',
-    title: 'Regelbasierte, prädiktive und generative KI im Journalismus',
-    thumb: null,
-  },
-  {
     url: '/excellence/blog/Asymmetric-Amplifications-Epistemic-Infrastructures/',
-    date: '2026-05-12',
+    date: '2026-07-22',
     postLang: 'EN' as const,
     color: '#5b3a78',
     title: 'Asymmetric Amplifications and Epistemic Infrastructures',
@@ -141,14 +133,9 @@ const postsText = {
         'Das praktische Tutorial zur Methode auf dem Stand von Mitte 2026, vom Repository mit knowledge-Ordner über Materialsammlung, CLAUDE.md, Exploration und Destillation bis zur Implementation mit Verification Milestones und zur Publikation.',
     },
     {
-      tag: 'Journalismus & KI',
-      teaser:
-        'Regelbasierte Automatisierung, ML-Prognosen und generative KI tragen Bias an verschiedenen Stellen: eine Ordnung an Beispielen aus dem österreichischen Journalismus, und warum Redaktionen Feminist AI Literacies brauchen.',
-    },
-    {
       tag: 'Forschung & KI',
       teaser:
-        'Ein koautorierter Essay aus Digital Humanities und Sozialwissenschaften: Wie LLMs und KI-Agenten computergestützte Forschungsarbeit und Journalismus asymmetrisch verstärken, und warum epistemische Infrastruktur die methodische Antwort ist.',
+        'Ein koautorierter Essay aus Digital Humanities und Sozialwissenschaften zur ÖAW-Preisfrage 2026: Wie LLMs und KI-Agenten computergestützte Forschungsarbeit asymmetrisch verstärken, und warum epistemische Infrastruktur die methodische Antwort ist.',
     },
     {
       tag: 'Forschung & KI',
@@ -197,14 +184,9 @@ const postsText = {
         'The hands-on tutorial for the method as of mid-2026, from a repository with a knowledge folder via material collection, CLAUDE.md, exploration and distillation to implementation with verification milestones and publication. In German.',
     },
     {
-      tag: 'Journalism & AI',
-      teaser:
-        'Rule-based automation, machine-learning predictions and generative AI carry bias in different places: a map built on examples from Austrian journalism, and why newsrooms need feminist AI literacies. In German.',
-    },
-    {
       tag: 'Research & AI',
       teaser:
-        'A co-authored essay from Digital Humanities and the social sciences: how LLMs and AI agents asymmetrically amplify computer-based scholarly work and journalism, and why epistemic infrastructure is the methodological response.',
+        'A co-authored essay from Digital Humanities and the social sciences for the OeAW Prize Question 2026: how LLMs and AI agents asymmetrically amplify computer-based scholarly work, and why epistemic infrastructure is the methodological response.',
     },
     {
       tag: 'Research & AI',
