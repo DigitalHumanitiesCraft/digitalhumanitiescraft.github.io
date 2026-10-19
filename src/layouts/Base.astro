@@ -21,7 +21,7 @@ interface Props {
   path: string;
   /** Kanonischer Pfad, falls er von path abweicht (EN-Chrome-Variante eines Blog-Posts) */
   canonicalPath?: string;
-  /** Seite nicht indexieren (404): robots noindex, kein canonical */
+  /** Seite nicht indexieren (404): robots noindex, kein canonical, kein og:url */
   noindex?: boolean;
   /** og:type, z. B. "article" für Blog-Posts */
   ogType?: string;
@@ -89,7 +89,7 @@ const jsonLd = {
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
-    <meta property="og:url" content={`${site}${canonicalPath}`} />
+    {!noindex && <meta property="og:url" content={`${site}${canonicalPath}`} />}
     <meta property="og:site_name" content="Digital Humanities Craft" />
     <meta property="og:image" content={`${site}${ogImage}`} />
     <meta name="twitter:card" content="summary_large_image" />
