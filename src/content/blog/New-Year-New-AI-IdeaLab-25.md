@@ -35,13 +35,13 @@ abstract: "Der Beitrag analysiert das entstehende Monopol der Tech-Konzerne im B
 
 [Slides](https://docs.google.com/presentation/d/e/2PACX-1vTJFsKykxv1qOii3NFDEdi9UJ70k_w03_z8MPxEmSedxEXGASQ0pcFh3G-cUbrvd1DeJBb_e9GPoVkq/pub)
 
-# **AI Monopoly**
+## **AI Monopoly**
 
 Das Brettspiel Monopoly hat ein klares Ziel: durch strategischen Immobilienkauf, Bebauung und Mieteinnahmen zur reichsten Spielerin zu werden. Eine ähnliche Strategie verfolgen im Jahr 2025 die großen Technologiekonzerne \- oder genauer: die Tech-Oligarchen (alles Männer\!). OpenAI, Microsoft, Google, Meta, Anthropic, Nvidia und xAI bauen systematisch ihre Monopole im Bereich des “Reasoning” aus – eine Schlüsselfähigkeit zukünftiger KI-Systeme. Sie skalieren ihre Sprachmodelle durch den Kauf und die oft fragwürdige Aneignung von Daten, unterstützt durch Milliardeninvestitionen in Rechenleistung (“Stargate”).[^1] Sie kassieren dabei Gebühren von den Nutzer:innen. Doch trotz dieser Einnahmen machen viele Unternehmen erhebliche Verluste (außer Nvidia), wie ein Tweet von Sam Altman[^2] zeigt: Selbst das ChatGPT Plus-Abonnement für 200 $ im Monat führt zu roten Zahlen. Moralische Fragen, vor allem zum Umgang mit Daten, bleiben meist unbeantwortet und scheinen selten Konsequenzen zu haben – oder man kauft sich wie bei Monopoly einfach frei.
 
 Ich möchte aufzeigen, warum Generative KI in naher Zukunft weit über die allgemeinen Erwartungen hinausgehen wird; warum die vorherrschenden Vorstellungen aus meiner Sicht fehlgeleitet sind und warum die Tech-Konzerne bereits heute ein Monopol auf die strategische Ressource “Reasoning” besitzen. Eine überraschende Wendung bringt dabei die chinesische Firma DeepSeek: Sie ist gerade “über Los gegangen” und hat sich die symbolischen “200 $” gesichert, indem sie mit R1 qualitativ hochwertiges KI-Reasoning als Open Source und zu erschwinglichen Preisen verfügbar macht (was wohl eher als bewusste Aktion des autokratischen Staates China zu verstehen ist).[^3]
 
-# **Was kann ein LLM eigentlich?**
+## **Was kann ein LLM eigentlich?**
 
 Zuvor sollten wir uns dem überstrapazierten Begriff “Reasoning” widmen.[^4] LLMs unterscheiden sich grundlegend von menschlicher Intelligenz. Ein direkter Vergleich ist daher wenig zielführend – wir haben es mit etwas grundsätzlich Neuem zu tun. Welche Fähigkeiten und Grenzen haben die modernsten Large Language Models – die sogenannten Frontier-LLMs? 
 
@@ -65,7 +65,7 @@ Um das Reasoning-Verhalten von LLMs besser zu verstehen, ist ein Vergleich mit e
 
 Wichtig zu verstehen ist: Wenn ein LLM "2+2=" beantwortet, führt es keine Rechenoperation durch, sondern ruft eine memorierte Lösung ab. Allerdings können LLMs externe Tools wie einen Taschenrechner aufrufen, um tatsächliche mathematische Operationen durchzuführen.
 
-# **Reasoning durch Prompt Engineering: Chain of Thought und smartGPT**
+## **Reasoning durch Prompt Engineering: Chain of Thought und smartGPT**
 
 François Chollet, ein ehemaliger Google-Forscher, hat kürzlich eine neue Firma gegründet, die sich vermutlich der Programmsynthese widmen wird – der Entwicklung von KI-Systemen, die selbstständig Programme zur Problemlösung erstellen können. In diesem Kontext hat sich Chollet, bekannt für seine kritische und wissenschaftlich fundierte Arbeitsweise, mit der grundlegenden Frage auseinandergesetzt, was Intelligenz eigentlich ist. Seine Definition: Intelligenz ist die Fähigkeit eines Systems, neue Kompetenzen zu erwerben, um Situationen besser zu bewältigen. Dies geht über das bloße Auswendiglernen und Anwenden von Methoden hinaus – es bedeutet, sich aktiv neue Fähigkeiten anzueignen, um Probleme zu verstehen und unbekannte Situationen zu meistern. Diese Auffassung von Intelligenz als adaptive Lernfähigkeit bildet auch die Grundlage für seine Entwicklung der ARC-Benchmark, die genau diese Adaptionsfähigkeit testet.
 
@@ -75,7 +75,7 @@ Mein Zugang zu dieser Thematik ist bewusst pragmatisch: LLMs betreiben kein mens
 
 Diese Sicht auf Token-basiertes Reasoning wird durch eine bemerkenswerte These von Ilya Sutskever gestützt: Der Kernmechanismus von LLMs \- die kontextbasierte Vorhersage des nächsten Tokens \- ist möglicherweise tiefgreifender als bisher angenommen. Seine provokante Frage lautet: Was bedeutet es, das “richtige” nächste Token zu bestimmen? Seine Hypothese: Ein Modell, das dies konsistent leistet, muss sowohl den Kontext als auch die zugrundeliegende Realität in gewisser Weise “verstanden” haben.[^15]
 
-# **Reasoning durch Test Time Inference**
+## **Reasoning durch Test Time Inference**
 
 Reasoning für LLMs bedeutet ausreichend Tokens zu generieren, damit ein KI-Sprachmodell genügend Kontext hat, um die Qualität seiner eigenen Antworten besser zu prüfen.
 
@@ -87,7 +87,7 @@ Eine neue Generation von Modellen – manche sagen, es sei nichts Neues, manche 
 
 Prompt Engineering ist also absolut zentral für LLMs: Erkenntnisse aus dieser Technik werden direkt in neue Modelle integriert, während Test-Time-Compute als möglicherweise noch bedeutendere Skalierungshypothese erscheint.
 
-# **o1 und R1**
+## **o1 und R1**
 
 Laut François Chollet ist o1 ein natürlichsprachlicher Suchprozess, der den gesamten Raum möglicher Chain-of-Thought-Lösungen zu einem Input durchsucht und evaluiert, um die bestmögliche Lösung zu finden. Die verfügbare Rechenzeit bestimmt dabei die Intensität der Suche. Es werden verschiedene “let's think step by step”-Pfade generiert, und es muss einen (bei o1 nicht öffentlich bekannten) Mechanismus geben, der die besten Pfade mit den vielversprechendsten Lösungen identifiziert. Das bedeutet nicht, dass die Ergebnisse immer perfekt sind, aber insgesamt erzielen die Modelle bessere Resultate und halluzinieren weniger. Diese Leistungssteigerung geht allerdings mit erheblichen Kosten für Stromverbrauch und Computerchips einher.
 
@@ -98,13 +98,13 @@ Ein bedeutender Durchbruch der letzten Tage ist die Veröffentlichung eines Reas
 3. R1 in seinen Varianten ermöglicht lokalen Betrieb. Organisationen, die ihre internen Daten nicht auf amerikanische Server übertragen wollen, können nun eigene Systeme aufbauen. Während dies theoretisch auch mit Metas Llama-Modellen möglich war, benötigten diese erhebliche GPU-Ressourcen. Die R1-Versionen hingegen erreichen auch in kleineren Konfigurationen bemerkenswerte Leistungen. Insbesondere Universitäten sollten sich auf diese lokalen Lösungsansätze konzentrieren.  
 4. Open-Source-Entwicklung erweist sich hier als treibende Kraft für Innovation und Demokratisierung der KI-Technologie. Oder: zur Kapitalisierung und als Werkzeug autoritärer Staaten.
 
-# **o3 “crushes benchmarks designed to stand for decades”**
+## **o3 “crushes benchmarks designed to stand for decades”**
 
 “o3 crushes benchmarks designed to stand for decades” ist ein direktes Zitat von Philip von AI Explained.[^18]
 
 o3, die Weiterentwicklung von o1, erreicht bemerkenswerte Leistungen bei etablierten Benchmarks. Besonders beeindruckend sind die Ergebnisse bei FourierMath, einem Test mit Aufgaben, die selbst Mathematikprofessor:innen mehrere Tage zur Lösung benötigen. Auch in den Naturwissenschaften und bei Programmieraufgaben erzielt o3 außergewöhnliche Resultate. Bemerkenswert ist das Ergebnis von 75.7% auf der ARC-Benchmark, die speziell zur Messung der Adaptionsfähigkeit bei neuartigen Aufgaben konzipiert wurde.
 
-# **Fazit: New Year, New AI? → Yes\!**
+## **Fazit: New Year, New AI? → Yes\!**
 
 New Year, New AI? Diese Frage lässt sich klar mit “Ja” beantworten. Die Entwicklung neuer Modelle wie o1 und o3 zeigt, dass sich "Reasoning" in KI-Systemen durch Test-Time-Compute und Test-Time-Training weiter skalieren lässt. Diese Ansätze ermöglichen eine Art “Reasoning auf Abruf”, bei dem ein Sprachmodell während der Anwendung kontinuierlich Tokens generiert und sogar während der Ausführung dazulernt. Das Resultat ist ein “Token-basiertes Reasoning” – kein echtes menschliches Denken oder Bewusstsein, aber in spezifischen, komplexen Bereichen erstaunlich leistungsfähig. Bezeichnend ist: Diese Systeme werden 2025 vermutlich Forschende bei komplexen Aufgaben unterstützen können, während sie an vermeintlich einfachen Aufgaben wie dem Ausfüllen eines SAP-Reiseantrags scheitern.
 
