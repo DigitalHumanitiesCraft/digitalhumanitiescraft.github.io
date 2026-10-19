@@ -9,7 +9,7 @@ method:
 status: active
 language: en
 created: 2026-10-01
-updated: 2026-10-03
+updated: 2026-10-19
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 template:
@@ -163,3 +163,9 @@ The curated backward-looking provenance index of the project. Current facts and 
 - Source: operator request to have everything about the page in one place
 - Target: `knowledge/fancy-research-tools/`, `scripts/fancy-research-tools/`, `CLAUDE.md` and `AGENTS.md` of the site repository, [ADR-015](specification.md#adr-015-knowledge-and-scripts-move-into-the-site-repository), [INDEX](INDEX.md#storage-zones), [testing](testing.md#how-to-run)
 - Result: the knowledge base, the image prompt logs and the scripts left DigitalHumanitiesCraft/fancy-research-tools, which keeps a README pointing here. The scripts find the site root from their own location. Earlier journal entries keep the paths that were valid at their date.
+
+### 2026-10-19 corrected Meta description within search snippet length
+
+- Source: SEO check of dhcraft.org, operator approval of the shortened wording
+- Target: `description` in both languages of `src/i18n/fancy.ts`
+- Result: the description fell from 250 (DE) and 252 (EN) characters to 153 and 156, under the commonly cited guideline of about 160 characters for a search snippet, which search engines actually truncate by pixel width. It keeps agentic engineering, the results, frontier language models and the three forms of collaboration, and drops coding agents and the list of sectors.

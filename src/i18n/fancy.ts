@@ -153,7 +153,7 @@ const text = {
     title: 'fancy (research) tools! | Digital Humanities Craft',
     ogTitle: 'fancy (research) tools!',
     description:
-      'Agentic Engineering von Digital Humanities Craft. Wir entwickeln mit Frontier-Sprachmodellen und Coding-Agenten Werkzeuge, Workflows und Wissensbasen für Forschung, Kultureinrichtungen, Unternehmen und Verwaltung, für Sie, mit Ihnen oder im Training.',
+      'Agentic Engineering von Digital Humanities Craft. Werkzeuge, Workflows und Wissensbasen mit Frontier-Sprachmodellen, für Sie, mit Ihnen oder im Training.',
     ogLocale: 'de_AT',
     ogImageAlt:
       'Kopfbereich der Seite fancy (research) tools! mit dem Titel, der Zeile Agentic Engineering für alle, die mit Wissen arbeiten, und dem Knopf Projekt anfragen',
@@ -349,7 +349,7 @@ const text = {
     title: 'fancy (research) tools! | Digital Humanities Craft',
     ogTitle: 'fancy (research) tools!',
     description:
-      'Agentic engineering by Digital Humanities Craft. With frontier language models and coding agents we develop tools, workflows and knowledge bases for research, cultural institutions, companies and public administration, for you, with you or in training.',
+      'Agentic engineering by Digital Humanities Craft. Tools, workflows and knowledge bases built with frontier language models, for you, with you or in training.',
     ogLocale: 'en_GB',
     ogImageAlt:
       'Header of the page fancy (research) tools! with its title, the line Agentic engineering for everyone who works with knowledge, and the button Request a project',
