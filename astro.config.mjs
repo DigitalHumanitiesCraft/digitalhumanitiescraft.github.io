@@ -55,6 +55,9 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
+      // Promptotyping-Portal: eigenes Pages-Repo unter dhcraft.org ohne eigene Sitemap.
+      // Nur die Startseite, das Portal routet über #-Anker, Unterpfade antworten mit 404.
+      customPages: ['https://dhcraft.org/Promptotyping/'],
       // Redirect-Stubs (noindex) gehören nicht in die Sitemap
       filter: (page) =>
         !page.includes('/excellence/promptotyping') &&
