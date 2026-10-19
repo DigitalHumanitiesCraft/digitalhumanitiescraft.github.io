@@ -73,7 +73,7 @@ Dies deckt sich mit meinen eigenen Erfahrungen im Umgang mit Vibe Coding. Im dok
 
 ![][image4]
 
-<p class="image-caption">The One Snake - Test Suite. <a href="https://dhcraft.org/excellence/promptotyping/the-one-snake-vibe-coding/test.html">https://dhcraft.org/excellence/promptotyping/the-one-snake-vibe-coding/test.html</a></p>
+<p class="image-caption">The One Snake - Test Suite. <a href="https://dhcraft.org/demos/the-one-snake-vibe-coding/test.html">https://dhcraft.org/demos/the-one-snake-vibe-coding/test.html</a></p>
 
 Dieses Beispiel zeigt: Einfachere Anwendungen lassen sich nahezu unmittelbar realisieren. Auch komplexere Aufgaben führen überraschend schnell zu funktionierenden Prototypen. Allerdings habe ich den generierten Code bisher gar nicht genauer analysiert – mir ist daher nicht bewusst, wie und warum das Spiel genau funktioniert. Dennoch funktioniert es.
 
