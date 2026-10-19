@@ -13,8 +13,10 @@ export interface BlogPost {
   postLang: 'DE' | 'EN';
   tag: string;
   color: string;
-  /** Erstes Bild des Posts (public-Passthrough) für die Teaser-Karte, null = Fallback-Banner */
+  /** Bild der Teaser-Karte (public-Passthrough), null = Fallback-Banner */
   thumb: string | null;
+  /** true = nicht unter den Teasern der Startseite */
+  hideOnHome?: boolean;
 }
 
 const t = {
@@ -55,7 +57,8 @@ const postsBase = [
     postLang: 'DE' as const,
     color: '#b5476a',
     title: 'Regelbasierte, prädiktive und generative KI im Journalismus',
-    thumb: null,
+    thumb: '/excellence/blog/img/ki-typen-journalismus-bias.svg',
+    hideOnHome: true,
   },
   {
     url: '/excellence/blog/Asymmetric-Amplifications-Epistemic-Infrastructures/',
@@ -64,6 +67,7 @@ const postsBase = [
     color: '#5b3a78',
     title: 'Asymmetric Amplifications and Epistemic Infrastructures',
     thumb: '/excellence/blog/img/asymmetric-amplifications-epistemic.svg',
+    hideOnHome: true,
   },
   {
     url: '/excellence/blog/Asymmetric-Amplification/',

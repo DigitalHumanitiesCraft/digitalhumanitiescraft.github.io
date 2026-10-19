@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="Drei Systemtypen, drei Formen von Bias: sichtbar, geerbt, verteilt">
+<defs>
+<radialGradient id="wash" cx="80%" cy="20%" r="80%">
+<stop offset="0%" stop-color="#b5476a" stop-opacity="0.12"/>
+<stop offset="55%" stop-color="#b5476a" stop-opacity="0.04"/>
+<stop offset="100%" stop-color="#b5476a" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="hex2"><polygon points="600,105 695.3,160 695.3,270 600,325 504.7,270 504.7,160"/></clipPath>
+<polygon id="h" points="0,-18 15.6,-9 15.6,9 0,18 -15.6,9 -15.6,-9"/>
+</defs>
+<rect width="1200" height="600" fill="#fdfcf8"/>
+<rect width="1200" height="600" fill="url(#wash)"/>
+<polygon points="250,105 345.3,160 345.3,270 250,325 154.7,270 154.7,160" fill="#b5476a" fill-opacity="0.14" stroke="#b5476a" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="250,105 345.3,160 345.3,190 154.7,190 154.7,160" fill="#b5476a" fill-opacity="0.5"/>
+<line x1="125" y1="190" x2="375" y2="190" stroke="#1e2749" stroke-width="5" stroke-linecap="round"/>
+<circle cx="375" cy="190" r="9" fill="#f2b95c"/>
+<g clip-path="url(#hex2)">
+<rect x="500" y="105" width="200" height="44" fill="#b5476a" fill-opacity="0.12"/>
+<rect x="500" y="149" width="200" height="44" fill="#b5476a" fill-opacity="0.26"/>
+<rect x="500" y="193" width="200" height="44" fill="#b5476a" fill-opacity="0.44"/>
+<rect x="500" y="237" width="200" height="44" fill="#a33f60" fill-opacity="0.66"/>
+<rect x="500" y="281" width="200" height="44" fill="#8f3654" fill-opacity="0.9"/>
+</g>
+<polygon points="600,105 695.3,160 695.3,270 600,325 504.7,270 504.7,160" fill="none" stroke="#b5476a" stroke-width="6" stroke-linejoin="round"/>
+<polygon points="950,105 1045.3,160 1045.3,270 950,325 854.7,270 854.7,160" fill="none" stroke="#b5476a" stroke-width="3" stroke-opacity="0.35" stroke-dasharray="10 10" stroke-linejoin="round"/>
+<g fill="#b5476a">
+<use xlink:href="#h" href="#h" x="950" y="215" fill-opacity="0.95"/>
+<use xlink:href="#h" href="#h" x="915" y="170" fill-opacity="0.8"/>
+<use xlink:href="#h" href="#h" x="990" y="180" fill-opacity="0.75"/>
+<use xlink:href="#h" href="#h" x="905" y="250" fill-opacity="0.7"/>
+<use xlink:href="#h" href="#h" x="985" y="262" fill-opacity="0.6"/>
+<use xlink:href="#h" href="#h" x="950" y="128" fill-opacity="0.55"/>
+<use xlink:href="#h" href="#h" x="1030" y="225" fill-opacity="0.5"/>
+<use xlink:href="#h" href="#h" x="945" y="305" fill-opacity="0.45"/>
+<use xlink:href="#h" href="#h" x="865" y="205" fill-opacity="0.45"/>
+<use xlink:href="#h" href="#h" x="1060" y="140" fill-opacity="0.35"/>
+<use xlink:href="#h" href="#h" x="850" y="120" fill-opacity="0.3"/>
+<use xlink:href="#h" href="#h" x="1085" y="290" fill-opacity="0.3"/>
+<use xlink:href="#h" href="#h" x="835" y="315" fill-opacity="0.25"/>
+<use xlink:href="#h" href="#h" x="1120" y="200" fill-opacity="0.22"/>
+<use xlink:href="#h" href="#h" x="1015" y="345" fill-opacity="0.2"/>
+<use xlink:href="#h" href="#h" x="1110" y="85" fill-opacity="0.16"/>
+</g>
+<use xlink:href="#h" href="#h" x="1040" y="100" fill="#f2b95c" fill-opacity="0.85"/>
+<use xlink:href="#h" href="#h" x="880" y="290" fill="#85aede" fill-opacity="0.7"/>
+<use xlink:href="#h" href="#h" x="1150" y="320" fill="#f2b95c" fill-opacity="0.5"/>
+<g font-family="Sora, Instrument Sans, system-ui, sans-serif" font-size="28" font-weight="600" letter-spacing="4" fill="#1e2749" fill-opacity="0.85" text-anchor="middle">
+<text x="250" y="400">SICHTBAR</text>
+<text x="600" y="400">GEERBT</text>
+<text x="950" y="400">VERTEILT</text>
+</g>
+</svg>

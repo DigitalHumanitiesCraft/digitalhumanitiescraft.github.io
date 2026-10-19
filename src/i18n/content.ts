@@ -311,7 +311,7 @@ const teamBio = {
   ],
 };
 
-// Blog-Teaser der Startseite kommen aus src/i18n/blog.ts und dem Kanal-RSS (neueste Artikel und Videos, siehe BlogTeasers.astro)
+// Blog-Teaser der Startseite kommen aus src/i18n/blog.ts und dem Kanal-RSS (neueste Artikel ohne hideOnHome und Videos, siehe BlogTeasers.astro)
 
 export function getContent(lang: Lang) {
   const services: Service[] = servicesText[lang].map((s, i) => ({

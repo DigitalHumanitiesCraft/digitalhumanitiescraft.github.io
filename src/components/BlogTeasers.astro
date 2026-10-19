@@ -14,9 +14,13 @@ const { lang } = Astro.props;
 const { t } = getContent(lang);
 const blogUrl = lang === 'de' ? '/excellence/blog/' : '/en/excellence/blog/';
 
-// Blog und Videos teilen sich seit 2026-10-02 einen Abschnitt, je die drei neuesten Einträge.
+// Blog und Videos teilen sich seit 2026-10-02 einen Abschnitt, je die drei neuesten Einträge;
+// Posts mit hideOnHome zählen dabei nicht mit.
 const { posts } = getBlogContent(lang);
-const teaserPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 3);
+const teaserPosts = posts
+  .filter((p) => !p.hideOnHome)
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 3);
 const videos = (await getChannelVideos()).sort((a, b) => b.published.localeCompare(a.published)).slice(0, 3);
 const allVideosUrl = lang === 'de' ? '/excellence/blog/#videos' : '/en/excellence/blog/#videos';
 ---
