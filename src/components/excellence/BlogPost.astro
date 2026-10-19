@@ -13,7 +13,7 @@ interface Props {
   lang: Lang;
   /** Pfad dieser Sprachvariante, z. B. "/excellence/blog/<id>/" bzw. "/en/excellence/blog/<id>/". */
   path: string;
-  /** Pfad derselben Seite in der anderen Sprache (für den Sprachumschalter und hreflang). */
+  /** Pfad derselben Seite in der anderen Sprache (für den Sprachumschalter). */
   altPath: string;
 }
 
@@ -25,7 +25,11 @@ const d = post.data;
 // Essay bleibt englisch, auch wenn die Seite mit deutschem Chrome aufgerufen wird.
 const contentLang = d.citation?.language ?? 'de';
 const site = Astro.site?.href.replace(/\/$/, '') ?? 'https://dhcraft.org';
-const url = `${site}${path}`;
+// Beide Chrome-Varianten zeigen denselben Artikeltext. Kanonisch (und Zitier-URL) ist
+// immer die historische Adresse /excellence/blog/<id>/; die /en/-Variante ist kein
+// eigenes Dokument und bekommt daher kein hreflang-Paar und keinen Sitemap-Eintrag.
+const canonicalPath = `/excellence/blog/${post.id}/`;
+const url = `${site}${canonicalPath}`;
 const author = d.author;
 const rights = d.dublin_core?.rights ?? 'CC BY 4.0';
 const description = d.dublin_core?.description ?? d.citation?.abstract ?? '';
@@ -128,7 +132,7 @@ const ui =
 const authorLabel = authorNames.length > 1 ? (lang === 'de' ? 'Autor:innen' : 'Authors') : ui.author;
 ---
 
-<Base lang={lang} title={`${d.title} | Digital Humanities Craft`} description={description.slice(0, 160)} path={path} altPath={altPath} ogType="article">
+<Base lang={lang} title={`${d.title} | Digital Humanities Craft`} description={description.slice(0, 160)} path={path} canonicalPath={canonicalPath} ogType="article">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
     <meta name="DC.title" content={d.title} />

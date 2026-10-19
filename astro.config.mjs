@@ -62,7 +62,9 @@ export default defineConfig({
         page !== 'https://dhcraft.org/promptotyping/' &&
         page !== 'https://dhcraft.org/excellence/' &&
         page !== 'https://dhcraft.org/en/excellence/' &&
-        !page.startsWith('https://dhcraft.org/fancy-research-tools/en/'),
+        !page.startsWith('https://dhcraft.org/fancy-research-tools/en/') &&
+        // EN-Chrome-Varianten der Blog-Posts sind per canonical auf /excellence/blog/<id>/ zusammengeführt
+        !/^https:\/\/dhcraft\.org\/en\/excellence\/blog\/.+/.test(page),
     }),
   ],
 });
