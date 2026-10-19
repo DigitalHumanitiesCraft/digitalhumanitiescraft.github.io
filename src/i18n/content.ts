@@ -80,7 +80,7 @@ const t = {
     footerAi: 'Unsere Position zu KI-Einsatz',
     metaTitle: 'Digital Humanities Craft | Forschungssoftware, Agentic Engineering und KI-Weiterbildung',
     metaDescription:
-      'Forschungssoftware, Workflows für Forschungsdaten, digitale Editionen und Agentic Engineering sowie Weiterbildung und Beratung zu generativer KI für Universitäten, Kultureinrichtungen, Unternehmen und Verwaltung, aus Kainbach bei Graz.',
+      'Forschungssoftware, digitale Editionen und Agentic Engineering, Weiterbildung und Beratung zu generativer KI für Forschung, Kultur, Wirtschaft und Verwaltung.',
     skipLink: 'Zum Inhalt springen',
   },
   en: {
@@ -119,7 +119,7 @@ const t = {
     footerAi: 'Our position on AI use',
     metaTitle: 'Digital Humanities Craft | Research software, agentic engineering and AI training',
     metaDescription:
-      'Research software, research data workflows, digital editions and agentic engineering, plus training and consulting on generative AI for universities, cultural institutions, companies and public administration, from Kainbach near Graz, Austria.',
+      'Research software, digital editions and agentic engineering, plus training and consulting on generative AI for research, culture, business and government.',
     skipLink: 'Skip to content',
   },
 };
