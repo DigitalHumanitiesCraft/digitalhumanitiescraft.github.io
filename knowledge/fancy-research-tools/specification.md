@@ -27,7 +27,7 @@ What the page must do, which rules its copy follows and which decisions hold. Re
 ### Functional requirements
 
 - FR-01: The first screen names the offer, agentic engineering, in one line and leads to the request. Acceptance: hero with title, the line "Agentic Engineering für alle, die mit Wissen arbeiten.", lede and the buttons "Projekt anfragen" and "Unser Angebot", visible without scrolling at 1440 by 900.
-- FR-02: Every tool and method shows its function, maturity and evidence. Acceptance: each entry carries a [maturity chip](INDEX.md#maturity-chip), each tool an [evidence link](INDEX.md#evidence-link), each entry with code a [repository link](INDEX.md#repository-link), and every external link answers HTTP 200 in the link check of [testing](testing.md).
+- FR-02: Every tool and method shows its function, maturity and evidence. Acceptance: each entry carries a [maturity chip](INDEX.md#maturity-chip), each entry with code a [repository link](INDEX.md#repository-link), and every external link answers HTTP 200 in the link check of [testing](testing.md).
 - FR-03: A visitor can send a request in two ways. Acceptance: a conversation path with prefilled e-mail and telephone and a documents path with a prefilled e-mail, both in the section `#kontakt`.
 - FR-04: Every section, offer, tool and method is addressable. Acceptance: unique fragment identifiers, the sections `#angebot`, `#werkzeuge`, `#methoden`, `#qualitaet`, `#vorgehen` and `#kontakt`, the offer blocks `#lernen`, `#gemeinsam`, `#bauen`, `#modelle` and `#kosten`, each tool and each method by the anchor listed in [data](data.md#tools).
 - FR-05: Ways of working, model use and billing are stated. Acceptance: the section `#angebot` names learning, developing together and commissioned development, says where frontier language models are used and that model and access are chosen with the client by the kind of data, and states billing after [CR-05](#content-rules).
@@ -77,7 +77,7 @@ Validation: assumption (proxy: operator).
 
 Derivation:
 - Requirement FR-02, content rule CR-01
-- Terms [Maturity chip](INDEX.md#maturity-chip), [Evidence link](INDEX.md#evidence-link)
+- Terms [Maturity chip](INDEX.md#maturity-chip), [Repository link](INDEX.md#repository-link)
 
 ### Epic 2: Maintaining the page
 
@@ -97,7 +97,7 @@ The page runs in this order.
 
 1. Hero with title, line, lede and two buttons. The right half stays empty.
 2. `#angebot` with the cards Lernen, Gemeinsam entwickeln and Im Auftrag entwickeln and the blocks Modelle und Daten and Kosten.
-3. `#werkzeuge` with the tools coOCR/HTR, teiCrafter, CorrespExplorer, SZD-HTR and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one sentence, maturity chip and the links Werkzeug öffnen, Repository, Video where one exists, Belege and Anpassen anfragen.
+3. `#werkzeuge` with the tools coOCR/HTR, teiCrafter, CorrespExplorer, SZD-HTR and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one sentence, maturity chip and the links Werkzeug öffnen, Repository and Video where one exists.
 4. `#methoden` with Promptotyping, Grounded Vault and Agentic Edition Pipeline, each with a generated infographic, one sentence, maturity chip and its links.
 5. `#qualitaet`, titled Grundsätze, with the expandable principles, followed by Wer wir sind, see [design](design.md#principles).
 6. `#vorgehen` with the process steps and the fit lists.
@@ -129,7 +129,7 @@ Reason. Content edits happen once, and a variant differs only where its look dif
 
 ### ADR-003 Honest maturity with evidence
 
-Amended on 2026-10-02. The state lines became [maturity chips](INDEX.md#maturity-chip) with an [evidence link](INDEX.md#evidence-link), see the journal entry "Condensed German page with method illustrations".
+Amended on 2026-10-02. The state lines became [maturity chips](INDEX.md#maturity-chip) with an evidence link, see the journal entry "Condensed German page with method illustrations".
 
 Context. All tools are prototypes or research previews, and the page advertises a paid service.
 
@@ -277,3 +277,5 @@ Choice. Every link to a GitHub repository is labelled Repository and carries the
 Reason. One label and one mark for one kind of target let a reader scan the rows. The maturity chip alone did not tell a reader that a research preview is unfinished.
 
 Effect. The ability icon term and the per-tool ability list are removed from the knowledge base. The Research Mission Control image stays in `public/` and its prompt log in `image-prompts/` until the method returns.
+
+Amendment, 2026-10-21. On the operator's request the tools also drop Belege and Anpassen anfragen, because the contact section already carries the request and the repository holds the knowledge base. coOCR/HTR and teiCrafter move to Experiment, and teiCrafter is described as a template to fork into one's own tool for capturing TEI data. The not-finished note covers Forschungsvorschau and Experiment.

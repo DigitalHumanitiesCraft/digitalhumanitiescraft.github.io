@@ -175,3 +175,9 @@ The curated backward-looking provenance index of the project. Current facts and 
 - Source: operator feedback on the live page
 - Target: tool and method rows in `src/i18n/fancy.ts` and `src/components/fancy/FancyPage.astro`, knowledge per [ADR-016](specification.md#adr-016-uniform-links-no-ability-icons-research-mission-control-withdrawn)
 - Result: repository links carry one label and the GitHub mark, Promptotyping, Grounded Vault and the bibliography link their videos, Promptotyping also its blog post. Grounded Vault and the Agentic Edition Pipeline lost their evidence link, the ability icons and legend left the page, research previews carry a not-finished note, and Research Mission Control left the methods. Verified by a production build and screenshots of both sections, not yet pushed.
+
+### 2026-10-21 integrated Tools without evidence and request links
+
+- Source: operator feedback that the link rows repeat what the page says elsewhere
+- Target: tool rows in `src/i18n/fancy.ts` and `src/components/fancy/FancyPage.astro`, the amendment of [ADR-016](specification.md#adr-016-uniform-links-no-ability-icons-research-mission-control-withdrawn)
+- Result: tools link only the tool, the repository and a video where one exists. coOCR/HTR and teiCrafter carry the chip Experiment and the not-finished note, teiCrafter reads as a template to fork.

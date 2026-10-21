@@ -42,8 +42,8 @@ The anchor is the fragment identifier on the page. Links checked on 2026-10-01 u
 
 | Tool | Anchor | Maturity on the page | Demo | Repository | Licence | Evidence |
 |---|---|---|---|---|---|---|
-| coOCR/HTR | `#t-coocr` | Forschungsvorschau | https://dhcraft.org/co-ocr-htr/ | https://github.com/DigitalHumanitiesCraft/co-ocr-htr | CC BY 4.0 | https://dhcraft.org/co-ocr-htr/knowledge.html |
-| teiCrafter | `#t-tei` | Forschungsvorschau | https://dhcraft.org/teiCrafter/editor.html | https://github.com/DigitalHumanitiesCraft/teiCrafter | MIT | https://github.com/DigitalHumanitiesCraft/teiCrafter/blob/main/knowledge/INDEX.md |
+| coOCR/HTR | `#t-coocr` | Experiment | https://dhcraft.org/co-ocr-htr/ | https://github.com/DigitalHumanitiesCraft/co-ocr-htr | CC BY 4.0 | https://dhcraft.org/co-ocr-htr/knowledge.html |
+| teiCrafter | `#t-tei` | Experiment | https://dhcraft.org/teiCrafter/editor.html | https://github.com/DigitalHumanitiesCraft/teiCrafter | MIT | https://github.com/DigitalHumanitiesCraft/teiCrafter/blob/main/knowledge/INDEX.md |
 | CorrespExplorer | `#t-corresp` | Laufende Demo | https://dhcraft.org/CorrespExplorer/ | https://github.com/DigitalHumanitiesCraft/CorrespExplorer | MIT, docs CC BY 4.0 | https://dhcraft.org/CorrespExplorer/vault.html |
 | SZD-HTR | `#t-szd` | Experiment | https://chpollin.github.io/szd-htr-ocr-pipeline/ | https://github.com/chpollin/szd-htr-ocr-pipeline | MIT, facsimiles with the Literaturarchiv Salzburg via GAMS | https://github.com/chpollin/szd-htr-ocr-pipeline/blob/main/knowledge/index.md, state from its README (experimental sub-project, checking tiers 1 and 2 populated, tier 0 empty), checked on 2026-10-02 |
 | Stefan-Zweig-Bibliographie (Klawiter-Rescue) | `#t-klawiter` | Bestand gesichert | https://chpollin.github.io/klawiter-rescue/ | https://github.com/chpollin/klawiter-rescue | MIT, data CC BY 4.0 | https://github.com/chpollin/klawiter-rescue/blob/main/knowledge/status.md, checked on 2026-10-02 |

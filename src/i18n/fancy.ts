@@ -34,29 +34,26 @@ const maturityClass: Record<Maturity, string> = {
 
 const img = (name: string) => `/fancy-research-tools/img/${name}`;
 
-const toolsBase: { id: string; img: string; open: string; code: string; video?: string; evidence: string; maturity: Maturity }[] = [
+const toolsBase: { id: string; img: string; open: string; code: string; video?: string; maturity: Maturity }[] = [
   {
     id: 't-coocr',
     img: 'coocr-htr',
     open: 'https://dhcraft.org/co-ocr-htr/',
     code: 'https://github.com/DigitalHumanitiesCraft/co-ocr-htr',
-    evidence: 'https://dhcraft.org/co-ocr-htr/knowledge.html',
-    maturity: 'preview',
+    maturity: 'experiment',
   },
   {
     id: 't-tei',
     img: 'teicrafter',
     open: 'https://dhcraft.org/teiCrafter/editor.html',
     code: 'https://github.com/DigitalHumanitiesCraft/teiCrafter',
-    evidence: 'https://github.com/DigitalHumanitiesCraft/teiCrafter/blob/main/knowledge/INDEX.md',
-    maturity: 'preview',
+    maturity: 'experiment',
   },
   {
     id: 't-corresp',
     img: 'correspexplorer',
     open: 'https://dhcraft.org/CorrespExplorer/',
     code: 'https://github.com/DigitalHumanitiesCraft/CorrespExplorer',
-    evidence: 'https://dhcraft.org/CorrespExplorer/vault.html',
     maturity: 'demo',
   },
   {
@@ -64,7 +61,6 @@ const toolsBase: { id: string; img: string; open: string; code: string; video?: 
     img: 'szd-htr',
     open: 'https://chpollin.github.io/szd-htr-ocr-pipeline/',
     code: 'https://github.com/chpollin/szd-htr-ocr-pipeline',
-    evidence: 'https://github.com/chpollin/szd-htr-ocr-pipeline/blob/main/knowledge/index.md',
     maturity: 'experiment',
   },
   {
@@ -73,7 +69,6 @@ const toolsBase: { id: string; img: string; open: string; code: string; video?: 
     open: 'https://chpollin.github.io/klawiter-rescue/',
     code: 'https://github.com/chpollin/klawiter-rescue',
     video: 'https://youtu.be/KG35VGVctJw',
-    evidence: 'https://github.com/chpollin/klawiter-rescue/blob/main/knowledge/status.md',
     maturity: 'secured',
   },
 ];
@@ -162,39 +157,32 @@ const text = {
     toolOpen: 'Werkzeug öffnen',
     toolCode: 'Repository',
     toolVideo: 'Video',
-    toolEvidence: 'Belege',
-    previewNote: 'Nicht fertig. Eine Forschungsvorschau zum Ausprobieren, Ergebnisse vor jeder Nutzung prüfen.',
-    toolRequest: 'Anpassen anfragen',
+    previewNote: 'Nicht fertig. Zum Ausprobieren, Ergebnisse vor jeder Nutzung prüfen.',
     tools: [
       {
         title: 'coOCR/HTR',
         alt: 'coOCR/HTR mit dem Scan einer Druckseite links, der erkannten Transkription in der Mitte und dem Prüfbereich rechts.',
         solution: 'Erkennt den Text alter Drucke und Handschriften und lässt jede Lesung am Seitenbild prüfen.',
-        mail: 'mailto:office@dhcraft.org?subject=coOCR%2FHTR%20f%C3%BCr%20unser%20Projekt',
       },
       {
         title: 'teiCrafter',
         alt: 'teiCrafter mit lesbarem Brieftext und markierten Personen und Orten links und dem Register der erwähnten Personen und Orte rechts.',
-        solution: 'Bearbeitet TEI-XML als lesbaren Text und prüft beim Speichern gegen das Schema.',
-        mail: 'mailto:office@dhcraft.org?subject=teiCrafter%20f%C3%BCr%20unser%20Projekt',
+        solution: 'Vorlage zum Forken, aus der ein eigenes Werkzeug zur Erfassung von TEI-Daten entsteht, mit lesbarem Text statt Tags und Schemaprüfung beim Speichern.',
       },
       {
         title: 'CorrespExplorer',
         alt: 'CorrespExplorer mit einer Zeitleiste der Briefe eines Demonstrationsbestands, farbig nach Sprache, und Filtern am linken Rand.',
         solution: 'Zeigt Briefmetadaten aus CMIF als Karte, Zeitleiste und Netzwerk, damit sichtbar wird, wer wem wann von wo schrieb.',
-        mail: 'mailto:office@dhcraft.org?subject=CorrespExplorer%20f%C3%BCr%20unser%20Projekt',
       },
       {
         title: 'SZD-HTR',
         alt: 'Statistikansicht von SZD-HTR mit der Verteilung der Objekte nach Prüfstufe und den Gründen, aus denen Objekte zur Sichtung vorgemerkt sind.',
         solution: 'Transkribiert einen ganzen Nachlass und vermerkt an jedem Objekt, ob Maschine, Agent oder Mensch es geprüft hat.',
-        mail: 'mailto:office@dhcraft.org?subject=SZD-HTR%20f%C3%BCr%20unser%20Projekt',
       },
       {
         title: 'Stefan-Zweig-Bibliographie',
         alt: 'Oberfläche der Stefan-Zweig-Bibliographie mit Suche über alle Einträge und einer Gliederung nach Werken, Rezeption und Ausgaben.',
         solution: 'Rettet eine Bibliographie aus einem stillgelegten Wiki in Forschungsdaten, in denen jede Angabe ihre Quellseite behält.',
-        mail: 'mailto:office@dhcraft.org?subject=Bibliographie-Rettung%20f%C3%BCr%20unser%20Projekt',
       },
     ],
     methodsTitle: 'Methoden und Frameworks',
@@ -344,39 +332,32 @@ const text = {
     toolOpen: 'Open tool',
     toolCode: 'Repository',
     toolVideo: 'Video',
-    toolEvidence: 'Evidence',
-    previewNote: 'Not finished. A research preview to try out, check results before any use.',
-    toolRequest: 'Request adaptation',
+    previewNote: 'Not finished. To try out, check results before any use.',
     tools: [
       {
         title: 'coOCR/HTR',
         alt: 'coOCR/HTR with the scan of a printed page on the left, the recognised transcription in the middle and the review panel on the right.',
         solution: 'Recognises the text of early printed books and manuscripts and lets every reading be checked against the page image.',
-        mail: 'mailto:office@dhcraft.org?subject=coOCR%2FHTR%20for%20our%20project',
       },
       {
         title: 'teiCrafter',
         alt: 'teiCrafter with readable letter text and marked persons and places on the left and the register of the persons and places mentioned on the right.',
-        solution: 'Edits TEI XML as readable text and validates against the schema on saving.',
-        mail: 'mailto:office@dhcraft.org?subject=teiCrafter%20for%20our%20project',
+        solution: 'A template to fork into your own tool for capturing TEI data, with readable text instead of tags and schema validation on saving.',
       },
       {
         title: 'CorrespExplorer',
         alt: 'CorrespExplorer with a timeline of the letters in a demonstration collection, coloured by language, and filters along the left edge.',
         solution: 'Shows letter metadata from CMIF as a map, a timeline and a network, so that it becomes visible who wrote to whom, when and from where.',
-        mail: 'mailto:office@dhcraft.org?subject=CorrespExplorer%20for%20our%20project',
       },
       {
         title: 'SZD-HTR',
         alt: 'Statistics view of SZD-HTR with the distribution of objects by checking tier and the reasons why objects are marked for review.',
         solution: 'Transcribes an entire estate and records for every object whether a machine, an agent or a human has checked it.',
-        mail: 'mailto:office@dhcraft.org?subject=SZD-HTR%20for%20our%20project',
       },
       {
         title: 'Stefan Zweig Bibliography',
         alt: 'Interface of the Stefan Zweig Bibliography with a search across all entries and a breakdown by works, reception and editions.',
         solution: 'Rescues a bibliography from a decommissioned wiki into research data in which every statement keeps its source page.',
-        mail: 'mailto:office@dhcraft.org?subject=Bibliography%20rescue%20for%20our%20project',
       },
     ],
     methodsTitle: 'Methods and frameworks',

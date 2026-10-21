@@ -69,10 +69,6 @@ This knowledge base follows the Promptotyping Documents convention, kept in the 
 
 ## Terms
 
-### Evidence link
-
-The link \"Belege\" at a tool, pointing to the knowledge base or status document of that tool. Method cards carry no evidence link, their page, repository, video and articles are the evidence.
-
 ### Repository link
 
 The link \"Repository\" with the GitHub mark at every tool and method whose code is on GitHub. Every link to github.com on the tool and method rows carries the same mark and label.
