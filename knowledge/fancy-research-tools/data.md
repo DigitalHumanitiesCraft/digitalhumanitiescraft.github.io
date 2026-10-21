@@ -32,7 +32,7 @@ The facts the page states about its provider, tools, methods and images, with th
 | Billing per hour, per working day or as a flat fee, starting from the client's budget, decision after every work step | operator statement, 2026-10-02, replacing the statement of 2026-10-01, wording of 2026-10-21 |
 | Costs for the use of language models may be added depending on the scope, no licence fees for the software | operator statement, 2026-10-02, wording of 2026-10-21 |
 | Tools built with coding agents, mostly standalone static applications that run in the browser without a server, other solutions possible | operator statement, 2026-10-21, refining the statement of 2026-10-02 |
-| Empowerment through workshops and training as the main idea, code and knowledge base stay with the client, support after handover on request | operator statement, 2026-10-21 |
+| Empowerment through workshops and training as the main idea, development together from a first prototype to the finished tool, code and knowledge base stay with the client, support after handover on request | operator statement, 2026-10-21 |
 | Training formats (workshops, intensive days) | excellence section of dhcraft.org, `src/i18n/excellence.ts` of the site repository, linked from the card Lernen |
 
 Facts withdrawn from the page on 2026-10-21 with [ADR-017](specification.md#adr-017-page-slimmed-to-offer-examples-methods-and-contact). They stay true and may return, the sources are unchanged.
@@ -91,4 +91,7 @@ Tool screenshots are taken by `scripts/fancy-research-tools/shoot-tools.cjs` at 
 | M³GIM | open rights question recorded in the vault |
 | viewCrafter | ended on 2026-09-29, repository private |
 | zbz-ocr-tei | same task as coOCR/HTR and the Agentic Edition Pipeline |
-| Wissensbilanz-Dashboard, Kulturpool-Demo, Objekt-Bestimmung | shown until 2026-10-02, removed on the operator's decision |
+| Wissensbilanz-Dashboard, Kulturpool-Demo, Objekt-Bestimmung | shown until 2026-10-02, removed on the operator's decision. The Kulturpool demo of the Volkskundemuseum is not added back, operator decision of 2026-10-21 |
+| Notker | belongs to a client project, excluded until the project consents, operator decision of 2026-10-21 |
+
+The page shows no example whose content is licensed for non-commercial use only and no example from a client project without the consent of the project behind it, see [ADR-017](specification.md#adr-017-page-slimmed-to-offer-examples-methods-and-contact).

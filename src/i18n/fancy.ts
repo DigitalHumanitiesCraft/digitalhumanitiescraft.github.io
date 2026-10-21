@@ -120,7 +120,7 @@ const text = {
     offerTitle: 'Angebot',
     offers: [
       { title: 'Lernen', text: 'In Workshops und Trainings arbeitet Ihr Team selbst mit Coding-Agenten und lernt, Werkzeuge wie die unten gezeigten zu bauen und anzupassen.', link: 'Formate ansehen' },
-      { title: 'Gemeinsam entwickeln', text: 'Wir entwickeln das Werkzeug gemeinsam mit Ihrem Team an Ihren Daten. Der Code und die Wissensbasis, aus der die Coding-Agenten arbeiten, bleiben bei Ihnen.', link: 'Gespräch anfragen' },
+      { title: 'Gemeinsam entwickeln', text: 'Wir entwickeln gemeinsam mit Ihrem Team an Ihren Daten, vom ersten Prototyp bis zum fertigen Werkzeug. Der Code und die Wissensbasis, aus der die Coding-Agenten arbeiten, bleiben bei Ihnen.', link: 'Gespräch anfragen' },
       { title: 'Im Auftrag entwickeln', text: 'Wir bauen das Werkzeug für Sie, von der kleinen Anwendung für einen Arbeitsschritt bis zur agentischen Pipeline. Auf Wunsch betreuen wir es nach der Übergabe weiter.', link: 'Beispiele ansehen' },
     ],
     costsTitle: 'Kosten',
@@ -220,7 +220,7 @@ const text = {
     offerTitle: 'What we offer',
     offers: [
       { title: 'Learn', text: 'In workshops and training your team works with coding agents itself and learns to build and adapt tools like the ones shown below.', link: 'See formats' },
-      { title: 'Develop together', text: 'We develop the tool together with your team on your data. The code and the knowledge base the coding agents work from stay with you.', link: 'Request a conversation' },
+      { title: 'Develop together', text: 'We develop together with your team on your data, from a first prototype to the finished tool. The code and the knowledge base the coding agents work from stay with you.', link: 'Request a conversation' },
       { title: 'Develop on commission', text: 'We build the tool for you, from a small application for a single work step to an agentic pipeline. On request we look after it once it is handed over.', link: 'See examples' },
     ],
     costsTitle: 'Costs',
