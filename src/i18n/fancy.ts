@@ -169,7 +169,7 @@ const text = {
     ],
     modelsTitle: 'Modelle und Daten',
     models: [
-      'Frontier-Sprachmodelle kommen an zwei Stellen zum Einsatz, als Coding-Agenten bei der Entwicklung und im fertigen Werkzeug für einzelne Arbeitsschritte wie Texterkennung, Auszeichnung oder die Erzeugung strukturierter Daten.',
+      'Frontier-Sprachmodelle arbeiten bei der Entwicklung als Coding-Agenten und übernehmen im fertigen Werkzeug einzelne Arbeitsschritte wie Texterkennung, Auszeichnung oder die Erzeugung strukturierter Daten.',
       'In beiden Fällen kommen kommerzielle wie offene Modelle in Betracht, bis hin zum Betrieb auf eigener Hardware. Modell und Zugang werden gemeinsam mit Ihnen nach Art und Schutzbedarf der Daten gewählt. Für die Entwicklung genügen in der Regel einzelne, bei Bedarf anonymisierte Beispieldateien.',
     ],
     costsTitle: 'Kosten',
@@ -365,7 +365,7 @@ const text = {
     ],
     modelsTitle: 'Models and data',
     models: [
-      'Frontier language models are used in two places, as coding agents during development and in the finished tool for individual work steps such as text recognition, markup or the generation of structured data.',
+      'Frontier language models work as coding agents during development and handle individual work steps in the finished tool, such as text recognition, markup or the generation of structured data.',
       'In both cases commercial as well as open models come into consideration, up to operation on your own hardware. Model and access are chosen together with you according to the nature and protection needs of the data. For development a few sample files, anonymised where required, are usually sufficient.',
     ],
     costsTitle: 'Costs',
