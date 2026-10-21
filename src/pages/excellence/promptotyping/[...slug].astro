@@ -12,9 +12,10 @@
 // als statische Dateien unter public/excellence/promptotyping/ (verbatim kopiert),
 // NICHT hier in der Route.
 export function getStaticPaths() {
-  // [Stub-Slug, Ziel-Slug im demos-Repo]; undefined = Übersichtsseite
+  // [Stub-Slug, Ziel-Slug im demos-Repo]; undefined = Übersichtsseite, die aufs
+  // Promptotyping-Portal zeigt (Projekt-Site, case-sensitiv /Promptotyping/)
   const entries = [
-    [undefined, ''],
+    [undefined, undefined],
     ['ChSl', 'ChSl'],
     ['crown-dashboard-json-webapp', 'crown-dashboard-json-webapp'],
     ['disco-invert', 'disco-invert'],
@@ -29,7 +30,7 @@ export function getStaticPaths() {
   ];
   return entries.map(([slug, targetSlug]) => ({
     params: { slug },
-    props: { target: targetSlug ? `/demos/${targetSlug}/` : '/demos/' },
+    props: { target: targetSlug ? `/demos/${targetSlug}/` : '/Promptotyping/' },
   }));
 }
 
