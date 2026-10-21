@@ -182,7 +182,7 @@ const servicesText = {
 
 // 2026-10-02: CROWN und Fortunoff entfernt (Rolle nicht belegt), Feministische AI Literacies aufgenommen.
 // 2026-10-21: M³GIM entfernt, das Projekt soll nicht verlinkt sein.
-// 2026-10-06: Fortunoff zurück, belegter DHCraft-Auftrag (Christian Steiner). CROWN ist ebenfalls belegt, bleibt aber für zwei volle Reihen draußen.
+// 2026-10-06: Fortunoff zurück, belegter DHCraft-Auftrag (Christian Steiner).
 // Jede Beschreibung nennt erst das Projekt, dann den Beitrag von DHCraft.
 const projectsBase = [
   { title: 'MHDBDB', url: 'https://dhcraft.org/mhdbdb-tei-only/', thumbKey: 'mhdbdb' as const },
