@@ -10,12 +10,6 @@ export const fancyIcons = {
   together:
     '<circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="8" r="3"/><path d="M2.5 20c.8-3 2.8-4.5 5.5-4.5s4.7 1.5 5.5 4.5M14 15.7c.8-.2 1.6-.2 2.5-.2 2.7 0 4.7 1.5 5.5 4.5"/>',
   build: '<path d="M14.5 4.2a5 5 0 0 0-5.3 6.6L3.6 16.4a2 2 0 0 0 2.8 2.8l5.6-5.6a5 5 0 0 0 6.6-5.3l-3 3-2.8-.4-.4-2.8z"/>',
-  requirements: '<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/>',
-  tests: '<path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 14h9"/>',
-  code: '<path d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 4l-3 16"/>',
-  formats: '<path d="M3 7l9-4 9 4-9 4z"/><path d="M3 7v10l9 4 9-4V7M12 11v10"/>',
-  control: '<circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/>',
-  handover: '<path d="M4 12h12M12 6l6 6-6 6"/><path d="M20 4v16"/>',
 };
 
 export type FancyIcon = keyof typeof fancyIcons;
@@ -81,9 +75,9 @@ const methodsBase: { id: string; img: string; maturity: Maturity; links: string[
     links: [
       'https://dhcraft.org/Promptotyping/',
       'https://github.com/DigitalHumanitiesCraft/Promptotyping',
+      'https://youtu.be/8sUe4Jkh3uQ',
       'https://youtu.be/hd_a-NBO_S4',
       'https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin',
-      '/excellence/blog/Was-ist-Promptotyping/',
     ],
   },
   {
@@ -110,7 +104,6 @@ const methodsBase: { id: string; img: string; maturity: Maturity; links: string[
 const offerIcons: FancyIcon[] = ['learn', 'together', 'build'];
 const offerIds = ['lernen', 'gemeinsam', 'bauen'];
 const offerHrefs = ['#excellence', '#kontakt', '#werkzeuge'];
-const claimIcons: FancyIcon[] = ['requirements', 'code', 'tests', 'formats', 'control', 'handover'];
 
 const text = {
   de: {
@@ -122,29 +115,18 @@ const text = {
     ogImageAlt:
       'Kopfbereich der Seite fancy (research) tools! mit dem Titel, der Zeile Agentic Engineering für alle, die mit Wissen arbeiten, und dem Knopf Projekt anfragen',
     heroLine: 'Agentic Engineering für alle, die mit Wissen arbeiten.',
-    lede: 'Wir entwickeln mit Frontier-Sprachmodellen und Coding-Agenten Werkzeuge, Workflows und Wissensbasen für Ihre Arbeitsabläufe, im Auftrag, gemeinsam mit Ihrem Team oder im Training. Grundlage ist ein genaues Verständnis Ihres Projekts und Ihrer Daten.',
+    lede: 'Wir entwickeln mit Coding-Agenten Werkzeuge für die Arbeit mit Wissen, meist als eigene statische Anwendungen, die ohne Server direkt im Browser laufen. Andere Lösungen sind ebenso möglich. In Workshops und Trainings lernt Ihr Team, solche Werkzeuge selbst weiterzuentwickeln.',
     heroCta: 'Projekt anfragen',
     heroOffer: 'Unser Angebot',
     offerTitle: 'Angebot',
     offers: [
-      { title: 'Lernen', text: 'In Workshops und Intensivtagen erwirbt Ihr Team die Kompetenz, selbst mit Coding-Agenten und Wissensbasen zu arbeiten.', link: 'Formate ansehen' },
-      { title: 'Gemeinsam entwickeln', text: 'Wir entwickeln gemeinsam mit Ihrem Team an Ihren Daten. Die Wissensbasis verbleibt bei Ihnen und ermöglicht die eigenständige Weiterentwicklung.', link: 'Gespräch anfragen' },
-      { title: 'Im Auftrag entwickeln', text: 'Wir entwickeln das Werkzeug in Ihrem Auftrag, von der kleinen Anwendung für einen einzelnen Arbeitsschritt bis zur agentischen Pipeline.', link: 'Beispiele ansehen' },
-    ],
-    modelsTitle: 'Modelle und Daten',
-    models: [
-      'Frontier-Sprachmodelle arbeiten bei der Entwicklung als Coding-Agenten und übernehmen im fertigen Werkzeug einzelne Arbeitsschritte wie Texterkennung, Auszeichnung oder die Erzeugung strukturierter Daten.',
-      'In beiden Fällen kommen kommerzielle wie offene Modelle in Betracht, bis hin zum Betrieb auf eigener Hardware. Modell und Zugang werden gemeinsam mit Ihnen nach Art und Schutzbedarf der Daten gewählt. Für die Entwicklung genügen in der Regel einzelne, bei Bedarf anonymisierte Beispieldateien.',
+      { title: 'Lernen', text: 'In Workshops und Trainings lernt Ihr Team, Werkzeuge wie diese mit Coding-Agenten selbst zu entwickeln und weiterzuentwickeln.', link: 'Formate ansehen' },
+      { title: 'Gemeinsam entwickeln', text: 'Wir arbeiten mit Ihrem Team an Ihren Daten. Die Wissensbasis bleibt bei Ihnen, damit Ihr Team das Werkzeug selbst weiterentwickeln kann.', link: 'Gespräch anfragen' },
+      { title: 'Im Auftrag entwickeln', text: 'Wir bauen das Werkzeug für Sie, von der kleinen Anwendung für einen Arbeitsschritt bis zur agentischen Pipeline. Auf Wunsch betreuen wir es auch danach.', link: 'Beispiele ansehen' },
     ],
     costsTitle: 'Kosten',
-    costs:
-      'Die Abrechnung richtet sich nach der Aufgabe, nach Stunden, nach Arbeitstagen oder als Pauschale. Ausgangspunkt ist Ihr Budgetrahmen. Nach einer ersten Sichtung legen wir dar, was in diesem Rahmen möglich ist, und Sie entscheiden nach jedem Arbeitsschritt über die Fortsetzung.',
-    costsList: [
-      'Den Code schreiben überwiegend Coding-Agenten. Der Aufwand liegt vor allem darin, Ihr Projekt gemeinsam mit Ihnen zu verstehen und die entstehenden Systeme verständlich zu machen.',
-      'Für die Software fallen keine Lizenzkosten an. Kosten für die Nutzung von Sprachmodellen können je nach Umfang des Projekts gesondert anfallen.',
-      'Wo der Anwendungsfall es erlaubt, laufen Werkzeuge im Browser und kommen ohne eigenen Server aus.',
-      'Ein kleiner Rahmen begrenzt den Umfang, etwa auf einen einzelnen Arbeitsschritt.',
-    ],
+    costs: 
+      'Abgerechnet wird nach Stunden, Arbeitstagen oder pauschal, ausgehend von Ihrem Budgetrahmen. Nach einer ersten Sichtung zeigen wir, was darin möglich ist, und Sie entscheiden nach jedem Schritt über die Fortsetzung. Für die Software fallen keine Lizenzkosten an, Kosten für Sprachmodelle können je nach Umfang gesondert anfallen.',
     toolsTitle: 'Werkzeuge zum Anpassen',
     maturity: {
       use: 'Im Einsatz',
@@ -166,6 +148,7 @@ const text = {
       },
       {
         title: 'teiCrafter',
+        openLabel: 'Demo ansehen',
         alt: 'teiCrafter mit lesbarem Brieftext und markierten Personen und Orten links und dem Register der erwähnten Personen und Orte rechts.',
         solution: 'Vorlage zum Forken, aus der ein eigenes Werkzeug zur Erfassung von TEI-Daten entsteht, mit lesbarem Text statt Tags und Schemaprüfung beim Speichern.',
       },
@@ -192,7 +175,7 @@ const text = {
         title: 'Promptotyping',
         alt: 'Promptotyping als Ablauf von Preparation über Exploration und Distillation zu Implementation, alle Schritte verbunden mit dem Project Knowledge, ein Review führt zum Promptotype aus Projektwissen, Daten und Artefakt.',
         solution: 'Promptotyping entwickelt Forschungsartefakte mit KI-Agenten aus einer gepflegten Wissensbasis heraus.',
-        links: ['Zur Methode', 'Repository', 'Video', 'Beitrag auf L.I.S.A.', 'Blogbeitrag'],
+        links: ['Zur Methode', 'Repository', 'Video Teil 1', 'Video Teil 2', 'Beitrag auf L.I.S.A.'],
       },
       {
         title: 'Grounded Vault',
@@ -207,83 +190,19 @@ const text = {
         links: ['Zum Video', 'Repository'],
       },
     ],
-    qualityTitle: 'Grundsätze',
-    // html, weil "Übergabe" Inline-Links trägt
-    claims: [
-      {
-        title: 'Projektwissen und Methode',
-        html: 'Am Anfang steht das Verständnis des Projekts, seiner Fragestellung, seiner Daten und seiner Arbeitsabläufe. Dieses Wissen wird in einer projekteigenen Wissensbasis festgehalten und mit dem Code versioniert. Danach richtet sich die Methode des Context Engineering, etwa Promptotyping, Grounded Vault, eine agentische Pipeline oder ein einfacher Arbeitszyklus mit einem Agenten.',
-      },
-      {
-        title: 'Rahmen für Coding-Agenten',
-        html: 'Die Qualität agentisch erzeugten Codes hängt vom Kontext ab, in dem die Agenten arbeiten. Wir gestalten diesen Rahmen aus Wissensbasis, präzisen Anforderungen, Beispieldaten aus Ihrem Bestand und automatisierten Tests, die die Agenten selbst ausführen.',
-      },
-      {
-        title: 'Ausgewiesener Reifegrad',
-        html: 'Ergebnisse sind Prototypen und Forschungswerkzeuge, deren Reifegrad offen ausgewiesen wird. Für einen produktiven Betrieb, etwa mit sensiblen Daten oder vielen Nutzenden, sind eine professionelle Überarbeitung und eine unabhängige Prüfung des Codes erforderlich.',
-      },
-      {
-        title: 'Offene Formate',
-        html: 'Ergebnisse liegen in offenen, dokumentierten Formaten vor, je nach Material TEI, PAGE XML, METS/MODS, JSON-LD oder CSV. Bilddaten lassen sich über IIIF einbinden. Die Daten bleiben damit unabhängig vom Werkzeug lesbar und lassen sich in andere Systeme und Repositorien überführen.',
-      },
-      {
-        title: 'Fachliche Kontrolle',
-        html: 'Beim Einsatz von Large Language Models bleibt für jeden Inhalt erkennbar, ob er maschinell erzeugt, von einem Agenten geprüft oder von Ihren Fachleuten bestätigt wurde. Als gesichert gelten ausschließlich fachlich bestätigte Inhalte.',
-      },
-      {
-        title: 'Übergabe',
-        html: 'Sie erhalten den vollständigen Quellcode und die Wissensbasis des Projekts, auf deren Grundlage Ihr Team, externe Entwicklerinnen und Entwickler oder KI-Assistenten die Arbeit fortführen können. Für Forschungsdaten bieten wir die Langzeitarchivierung im zertifizierten Repositorium <a href="https://gams.uni-graz.at/">GAMS</a> an.',
-      },
-    ],
     aboutTitle: 'Wer wir sind',
     about:
       'Digital Humanities Craft ist ein Unternehmen aus der Forschung der Digitalen Geisteswissenschaften mit Sitz bei Graz. Wir entwickeln Forschungssoftware und digitale Editionen, unterrichten an Universitäten in Österreich und Deutschland und arbeiten als technischer Partner in Förderprojekten.',
     aboutLink: 'Team und Projekte',
-    processTitle: 'Vorgehen',
-    steps: [
-      { title: 'Erstgespräch und Sichtung', text: 'Anhand echter Dateien besprechen wir Ihren Arbeitsablauf und klären, was im vorgesehenen Rahmen möglich ist.' },
-      { title: 'Anforderungen und Angebot', text: 'Ziel, Daten und Abnahmekriterien werden schriftlich festgehalten.' },
-      { title: 'Prototyp an Ihren Daten', text: 'Eine erste lauffähige Fassung wird im Arbeitsalltag erprobt.' },
-      { title: 'Prüfung und Abnahme', text: 'Ihre Fachleute prüfen das Ergebnis anhand der vereinbarten Kriterien.' },
-      { title: 'Übergabe und Betreuung', text: 'Übergeben werden Werkzeug, Quellcode und Wissensbasis.' },
-    ],
-    fitYesTitle: 'Passt gut',
-    fitYes: [
-      'Archive, Museen, Bibliotheken und Gedenkstätten',
-      'Universitäten, Akademien und Forschungsprojekte, auch als technischer Partner in Förderprojekten',
-      'Unternehmen und Verwaltung mit einem Ablauf, für den es keine passende Standardsoftware gibt',
-      'wiederkehrende Arbeit mit Dateien, Listen oder Bildern, die heute in Word, Excel oder von Hand erledigt wird',
-      'kleine Vorhaben, auch ein einzelner Arbeitsschritt',
-      'Teams, die selbst mit Coding-Agenten und Wissensbasen arbeiten lernen wollen',
-    ],
-    fitNoTitle: 'Passt nicht',
-    fitNo: [
-      'Ersatz für Standardsoftware mit Herstellersupport',
-      'allgemeine Websites, Onlineshops oder Öffentlichkeitsarbeit',
-      'Vorhaben ohne fachliche Ansprechperson für Prüfung und Abnahme',
-      'Produktivbetrieb ohne unabhängige Prüfung des Codes',
-    ],
     contactTitle: 'Projekt anfragen',
     talkTitle: 'Im Gespräch',
-    talkText: 'Beschreiben Sie uns kurz Ihren Arbeitsablauf. Hilfreich sind folgende Angaben:',
-    talkQuestions: [
-      'Welcher Ablauf kostet Sie Zeit?',
-      'Wer macht die Arbeit, und womit?',
-      'Welche Dateien sind beteiligt, und in welchem Umfang?',
-      'Was soll am Ende herauskommen?',
-      'Welcher Budgetrahmen ist vorgesehen?',
-    ],
+    talkText: 'Erzählen Sie uns, welches Problem Sie beschäftigt oder welche Idee Sie haben. Im Gespräch finden wir heraus, was funktioniert.',
     talkMail:
       'mailto:office@dhcraft.org?subject=fancy%20(research)%20tools%21%20%E2%80%93%20Erstgespr%C3%A4ch&body=Welcher%20Ablauf%20kostet%20Zeit%3F%0A%0AWer%20macht%20die%20Arbeit%2C%20und%20womit%3F%0A%0AWelche%20Dateien%20sind%20beteiligt%3F%0A%0AWas%20soll%20am%20Ende%20herauskommen%3F%0A%0AWelcher%20Budgetrahmen%20ist%20vorgesehen%3F%0A',
     talkMailLabel: 'E-Mail schreiben',
     docsTitle: 'Mit Unterlagen',
-    docsText:
-      'Schicken Sie uns, was Sie bereits haben. Daraus bauen wir einen ersten Prototyp, an dem sich das Vorhaben konkret besprechen lässt.',
-    docsItems: [
-      'eine Projektbeschreibung auf einer Seite',
-      'Beispieldaten, etwa einige typische Dateien',
-      'Ihre Ideen, was das Werkzeug können soll',
-    ],
+    docsText: 
+      'Schicken Sie uns Material, Daten, Gedanken oder Ideen. Daraus entsteht ein erster Prototyp, an dem sich das Vorhaben konkret besprechen lässt.',
     docsMail:
       'mailto:office@dhcraft.org?subject=fancy%20(research)%20tools%21%20%E2%80%93%20Unterlagen%20f%C3%BCr%20einen%20Prototyp',
     docsMailLabel: 'Unterlagen senden',
@@ -297,29 +216,18 @@ const text = {
     ogImageAlt:
       'Header of the page fancy (research) tools! with its title, the line Agentic engineering for everyone who works with knowledge, and the button Request a project',
     heroLine: 'Agentic engineering for everyone who works with knowledge.',
-    lede: 'With frontier language models and coding agents we develop tools, workflows and knowledge bases for your work processes, on commission, together with your team or in training. The basis is a precise understanding of your project and your data.',
+    lede: 'We use coding agents to build tools for working with knowledge, mostly as standalone static applications that run directly in the browser without a server. Other solutions are possible as well. In workshops and training your team learns to develop such tools further on its own.',
     heroCta: 'Request a project',
     heroOffer: 'Our offer',
     offerTitle: 'Offer',
     offers: [
-      { title: 'Learn', text: 'In workshops and intensive days your team acquires the competence to work with coding agents and knowledge bases itself.', link: 'See formats' },
-      { title: 'Develop together', text: 'We develop together with your team on your data. The knowledge base remains with you and enables independent further development.', link: 'Request a conversation' },
-      { title: 'Commissioned development', text: 'We develop the tool on your behalf, from a small application for a single work step to an agentic pipeline.', link: 'See examples' },
-    ],
-    modelsTitle: 'Models and data',
-    models: [
-      'Frontier language models work as coding agents during development and handle individual work steps in the finished tool, such as text recognition, markup or the generation of structured data.',
-      'In both cases commercial as well as open models come into consideration, up to operation on your own hardware. Model and access are chosen together with you according to the nature and protection needs of the data. For development a few sample files, anonymised where required, are usually sufficient.',
+      { title: 'Learn', text: 'In workshops and training your team learns to build and extend tools like these with coding agents.', link: 'See formats' },
+      { title: 'Develop together', text: 'We work with your team on your data. The knowledge base stays with you, so that your team can develop the tool further on its own.', link: 'Request a conversation' },
+      { title: 'Commissioned development', text: 'We build the tool for you, from a small application for a single work step to an agentic pipeline. On request we also look after it afterwards.', link: 'See examples' },
     ],
     costsTitle: 'Costs',
-    costs:
-      'Billing depends on the task, by the hour, by working day or as a flat fee. The starting point is your budget. After an initial assessment we set out what is possible within it, and you decide after each step whether to continue.',
-    costsList: [
-      'The code is written predominantly by coding agents. The effort lies mainly in understanding your project together with you and in making the resulting systems comprehensible.',
-      'There are no licence fees for the software. Costs for the use of language models may be charged separately, depending on the scope of the project.',
-      'Where the use case allows, tools run in the browser and require no server of their own.',
-      'A small budget limits the scope, for example to a single work step.',
-    ],
+    costs: 
+      'We bill per hour, per working day or as a flat fee, starting from your budget. After a first look we show what is possible within it, and you decide after every step whether to continue. There are no licence fees for the software, costs for language models may be charged separately depending on the scope.',
     toolsTitle: 'Tools to adapt',
     maturity: {
       use: 'In use',
@@ -341,6 +249,7 @@ const text = {
       },
       {
         title: 'teiCrafter',
+        openLabel: 'View demo',
         alt: 'teiCrafter with readable letter text and marked persons and places on the left and the register of the persons and places mentioned on the right.',
         solution: 'A template to fork into your own tool for capturing TEI data, with readable text instead of tags and schema validation on saving.',
       },
@@ -367,7 +276,7 @@ const text = {
         title: 'Promptotyping',
         alt: 'Promptotyping as a sequence from Preparation via Exploration and Distillation to Implementation, every step connected to the Project Knowledge, with a review leading to the Promptotype made of project knowledge, data and artefact.',
         solution: 'Promptotyping develops research artefacts with AI agents out of a maintained knowledge base.',
-        links: ['About the method', 'Repository', 'Video', 'Article on L.I.S.A.', 'Blog post (German)'],
+        links: ['About the method', 'Repository', 'Video part 1', 'Video part 2', 'Article on L.I.S.A.'],
       },
       {
         title: 'Grounded Vault',
@@ -382,77 +291,18 @@ const text = {
         links: ['Watch the video', 'Repository'],
       },
     ],
-    qualityTitle: 'Principles',
-    claims: [
-      {
-        title: 'Project knowledge and method',
-        html: 'Work begins with an understanding of the project, its research question, its data and its workflows. This knowledge is recorded in a project knowledge base and versioned with the code. The method of context engineering follows from it, for example Promptotyping, Grounded Vault, an agentic pipeline or a simple work cycle with one agent.',
-      },
-      {
-        title: 'A framework for coding agents',
-        html: 'The quality of agent-generated code depends on the context in which the agents work. We design this framework from the knowledge base, precise requirements, sample data from your holdings and automated tests that the agents run themselves.',
-      },
-      {
-        title: 'Declared maturity',
-        html: 'Results are prototypes and research tools whose maturity is openly declared. Productive operation, for example with sensitive data or many users, requires professional revision and an independent review of the code.',
-      },
-      {
-        title: 'Open formats',
-        html: 'Results are held in open, documented formats, depending on the material TEI, PAGE XML, METS/MODS, JSON-LD or CSV. Image data can be integrated via IIIF. The data thus remain readable independently of the tool and can be transferred to other systems and repositories.',
-      },
-      {
-        title: 'Expert control',
-        html: 'Where large language models are used, it remains discernible for every item whether it was generated by a model, checked by an agent or confirmed by your experts. Only content confirmed by your experts counts as established.',
-      },
-      {
-        title: 'Handover',
-        html: 'You receive the complete source code and the project knowledge base, on the basis of which your team, external developers or AI assistants can continue the work. For research data we offer long-term archiving in the certified repository <a href="https://gams.uni-graz.at/">GAMS</a>.',
-      },
-    ],
     aboutTitle: 'Who we are',
     about:
       'Digital Humanities Craft is a company that grew out of research in the Digital Humanities, based near Graz. We develop research software and digital editions, teach at universities in Austria and Germany and work as a technical partner in funded projects.',
     aboutLink: 'Team and projects',
-    processTitle: 'Process',
-    steps: [
-      { title: 'Initial conversation and assessment', text: 'Using real files we discuss your workflow and clarify what is possible within the intended budget.' },
-      { title: 'Requirements and quotation', text: 'Goal, data and acceptance criteria are recorded in writing.' },
-      { title: 'Prototype on your data', text: 'A first working version is tried out in daily work.' },
-      { title: 'Testing and acceptance', text: 'Your experts assess the result against the agreed criteria.' },
-      { title: 'Handover and support', text: 'Tool, source code and knowledge base are handed over.' },
-    ],
-    fitYesTitle: 'Good fit',
-    fitYes: [
-      'Archives, museums, libraries and memorial sites',
-      'Universities, academies and research projects, also as a technical partner in funded projects',
-      'Companies and public administration with a workflow for which no suitable standard software exists',
-      'recurring work with files, lists or images that is currently done in Word, Excel or by hand',
-      'small projects, even a single work step',
-      'teams who want to learn to work with coding agents and knowledge bases themselves',
-    ],
-    fitNoTitle: 'Not a fit',
-    fitNo: [
-      'Replacement for standard software with vendor support',
-      'general websites, online shops or public relations',
-      'projects without a subject contact for testing and acceptance',
-      'productive operation without an independent review of the code',
-    ],
     contactTitle: 'Request a project',
     talkTitle: 'In conversation',
-    talkText: 'Please describe your workflow briefly. The following details are helpful:',
-    talkQuestions: [
-      'Which workflow costs you time?',
-      'Who does the work, and with what?',
-      'Which files are involved, and in what volume?',
-      'What should the outcome be?',
-      'What budget is envisaged?',
-    ],
+    talkText: 'Tell us which problem is on your mind or which idea you have. In conversation we find out what works.',
     talkMail:
       'mailto:office@dhcraft.org?subject=fancy%20(research)%20tools%21%20%E2%80%93%20First%20conversation&body=Which%20workflow%20costs%20time%3F%0A%0AWho%20does%20the%20work%2C%20and%20with%20what%3F%0A%0AWhich%20files%20are%20involved%3F%0A%0AWhat%20should%20the%20outcome%20be%3F%0A%0AWhat%20budget%20is%20envisaged%3F%0A',
     talkMailLabel: 'Write an e-mail',
     docsTitle: 'With documents',
-    docsText: 'Send us what you already have. From it we build a first prototype on which the project can be discussed in concrete terms.',
-    docsItems: ['a one-page project description', 'sample data, for example a few typical files', 'your ideas of what the tool should do'],
+    docsText: 'Send us material, data, thoughts or ideas. From them we build a first prototype on which the project can be discussed in concrete terms.',
     docsMail:
       'mailto:office@dhcraft.org?subject=fancy%20(research)%20tools%21%20%E2%80%93%20Documents%20for%20a%20prototype',
     docsMailLabel: 'Send documents',
@@ -579,6 +429,5 @@ export function getFancyContent(lang: Lang) {
       maturityLabel: t.maturity[b.maturity],
       links: b.links.map((href, j) => ({ href, label: t.methods[i].links[j] })),
     })),
-    claims: t.claims.map((c, i) => ({ ...c, icon: claimIcons[i] })),
   };
 }

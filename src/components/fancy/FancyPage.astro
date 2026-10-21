@@ -75,16 +75,9 @@ const githubMark =
             }
           </ul>
           <div class="paths terms">
-            <div class="path" id="modelle">
-              <h3>{t.modelsTitle}</h3>
-              {t.models.map((p) => <p>{p}</p>)}
-            </div>
             <div class="path" id="kosten">
               <h3>{t.costsTitle}</h3>
               <p>{t.costs}</p>
-              <ul class="fit-list yes" role="list">
-                {t.costsList.map((item) => <li>{item}</li>)}
-              </ul>
             </div>
           </div>
         </div>
@@ -118,7 +111,7 @@ const githubMark =
                         {unfinished(tool.maturity) && <span class="preview-note">{t.previewNote}</span>}
                       </div>
                       <p class="tool-links">
-                        <a class="button primary" href={tool.open}>{t.toolOpen}</a>
+                        <a class="button primary" href={tool.open}>{tool.openLabel ?? t.toolOpen}</a>
                         <a class="repo-link" href={tool.code}>
                           <svg class="repo-icon" viewBox="0 0 16 16" aria-hidden="true" set:html={githubMark} />
                           {t.toolCode}
@@ -177,65 +170,6 @@ const githubMark =
         </div>
       </section>
 
-      <section class="section tinted" id="qualitaet" aria-labelledby="qualitaet-title">
-        <div class="wrap">
-          <h2 id="qualitaet-title" class="section-title">{t.qualityTitle}</h2>
-          <ul class="claims" role="list">
-            {
-              f.claims.map((c) => (
-                <li>
-                  <details>
-                    <summary>
-                      <svg class="claim-icon" viewBox="0 0 24 24" aria-hidden="true" set:html={fancyIcons[c.icon]} />
-                      {c.title}
-                    </summary>
-                    <p set:html={c.html} />
-                  </details>
-                </li>
-              ))
-            }
-          </ul>
-
-          <div class="about">
-            <h3>{t.aboutTitle}</h3>
-            <p>
-              {t.about} <a href={f.aboutHref}>{t.aboutLink}</a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="vorgehen" aria-labelledby="vorgehen-title">
-        <div class="wrap">
-          <h2 id="vorgehen-title" class="section-title">{t.processTitle}</h2>
-          <ol class="steps" role="list">
-            {
-              t.steps.map((s) => (
-                <li>
-                  <h3>{s.title}</h3>
-                  <p>{s.text}</p>
-                </li>
-              ))
-            }
-          </ol>
-
-          <div class="fit">
-            <div>
-              <h3>{t.fitYesTitle}</h3>
-              <ul class="fit-list yes">
-                {t.fitYes.map((item) => <li>{item}</li>)}
-              </ul>
-            </div>
-            <div>
-              <h3>{t.fitNoTitle}</h3>
-              <ul class="fit-list no">
-                {t.fitNo.map((item) => <li>{item}</li>)}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section cta" id="kontakt" aria-labelledby="kontakt-title">
         <div class="wrap">
           <h2 id="kontakt-title" class="section-title">{t.contactTitle}</h2>
@@ -243,9 +177,6 @@ const githubMark =
             <div class="path">
               <h3>{t.talkTitle}</h3>
               <p>{t.talkText}</p>
-              <ol class="ask" role="list">
-                {t.talkQuestions.map((q) => <li>{q}</li>)}
-              </ol>
               <div class="actions">
                 <a class="button primary" href={t.talkMail}>{t.talkMailLabel}</a>
                 <a class="button" href={f.tel.href}>{f.tel.label}</a>
@@ -255,14 +186,18 @@ const githubMark =
             <div class="path">
               <h3>{t.docsTitle}</h3>
               <p>{t.docsText}</p>
-              <ul class="ask bullets" role="list">
-                {t.docsItems.map((d) => <li>{d}</li>)}
-              </ul>
               <div class="actions">
                 <a class="button" href={t.docsMail}>{t.docsMailLabel}</a>
               </div>
               <p class="address">{f.address}</p>
             </div>
+          </div>
+
+          <div class="about">
+            <h3>{t.aboutTitle}</h3>
+            <p>
+              {t.about} <a href={f.aboutHref}>{t.aboutLink}</a>
+            </p>
           </div>
         </div>
       </section>
@@ -351,13 +286,6 @@ const githubMark =
 
   a:hover {
     text-decoration-thickness: 2px;
-  }
-
-  /* :global nötig: per set:html injizierte Links tragen kein Astro-Scoping-Attribut */
-  .claims p :global(a) {
-    color: var(--purple);
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
   }
 
   :focus-visible {
@@ -554,10 +482,6 @@ const githubMark =
     margin-block-start: var(--space-s);
   }
 
-  .terms .fit-list {
-    margin-block-start: var(--space-m);
-  }
-
 
   .tools {
     display: grid;
@@ -733,50 +657,6 @@ const githubMark =
     color: var(--text-muted);
   }
 
-  .claims {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-    gap: var(--space-s);
-    align-items: start;
-  }
-
-  .claims > li {
-    padding: var(--space-s) var(--space-m);
-    background: var(--paper);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
-  }
-
-  .claims summary {
-    display: flex;
-    align-items: center;
-    gap: var(--space-s);
-    cursor: pointer;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 1.1rem;
-    list-style: none;
-  }
-
-  .claims summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .claims summary::after {
-    content: '+';
-    margin-inline-start: auto;
-    color: var(--purple);
-  }
-
-  .claims details[open] summary::after {
-    content: '−';
-  }
-
-  .claims p {
-    margin-block-start: var(--space-xs);
-    color: var(--text-muted);
-  }
-
   .claim-icon {
     flex: none;
     inline-size: 2.4rem;
@@ -803,73 +683,6 @@ const githubMark =
   .about p {
     margin-block-start: var(--space-xs);
     font-size: var(--step-0);
-    color: var(--text-muted);
-  }
-
-  .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
-    gap: var(--space-l) var(--space-m);
-    counter-reset: step;
-  }
-
-  .steps li {
-    counter-increment: step;
-  }
-
-  .steps li::before {
-    content: counter(step);
-    display: grid;
-    place-items: center;
-    inline-size: 3rem;
-    block-size: 3rem;
-    margin-block-end: var(--space-s);
-    border-radius: 50%;
-    background: var(--purple);
-    color: #fff;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: var(--step-1);
-  }
-
-  .steps p {
-    margin-block-start: var(--space-xs);
-    color: var(--text-muted);
-  }
-
-  .fit {
-    margin-block-start: var(--space-section);
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
-    gap: var(--space-l);
-  }
-
-  .fit-list {
-    margin-block-start: var(--space-s);
-    padding: 0;
-    list-style: none;
-    display: grid;
-    gap: var(--space-xs);
-  }
-
-  .fit-list li {
-    display: flex;
-    gap: 0.6rem;
-  }
-
-  .fit-list li::before {
-    flex: none;
-    font-weight: 700;
-    inline-size: 1.2rem;
-  }
-
-  .fit-list.yes li::before {
-    content: '✓';
-    color: var(--ok);
-  }
-
-  .fit-list.no li::before {
-    content: '✕';
     color: var(--text-muted);
   }
 
@@ -900,31 +713,6 @@ const githubMark =
 
   .cta .actions {
     margin-block-start: var(--space-m);
-  }
-
-  .ask {
-    margin-block-start: var(--space-m);
-    display: grid;
-    gap: var(--space-xs);
-    counter-reset: ask;
-    font-size: var(--step-0);
-  }
-
-  .ask li {
-    counter-increment: ask;
-    display: flex;
-    gap: var(--space-s);
-  }
-
-  .ask li::before {
-    content: counter(ask);
-    color: var(--purple);
-    font-family: var(--font-display);
-    font-weight: 700;
-  }
-
-  .ask.bullets li::before {
-    content: '•';
   }
 
   .address {
