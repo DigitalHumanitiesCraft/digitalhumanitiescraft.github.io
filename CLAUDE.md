@@ -12,7 +12,7 @@ Read `knowledge/fancy-research-tools/INDEX.md` first, then its `handoff.md`, the
 
 ### Where to edit what
 
-- Copy, links, maturity and ability icons of tools and methods: `src/i18n/fancy.ts`, after the facts in `data.md`. German and English stand in the same file and change together.
+- Copy, links and maturity of tools and methods: `src/i18n/fancy.ts`, after the facts in `data.md`. German and English stand in the same file and change together.
 - Look and markup: `src/components/fancy/FancyPage.astro`, after `design.md`.
 - Privacy statement: `privacy` in `src/i18n/fancy.ts`, rendered by `src/components/fancy/FancyPrivacy.astro`.
 - Screenshots, share image and encoded method images: the scripts in `scripts/fancy-research-tools/`, which write into `public/fancy-research-tools/img/`.

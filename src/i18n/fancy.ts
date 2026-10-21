@@ -1,6 +1,6 @@
-// Inhalte der Unterseite "fancy (research) tools!". Wissensbasis mit Entscheidungen zu Wortlaut,
-// Reifegraden, Bildern und Grundsätzen, Werkzeugen für Bildschirmfotos und Prüfungen liegt im Repo
-// DigitalHumanitiesCraft/fancy-research-tools (knowledge/, tools/). Textänderungen zuerst dort klären.
+// Inhalte der Unterseite "fancy (research) tools!". Die Wissensbasis mit Entscheidungen zu Wortlaut,
+// Reifegraden und Bildern liegt in knowledge/fancy-research-tools/ dieses Repos, die Skripte für
+// Bildschirmfotos und Prüfungen in scripts/fancy-research-tools/. Textänderungen zuerst dort klären.
 
 import type { Lang } from './content';
 
@@ -14,15 +14,14 @@ export const fancyIcons = {
 
 export type FancyIcon = keyof typeof fancyIcons;
 
-
 /** Reifegrad: das Wort trägt die Bedeutung, die Farbklasse wiederholt sie nur */
 type Maturity = 'use' | 'rc' | 'preview' | 'demo' | 'secured' | 'experiment';
 const maturityClass: Record<Maturity, string> = {
   use: 'm-use',
   rc: 'm-rc',
   preview: 'm-preview',
-  demo: 'm-preview',
-  secured: 'm-preview',
+  demo: 'm-rc',
+  secured: 'm-use',
   experiment: 'm-experiment',
 };
 
@@ -110,24 +109,24 @@ const text = {
     title: 'fancy (research) tools! | Digital Humanities Craft',
     ogTitle: 'fancy (research) tools!',
     description:
-      'Agentic Engineering von Digital Humanities Craft. Werkzeuge, Workflows und Wissensbasen mit Frontier-Sprachmodellen, für Sie, mit Ihnen oder im Training.',
+      'Forschungswerkzeuge, mit Coding-Agenten gebaut und meist ohne Server im Browser lauffähig. In Workshops und Trainings lernt Ihr Team, sie selbst weiterzuentwickeln.',
     ogLocale: 'de_AT',
     ogImageAlt:
-      'Kopfbereich der Seite fancy (research) tools! mit dem Titel, der Zeile Agentic Engineering für alle, die mit Wissen arbeiten, und dem Knopf Projekt anfragen',
+      'Kopfbereich der Seite fancy (research) tools! mit dem Titel, der Zeile Agentic Engineering für alle, die mit Wissen arbeiten, und dem Knopf Ins Gespräch kommen',
     heroLine: 'Agentic Engineering für alle, die mit Wissen arbeiten.',
-    lede: 'Wir entwickeln mit Coding-Agenten Werkzeuge für die Arbeit mit Wissen, meist als eigene statische Anwendungen, die ohne Server direkt im Browser laufen. Andere Lösungen sind ebenso möglich. In Workshops und Trainings lernt Ihr Team, solche Werkzeuge selbst weiterzuentwickeln.',
-    heroCta: 'Projekt anfragen',
+    lede: 'fancy (research) tools sind Werkzeuge für die Arbeit mit Wissen, entwickelt mit Coding-Agenten. Meist sind es eigenständige statische Anwendungen, die ohne Server im Browser laufen, andere Lösungen sind möglich. In Workshops und Trainings lernt Ihr Team, solche Werkzeuge selbst weiterzuentwickeln.',
+    heroCta: 'Ins Gespräch kommen',
     heroOffer: 'Unser Angebot',
     offerTitle: 'Angebot',
     offers: [
-      { title: 'Lernen', text: 'In Workshops und Trainings lernt Ihr Team, Werkzeuge wie diese mit Coding-Agenten selbst zu entwickeln und weiterzuentwickeln.', link: 'Formate ansehen' },
-      { title: 'Gemeinsam entwickeln', text: 'Wir arbeiten mit Ihrem Team an Ihren Daten. Die Wissensbasis bleibt bei Ihnen, damit Ihr Team das Werkzeug selbst weiterentwickeln kann.', link: 'Gespräch anfragen' },
-      { title: 'Im Auftrag entwickeln', text: 'Wir bauen das Werkzeug für Sie, von der kleinen Anwendung für einen Arbeitsschritt bis zur agentischen Pipeline. Auf Wunsch betreuen wir es auch danach.', link: 'Beispiele ansehen' },
+      { title: 'Lernen', text: 'In Workshops und Trainings arbeitet Ihr Team selbst mit Coding-Agenten und lernt, Werkzeuge wie die unten gezeigten zu bauen und anzupassen.', link: 'Formate ansehen' },
+      { title: 'Gemeinsam entwickeln', text: 'Wir entwickeln das Werkzeug gemeinsam mit Ihrem Team an Ihren Daten. Der Code und die Wissensbasis, aus der die Coding-Agenten arbeiten, bleiben bei Ihnen.', link: 'Gespräch anfragen' },
+      { title: 'Im Auftrag entwickeln', text: 'Wir bauen das Werkzeug für Sie, von der kleinen Anwendung für einen Arbeitsschritt bis zur agentischen Pipeline. Auf Wunsch betreuen wir es nach der Übergabe weiter.', link: 'Beispiele ansehen' },
     ],
     costsTitle: 'Kosten',
-    costs: 
-      'Abgerechnet wird nach Stunden, Arbeitstagen oder pauschal, ausgehend von Ihrem Budgetrahmen. Nach einer ersten Sichtung zeigen wir, was darin möglich ist, und Sie entscheiden nach jedem Schritt über die Fortsetzung. Für die Software fallen keine Lizenzkosten an, Kosten für Sprachmodelle können je nach Umfang gesondert anfallen.',
-    toolsTitle: 'Werkzeuge zum Anpassen',
+    costs:
+      'Abgerechnet wird nach Stunden, Arbeitstagen oder pauschal. Ausgangspunkt ist Ihr Budgetrahmen. Nach dem ersten Gespräch zeigen wir, was darin möglich ist, und Sie entscheiden nach jedem Arbeitsschritt, ob es weitergeht. Für die Software fallen keine Lizenzkosten an. Für die Nutzung von Sprachmodellen können je nach Umfang Kosten hinzukommen.',
+    toolsTitle: 'Beispiele zum Ausprobieren',
     maturity: {
       use: 'Im Einsatz',
       rc: 'Release Candidate',
@@ -139,7 +138,7 @@ const text = {
     toolOpen: 'Werkzeug öffnen',
     toolCode: 'Repository',
     toolVideo: 'Video',
-    previewNote: 'Nicht fertig. Zum Ausprobieren, Ergebnisse vor jeder Nutzung prüfen.',
+    previewNote: 'Noch nicht fertig. Zum Ausprobieren gedacht, Ergebnisse bitte vor jeder Weiterverwendung prüfen.',
     tools: [
       {
         title: 'coOCR/HTR',
@@ -150,7 +149,7 @@ const text = {
         title: 'teiCrafter',
         openLabel: 'Demo ansehen',
         alt: 'teiCrafter mit lesbarem Brieftext und markierten Personen und Orten links und dem Register der erwähnten Personen und Orte rechts.',
-        solution: 'Vorlage zum Forken, aus der ein eigenes Werkzeug zur Erfassung von TEI-Daten entsteht, mit lesbarem Text statt Tags und Schemaprüfung beim Speichern.',
+        solution: 'Eine Vorlage zum Forken, aus der Sie Ihr eigenes Werkzeug zur Erfassung von TEI-Daten entwickeln. Sie zeigt lesbaren Text statt Tags und prüft beim Speichern gegen das Schema.',
       },
       {
         title: 'CorrespExplorer',
@@ -165,7 +164,7 @@ const text = {
       {
         title: 'Stefan-Zweig-Bibliographie',
         alt: 'Oberfläche der Stefan-Zweig-Bibliographie mit Suche über alle Einträge und einer Gliederung nach Werken, Rezeption und Ausgaben.',
-        solution: 'Rettet eine Bibliographie aus einem stillgelegten Wiki in Forschungsdaten, in denen jede Angabe ihre Quellseite behält.',
+        solution: 'Überführt eine Bibliographie aus einem stillgelegten Wiki in Forschungsdaten, in denen jede Angabe auf ihre Quellseite verweist.',
       },
     ],
     methodsTitle: 'Methoden und Frameworks',
@@ -174,7 +173,7 @@ const text = {
       {
         title: 'Promptotyping',
         alt: 'Promptotyping als Ablauf von Preparation über Exploration und Distillation zu Implementation, alle Schritte verbunden mit dem Project Knowledge, ein Review führt zum Promptotype aus Projektwissen, Daten und Artefakt.',
-        solution: 'Promptotyping entwickelt Forschungsartefakte mit KI-Agenten aus einer gepflegten Wissensbasis heraus.',
+        solution: 'Promptotyping entwickelt Forschungsartefakte mit Coding-Agenten aus einer gepflegten Wissensbasis heraus.',
         links: ['Zur Methode', 'Repository', 'Video Teil 1', 'Video Teil 2', 'Beitrag auf L.I.S.A.'],
       },
       {
@@ -194,53 +193,52 @@ const text = {
     about:
       'Digital Humanities Craft ist ein Unternehmen aus der Forschung der Digitalen Geisteswissenschaften mit Sitz bei Graz. Wir entwickeln Forschungssoftware und digitale Editionen, unterrichten an Universitäten in Österreich und Deutschland und arbeiten als technischer Partner in Förderprojekten.',
     aboutLink: 'Team und Projekte',
-    contactTitle: 'Projekt anfragen',
-    talkTitle: 'Im Gespräch',
-    talkText: 'Erzählen Sie uns, welches Problem Sie beschäftigt oder welche Idee Sie haben. Im Gespräch finden wir heraus, was funktioniert.',
+    contactTitle: 'Ins Gespräch kommen',
+    talkTitle: 'Problem oder Idee besprechen',
+    talkText: 'Erzählen Sie uns, welches Problem Sie beschäftigt oder welche Idee Sie haben. Gemeinsam finden wir heraus, was funktioniert.',
     talkMail:
-      'mailto:office@dhcraft.org?subject=fancy%20(research)%20tools%21%20%E2%80%93%20Erstgespr%C3%A4ch&body=Welcher%20Ablauf%20kostet%20Zeit%3F%0A%0AWer%20macht%20die%20Arbeit%2C%20und%20womit%3F%0A%0AWelche%20Dateien%20sind%20beteiligt%3F%0A%0AWas%20soll%20am%20Ende%20herauskommen%3F%0A%0AWelcher%20Budgetrahmen%20ist%20vorgesehen%3F%0A',
+      'mailto:office@dhcraft.org?subject=Gespr%C3%A4ch%20zu%20fancy%20(research)%20tools&body=Worum%20geht%20es%2C%20ein%20Problem%2C%20eine%20Idee%2C%20ein%20Vorhaben%3F%0A%0AWelches%20Material%20oder%20welche%20Daten%20gibt%20es%3F%0A%0AWelcher%20Budgetrahmen%20ist%20vorgesehen%3F%0A',
     talkMailLabel: 'E-Mail schreiben',
-    docsTitle: 'Mit Unterlagen',
-    docsText: 
-      'Schicken Sie uns Material, Daten, Gedanken oder Ideen. Daraus entsteht ein erster Prototyp, an dem sich das Vorhaben konkret besprechen lässt.',
-    docsMail:
-      'mailto:office@dhcraft.org?subject=fancy%20(research)%20tools%21%20%E2%80%93%20Unterlagen%20f%C3%BCr%20einen%20Prototyp',
-    docsMailLabel: 'Unterlagen senden',
+    docsTitle: 'Material schicken',
+    docsText:
+      'Schicken Sie uns Material, Daten, Gedanken oder Ideen. Wir sehen sie uns an und besprechen mit Ihnen, was sich daraus machen lässt.',
+    docsMail: 'mailto:office@dhcraft.org?subject=Material%20f%C3%BCr%20fancy%20(research)%20tools',
+    docsMailLabel: 'Material senden',
   },
   en: {
     title: 'fancy (research) tools! | Digital Humanities Craft',
     ogTitle: 'fancy (research) tools!',
     description:
-      'Agentic engineering by Digital Humanities Craft. Tools, workflows and knowledge bases built with frontier language models, for you, with you or in training.',
+      'Research tools built with coding agents, mostly running in the browser without a server. In workshops and training your team learns to develop them further.',
     ogLocale: 'en_GB',
     ogImageAlt:
-      'Header of the page fancy (research) tools! with its title, the line Agentic engineering for everyone who works with knowledge, and the button Request a project',
+      'Header of the page fancy (research) tools! with its title, the line Agentic engineering for everyone who works with knowledge, and the button Get in touch',
     heroLine: 'Agentic engineering for everyone who works with knowledge.',
-    lede: 'We use coding agents to build tools for working with knowledge, mostly as standalone static applications that run directly in the browser without a server. Other solutions are possible as well. In workshops and training your team learns to develop such tools further on its own.',
-    heroCta: 'Request a project',
-    heroOffer: 'Our offer',
-    offerTitle: 'Offer',
+    lede: 'fancy (research) tools are applications for working with knowledge, built with coding agents. Most are standalone static applications that run in the browser without a server, though other solutions are possible. In workshops and training your team learns to develop such tools further itself.',
+    heroCta: 'Get in touch',
+    heroOffer: 'What we offer',
+    offerTitle: 'What we offer',
     offers: [
-      { title: 'Learn', text: 'In workshops and training your team learns to build and extend tools like these with coding agents.', link: 'See formats' },
-      { title: 'Develop together', text: 'We work with your team on your data. The knowledge base stays with you, so that your team can develop the tool further on its own.', link: 'Request a conversation' },
-      { title: 'Commissioned development', text: 'We build the tool for you, from a small application for a single work step to an agentic pipeline. On request we also look after it afterwards.', link: 'See examples' },
+      { title: 'Learn', text: 'In workshops and training your team works with coding agents itself and learns to build and adapt tools like the ones shown below.', link: 'See formats' },
+      { title: 'Develop together', text: 'We develop the tool together with your team on your data. The code and the knowledge base the coding agents work from stay with you.', link: 'Request a conversation' },
+      { title: 'Develop on commission', text: 'We build the tool for you, from a small application for a single work step to an agentic pipeline. On request we look after it once it is handed over.', link: 'See examples' },
     ],
     costsTitle: 'Costs',
-    costs: 
-      'We bill per hour, per working day or as a flat fee, starting from your budget. After a first look we show what is possible within it, and you decide after every step whether to continue. There are no licence fees for the software, costs for language models may be charged separately depending on the scope.',
-    toolsTitle: 'Tools to adapt',
+    costs:
+      'We bill per hour, per working day or as a flat fee, starting from your budget. After the first conversation we show what is possible within it, and you decide after every work step whether to continue. There are no licence fees for the software. Costs for using language models may be added depending on the scope.',
+    toolsTitle: 'Examples to try',
     maturity: {
       use: 'In use',
       rc: 'Release Candidate',
       preview: 'Research preview',
       demo: 'Live demo',
-      secured: 'Holdings secured',
+      secured: 'Data rescued',
       experiment: 'Experiment',
     },
     toolOpen: 'Open tool',
     toolCode: 'Repository',
     toolVideo: 'Video',
-    previewNote: 'Not finished. To try out, check results before any use.',
+    previewNote: 'Not finished yet. Meant for trying out, please check results before reusing them.',
     tools: [
       {
         title: 'coOCR/HTR',
@@ -251,7 +249,7 @@ const text = {
         title: 'teiCrafter',
         openLabel: 'View demo',
         alt: 'teiCrafter with readable letter text and marked persons and places on the left and the register of the persons and places mentioned on the right.',
-        solution: 'A template to fork into your own tool for capturing TEI data, with readable text instead of tags and schema validation on saving.',
+        solution: 'A template to fork and develop into your own tool for capturing TEI data. It shows readable text instead of tags and validates against the schema on saving.',
       },
       {
         title: 'CorrespExplorer',
@@ -266,7 +264,7 @@ const text = {
       {
         title: 'Stefan Zweig Bibliography',
         alt: 'Interface of the Stefan Zweig Bibliography with a search across all entries and a breakdown by works, reception and editions.',
-        solution: 'Rescues a bibliography from a decommissioned wiki into research data in which every statement keeps its source page.',
+        solution: 'Moves a bibliography out of a decommissioned wiki into research data in which every statement points to its source page.',
       },
     ],
     methodsTitle: 'Methods and frameworks',
@@ -275,7 +273,7 @@ const text = {
       {
         title: 'Promptotyping',
         alt: 'Promptotyping as a sequence from Preparation via Exploration and Distillation to Implementation, every step connected to the Project Knowledge, with a review leading to the Promptotype made of project knowledge, data and artefact.',
-        solution: 'Promptotyping develops research artefacts with AI agents out of a maintained knowledge base.',
+        solution: 'Promptotyping develops research artefacts with coding agents out of a maintained knowledge base.',
         links: ['About the method', 'Repository', 'Video part 1', 'Video part 2', 'Article on L.I.S.A.'],
       },
       {
@@ -295,17 +293,16 @@ const text = {
     about:
       'Digital Humanities Craft is a company that grew out of research in the Digital Humanities, based near Graz. We develop research software and digital editions, teach at universities in Austria and Germany and work as a technical partner in funded projects.',
     aboutLink: 'Team and projects',
-    contactTitle: 'Request a project',
-    talkTitle: 'In conversation',
-    talkText: 'Tell us which problem is on your mind or which idea you have. In conversation we find out what works.',
+    contactTitle: 'Get in touch',
+    talkTitle: 'Talk about a problem or idea',
+    talkText: 'Tell us which problem is on your mind or which idea you have. Together we find out what works.',
     talkMail:
-      'mailto:office@dhcraft.org?subject=fancy%20(research)%20tools%21%20%E2%80%93%20First%20conversation&body=Which%20workflow%20costs%20time%3F%0A%0AWho%20does%20the%20work%2C%20and%20with%20what%3F%0A%0AWhich%20files%20are%20involved%3F%0A%0AWhat%20should%20the%20outcome%20be%3F%0A%0AWhat%20budget%20is%20envisaged%3F%0A',
+      'mailto:office@dhcraft.org?subject=Conversation%20about%20fancy%20(research)%20tools&body=What%20is%20it%20about%2C%20a%20problem%2C%20an%20idea%2C%20a%20project%3F%0A%0AWhat%20material%20or%20data%20is%20there%3F%0A%0AWhat%20budget%20is%20envisaged%3F%0A',
     talkMailLabel: 'Write an e-mail',
-    docsTitle: 'With documents',
-    docsText: 'Send us material, data, thoughts or ideas. From them we build a first prototype on which the project can be discussed in concrete terms.',
-    docsMail:
-      'mailto:office@dhcraft.org?subject=fancy%20(research)%20tools%21%20%E2%80%93%20Documents%20for%20a%20prototype',
-    docsMailLabel: 'Send documents',
+    docsTitle: 'Send material',
+    docsText: 'Send us material, data, thoughts or ideas. We look through them and discuss with you what can be made of them.',
+    docsMail: 'mailto:office@dhcraft.org?subject=Material%20for%20fancy%20(research)%20tools',
+    docsMailLabel: 'Send material',
   },
 };
 
@@ -407,7 +404,7 @@ export function getFancyContent(lang: Lang) {
   return {
     t,
     privacy: privacy[lang],
-    ogImage: img('og.jpg'),
+    ogImage: img(lang === 'de' ? 'og.jpg' : 'og-en.jpg'),
     aboutHref: lang === 'de' ? '/#team' : '/en/#team',
     tel: { href: 'tel:+436781269242', label: '+43 678 12 69 242' },
     address: 'office@dhcraft.org',
@@ -422,7 +419,6 @@ export function getFancyContent(lang: Lang) {
     methods: methodsBase.map((b, i) => ({
       ...b,
       ...t.methods[i],
-      large: img(`${b.img}-1440.webp`),
       src: img(`${b.img}-720.webp`),
       srcset: `${img(`${b.img}-720.webp`)} 720w, ${img(`${b.img}-1440.webp`)} 1440w`,
       maturityClass: maturityClass[b.maturity],

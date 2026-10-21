@@ -43,9 +43,10 @@ const githubMark =
     <Nav lang={lang} altPath={altPath} homeHref={homeHref} />
     <main id="main" class="fancy">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="wrap hero-grid">
-          <div>
-            <h1 id="hero-title">fancy (research) tools<span class="bang">!</span><span class="accent-line">{t.heroLine}</span></h1>
+        <div class="wrap">
+          <div class="hero-text">
+            <h1 id="hero-title">fancy (research) tools<span class="bang">!</span></h1>
+            <p class="accent-line">{t.heroLine}</p>
             <p class="lede">{t.lede}</p>
             <div class="actions">
               <a class="button primary" href="#kontakt">{t.heroCta}</a>
@@ -55,7 +56,7 @@ const githubMark =
         </div>
       </section>
 
-      <section class="section" id="angebot" aria-labelledby="angebot-title">
+      <section class="section tinted" id="angebot" aria-labelledby="angebot-title">
         <div class="wrap">
           <h2 id="angebot-title" class="section-title">{t.offerTitle}</h2>
           <ul class="offers" role="list">
@@ -74,16 +75,14 @@ const githubMark =
               ))
             }
           </ul>
-          <div class="paths terms">
-            <div class="path" id="kosten">
-              <h3>{t.costsTitle}</h3>
-              <p>{t.costs}</p>
-            </div>
+          <div class="costs" id="kosten">
+            <h3>{t.costsTitle}</h3>
+            <p>{t.costs}</p>
           </div>
         </div>
       </section>
 
-      <section class="section tinted" id="werkzeuge" aria-labelledby="werkzeuge-title">
+      <section class="section" id="werkzeuge" aria-labelledby="werkzeuge-title">
         <div class="wrap">
           <h2 id="werkzeuge-title" class="section-title">{t.toolsTitle}</h2>
           <ul class="tools" role="list">
@@ -110,14 +109,16 @@ const githubMark =
                         <span class={`maturity ${tool.maturityClass}`}>{tool.maturityLabel}</span>
                         {unfinished(tool.maturity) && <span class="preview-note">{t.previewNote}</span>}
                       </div>
-                      <p class="tool-links">
+                      <div class="tool-links">
                         <a class="button primary" href={tool.open}>{tool.openLabel ?? t.toolOpen}</a>
-                        <a class="repo-link" href={tool.code}>
-                          <svg class="repo-icon" viewBox="0 0 16 16" aria-hidden="true" set:html={githubMark} />
-                          {t.toolCode}
-                        </a>
-                        {tool.video && <a href={tool.video}>{t.toolVideo}</a>}
-                      </p>
+                        <p class="more-links">
+                          <a class="repo-link" href={tool.code}>
+                            <svg class="repo-icon" viewBox="0 0 16 16" aria-hidden="true" set:html={githubMark} />
+                            {t.toolCode}
+                          </a>
+                          {tool.video && <a href={tool.video}>{t.toolVideo}</a>}
+                        </p>
+                      </div>
                     </div>
                   </article>
                 </li>
@@ -127,7 +128,7 @@ const githubMark =
         </div>
       </section>
 
-      <section class="section" id="methoden" aria-labelledby="methoden-title">
+      <section class="section tinted" id="methoden" aria-labelledby="methoden-title">
         <div class="wrap">
           <h2 id="methoden-title" class="section-title">{t.methodsTitle}</h2>
           <ul class="methods" role="list">
@@ -135,18 +136,16 @@ const githubMark =
               f.methods.map((m) => (
                 <li class="method" id={m.id}>
                   <figure class="method-figure">
-                    <a href={m.large}>
-                      <img
-                        src={m.src}
-                        srcset={m.srcset}
-                        sizes="(min-width: 60rem) 36rem, 100vw"
-                        width="1440"
-                        height="900"
-                        loading="lazy"
-                        decoding="async"
-                        alt={m.alt}
-                      />
-                    </a>
+                    <img
+                      src={m.src}
+                      srcset={m.srcset}
+                      sizes="(min-width: 60rem) 24rem, 100vw"
+                      width="1440"
+                      height="900"
+                      loading="lazy"
+                      decoding="async"
+                      alt={m.alt}
+                    />
                     <figcaption>{t.methodCaption}</figcaption>
                   </figure>
                   <h3>{m.title}</h3>
@@ -155,14 +154,17 @@ const githubMark =
                     <span class={`maturity ${m.maturityClass}`}>{m.maturityLabel}</span>
                     {unfinished(m.maturity) && <span class="preview-note">{t.previewNote}</span>}
                   </div>
-                  <p class="tool-links">
-                    {m.links.map((l, i) => (
-                      <a class={i === 0 ? 'button primary' : isRepo(l.href) ? 'repo-link' : undefined} href={l.href}>
-                        {i > 0 && isRepo(l.href) && <svg class="repo-icon" viewBox="0 0 16 16" aria-hidden="true" set:html={githubMark} />}
-                        {l.label}
-                      </a>
-                    ))}
-                  </p>
+                  <div class="tool-links">
+                    <a class="button primary" href={m.links[0].href}>{m.links[0].label}</a>
+                    <p class="more-links">
+                      {m.links.slice(1).map((l) => (
+                        <a class={isRepo(l.href) ? 'repo-link' : undefined} href={l.href}>
+                          {isRepo(l.href) && <svg class="repo-icon" viewBox="0 0 16 16" aria-hidden="true" set:html={githubMark} />}
+                          {l.label}
+                        </a>
+                      ))}
+                    </p>
+                  </div>
                 </li>
               ))
             }
@@ -181,7 +183,6 @@ const githubMark =
                 <a class="button primary" href={t.talkMail}>{t.talkMailLabel}</a>
                 <a class="button" href={f.tel.href}>{f.tel.label}</a>
               </div>
-              <p class="address">{f.address}</p>
             </div>
             <div class="path">
               <h3>{t.docsTitle}</h3>
@@ -189,16 +190,16 @@ const githubMark =
               <div class="actions">
                 <a class="button" href={t.docsMail}>{t.docsMailLabel}</a>
               </div>
-              <p class="address">{f.address}</p>
             </div>
           </div>
+          <p class="address">{f.address}</p>
 
-          <div class="about">
-            <h3>{t.aboutTitle}</h3>
+          <aside class="about" aria-labelledby="about-title">
+            <h2 id="about-title">{t.aboutTitle}</h2>
             <p>
               {t.about} <a href={f.aboutHref}>{t.aboutLink}</a>
             </p>
-          </div>
+          </aside>
         </div>
       </section>
     </main>
@@ -221,7 +222,6 @@ const githubMark =
     --text-muted: rgba(30, 39, 73, 0.74);
     --raised: #fff;
     --wash: rgba(138, 79, 163, 0.1);
-    --ok: oklch(55% 0.14 150);
     --radius: 1rem;
     --radius-control: 999px;
     --measure: 62ch;
@@ -252,7 +252,6 @@ const githubMark =
     margin: 0;
   }
 
-  ol[role='list'],
   ul[role='list'] {
     list-style: none;
     padding: 0;
@@ -312,12 +311,9 @@ const githubMark =
     color: var(--purple);
   }
 
-  /* The hero fills the first screen so the request button never sits above an empty band. */
+  /* The hero takes the height of its text, a minimum height left an empty band below the buttons. */
   .hero {
-    display: grid;
-    align-content: center;
-    min-block-size: min(50rem, calc(100svh - 4rem));
-    padding-block: var(--space-l);
+    padding-block: var(--space-section);
     overflow: clip;
     position: relative;
     isolation: isolate;
@@ -332,28 +328,28 @@ const githubMark =
     filter: blur(30px);
   }
 
-  /* In the grid of .hero the auto margins of .wrap would shrink it to the text and centre it. */
-  .hero-grid {
-    box-sizing: border-box;
-    inline-size: 100%;
+  /* Text in the left half, the right side stays empty. */
+  .hero-text {
+    max-inline-size: 36rem;
   }
 
-  /* Text in the left half, the right side stays empty. */
-  .hero-grid > div {
-    max-inline-size: 36rem;
+  .hero h1,
+  .accent-line {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.06;
+    text-wrap: balance;
   }
 
   .hero h1 {
     font-size: var(--step-3);
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    line-height: 1.06;
   }
 
+  /* Kept outside the h1 so that the heading reads as the name alone. */
   .accent-line {
-    display: block;
     color: var(--purple);
-    font-size: 0.62em;
+    font-size: calc(var(--step-3) * 0.62);
     margin-block-start: 0.35em;
   }
 
@@ -417,18 +413,27 @@ const githubMark =
   /* The three ways of working as cards, the hexagon icon names the way. */
   .offers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
     gap: var(--space-m);
+  }
+
+  @media (min-width: 56rem) {
+    .offers {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .offer,
+  .costs {
+    padding: var(--space-m);
+    border-radius: var(--radius);
+    background: var(--paper);
+    box-shadow: 0 0 0 1px var(--rule);
   }
 
   .offer {
     display: flex;
     flex-direction: column;
     gap: var(--space-s);
-    padding: var(--space-m);
-    border-radius: var(--radius);
-    background: #fff;
-    box-shadow: 0 0 0 1px var(--rule);
   }
 
   .offer h3 {
@@ -453,35 +458,30 @@ const githubMark =
   }
 
   .path {
-    padding: var(--space-m) var(--space-l) var(--space-l);
+    padding: var(--space-l);
     border-radius: var(--radius);
     background: #fff;
     box-shadow: 0 0 0 1px var(--rule);
   }
 
-  .path h3 {
+  .path h3,
+  .costs h3 {
     font-size: var(--step-1);
   }
 
-  .path > p {
+  .path > p,
+  .costs > p {
     margin-block-start: var(--space-xs);
     color: var(--text-muted);
   }
 
-  .terms {
+  .costs {
     margin-block-start: var(--space-m);
-    gap: var(--space-m);
-    align-items: start;
   }
 
-  .terms .path {
-    padding: var(--space-m);
+  .costs > p {
+    max-inline-size: var(--measure);
   }
-
-  .terms .path > p + p {
-    margin-block-start: var(--space-s);
-  }
-
 
   .tools {
     display: grid;
@@ -535,7 +535,6 @@ const githubMark =
     max-inline-size: var(--measure);
   }
 
-
   /* Maturity in one word, the colour repeats what the word says and never carries it alone. */
   .maturity {
     display: inline-flex;
@@ -569,15 +568,25 @@ const githubMark =
     gap: 0.5rem 0.75rem;
   }
 
-
+  /* The primary action on its own line, further links in a calm second row below it. */
   .tool-links {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem 1.1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-s);
     margin-block-start: var(--space-s);
     font-size: var(--step--1);
     font-weight: 500;
+  }
+
+  .more-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+  }
+
+  .more-links a {
+    padding-block: 0.15rem;
   }
 
   .repo-link {
@@ -605,8 +614,13 @@ const githubMark =
   /* Cards as in the services grid of dhcraft.org. */
   .methods {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
     gap: var(--space-l) var(--space-m);
+  }
+
+  @media (min-width: 60rem) {
+    .methods {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   .method {
@@ -638,11 +652,6 @@ const githubMark =
     padding-block-start: var(--space-xs);
   }
 
-  .method-figure a {
-    display: block;
-    border-radius: var(--radius);
-  }
-
   .method-figure img {
     inline-size: 100%;
     aspect-ratio: 16 / 10;
@@ -672,17 +681,18 @@ const githubMark =
   }
 
   .about {
-    margin-block-start: var(--space-section);
-    max-inline-size: var(--measure);
+    margin-block-start: var(--space-l);
+    padding-block-start: var(--space-l);
+    border-block-start: 1px solid var(--rule);
   }
 
-  .about h3 {
+  .about h2 {
     font-size: var(--step-1);
   }
 
   .about p {
     margin-block-start: var(--space-xs);
-    font-size: var(--step-0);
+    max-inline-size: var(--measure);
     color: var(--text-muted);
   }
 
@@ -716,24 +726,11 @@ const githubMark =
   }
 
   .address {
-    margin-block-start: var(--space-s);
+    margin-block-start: var(--space-m);
     user-select: all;
   }
 
-  .visually-hidden {
-    position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-  }
-
   @media print {
-    details > :not(summary) {
-      display: block;
-    }
-
     .actions {
       display: none;
     }
