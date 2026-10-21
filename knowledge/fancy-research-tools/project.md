@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-10-03
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -26,7 +26,7 @@ knowledge-sources:
     Open Graph protocol: https://ogp.me/
 ---
 
-"fancy (research) tools!" is the offer of Digital Humanities Craft OG for agentic engineering, the development of tools, workflows and knowledge bases with frontier language models and coding agents. It addresses research and cultural heritage institutions as well as companies and public administration, and offers the work as training, together with the client's team or on commission. The provider's own research tools and methods serve as evidence of what the work produces and can be adapted.
+"fancy (research) tools!" is the offer of Digital Humanities Craft OG for agentic engineering. fancy (research) tools are tools for working with knowledge, built with coding agents, mostly standalone static applications that run in the browser without a server, with other solutions possible. The offer addresses research and cultural heritage institutions as well as companies and public administration. Its main idea is empowerment, teams learn in workshops and training to develop such tools further themselves. Development together with the client's team or on commission follows, with support after handover on request. The provider's own tools and methods serve as examples to try.
 
 ## Location
 
@@ -42,7 +42,7 @@ The name comes from a remark in a chat about a colleague's prompted markup edito
 
 ## Purpose
 
-Visitors are archives, museums, libraries, universities, research projects, companies and administrations with a recurring workflow and no in-house development, and teams that want to learn to work with coding agents themselves. They should understand the offer, judge whether it fits and send a request, either as a conversation or as documents from which a first prototype is built. Billing follows the task, per hour, per working day or as a flat fee, starting from the client's budget.
+Visitors are archives, museums, libraries, universities, research projects, companies and administrations with a recurring workflow and no in-house development, and teams that want to learn to work with coding agents themselves. They should understand what the tools are and how their team can learn to build them, try the examples and get in touch, either to talk about a problem or an idea or by sending material, data, thoughts or ideas. Billing follows the task, per hour, per working day or as a flat fee, starting from the client's budget.
 
 ## Standards
 

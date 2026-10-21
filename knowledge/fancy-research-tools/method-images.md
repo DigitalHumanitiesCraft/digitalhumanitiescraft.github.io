@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-02
-updated: 2026-10-03
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -21,7 +21,7 @@ The brief for an image-generating agent that produces the illustrations of the m
 
 ## Current task
 
-Revise the Research Mission Control infographic into a version 4 without the "Lane" boxes. Start from `knowledge/fancy-research-tools/image-prompts/method-research-mission-control-infographic-v3.png` and its prompt log. Remove the thin group frames around agent and result and the label "Lane". Keep all other labels, the layout, the role exchange and delegation arrows, the direct connection from the Independent Verification Agent to the User, the undirected access lines from the Repository and the white ground. Save the result as `method-research-mission-control-infographic-v4.png` with its prompt log after [Delivery](#delivery). Change no other file and do not commit or push.
+Dormant since 2026-10-21, when Research Mission Control was withdrawn from the page and its images left `public/` ([ADR-017](specification.md#adr-017-page-slimmed-to-offer-examples-methods-and-contact)). Resume it only when the operator brings the method back. The task was to revise the Research Mission Control infographic into a version 4 without the "Lane" boxes. Start from `knowledge/fancy-research-tools/image-prompts/method-research-mission-control-infographic-v3.png` and its prompt log. Remove the thin group frames around agent and result and the label "Lane". Keep all other labels, the layout, the role exchange and delegation arrows, the direct connection from the Independent Verification Agent to the User, the undirected access lines from the Repository and the white ground. Save the result as `method-research-mission-control-infographic-v4.png` with its prompt log after [Delivery](#delivery). Change no other file and do not commit or push.
 
 ## Series in use
 
@@ -32,7 +32,7 @@ The page shows the series infographic-v3, chosen by the operator on 2026-10-02. 
 | promptotyping | Promptotyping | violet `#8a4fa3` | Preparation, Exploration, Distillation, Implementation, Project Knowledge, Review, Promptotype, Data, Artifact |
 | grounded-vault | Grounded Vault | green `#5c9e4a` | Sources, Markdown representation, Distillates, Assertions, Output |
 | agentic-edition-pipeline | Agentic Edition Pipeline | orange `#e39a3b` | AI Agent, Project Knowledge, Digitized Source, Transcription, Review and Correction, TEI, Reading and Review, Editorial Team |
-| research-mission-control | Research Mission Control | blue `#85aede` | User, Research Orchestrator, Operational Orchestrator, Independent Verification Agent, Lane, Specialist Agents, Repository in version 3, without Lane in version 4 |
+| research-mission-control | Research Mission Control, withdrawn from the page, prompt logs kept | blue `#85aede` | User, Research Orchestrator, Operational Orchestrator, Independent Verification Agent, Lane, Specialist Agents, Repository in version 3, without Lane in version 4 |
 
 ## Style
 
@@ -47,7 +47,7 @@ The images belong to the look of https://dhcraft.org and its watercolour hexagon
 
 ## Where the images appear
 
-Each image sits at the top of a method card, above the method's name, maturity chip and links. The cards stand two side by side on wide screens and stack on a phone, where an image is shown at about 360 pixels wide and links to its large version. The alt text in `src/i18n/fancy.ts` of the site repository describes the labels and the flow in words, and the caption reads "Generiert mit gpt-image".
+Each image sits at the top of a method card, above the method's name, maturity chip and links. The cards stand three side by side from 60rem and stack below, where an image is shown at about 360 pixels wide on a phone. The images are not linked. The alt text in `src/i18n/fancy.ts` of the site repository describes the labels and the flow in words, and the caption reads "Generiert mit gpt-image".
 
 ## Delivery
 
@@ -58,4 +58,4 @@ Each image sits at the top of a method card, above the method's name, maturity c
 
 ## Acceptance and integration
 
-The operator accepts an image when it shows only its listed labels, no person and no logo, when its method colour leads, when its flow is correct and recognisable at 360 pixels wide, and when it fits the series. The integration then encodes the image with `tools/encode-images.cjs <png> method-<slug>` into WebP at 1440 and 720 pixels in `public/fancy-research-tools/img/` of the site repository, adjusts the alt text in `src/i18n/fancy.ts` where the labels changed and updates the image row in [data](data.md#images).
+The operator accepts an image when it shows only its listed labels, no person and no logo, when its method colour leads, when its flow is correct and recognisable at 360 pixels wide, and when it fits the series. The integration then encodes the image with `scripts/fancy-research-tools/encode-images.cjs <png> method-<slug>` into WebP at 1440 and 720 pixels in `public/fancy-research-tools/img/` of the site repository, adjusts the alt text in `src/i18n/fancy.ts` where the labels changed and updates the image row in [data](data.md#images).

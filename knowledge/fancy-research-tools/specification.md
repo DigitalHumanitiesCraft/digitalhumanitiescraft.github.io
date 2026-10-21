@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-10-03
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -26,11 +26,11 @@ What the page must do, which rules its copy follows and which decisions hold. Re
 
 ### Functional requirements
 
-- FR-01: The first screen names the offer, agentic engineering, in one line and leads to the request. Acceptance: hero with title, the line "Agentic Engineering für alle, die mit Wissen arbeiten.", lede and the buttons "Projekt anfragen" and "Unser Angebot", visible without scrolling at 1440 by 900.
-- FR-02: Every tool and method shows its function, maturity and evidence. Acceptance: each entry carries a [maturity chip](INDEX.md#maturity-chip), each entry with code a [repository link](INDEX.md#repository-link), and every external link answers HTTP 200 in the link check of [testing](testing.md).
-- FR-03: A visitor can send a request in two ways. Acceptance: a conversation path with prefilled e-mail and telephone and a documents path with a prefilled e-mail, both in the section `#kontakt`.
-- FR-04: Every section, offer, tool and method is addressable. Acceptance: unique fragment identifiers, the sections `#angebot`, `#werkzeuge`, `#methoden`, `#qualitaet`, `#vorgehen` and `#kontakt`, the offer blocks `#lernen`, `#gemeinsam`, `#bauen`, `#modelle` and `#kosten`, each tool and each method by the anchor listed in [data](data.md#tools).
-- FR-05: Ways of working, model use and billing are stated. Acceptance: the section `#angebot` names learning, developing together and commissioned development, says where frontier language models are used and that model and access are chosen with the client by the kind of data, and states billing after [CR-05](#content-rules).
+- FR-01: The first screen says what fancy (research) tools are and leads to a conversation. Acceptance: hero with title, the line "Agentic Engineering für alle, die mit Wissen arbeiten.", a lede that names tools built with coding agents, mostly static applications in the browser without a server, and workshops and training as the way a team learns to develop them further, and the buttons "Ins Gespräch kommen" and "Unser Angebot", visible without scrolling at 1440 by 900.
+- FR-02: Every tool and method shows its function, maturity and repository. Acceptance: each entry carries a [maturity chip](INDEX.md#maturity-chip), each Forschungsvorschau or Experiment the not-finished note, each entry with code a [repository link](INDEX.md#repository-link), and every external link answers HTTP 200 in the link check of [testing](testing.md).
+- FR-03: A visitor can get in touch in two ways. Acceptance: a conversation path "Problem oder Idee besprechen" with prefilled e-mail and telephone and a material path "Material schicken" with a prefilled e-mail, both in the section `#kontakt`, the e-mail address shown once below both.
+- FR-04: Every section, offer, tool and method is addressable. Acceptance: unique fragment identifiers, the sections `#angebot`, `#werkzeuge`, `#methoden` and `#kontakt`, the offer blocks `#lernen`, `#gemeinsam`, `#bauen` and `#kosten`, each tool and each method by the anchor listed in [data](data.md#tools). `#kosten` stays stable, because the contact text of the home page links it.
+- FR-05: Ways of working and billing are stated. Acceptance: the section `#angebot` names learning, developing together and commissioned development, with learning first, and the block `#kosten` states billing after [CR-05](#content-rules) and that model use may add costs.
 - FR-06: Tool and method data are kept once for both languages. Acceptance: links, maturity and image names of every tool and method stand once in `src/i18n/fancy.ts` of the site repository, and only the texts differ per language.
 - FR-08: A shared link shows title, description and image. Acceptance: Open Graph metadata with a 1200 by 630 image and its alt text, and a canonical link.
 - FR-09: The page exists in German and English. Acceptance: `/fancy-research-tools/` and `/en/fancy-research-tools/` link each other through `hreflang` alternates and the language switch of the site navigation, and the former English addresses `/fancy-research-tools/en/` and `/fancy-research-tools/en/privacy/` redirect to the current ones.
@@ -50,7 +50,7 @@ These rules come from operator decisions and corrections recorded in [ADR-013](#
 - CR-01: Every claim about the work is either backed by all tools shown or phrased as the working method for client projects, which the provider can keep. Facts come from the sources in [data](data.md).
 - CR-02: The page never claims that the provider reviews client code. It states that the provider designs the context in which coding agents work, and that productive use needs a professional revision and an independent review of the code.
 - CR-03: Promptotyping is presented as one context engineering method among several, chosen per project after the project is understood.
-- CR-04: Language models are called frontier language models (Frontier-Sprachmodelle) and are never named by provider. The caption of a generated image names the image model, because [ADR-012](#adr-012-generated-illustrations-for-the-method-cards) requires the label.
+- CR-04: Language models are never named by provider. Where the page characterises their capability, it calls them frontier language models (Frontier-Sprachmodelle). The costs block speaks of language models in general, by the operator's wording of 2026-10-21. The caption of a generated image names the image model, because [ADR-012](#adr-012-generated-illustrations-for-the-method-cards) requires the label.
 - CR-05: Billing is per hour, per working day or as a flat fee, starting from the client's budget, with a decision on continuation after every step. The page shows no price.
 - CR-06: No price, promise, condition or client name is invented. The page names no other institution, neither clients nor partners, by the operator's decision of 2026-10-02. Real cases appear only with the consent of the projects behind them and without naming the institution unless the operator decides otherwise.
 - CR-07: The register is formal and scholarly, with traceability, provenance and reuse as its terms and without casual phrasing. The house rules for punctuation hold, no dash or colon as connector, no trailing negation, no ornamental triad, no marketing adjectives.
@@ -63,17 +63,17 @@ These rules come from operator decisions and corrections recorded in [ADR-013](#
 
 *As the head of a small archive, who carries a recurring workflow in Word, I want to see whether my case fits, so that I write only when help is plausible.*
 
-Validation: assumption (proxy: operator), effect to be observed, resolved by the first requests received.
+Validation: assumption (proxy: operator), effect to be observed, resolved by the first requests received. Re-derived on 2026-10-21, when the fit lists left the page ([ADR-017](#adr-017-page-slimmed-to-offer-examples-methods-and-contact)). The visitor now judges the fit from the examples and settles it in a conversation, which the contact section invites with a problem, an idea or material.
 
 Derivation:
 - Requirements FR-01, FR-03, FR-05
-- The fit lists "Passt gut" and "Passt nicht" in the section `#vorgehen`
+- The examples in the section `#werkzeuge` and the conversation path in `#kontakt`
 
 #### Check what is proven
 
-*As a researcher evaluating a tool, I want its maturity and the source of that statement, so that I can tell a prototype from an established tool.*
+*As a researcher evaluating a tool, I want its maturity and a way to its code and knowledge base, so that I can tell a prototype from an established tool.*
 
-Validation: assumption (proxy: operator).
+Validation: assumption (proxy: operator). Re-derived on 2026-10-21, when the evidence links left the rows ([ADR-016](#adr-016-uniform-links-no-ability-icons-research-mission-control-withdrawn)). The source of each maturity statement is recorded in [data](data.md#tools), and the repository link leads to the knowledge base it comes from.
 
 Derivation:
 - Requirement FR-02, content rule CR-01
@@ -95,13 +95,11 @@ Derivation:
 
 The page runs in this order.
 
-1. Hero with title, line, lede and two buttons. The right half stays empty.
-2. `#angebot` with the cards Lernen, Gemeinsam entwickeln and Im Auftrag entwickeln and the blocks Modelle und Daten and Kosten.
-3. `#werkzeuge` with the tools coOCR/HTR, teiCrafter, CorrespExplorer, SZD-HTR and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one sentence, maturity chip and the links Werkzeug öffnen, Repository and Video where one exists.
-4. `#methoden` with Promptotyping, Grounded Vault and Agentic Edition Pipeline, each with a generated infographic, one sentence, maturity chip and its links.
-5. `#qualitaet`, titled Grundsätze, with the expandable principles, followed by Wer wir sind, see [design](design.md#principles).
-6. `#vorgehen` with the process steps and the fit lists.
-7. `#kontakt` with the two request paths.
+1. Hero with title, the accent line, lede and the buttons Ins Gespräch kommen and Unser Angebot. The right half stays empty.
+2. `#angebot`, titled Angebot, with the cards Lernen, Gemeinsam entwickeln and Im Auftrag entwickeln and the block Kosten.
+3. `#werkzeuge`, titled Beispiele zum Ausprobieren, with coOCR/HTR, teiCrafter, CorrespExplorer, SZD-HTR and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one sentence, maturity chip with the not-finished note where it applies, the button Werkzeug öffnen (Demo ansehen for teiCrafter) and the links Repository and Video where one exists.
+4. `#methoden`, titled Methoden und Frameworks, with Promptotyping, Grounded Vault and Agentic Edition Pipeline, each with a generated infographic, one sentence, maturity chip and its links.
+5. `#kontakt`, titled Ins Gespräch kommen, with the paths Problem oder Idee besprechen and Material schicken, the e-mail address and the block Wer wir sind.
 
 ## Decisions
 
@@ -129,7 +127,7 @@ Reason. Content edits happen once, and a variant differs only where its look dif
 
 ### ADR-003 Honest maturity with evidence
 
-Amended on 2026-10-02. The state lines became [maturity chips](INDEX.md#maturity-chip) with an evidence link, see the journal entry "Condensed German page with method illustrations".
+Amended on 2026-10-02. The state lines became [maturity chips](INDEX.md#maturity-chip) with an evidence link, see the journal entry "Condensed German page with method illustrations". Amended again on 2026-10-21 by [ADR-016](#adr-016-uniform-links-no-ability-icons-research-mission-control-withdrawn) and [ADR-017](#adr-017-page-slimmed-to-offer-examples-methods-and-contact). The rows no longer link evidence, the chip and the not-finished note carry the modest claim, the repository link leads to the tool's knowledge base, and [data](data.md#tools) records the source of each maturity statement.
 
 Context. All tools are prototypes or research previews, and the page advertises a paid service.
 
@@ -232,9 +230,11 @@ Choice. Each method card gets one generated illustration after the brief in [met
 
 Reason. Methods have no interface to photograph, so a screenshot cannot serve as evidence there, and the evidence stays in the maturity chip and its links. An illustration in the watercolour language of the DHCraft logo ties the cards to the design.
 
-Effect. Source PNGs stay local and out of Git, their prompt logs are committed. The operator chose the series infographic-v3, which carries a few English key terms, so the alt text describes each flow in words and the image links to its large version for small screens.
+Effect. Source PNGs stay local and out of Git, their prompt logs are committed. The operator chose the series infographic-v3, which carries a few English key terms, so the alt text describes each flow in words. The images linked to their large version until 2026-10-21, when the link left as a large tab stop to a bare image file ([ADR-017](#adr-017-page-slimmed-to-offer-examples-methods-and-contact)).
 
 ### ADR-013 Positioning as an agentic engineering offer
+
+Amended by [ADR-017](#adr-017-page-slimmed-to-offer-examples-methods-and-contact). The block on models and data left the page, the lede now says what fancy (research) tools are, and empowerment through workshops and training leads the offer. The name, the three ways of working and the billing rule still hold.
 
 Context. The page offered custom tools and adaptable research tools. On 2026-10-02 the operator decided to present it as the offer for agentic engineering, building on an older internal concept "Prompt Engineering as a Service" and on research into terms and comparable offers. dhcraft.org already listed training and consulting on its excellence page and linked this page only from its research software card.
 
@@ -276,6 +276,16 @@ Choice. Every link to a GitHub repository is labelled Repository and carries the
 
 Reason. One label and one mark for one kind of target let a reader scan the rows. The maturity chip alone did not tell a reader that a research preview is unfinished.
 
-Effect. The ability icon term and the per-tool ability list are removed from the knowledge base. The Research Mission Control image stays in `public/` and its prompt log in `image-prompts/` until the method returns.
+Effect. The ability icon term and the per-tool ability list are removed from the knowledge base. The Research Mission Control images left `public/` on 2026-10-21, so that the method is not reachable at a public address before it is ready ([ADR-017](#adr-017-page-slimmed-to-offer-examples-methods-and-contact)). Its prompt logs stay in `image-prompts/` until the method returns.
 
 Amendment, 2026-10-21. On the operator's request the tools also drop Belege and Anpassen anfragen, because the contact section already carries the request and the repository holds the knowledge base. coOCR/HTR and teiCrafter move to Experiment, and teiCrafter is described as a template to fork into one's own tool for capturing TEI data. The not-finished note covers Forschungsvorschau and Experiment.
+
+### ADR-017 Page slimmed to offer, examples, methods and contact
+
+Context. On 2026-10-21 the operator found the page too long and its message unclear. Principles, process steps, fit lists, the block on models and data and a standing maturity disclaimer explained more than a visitor needed before a first conversation. Three reviews of the slimmed state at commit d089227 then asked for clearer copy, a calmer layout and a consistent knowledge base.
+
+Choice. The page keeps four sections after the hero, `#angebot`, `#werkzeuge`, `#methoden` and `#kontakt`. The lede says what fancy (research) tools are, tools built with coding agents, mostly standalone static applications in the browser without a server, with other solutions possible. Empowerment through workshops and training is the main idea, development together or on commission follows, and support after handover is offered on request. The tools section is titled "Beispiele zum Ausprobieren". The contact invites a conversation about a problem or an idea, or material, data, thoughts and ideas sent by e-mail, with three questions in the prefilled mail and no dash in the subjects. Principles, process, fit lists, the models block and the maturity disclaimer stay off the page. Unfinished tools and methods keep their chip and the not-finished note. The layout puts offers and methods on a white ground with paper cards, offers and methods in one column on narrow screens and three on wide ones, primary actions on their own line above a second row of links, the e-mail address once below the contact cards, Wer wir sind as its own aside with an h2, and the accent line outside the h1. Method images no longer link to their large file. The Research Mission Control images leave `public/`, and the share image is rendered per language.
+
+Reason. A visitor should learn in one screen what the tools are and that the team learns to build them, then try the examples and get in touch. Everything that explained the working method in advance is better said in the conversation. The layout changes follow the reviews and remove uneven grids, an empty band below the hero buttons and duplicate content.
+
+Effect. FR-01 to FR-05, the stories of Epic 1 and the scope list follow the new page, and [design](design.md) keeps the removed principles only as history. The anchors `#qualitaet`, `#vorgehen` and `#modelle` no longer exist, `#kosten` stays for the link from the home page. CR-04 allows the general term language models in the costs block. The facts that left the page are marked in [data](data.md#provider).

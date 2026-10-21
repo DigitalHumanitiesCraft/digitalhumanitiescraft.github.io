@@ -6,7 +6,7 @@ project:
 status: active
 language: en
 created: 2026-10-01
-updated: 2026-10-02
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -33,8 +33,8 @@ An offer page on dhcraft.org that visitors find from the site navigation and the
 
 ## Open points
 
-- The conditions under which client research data enter GAMS are not documented. The offers in the operator's vault bill archiving separately, and both this page and the home page say only that archiving is offered.
-- coOCR/HTR keeps no review state per line or page, so the principle Fachliche Kontrolle holds for it only in part.
+- The conditions under which client research data enter GAMS are not documented. The offers in the operator's vault bill archiving separately, and the home page says only that archiving is offered. This page has not mentioned archiving since its principles left it on 2026-10-21.
+- coOCR/HTR keeps no review state per line or page. The page no longer states the former principle of expert control, so the point matters for client projects and for any later return of that claim.
 - coOCR/HTR puts its code under CC BY 4.0 against the house rule of MIT for code. An external contributor's code came in under CC BY, so a change needs that contributor's consent or a legal check.
-- Real cases with their effort, as evidence that a small budget suffices, need the consent of the projects behind them.
+- Real cases with their effort need the consent of the projects behind them. The page has no place for them since 2026-10-21, so they would come back with a decision on where they stand.
 - Offers for work on client data should name the model access and the roles under the EU AI Act, a clause for the offer template and a legal review.

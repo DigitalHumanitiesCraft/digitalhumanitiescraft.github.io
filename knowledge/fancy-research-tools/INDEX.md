@@ -7,7 +7,7 @@ status: draft
 language: en
 version: 0.1
 created: 2026-10-01
-updated: 2026-10-03
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -30,7 +30,7 @@ This knowledge base serves anyone who changes "fancy (research) tools!", the age
 | [project](project.md) | Charter | What is this page, for whom, from which provider, and where does it live? | when audience, offer, provider or location changes |
 | [specification](specification.md) | Specification | What must the page do, which rules hold for its copy, and which decisions stand? | when a requirement or decision changes |
 | [data](data.md) | Material | Which facts does the page state about provider, tools, methods and images, and where do they come from? | whenever a tool's state, link, licence or image changes |
-| [design](design.md) | Design | How does the page look and behave, and what does the principles section say? | when the look or the principles change |
+| [design](design.md) | Design | How does the page look and behave, and which designs did it leave behind? | when the look changes |
 | [method images](method-images.md) | Brief | Which images does an image-generating agent produce for the method cards, in which style, and where does it save them? | when a method, the image style or an image task changes |
 | [testing](testing.md) | Quality Assurance | Which checks guard a change, and how are they run against the site? | when a check is added or changes |
 | [plan](plan.md) | Planning | Which accepted work comes next, which points are open? | when work is accepted, done or decided |
@@ -49,7 +49,7 @@ All zones lie in the site repository, DigitalHumanitiesCraft/digitalhumanitiescr
 - `src/i18n/fancy.ts` holds all copy in German and English, the structured data of tools and methods, the privacy statements and the routes.
 - `src/components/fancy/FancyPage.astro` renders the page with its scoped styles, `src/components/fancy/FancyPrivacy.astro` the privacy statement.
 - `src/pages/fancy-research-tools/` and `src/pages/en/fancy-research-tools/` hold the route files.
-- `public/fancy-research-tools/img/` holds the published screenshots, method images and share image.
+- `public/fancy-research-tools/img/` holds the published screenshots, method images and the share images per language.
 - `astro.config.mjs` holds the redirects from the former English addresses, `src/components/Nav.astro` the navigation item, a pill labelled "fancy (research) tools".
 
 The former repository DigitalHumanitiesCraft/fancy-research-tools keeps the earlier standalone page and the history of these documents up to 2026-10-03 ([ADR-015](specification.md#adr-015-knowledge-and-scripts-move-into-the-site-repository)). Commit [8648a35](https://github.com/DigitalHumanitiesCraft/fancy-research-tools/tree/8648a35) is its last published state, commit [54a6fff](https://github.com/DigitalHumanitiesCraft/fancy-research-tools/tree/54a6fff) holds the five design variants.

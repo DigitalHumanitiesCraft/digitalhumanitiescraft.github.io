@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-10-03
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -87,7 +87,7 @@ PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=chrome node scripts/fancy-re
 PLAYWRIGHT=/path/to/node_modules/playwright CHANNEL=chrome node scripts/fancy-research-tools/encode-images.cjs knowledge/fancy-research-tools/image-prompts/<file>.png <slug>
 ```
 
-`shoot-og.cjs` renders the share image from the running preview, `shoot-tools.cjs` needs network access to the live demos.
+`shoot-og.cjs` renders the share images `og.jpg` and `og-en.jpg` from the hero of both languages in the running preview, `shoot-tools.cjs` needs network access to the live demos.
 
 ## Known limits
 

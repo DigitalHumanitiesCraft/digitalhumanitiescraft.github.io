@@ -26,7 +26,7 @@ The content rules CR-01 to CR-07 in `specification.md` bind every text on the pa
 - Never claim that the provider reviews client code. The provider designs the context in which coding agents work, and productive use needs a professional revision and an independent review of the code.
 - Present Promptotyping as one context engineering method among several, chosen per project.
 - Back every claim by all tools shown, or phrase it as the working method for client projects.
-- Call language models frontier language models and never name them by provider.
+- Never name language models by provider, and call them frontier language models where the page characterises their capability.
 - State billing per hour, per working day or as a flat fee, starting from the client's budget, and show no price.
 - Never invent prices, promises, conditions or client names.
 - Write in a formal scholarly register, with traceability, provenance and reuse as terms, no dash or colon as connector, no trailing negation, no ornamental triad, no marketing adjectives.
