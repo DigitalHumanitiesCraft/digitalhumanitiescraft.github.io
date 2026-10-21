@@ -30,9 +30,9 @@ The page speaks to academic readers and to clients outside academia. It argues w
 
 The page uses the tokens of the site and adds local ones only where the site has none.
 
-- Site tokens from `src/styles/global.css`: paper `--paper` `#fdfcf8`, ink navy `--ink` `#1e2749`, purple `--purple` `#8a4fa3` as the one accent for links, focus, buttons, ability icons and step numbers, and the watercolour palette of the logo, `--pink`, `--green`, `--lime`, `--orange`, `--gold` and `--blue` with their deep variants. Fonts are `--font-display` (Sora) for headings and `--font-body` (Instrument Sans) for running text, bundled by the site.
+- Site tokens from `src/styles/global.css`: paper `--paper` `#fdfcf8`, ink navy `--ink` `#1e2749`, purple `--purple` `#8a4fa3` as the one accent for links, focus, buttons and step numbers, and the watercolour palette of the logo, `--pink`, `--green`, `--lime`, `--orange`, `--gold` and `--blue` with their deep variants. Fonts are `--font-display` (Sora) for headings and `--font-body` (Instrument Sans) for running text, bundled by the site.
 - Local tokens on `main.fancy`: rule and muted text colours, a white raised surface, the purple hero wash, radii, a reading measure, a shadow, a fluid type scale from `--step--1` to `--step-3` and a fluid spacing scale from `--space-xs` to `--space-section`.
-- Shapes: pill buttons and chips, cards with a thin border on paper or white, and the hexagon of the logo as the icon shape, purple for ability icons and navy for the offer and principle icons.
+- Shapes: pill buttons and chips, cards with a thin border on paper or white, and the hexagon of the logo as the icon shape, navy for the offer and principle icons.
 - Hero: a purple radial wash and an extra-bold title "fancy (research) tools!" with a purple exclamation mark and the purple line "Agentic Engineering für alle, die mit Wissen arbeiten." The right half stays empty.
 - Theme: light only, because dhcraft.org has no dark theme.
 - Brand: the logo, wordmark and favicon of the site. The page carries no logo of its own.
@@ -42,8 +42,8 @@ The page uses the tokens of the site and adds local ones only where the site has
 1. User task: understand the offer, judge the fit, send a request by conversation or by documents for a first prototype.
 2. First decision: title, line, lede and the buttons "Projekt anfragen" and "Unser Angebot".
 3. Depth: the offer cards Lernen, Gemeinsam entwickeln and Im Auftrag entwickeln with a hexagon icon each, then the plain blocks Modelle und Daten and Kosten, then tools and methods with maturity and evidence, the principles, who we are, process, fit lists and the request. The section order is listed in [specification](specification.md#scope-of-the-page).
-4. Tool rows have four levels, the title, one sentence, a meta row with [maturity chip](INDEX.md#maturity-chip) and [ability icons](INDEX.md#ability-icon), and a link row with the button Werkzeug öffnen and the plain links Code, Belege and Anpassen anfragen. Method cards have the same levels below their image, with their links, the first as a button.
-5. Ability icons carry their name as hidden text for screen readers and as `title` for mouse users. A one-line legend under the tools title names every icon, so touch users can read them without hover.
+4. Tool rows have four levels, the title, one sentence, a meta row with the [maturity chip](INDEX.md#maturity-chip) and, for a Forschungsvorschau, the note that it is not finished, and a link row with the button Werkzeug öffnen and the plain links Repository, Video where one exists, Belege and Anpassen anfragen. Method cards have the same levels below their image, with their links in the order page, Repository, Video, articles, the first as a button.
+5. Every [repository link](INDEX.md#repository-link) carries the GitHub mark, so code is recognisable at a glance in every row.
 6. Maturity chips: Im Einsatz green, Release Candidate blue, Forschungsvorschau, Laufende Demo and Bestand gesichert orange, Experiment pink. The word carries the meaning, the colour repeats it.
 7. Principles are disclosure elements. The title with its icon stays visible, the text opens on demand and prints open.
 8. Layout: each tool row places screenshot and text side by side once the row is wider than 52rem, alternating sides, and stacks them below. Offers, methods and principles run in grids that fill as many columns as fit. The site navigation folds into a menu button below 1120 pixels.

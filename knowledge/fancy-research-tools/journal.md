@@ -9,7 +9,7 @@ method:
 status: active
 language: en
 created: 2026-10-01
-updated: 2026-10-19
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 template:
@@ -169,3 +169,9 @@ The curated backward-looking provenance index of the project. Current facts and 
 - Source: SEO check of dhcraft.org, operator approval of the shortened wording
 - Target: `description` in both languages of `src/i18n/fancy.ts`
 - Result: the description fell from 250 (DE) and 252 (EN) characters to 153 and 156, under the commonly cited guideline of about 160 characters for a search snippet, which search engines actually truncate by pixel width. It keeps agentic engineering, the results, frontier language models and the three forms of collaboration, and drops coding agents and the list of sectors.
+
+### 2026-10-21 integrated Uniform links and Research Mission Control withdrawn
+
+- Source: operator feedback on the live page
+- Target: tool and method rows in `src/i18n/fancy.ts` and `src/components/fancy/FancyPage.astro`, knowledge per [ADR-016](specification.md#adr-016-uniform-links-no-ability-icons-research-mission-control-withdrawn)
+- Result: repository links carry one label and the GitHub mark, Promptotyping, Grounded Vault and the bibliography link their videos, Promptotyping also its blog post. Grounded Vault and the Agentic Edition Pipeline lost their evidence link, the ability icons and legend left the page, research previews carry a not-finished note, and Research Mission Control left the methods. Verified by a production build and screenshots of both sections, not yet pushed.

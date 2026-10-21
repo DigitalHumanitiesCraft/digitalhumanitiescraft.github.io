@@ -69,15 +69,13 @@ This knowledge base follows the Promptotyping Documents convention, kept in the 
 
 ## Terms
 
-### Ability icon
-
-A small purple hexagon icon at a tool that names one ability, such as LLM-gestützt or Fachliche Prüfung im Werkzeug. Its name is hidden text for screen readers and a `title` for mouse users, and a legend under the tools title names every icon. An ability is shown only where the tool has it.
-
-Used in [design](design.md#interaction-patterns), [data](data.md#tools).
-
 ### Evidence link
 
-The link "Belege" at a tool or method, pointing to the knowledge base or status document of that tool or method. Where a method page or article is itself the evidence, the method links it instead.
+The link \"Belege\" at a tool, pointing to the knowledge base or status document of that tool. Method cards carry no evidence link, their page, repository, video and articles are the evidence.
+
+### Repository link
+
+The link \"Repository\" with the GitHub mark at every tool and method whose code is on GitHub. Every link to github.com on the tool and method rows carries the same mark and label.
 
 Used in [data](data.md), [specification](specification.md#requirements).
 

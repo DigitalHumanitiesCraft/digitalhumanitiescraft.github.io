@@ -27,11 +27,11 @@ What the page must do, which rules its copy follows and which decisions hold. Re
 ### Functional requirements
 
 - FR-01: The first screen names the offer, agentic engineering, in one line and leads to the request. Acceptance: hero with title, the line "Agentic Engineering für alle, die mit Wissen arbeiten.", lede and the buttons "Projekt anfragen" and "Unser Angebot", visible without scrolling at 1440 by 900.
-- FR-02: Every tool and method shows its function, maturity and evidence. Acceptance: each entry carries a [maturity chip](INDEX.md#maturity-chip) and an [evidence link](INDEX.md#evidence-link), and every external link answers HTTP 200 in the link check of [testing](testing.md).
+- FR-02: Every tool and method shows its function, maturity and evidence. Acceptance: each entry carries a [maturity chip](INDEX.md#maturity-chip), each tool an [evidence link](INDEX.md#evidence-link), each entry with code a [repository link](INDEX.md#repository-link), and every external link answers HTTP 200 in the link check of [testing](testing.md).
 - FR-03: A visitor can send a request in two ways. Acceptance: a conversation path with prefilled e-mail and telephone and a documents path with a prefilled e-mail, both in the section `#kontakt`.
 - FR-04: Every section, offer, tool and method is addressable. Acceptance: unique fragment identifiers, the sections `#angebot`, `#werkzeuge`, `#methoden`, `#qualitaet`, `#vorgehen` and `#kontakt`, the offer blocks `#lernen`, `#gemeinsam`, `#bauen`, `#modelle` and `#kosten`, each tool and each method by the anchor listed in [data](data.md#tools).
 - FR-05: Ways of working, model use and billing are stated. Acceptance: the section `#angebot` names learning, developing together and commissioned development, says where frontier language models are used and that model and access are chosen with the client by the kind of data, and states billing after [CR-05](#content-rules).
-- FR-06: Tool and method data are kept once for both languages. Acceptance: links, maturity, ability icons and image names of every tool and method stand once in `src/i18n/fancy.ts` of the site repository, and only the texts differ per language.
+- FR-06: Tool and method data are kept once for both languages. Acceptance: links, maturity and image names of every tool and method stand once in `src/i18n/fancy.ts` of the site repository, and only the texts differ per language.
 - FR-08: A shared link shows title, description and image. Acceptance: Open Graph metadata with a 1200 by 630 image and its alt text, and a canonical link.
 - FR-09: The page exists in German and English. Acceptance: `/fancy-research-tools/` and `/en/fancy-research-tools/` link each other through `hreflang` alternates and the language switch of the site navigation, and the former English addresses `/fancy-research-tools/en/` and `/fancy-research-tools/en/privacy/` redirect to the current ones.
 - FR-10: A privacy statement is reachable from every page of the offer. Acceptance: the footer of the page and of the privacy pages links `/fancy-research-tools/datenschutz/` or `/en/fancy-research-tools/privacy/`, and the English statement says that the German one is binding.
@@ -97,8 +97,8 @@ The page runs in this order.
 
 1. Hero with title, line, lede and two buttons. The right half stays empty.
 2. `#angebot` with the cards Lernen, Gemeinsam entwickeln and Im Auftrag entwickeln and the blocks Modelle und Daten and Kosten.
-3. `#werkzeuge` with a legend of the ability icons and the tools coOCR/HTR, teiCrafter, CorrespExplorer, SZD-HTR and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one sentence, maturity chip, ability icons and the links Werkzeug öffnen, Code, Belege and Anpassen anfragen.
-4. `#methoden` with Promptotyping, Grounded Vault, Agentic Edition Pipeline and Research Mission Control, each with a generated infographic, one sentence, maturity chip and its links.
+3. `#werkzeuge` with the tools coOCR/HTR, teiCrafter, CorrespExplorer, SZD-HTR and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one sentence, maturity chip and the links Werkzeug öffnen, Repository, Video where one exists, Belege and Anpassen anfragen.
+4. `#methoden` with Promptotyping, Grounded Vault and Agentic Edition Pipeline, each with a generated infographic, one sentence, maturity chip and its links.
 5. `#qualitaet`, titled Grundsätze, with the expandable principles, followed by Wer wir sind, see [design](design.md#principles).
 6. `#vorgehen` with the process steps and the fit lists.
 7. `#kontakt` with the two request paths.
@@ -267,3 +267,13 @@ Choice. The knowledge base moves to `knowledge/fancy-research-tools/`, the image
 Reason. The page, its facts and its checks change together, and one repository holds them without a write across repositories.
 
 Effect. Archiving the former repository on GitHub is an operator step. The site installs neither Playwright nor axe-core, so the scripts still borrow an existing installation.
+
+### ADR-016 Uniform links, no ability icons, Research Mission Control withdrawn
+
+Context. On 2026-10-21 the operator found the link rows uneven, with Code, Vorlage and Belege naming the same kind of target differently, the ability icons with their legend more noise than help, and Research Mission Control not ready to be public.
+
+Choice. Every link to a GitHub repository is labelled Repository and carries the GitHub mark. Rows link videos and articles where they exist. Method cards drop their evidence link, tools keep Belege. The ability icons and their legend leave the page. Tools and methods with the maturity Forschungsvorschau carry a note that they are not finished and that results need checking before use. Research Mission Control leaves the methods, and GitHub Pages of its repository is switched off.
+
+Reason. One label and one mark for one kind of target let a reader scan the rows. The maturity chip alone did not tell a reader that a research preview is unfinished.
+
+Effect. The ability icon term and the per-tool ability list are removed from the knowledge base. The Research Mission Control image stays in `public/` and its prompt log in `image-prompts/` until the method returns.

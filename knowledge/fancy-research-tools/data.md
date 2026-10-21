@@ -48,24 +48,15 @@ The anchor is the fragment identifier on the page. Links checked on 2026-10-01 u
 | SZD-HTR | `#t-szd` | Experiment | https://chpollin.github.io/szd-htr-ocr-pipeline/ | https://github.com/chpollin/szd-htr-ocr-pipeline | MIT, facsimiles with the Literaturarchiv Salzburg via GAMS | https://github.com/chpollin/szd-htr-ocr-pipeline/blob/main/knowledge/index.md, state from its README (experimental sub-project, checking tiers 1 and 2 populated, tier 0 empty), checked on 2026-10-02 |
 | Stefan-Zweig-Bibliographie (Klawiter-Rescue) | `#t-klawiter` | Bestand gesichert | https://chpollin.github.io/klawiter-rescue/ | https://github.com/chpollin/klawiter-rescue | MIT, data CC BY 4.0 | https://github.com/chpollin/klawiter-rescue/blob/main/knowledge/status.md, checked on 2026-10-02 |
 
-Ability icons per tool, as set in `fancy.ts`:
-
-- coOCR/HTR: LLM-gestützt with model choice down to a local model, Fachliche Prüfung im Werkzeug, Läuft im Browser.
-- teiCrafter: LLM-gestützt with model choice down to a local model, Lesbarer Text statt Tags, Fachliche Prüfung im Werkzeug, Läuft im Browser.
-- CorrespExplorer: Überblick über den ganzen Bestand, Läuft im Browser.
-- SZD-HTR: LLM-gestützt, Überblick über den ganzen Bestand, Fachliche Prüfung im Werkzeug.
-- Stefan-Zweig-Bibliographie: LLM-gestützt, Überblick über den ganzen Bestand, Belege bis zur Quelle.
-
-The page uses no ability that says data stay in-house, because the LLM-supported tools send data to the chosen model.
+The Stefan-Zweig-Bibliographie row also links the video https://youtu.be/KG35VGVctJw. Tools with the maturity Forschungsvorschau carry a note that they are not finished.
 
 ## Methods and frameworks
 
 | Method | Anchor | Maturity on the page | Page | Repository | Evidence |
 |---|---|---|---|---|---|
-| Promptotyping | `#m-pt` | Im Einsatz | https://dhcraft.org/Promptotyping/ and the article https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin | https://github.com/DigitalHumanitiesCraft/Promptotyping | the method page, article and repository |
-| Grounded Vault | `#m-gv` | Im Einsatz | https://dhcraft.org/grounded-vault/ | https://github.com/DigitalHumanitiesCraft/grounded-vault | https://github.com/DigitalHumanitiesCraft/grounded-vault/tree/main/knowledge |
-| Agentic Edition Pipeline | `#m-aep` | Forschungsvorschau | video https://youtu.be/krL-xMxTa_c | https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline | https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline/blob/main/knowledge/00_INDEX.md |
-| Research Mission Control | `#m-rmc` | Release Candidate | https://dhcraft.org/research-mission-control/ | https://github.com/DigitalHumanitiesCraft/research-mission-control | https://github.com/DigitalHumanitiesCraft/research-mission-control/blob/main/knowledge/INDEX.md, state from its README (release candidate 0.9.0 for model-level acceptance testing), checked on 2026-10-02 |
+| Promptotyping | `#m-pt` | Im Einsatz | https://dhcraft.org/Promptotyping/, the video https://youtu.be/hd_a-NBO_S4, the article https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin and the blog post /excellence/blog/Was-ist-Promptotyping/ | https://github.com/DigitalHumanitiesCraft/Promptotyping | the method page, article and repository |
+| Grounded Vault | `#m-gv` | Im Einsatz | https://dhcraft.org/grounded-vault/ and the video https://youtu.be/K1sZBOUSZ_0 | https://github.com/DigitalHumanitiesCraft/grounded-vault | the project page, video and repository |
+| Agentic Edition Pipeline | `#m-aep` | Forschungsvorschau | video https://youtu.be/krL-xMxTa_c | https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline | the video and repository |
 
 ## Images
 

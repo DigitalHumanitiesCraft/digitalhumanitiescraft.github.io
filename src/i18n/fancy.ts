@@ -6,12 +6,6 @@ import type { Lang } from './content';
 
 /** Innenleben der 24er-Icons (Pfade aus der Quellseite), gerendert per set:html in ein <svg> */
 export const fancyIcons = {
-  llm: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m6.5 6.5 2.5 2.5M15 15l2.5 2.5M6.5 17.5 9 15M15 9l2.5-2.5"/>',
-  review: '<path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/>',
-  overview: '<circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/>',
-  readable: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 13h6M7 16h9"/>',
-  browser: '<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/>',
-  evidence: '<path d="M5 3h10l4 4v14H5z"/><path d="M15 3v4h4M8 12h8M8 16h5"/>',
   learn: '<path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3z"/><path d="M21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/>',
   together:
     '<circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="8" r="3"/><path d="M2.5 20c.8-3 2.8-4.5 5.5-4.5s4.7 1.5 5.5 4.5M14 15.7c.8-.2 1.6-.2 2.5-.2 2.7 0 4.7 1.5 5.5 4.5"/>',
@@ -26,17 +20,6 @@ export const fancyIcons = {
 
 export type FancyIcon = keyof typeof fancyIcons;
 
-/** Fähigkeiten der Werkzeuge; llmLocal teilt das Icon mit llm, trägt aber den Hinweis auf die Modellwahl */
-type Trait = 'llm' | 'llmLocal' | 'review' | 'overview' | 'readable' | 'browser' | 'evidence';
-const traitIcon: Record<Trait, FancyIcon> = {
-  llm: 'llm',
-  llmLocal: 'llm',
-  review: 'review',
-  overview: 'overview',
-  readable: 'readable',
-  browser: 'browser',
-  evidence: 'evidence',
-};
 
 /** Reifegrad: das Wort trägt die Bedeutung, die Farbklasse wiederholt sie nur */
 type Maturity = 'use' | 'rc' | 'preview' | 'demo' | 'secured' | 'experiment';
@@ -51,7 +34,7 @@ const maturityClass: Record<Maturity, string> = {
 
 const img = (name: string) => `/fancy-research-tools/img/${name}`;
 
-const toolsBase: { id: string; img: string; open: string; code: string; evidence: string; maturity: Maturity; traits: Trait[] }[] = [
+const toolsBase: { id: string; img: string; open: string; code: string; video?: string; evidence: string; maturity: Maturity }[] = [
   {
     id: 't-coocr',
     img: 'coocr-htr',
@@ -59,7 +42,6 @@ const toolsBase: { id: string; img: string; open: string; code: string; evidence
     code: 'https://github.com/DigitalHumanitiesCraft/co-ocr-htr',
     evidence: 'https://dhcraft.org/co-ocr-htr/knowledge.html',
     maturity: 'preview',
-    traits: ['llmLocal', 'review', 'browser'],
   },
   {
     id: 't-tei',
@@ -68,7 +50,6 @@ const toolsBase: { id: string; img: string; open: string; code: string; evidence
     code: 'https://github.com/DigitalHumanitiesCraft/teiCrafter',
     evidence: 'https://github.com/DigitalHumanitiesCraft/teiCrafter/blob/main/knowledge/INDEX.md',
     maturity: 'preview',
-    traits: ['llmLocal', 'readable', 'review', 'browser'],
   },
   {
     id: 't-corresp',
@@ -77,7 +58,6 @@ const toolsBase: { id: string; img: string; open: string; code: string; evidence
     code: 'https://github.com/DigitalHumanitiesCraft/CorrespExplorer',
     evidence: 'https://dhcraft.org/CorrespExplorer/vault.html',
     maturity: 'demo',
-    traits: ['overview', 'browser'],
   },
   {
     id: 't-szd',
@@ -86,16 +66,15 @@ const toolsBase: { id: string; img: string; open: string; code: string; evidence
     code: 'https://github.com/chpollin/szd-htr-ocr-pipeline',
     evidence: 'https://github.com/chpollin/szd-htr-ocr-pipeline/blob/main/knowledge/index.md',
     maturity: 'experiment',
-    traits: ['llm', 'overview', 'review'],
   },
   {
     id: 't-klawiter',
     img: 'klawiter',
     open: 'https://chpollin.github.io/klawiter-rescue/',
     code: 'https://github.com/chpollin/klawiter-rescue',
+    video: 'https://youtu.be/KG35VGVctJw',
     evidence: 'https://github.com/chpollin/klawiter-rescue/blob/main/knowledge/status.md',
     maturity: 'secured',
-    traits: ['llm', 'overview', 'evidence'],
   },
 ];
 
@@ -106,8 +85,10 @@ const methodsBase: { id: string; img: string; maturity: Maturity; links: string[
     maturity: 'use',
     links: [
       'https://dhcraft.org/Promptotyping/',
-      'https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin',
       'https://github.com/DigitalHumanitiesCraft/Promptotyping',
+      'https://youtu.be/hd_a-NBO_S4',
+      'https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin',
+      '/excellence/blog/Was-ist-Promptotyping/',
     ],
   },
   {
@@ -117,7 +98,7 @@ const methodsBase: { id: string; img: string; maturity: Maturity; links: string[
     links: [
       'https://dhcraft.org/grounded-vault/',
       'https://github.com/DigitalHumanitiesCraft/grounded-vault',
-      'https://github.com/DigitalHumanitiesCraft/grounded-vault/tree/main/knowledge',
+      'https://youtu.be/K1sZBOUSZ_0',
     ],
   },
   {
@@ -125,19 +106,8 @@ const methodsBase: { id: string; img: string; maturity: Maturity; links: string[
     img: 'method-agentic-edition-pipeline',
     maturity: 'preview',
     links: [
-      'https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline',
       'https://youtu.be/krL-xMxTa_c',
-      'https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline/blob/main/knowledge/00_INDEX.md',
-    ],
-  },
-  {
-    id: 'm-rmc',
-    img: 'method-research-mission-control',
-    maturity: 'rc',
-    links: [
-      'https://dhcraft.org/research-mission-control/',
-      'https://github.com/DigitalHumanitiesCraft/research-mission-control',
-      'https://github.com/DigitalHumanitiesCraft/research-mission-control/blob/main/knowledge/INDEX.md',
+      'https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline',
     ],
   },
 ];
@@ -146,7 +116,6 @@ const offerIcons: FancyIcon[] = ['learn', 'together', 'build'];
 const offerIds = ['lernen', 'gemeinsam', 'bauen'];
 const offerHrefs = ['#excellence', '#kontakt', '#werkzeuge'];
 const claimIcons: FancyIcon[] = ['requirements', 'code', 'tests', 'formats', 'control', 'handover'];
-const legendOrder: Trait[] = ['llm', 'review', 'overview', 'readable', 'browser', 'evidence'];
 
 const text = {
   de: {
@@ -182,16 +151,6 @@ const text = {
       'Ein kleiner Rahmen begrenzt den Umfang, etwa auf einen einzelnen Arbeitsschritt.',
     ],
     toolsTitle: 'Werkzeuge zum Anpassen',
-    legendLabel: 'Zeichenerklärung',
-    traits: {
-      llm: 'LLM-gestützt',
-      llmLocal: 'LLM-gestützt, Modell wählbar bis zum lokalen Modell',
-      review: 'Fachliche Prüfung im Werkzeug',
-      overview: 'Überblick über den ganzen Bestand',
-      readable: 'Lesbarer Text statt Tags',
-      browser: 'Läuft im Browser ohne eigenen Server',
-      evidence: 'Belege bis zur Quelle',
-    },
     maturity: {
       use: 'Im Einsatz',
       rc: 'Release Candidate',
@@ -201,8 +160,10 @@ const text = {
       experiment: 'Experiment',
     },
     toolOpen: 'Werkzeug öffnen',
-    toolCode: 'Code',
+    toolCode: 'Repository',
+    toolVideo: 'Video',
     toolEvidence: 'Belege',
+    previewNote: 'Nicht fertig. Eine Forschungsvorschau zum Ausprobieren, Ergebnisse vor jeder Nutzung prüfen.',
     toolRequest: 'Anpassen anfragen',
     tools: [
       {
@@ -243,25 +204,19 @@ const text = {
         title: 'Promptotyping',
         alt: 'Promptotyping als Ablauf von Preparation über Exploration und Distillation zu Implementation, alle Schritte verbunden mit dem Project Knowledge, ein Review führt zum Promptotype aus Projektwissen, Daten und Artefakt.',
         solution: 'Promptotyping entwickelt Forschungsartefakte mit KI-Agenten aus einer gepflegten Wissensbasis heraus.',
-        links: ['Zur Methode', 'Beitrag auf L.I.S.A.', 'Repository'],
+        links: ['Zur Methode', 'Repository', 'Video', 'Beitrag auf L.I.S.A.', 'Blogbeitrag'],
       },
       {
         title: 'Grounded Vault',
         alt: 'Grounded Vault als Kette von Sources über Markdown representation und Distillates zu Assertions und Output, eine grüne Linie verbindet jede Aussage mit ihrer Quellstelle.',
         solution: 'Grounded Vault führt jede tragende Aussage eines Berichts über einen prüfbaren Anker bis zur Quellstelle.',
-        links: ['Projektseite', 'Vorlage', 'Belege'],
+        links: ['Projektseite', 'Repository', 'Video'],
       },
       {
         title: 'Agentic Edition Pipeline',
         alt: 'Agentic Edition Pipeline als Ablauf von Digitized Source über Transcription, Review and Correction und TEI zu Reading and Review, koordiniert von einem AI Agent mit Project Knowledge, die Prüfung liegt beim Editorial Team.',
         solution: 'Die Agentic Edition Pipeline führt Digitalisate über Transkription und Prüfung zu TEI und einer statischen Leseansicht.',
-        links: ['Vorlage', 'Video', 'Belege'],
-      },
-      {
-        title: 'Research Mission Control',
-        alt: 'Research Mission Control mit dem User an der Spitze, einem Research Orchestrator, einem Operational Orchestrator mit Specialist Agents und einem Independent Verification Agent, der an den User berichtet, alle um ein gemeinsames Repository.',
-        solution: 'Research Mission Control verteilt Klären, Umsetzen und Prüfen auf KI-Agenten an einem gemeinsamen Repository.',
-        links: ['Zur Methode', 'Repository', 'Belege'],
+        links: ['Zum Video', 'Repository'],
       },
     ],
     qualityTitle: 'Grundsätze',
@@ -378,16 +333,6 @@ const text = {
       'A small budget limits the scope, for example to a single work step.',
     ],
     toolsTitle: 'Tools to adapt',
-    legendLabel: 'Legend',
-    traits: {
-      llm: 'LLM-assisted',
-      llmLocal: 'LLM-assisted, model of your choice up to a local model',
-      review: 'Expert review in the tool',
-      overview: 'Overview of the whole collection',
-      readable: 'Readable text instead of tags',
-      browser: 'Runs in the browser without a server of its own',
-      evidence: 'Evidence back to the source',
-    },
     maturity: {
       use: 'In use',
       rc: 'Release Candidate',
@@ -397,8 +342,10 @@ const text = {
       experiment: 'Experiment',
     },
     toolOpen: 'Open tool',
-    toolCode: 'Code',
+    toolCode: 'Repository',
+    toolVideo: 'Video',
     toolEvidence: 'Evidence',
+    previewNote: 'Not finished. A research preview to try out, check results before any use.',
     toolRequest: 'Request adaptation',
     tools: [
       {
@@ -439,25 +386,19 @@ const text = {
         title: 'Promptotyping',
         alt: 'Promptotyping as a sequence from Preparation via Exploration and Distillation to Implementation, every step connected to the Project Knowledge, with a review leading to the Promptotype made of project knowledge, data and artefact.',
         solution: 'Promptotyping develops research artefacts with AI agents out of a maintained knowledge base.',
-        links: ['About the method', 'Article on L.I.S.A.', 'Repository'],
+        links: ['About the method', 'Repository', 'Video', 'Article on L.I.S.A.', 'Blog post (German)'],
       },
       {
         title: 'Grounded Vault',
         alt: 'Grounded Vault as a chain from Sources via Markdown representation and Distillates to Assertions and Output, with a green line connecting every statement to its source passage.',
         solution: 'Grounded Vault leads every load-bearing claim in a report through a verifiable anchor back to the source passage.',
-        links: ['Project page', 'Template', 'Evidence'],
+        links: ['Project page', 'Repository', 'Video'],
       },
       {
         title: 'Agentic Edition Pipeline',
         alt: 'Agentic Edition Pipeline as a sequence from Digitized Source via Transcription, Review and Correction and TEI to Reading and Review, coordinated by an AI Agent with Project Knowledge, with the review resting with the Editorial Team.',
         solution: 'The Agentic Edition Pipeline takes digital copies through transcription and review to TEI and a static reading view.',
-        links: ['Template', 'Video', 'Evidence'],
-      },
-      {
-        title: 'Research Mission Control',
-        alt: 'Research Mission Control with the User at the top, a Research Orchestrator, an Operational Orchestrator with Specialist Agents and an Independent Verification Agent that reports to the User, all arranged around a shared repository.',
-        solution: 'Research Mission Control divides clarifying, implementing and checking among AI agents working on a shared repository.',
-        links: ['About the method', 'Repository', 'Evidence'],
+        links: ['Watch the video', 'Repository'],
       },
     ],
     qualityTitle: 'Principles',
@@ -640,14 +581,12 @@ export function getFancyContent(lang: Lang) {
     tel: { href: 'tel:+436781269242', label: '+43 678 12 69 242' },
     address: 'office@dhcraft.org',
     offers: t.offers.map((o, i) => ({ ...o, id: offerIds[i], icon: offerIcons[i], href: i === 0 ? `${lang === 'de' ? '/' : '/en/'}${offerHrefs[i]}` : offerHrefs[i] })),
-    legend: legendOrder.map((k) => ({ icon: traitIcon[k], label: t.traits[k] })),
     tools: toolsBase.map((b, i) => ({
       ...b,
       ...t.tools[i],
       ...shot(b.img),
       maturityClass: maturityClass[b.maturity],
       maturityLabel: t.maturity[b.maturity],
-      traits: b.traits.map((k) => ({ icon: traitIcon[k], label: t.traits[k] })),
     })),
     methods: methodsBase.map((b, i) => ({
       ...b,

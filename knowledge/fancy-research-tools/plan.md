@@ -28,9 +28,8 @@ An offer page on dhcraft.org that visitors find from the site navigation and the
 
 ## Next work
 
-1. The Research Mission Control infographic in a version 4 without the "Lane" boxes, produced by Codex after [method images](method-images.md#current-task) and then integrated.
-2. A legal review of the privacy statement.
-3. A screen reader pass over the page, see [testing](testing.md#known-limits).
+1. A legal review of the privacy statement.
+2. A screen reader pass over the page, see [testing](testing.md#known-limits).
 
 ## Open points
 
