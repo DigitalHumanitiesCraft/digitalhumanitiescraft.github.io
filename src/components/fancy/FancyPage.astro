@@ -104,20 +104,15 @@ const githubMark =
                     </figure>
                     <div class="tool-body">
                       <h3 id={tool.id}>{tool.title}</h3>
-                      <p class="solution">{tool.solution}</p>
-                      <div class="tool-meta">
-                        <span class={`maturity ${tool.maturityClass}`}>{tool.maturityLabel}</span>
-                        {unfinished(tool.maturity) && <span class="preview-note">{t.previewNote}</span>}
-                      </div>
+                      <p class="solution">{tool.solution}{unfinished(tool.maturity) && ` ${t.previewNote}`}</p>
                       <div class="tool-links">
+                        <span class={`maturity ${tool.maturityClass}`}>{tool.maturityLabel}</span>
                         <a class="button primary" href={tool.open}>{tool.openLabel ?? t.toolOpen}</a>
-                        <p class="more-links">
-                          <a class="repo-link" href={tool.code}>
-                            <svg class="repo-icon" viewBox="0 0 16 16" aria-hidden="true" set:html={githubMark} />
-                            {t.toolCode}
-                          </a>
-                          {tool.video && <a href={tool.video}>{t.toolVideo}</a>}
-                        </p>
+                        <a class="repo-link" href={tool.code}>
+                          <svg class="repo-icon" viewBox="0 0 16 16" aria-hidden="true" set:html={githubMark} />
+                          {t.toolCode}
+                        </a>
+                        {tool.video && <a href={tool.video}>{t.toolVideo}</a>}
                       </div>
                     </div>
                   </article>
@@ -149,21 +144,16 @@ const githubMark =
                     <figcaption>{t.methodCaption}</figcaption>
                   </figure>
                   <h3>{m.title}</h3>
-                  <p class="solution">{m.solution}</p>
-                  <div class="tool-meta">
-                    <span class={`maturity ${m.maturityClass}`}>{m.maturityLabel}</span>
-                    {unfinished(m.maturity) && <span class="preview-note">{t.previewNote}</span>}
-                  </div>
+                  <p class="solution">{m.solution}{unfinished(m.maturity) && ` ${t.previewNote}`}</p>
                   <div class="tool-links">
+                    <span class={`maturity ${m.maturityClass}`}>{m.maturityLabel}</span>
                     <a class="button primary" href={m.links[0].href}>{m.links[0].label}</a>
-                    <p class="more-links">
-                      {m.links.slice(1).map((l) => (
-                        <a class={isRepo(l.href) ? 'repo-link' : undefined} href={l.href}>
-                          {isRepo(l.href) && <svg class="repo-icon" viewBox="0 0 16 16" aria-hidden="true" set:html={githubMark} />}
-                          {l.label}
-                        </a>
-                      ))}
-                    </p>
+                    {m.links.slice(1).map((l) => (
+                      <a class={isRepo(l.href) ? 'repo-link' : undefined} href={l.href}>
+                        {isRepo(l.href) && <svg class="repo-icon" viewBox="0 0 16 16" aria-hidden="true" set:html={githubMark} />}
+                        {l.label}
+                      </a>
+                    ))}
                   </div>
                 </li>
               ))
@@ -193,13 +183,6 @@ const githubMark =
             </div>
           </div>
           <p class="address">{f.address}</p>
-
-          <aside class="about" aria-labelledby="about-title">
-            <h2 id="about-title">{t.aboutTitle}</h2>
-            <p>
-              {t.about} <a href={f.aboutHref}>{t.aboutLink}</a>
-            </p>
-          </aside>
         </div>
       </section>
     </main>
@@ -561,31 +544,18 @@ const githubMark =
   .m-preview { --c: var(--orange); }
   .m-experiment { --c: var(--pink); }
 
-  .tool-meta {
+  /* One row under the paragraph: maturity, primary action and further links. */
+  .tool-links {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem 0.75rem;
-  }
-
-  /* The primary action on its own line, further links in a calm second row below it. */
-  .tool-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-s);
+    gap: 0.5rem 1rem;
     margin-block-start: var(--space-s);
     font-size: var(--step--1);
     font-weight: 500;
   }
 
-  .more-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem 1rem;
-  }
-
-  .more-links a {
+  .tool-links a:not(.button) {
     padding-block: 0.15rem;
   }
 
@@ -599,11 +569,6 @@ const githubMark =
     inline-size: 1em;
     block-size: 1em;
     fill: currentColor;
-  }
-
-  .preview-note {
-    font-size: var(--step--1);
-    color: var(--text-muted);
   }
 
   .tool-links .button {
@@ -678,22 +643,6 @@ const githubMark =
     stroke-width: 1.8;
     stroke-linecap: round;
     stroke-linejoin: round;
-  }
-
-  .about {
-    margin-block-start: var(--space-l);
-    padding-block-start: var(--space-l);
-    border-block-start: 1px solid var(--rule);
-  }
-
-  .about h2 {
-    font-size: var(--step-1);
-  }
-
-  .about p {
-    margin-block-start: var(--space-xs);
-    max-inline-size: var(--measure);
-    color: var(--text-muted);
   }
 
   /* Contact as on dhcraft.org, a light ground with a purple wash. */

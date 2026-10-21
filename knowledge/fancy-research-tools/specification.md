@@ -97,9 +97,9 @@ The page runs in this order.
 
 1. Hero with title, the accent line, lede and the buttons Ins Gespräch kommen and Unser Angebot. The right half stays empty.
 2. `#angebot`, titled Angebot, with the cards Lernen, Gemeinsam entwickeln and Im Auftrag entwickeln and the block Kosten.
-3. `#werkzeuge`, titled Beispiele zum Ausprobieren, with coOCR/HTR, teiCrafter, CorrespExplorer, SZD-HTR and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one sentence, maturity chip with the not-finished note where it applies, the button Werkzeug öffnen (Demo ansehen for teiCrafter) and the links Repository and Video where one exists.
+3. `#werkzeuge`, titled Beispiele zum Ausprobieren, with coOCR/HTR, teiCrafter, CorrespExplorer, SZD-HTR and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one paragraph ending with the not-finished note where it applies, and one row with maturity chip, the button Werkzeug öffnen (Demo ansehen for teiCrafter) and the links Repository and Video where one exists.
 4. `#methoden`, titled Methoden und Frameworks, with Promptotyping, Grounded Vault and Agentic Edition Pipeline, each with a generated infographic, one sentence, maturity chip and its links.
-5. `#kontakt`, titled Ins Gespräch kommen, with the paths Problem oder Idee besprechen and Material schicken, the e-mail address and the block Wer wir sind.
+5. `#kontakt`, titled Ins Gespräch kommen, with the paths Problem oder Idee besprechen and Material schicken, and the e-mail address.
 
 ## Decisions
 
