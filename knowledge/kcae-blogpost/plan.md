@@ -106,6 +106,19 @@ Source text column refers to `workshops/2026-11-09-ufl/lecture-notes.md` in the 
 7. **Implementation.** Post file in `src/content/blog/` with citation and Dublin Core front matter, entry and DE/EN teasers in `src/i18n/blog.ts`, preview image, `npm run build`, `npx tsc --noEmit`, browser preview, link check, journal entry, local commit. Publication needs the operator's push.
 8. **Alignment.** Maintenance rule in the KCAE repository: a slide change changes its section, checked by the script from phase 2. KCAE Lecture Notes card and register follow decision 1. The UFL lecture notes stay until the workshop and point to the post afterwards.
 
+## Grounding with Grounded Vault
+
+The post is written inside its own Grounded Vault instance, so that every substantive statement carries a resolvable anchor to the passage that supports it. The template is the repository `grounded-vault` (`SETUP.md` instantiates it).
+
+- **Place.** A separate, private instance repository, for example `kcae-blogpost-vault`. The public site repository `dhcraft-site` receives only the finished post, because `00_sources` holds third-party originals whose rights are not cleared for publication.
+- **Chain.** `00_sources` holds the sources as they arrived, `10_markdown` their Markdown representations (Docling for PDFs), `20_distillates` one distillate per source, `30_assertions` one file per claim of the post with its source anchor, and `40_output` one chapter file per blog section, in the order of the structure mapping above.
+- **Status.** Validation (`tools/validate.py`) checks resolvability and form, machine review (`tools/review.py`) checks whether a source passage supports a claim, and only the operator's verification establishes evidence. The post is published when every chapter validates and the operator has verified the assertions the definitions rest on.
+- **Export.** A small script assembles the `40_output` chapters into the post file with footnotes, so the post and the vault never diverge.
+
+## Research sweep with subagents
+
+The research of 2026-11-04 covered a handful of concepts (context engineering, vault governance, loop engineering, watermarking, Docling, multi-agent orchestration). Most definitions still lack a read primary source. Before phase 5, one subagent per session researches the open concepts of its section in parallel, returns candidate sources with full-text access, and adds them to `00_sources` after a duplicate check against the Zotero group agki-dh. Each source is read in full before it anchors an assertion; candidates without accessible full text stay out. The main session checks every returned source against its text before it enters the vault.
+
 ## Dependencies
 
 - Phase 5 writes against accepted slides. Phase 4 can start while slides are still in draft.
