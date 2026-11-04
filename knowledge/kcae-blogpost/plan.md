@@ -25,9 +25,7 @@ Taken on 2026-11-04 following the recommendations:
 - Vibe Coding, Frontier-LLMs and AI Watermarking form a short section "Weiterführend" before the close. The operational appendix slides (CLAUDE.md prompts, commands, compress the vault) stay out.
 - Images are own graphics and the CC BY 4.0 figure from Dathathri et al. (2024) with licence statement. No screenshots of third-party videos or slides.
 
-Open:
-
-- Two pending deck slides alter the structure: the term overview "Begriffe im Workshop" after "Lernziele und Ablauf", and "Subagents und Workflows" in session 3. Both were drafted in chat on 2026-11-04. They are built or dropped before the outline (phase 4) is fixed.
+Both slides that altered the structure, "Begriffe im Workshop" and "Subagents und Workflows", were built on 2026-11-04. Slide numbers in the mapping below refer to the deck before these insertions, except for the two new rows.
 
 ## Treatment rules
 
@@ -46,7 +44,7 @@ Source text column refers to `workshops/2026-11-09-ufl/lecture-notes.md` in the 
 | 1–4 | Title, DHCraft, Vorstellungsrunde, Materialien | Opening (links to slides and material only) | Einstieg | accepted |
 | 5 | Lernziele und Ablauf | Opening, the three areas | Lernziele und Ablauf | accepted |
 | 6 | Aufbauendes Beispiel und Ablauf | Opening, the running example | Aufbauendes Beispiel und Ablauf | accepted |
-| – | Begriffe im Workshop (pending) | Term overview | to write | not built |
+| 6 | Begriffe im Workshop | Term overview | yes | draft |
 | 7 | Session 1 | Prompt und Context Engineering | – | accepted |
 | 8 | Few-shotted for Breakfast | same | yes | accepted |
 | 9 | Software … für alle!? | same | yes | accepted |
@@ -90,7 +88,7 @@ Source text column refers to `workshops/2026-11-09-ufl/lecture-notes.md` in the 
 | 47 | Session 3 | Agentic Engineering | – | accepted |
 | 48 | Fancy Research Tools | same | yes | draft |
 | 49 | Loop Engineering | same | yes | draft |
-| – | Subagents und Workflows (pending) | same | research notes of 2026-11-04 | not built |
+| 51 | Subagents und Workflows | same | yes | draft |
 | 50 | Determinismus so weit wie möglich ausreizen | same | yes | draft |
 | 51 | Qualität sichern | same | yes | draft |
 | 52 | Hands-on 4: Ein Analysewerkzeug aus Excel-Daten | Beispiel: ein Analysewerkzeug | yes | draft |
