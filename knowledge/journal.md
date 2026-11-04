@@ -119,3 +119,14 @@ Die Abschnittsüberschrift schaltet in den Formaten bei 700 px auf die kleine Gr
 ### Ergebnis
 
 Die zwölf am 2026-10-02 entfernten Logos sind zurück: TU Graz, MedUni Graz, Österreichische Nationalbibliothek, Yale, MPI für Rechtsgeschichte, Münster, Würzburg, Bergbau-Museum Bochum, Saarland, BBAW, Krems und das Kunsthistorische Museum Wien. Laut Christian Steiner sind alle zwölf belegte DHCraft-Aufträge. Sie fehlten nur in dem Vault, gegen den am 2026-10-02 geprüft wurde, und das Fehlen dort war kein Beleg gegen den Auftrag. Das wiiw bleibt dabei.
+
+## 2026-11-04 Promptotyping-Tutorial entfernt
+
+### Ergebnis
+
+Der Beitrag „Ein Promptotyping-Projekt anlegen“ (`src/content/blog/Was-ist-Promptotyping.md`) ist entfernt, weil das Promptotyping-Paper ihn ersetzt und es keine Doppelung geben soll. Eintrag und Teaser sind aus `src/i18n/blog.ts` gelöscht. Die zitierte Adresse `/excellence/blog/Was-ist-Promptotyping/` und ihre EN-Variante leiten über `redirects` in `astro.config.mjs` auf die Blogübersicht, die Stubs stehen nicht in der Sitemap. Das Phasendiagramm `promptotyping-wiiw-phases.png` bleibt, weil der Beitrag Asymmetric Amplification es nutzt. Der Text bleibt in der Git-History erhalten.
+
+### Offen
+
+Das KUG-Skriptum im Repo knowledge-context-agentic-engineering zitiert die alte Adresse noch und landet jetzt auf der Blogübersicht.
+

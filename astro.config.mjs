@@ -52,6 +52,10 @@ export default defineConfig({
     '/promptotyping': '/Promptotyping/',
     '/fancy-research-tools/en': '/en/fancy-research-tools/',
     '/fancy-research-tools/en/privacy': '/en/fancy-research-tools/privacy/',
+    // Promptotyping-Tutorial entfernt (2026-11-04), weil das Promptotyping-Paper es ersetzt;
+    // die extern zitierte Adresse führt auf die Blogübersicht.
+    '/excellence/blog/Was-ist-Promptotyping': '/excellence/blog/',
+    '/en/excellence/blog/Was-ist-Promptotyping': '/en/excellence/blog/',
   },
   integrations: [
     sitemap({
@@ -62,6 +66,7 @@ export default defineConfig({
       filter: (page) =>
         !page.includes('/excellence/promptotyping') &&
         !page.includes('/excellence/guides') &&
+        !page.includes('/excellence/blog/Was-ist-Promptotyping') &&
         page !== 'https://dhcraft.org/promptotyping/' &&
         page !== 'https://dhcraft.org/excellence/' &&
         page !== 'https://dhcraft.org/en/excellence/' &&
