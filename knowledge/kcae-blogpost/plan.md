@@ -44,7 +44,7 @@ Source text column refers to `workshops/2026-11-09-ufl/lecture-notes.md` in the 
 | 1–4 | Title, DHCraft, Vorstellungsrunde, Materialien | Opening (links to slides and material only) | Einstieg | accepted |
 | 5 | Lernziele und Ablauf | Opening, the three areas | Lernziele und Ablauf | accepted |
 | 6 | Aufbauendes Beispiel und Ablauf | Opening, the running example | Aufbauendes Beispiel und Ablauf | accepted |
-| 6 | Begriffe im Workshop | Term overview | yes | draft |
+| 6 | Begriffe im Workshop | Term overview | yes | accepted |
 | 7 | Session 1 | Prompt und Context Engineering | – | accepted |
 | 8 | Few-shotted for Breakfast | same | yes | accepted |
 | 9 | Software … für alle!? | same | yes | accepted |
@@ -88,7 +88,7 @@ Source text column refers to `workshops/2026-11-09-ufl/lecture-notes.md` in the 
 | 47 | Session 3 | Agentic Engineering | – | accepted |
 | 48 | Fancy Research Tools | same | yes | draft |
 | 49 | Loop Engineering | same | yes | draft |
-| 51 | Subagents und Workflows | same | yes | draft |
+| 51 | Subagents und Workflows | same | yes | accepted |
 | 50 | Determinismus so weit wie möglich ausreizen | same | yes | draft |
 | 51 | Qualität sichern | same | yes | draft |
 | 52 | Hands-on 4: Ein Analysewerkzeug aus Excel-Daten | Beispiel: ein Analysewerkzeug | yes | draft |
