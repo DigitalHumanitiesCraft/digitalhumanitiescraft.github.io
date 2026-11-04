@@ -16,11 +16,11 @@ A long, fully written blog post on dhcraft.org that explains every concept of th
 Taken by the operator on 2026-11-04:
 
 - The structure follows the UFL workshop deck (https://docs.google.com/presentation/d/1kl9usbbkny5hl8QOKlN_OqYZWbDPo90TaINnPTEImnE/edit), not the Full Slide Deck of the teaching line.
+- Once accepted, the post replaces the Full Lecture Notes of the teaching line (repository knowledge-context-agentic-engineering, `script/full-lecture-notes-de.md`) as the canonical long text. The Lecture Notes card on the KCAE page then points to the post, and the naming rule for the Full Lecture Notes in that repository's `CLAUDE.md` changes in the same step.
 - No duplicate texts across the site. The tutorial post "Ein Promptotyping-Projekt anlegen" was removed for that reason (commit 26e1a8e). The Promptotyping section of the new post places the method and points to the Promptotyping paper.
 
 Open, with recommendation:
 
-1. Whether the post replaces the Full Lecture Notes of the teaching line (repository knowledge-context-agentic-engineering, `script/full-lecture-notes-de.md`) as the canonical long text. Recommendation: yes, once accepted. The Lecture Notes card on the KCAE page then points to the post, and the KCAE `CLAUDE.md` naming rule for the Full Lecture Notes changes in that repository.
 2. Language. Recommendation: German first, like the deck. An English version is a later, separate step.
 3. Appendix slides. Recommendation: Vibe Coding, Frontier-LLMs and AI Watermarking as a short section "Weiterführend" before the close; the operational appendix slides (CLAUDE.md prompts, commands, compress the vault) stay out.
 4. Images. Recommendation: own graphics and the CC BY 4.0 figure from Dathathri et al. (2024) with licence statement. No screenshots of third-party videos or slides.
@@ -99,12 +99,12 @@ Source text column refers to `workshops/2026-11-09-ufl/lecture-notes.md` in the 
 
 1. **Inventory.** Export all slide texts and speaker notes with slide IDs. Read the UFL lecture notes, the Full Lecture Notes and two existing posts (Asymmetric Amplification, System 1.42) for front matter, footnote style, image handling and register. Done when the inventory file lists every slide with its text and notes.
 2. **Mapping and check script.** Extend the table above with core claim, terms and source per section. Write a small script that compares deck slide titles with the post's level-3 headings in order and reports missing or reordered sections. Done when the script passes on the outline.
-3. **Decisions.** The operator settles open points 1 to 5.
+3. **Decisions.** The operator settles the open points.
 4. **Outline for acceptance.** Opening, sections with core claim and sources, Weiterführend, close. No running text before acceptance.
 5. **Writing in three passes,** one per session: condense and write from the lecture notes, read and cite sources, check against the writing-style rules, an independent reader agent reads without the author's reasoning, the operator accepts. Opening and close come last.
 6. **Literature.** Every definition gets a primary source read in full. Sources gathered on 2026-11-04 include Mei et al. (2025), Karpathy (2026), Anthropic (2024, 2025, 2026) on agents and workflows, Dathathri et al. (2024), Auer et al. (2024), Liu (2026) and Meta AI (2025). Additions go through the Zotero group agki-dh after a duplicate check.
 7. **Implementation.** Post file in `src/content/blog/` with citation and Dublin Core front matter, entry and DE/EN teasers in `src/i18n/blog.ts`, preview image, `npm run build`, `npx tsc --noEmit`, browser preview, link check, journal entry, local commit. Publication needs the operator's push.
-8. **Alignment.** Maintenance rule in the KCAE repository: a slide change changes its section, checked by the script from phase 2. KCAE Lecture Notes card and register follow decision 1. The UFL lecture notes stay until the workshop and point to the post afterwards.
+8. **Alignment.** Maintenance rule in the KCAE repository: a slide change changes its section, checked by the script from phase 2. KCAE Lecture Notes card, register and `CLAUDE.md` switch to the post once it is accepted. The UFL lecture notes stay until the workshop and point to the post afterwards.
 
 ## Grounding with Grounded Vault
 
