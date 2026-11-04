@@ -130,3 +130,17 @@ Der Beitrag „Ein Promptotyping-Projekt anlegen“ (`src/content/blog/Was-ist-P
 
 Das KUG-Skriptum im Repo knowledge-context-agentic-engineering zitiert die alte Adresse noch und landet jetzt auf der Blogübersicht.
 
+
+## 2026-11-04 KCAE-Blogpost: Inventar, Gliederung, Quellen
+
+### Ergebnis
+
+Für den Blogpost zu Knowledge, Context and Agentic Engineering liegen in `knowledge/kcae-blogpost/` das Inventar des UFL-Decks mit Folientexten, Sprechernotizen, Slide-IDs und Abnahmestatus (`deck-inventory.md`, `deck-slides.json`), die Gliederung zur Abnahme (`outline.md`), die erweiterte Zuordnungstabelle in `plan.md`, der Plan der Grounded-Vault-Instanz (`grounding.md`) und die geprüfte Quellenliste (`sources.md`, Rechercheprotokolle in `research/`). `scripts/kcae-blogpost/` enthält den Deck-Export, die Strukturprüfung gegen das Deck und die Zitatprüfung gegen die Quelltexte.
+
+### Entscheidungen
+
+„Ausblick: Vorlagen für die eigene Arbeit“ bleibt letzter Abschnitt von Session 3, wie im Deck, und der Post erhält nach „Weiterführend“ einen eigenen Schluss. Die Strukturprüfung erzwingt die Deck-Reihenfolge. Die Grounded-Vault-Instanz ist geplant und nicht angelegt, weil SETUP.md neun Projektentscheidungen dem Operator zuweist. `grounding.md` schlägt alle vor.
+
+### Offen
+
+Abnahme der Gliederung und der Vault-Parameter durch den Operator. Begriffe ohne gelesene Quelle und nur teilweise gelesene Quellen stehen in `sources.md`, ebenso Abweichungen zwischen Skriptum und Quellen, darunter die Übergangsfrist für Art. 50 AI Act aus Verordnung (EU) 2026/1744. Kein Eintrag in Zotero.

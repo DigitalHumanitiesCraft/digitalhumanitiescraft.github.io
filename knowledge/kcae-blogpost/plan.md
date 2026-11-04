@@ -2,7 +2,7 @@
 title: "Plan: Knowledge, Context and Agentic Engineering as a blog post"
 created: 2026-11-04
 status: draft
-related: [../journal.md, ../../src/content/blog/Asymmetric-Amplification.md]
+related: [../journal.md, ../../src/content/blog/Asymmetric-Amplification.md, outline.md, deck-inventory.md, sources.md, grounding.md]
 ---
 
 # Plan: Knowledge, Context and Agentic Engineering as a blog post
@@ -25,7 +25,7 @@ Taken on 2026-11-04 following the recommendations:
 - Vibe Coding, Frontier-LLMs and AI Watermarking form a short section "Weiterführend" before the close. The operational appendix slides (CLAUDE.md prompts, commands, compress the vault) stay out.
 - Images are own graphics and the CC BY 4.0 figure from Dathathri et al. (2024) with licence statement. No screenshots of third-party videos or slides.
 
-Both slides that altered the structure, "Begriffe im Workshop" and "Subagents und Workflows", were built on 2026-11-04. Slide numbers in the mapping below refer to the deck before these insertions, except for the two new rows.
+Both slides that altered the structure, "Begriffe im Workshop" and "Subagents und Workflows", were built on 2026-11-04 and are part of the mapping below.
 
 ## Treatment rules
 
@@ -37,64 +37,67 @@ Both slides that altered the structure, "Begriffe im Workshop" and "Subagents un
 
 ## Structure mapping
 
-Source text column refers to `workshops/2026-11-09-ufl/lecture-notes.md` in the repository knowledge-context-agentic-engineering, which already follows the deck section by section. "Draft" marks slides still carrying the deck's draft marker on 2026-11-04.
+Slide numbers follow the deck as exported on 2026-11-04 (`deck-inventory.md`, 63 slides, revision recorded in `deck-slides.json`). Every section of the post takes its source text from the section of the same title in `workshops/2026-11-09-ufl/lecture-notes.md` in the repository knowledge-context-agentic-engineering. The core claim is condensed here and spelled out in `outline.md`. The sources column names the anchors checked on 2026-11-04, "open" marks a term without a read source, and `sources.md` holds read extent, quote check and Zotero status. "Draft" marks slides carrying the deck's draft marker on 2026-11-04. `scripts/kcae-blogpost/check-structure.mjs` checks titles, order and coverage of this mapping against the outline and later the post.
 
-| Slide | Deck title | Blog section | Source text | Deck status |
-|---|---|---|---|---|
-| 1–4 | Title, DHCraft, Vorstellungsrunde, Materialien | Opening (links to slides and material only) | Einstieg | accepted |
-| 5 | Lernziele und Ablauf | Opening, the three areas | Lernziele und Ablauf | accepted |
-| 6 | Aufbauendes Beispiel und Ablauf | Opening, the running example | Aufbauendes Beispiel und Ablauf | accepted |
-| 6 | Begriffe im Workshop | Term overview | yes | accepted |
-| 7 | Session 1 | Prompt und Context Engineering | – | accepted |
-| 8 | Few-shotted for Breakfast | same | yes | accepted |
-| 9 | Software … für alle!? | same | yes | accepted |
-| 10 | Jagged Alien Intelligences | same | yes | accepted |
-| 11 | LLM-basierte AI Agents | same | yes | accepted |
-| 12 | AI Harness | same | yes | accepted |
-| 13 | Claude Code in der Claude Desktop App | same | yes | accepted |
-| 14 | Hands-on 1: Ein Projekt konfigurieren | Beispiel: ein Projekt konfigurieren | yes | accepted |
-| 15 | Prompt Engineering ist so 2025! | same | yes | accepted |
-| 16 | Markdown | Markdown und Tokens | yes | accepted |
-| 17 | Wissensdokument | same | yes | accepted |
-| 18 | Tool Use | same | yes | accepted |
-| 19 | Die erste Iteration des Dashboards | same | yes | accepted |
-| 20 | Hands-on 1: Follow-Up Prompts (Feedback) | Beispiel: Feedback | yes | accepted |
-| 21 | Subagents: ein Reviewer Agent | same | yes | accepted |
-| 22 | Hands-on 1: Follow-Up Prompts (Refactoring) | Beispiel: Refactoring und Kuratieren | yes | accepted |
-| 23 | Context Window managen | same | yes | accepted |
-| 24 | AGENTS.md / CLAUDE.md | same | yes | accepted |
-| 25 | Memory | same | yes | accepted |
-| 26 | Skill: Wissensbasis + Kontext → Folien | merged into the next section | – | accepted |
-| 27 | Hands-on 2: Vom Wissen zum Pitch und zum Skill | Beispiel: vom Wissen zum Skill | yes | accepted |
-| 28 | Skills: ein Pitch-Skill | same | yes | accepted |
-| 29 | MCP & RAG & Memory | same | yes | accepted |
-| 30 | Context Engineering | same | yes | draft |
-| 31 | Session 2 | Knowledge Engineering | – | accepted |
-| 32 | Agentic Engineering im Überblick | same | yes | accepted |
-| 33 | KI-Governance auf zwei Ebenen | same | yes | draft |
-| 34 | Permission Modes und Autonomie | same | yes | accepted |
-| 35 | Hook: nur im Projektordner arbeiten | same | yes | accepted |
-| 36 | Knowledge Engineering | same | yes | draft |
-| 37 | Docling: Vom PDF zum Wissensdokument | same | yes | draft |
-| 38 | Promptotyping Documents | same | yes | draft |
-| 39 | Obsidian | same | yes | accepted |
-| 40 | How Steph Ango uses Obsidian | same | yes | accepted |
-| 41 | Das Wissensdokument im Vault | same | yes | draft |
-| 42 | Tags und Tag-Taxonomie | same | yes | draft |
-| 43 | Maps of Content | same | yes | draft |
-| 44 | Hands-on 3: Die Wissensbasis wird ein Obsidian-Vault | Beispiel: der Vault | yes | draft |
-| 45 | Kuratieren: Struktur und Inhalt | same | yes | draft |
-| 46 | Vault-Governance | same | yes | draft |
-| 47 | Session 3 | Agentic Engineering | – | accepted |
-| 48 | Fancy Research Tools | same | yes | draft |
-| 49 | Loop Engineering | same | yes | draft |
-| 51 | Subagents und Workflows | same | yes | accepted |
-| 50 | Determinismus so weit wie möglich ausreizen | same | yes | draft |
-| 51 | Qualität sichern | same | yes | draft |
-| 52 | Hands-on 4: Ein Analysewerkzeug aus Excel-Daten | Beispiel: ein Analysewerkzeug | yes | draft |
-| 53 | Ausblick: Vorlagen für die eigene Arbeit | Close | yes | draft |
-| 55, 56, 61 | Vibe Coding, Frontier-LLMs, AI Watermarking | Weiterführend | yes | 61 draft |
-| 54, 57–60 | Anhang divider, CLAUDE.md prompts, commands, compress | left out | – | – |
+| Slide | Deck title | Blog section | Core claim | Terms | Sources | Status |
+|---|---|---|---|---|---|---|
+| 1–4 | Title, DHCraft, Vorstellungsrunde, Materialien | Eröffnung (links only) | the post follows a two-day workshop from prompts to the design of knowledge, context and environment | – | – | accepted |
+| 5 | Lernziele und Ablauf | Lernziele und Ablauf | three areas, one learning goal each | – | – | accepted |
+| 6 | Begriffe im Workshop | Begriffe im Workshop | four areas, LLM beneath, governance across | full term list | sourced where defined | accepted |
+| 7 | Aufbauendes Beispiel und Ablauf | Aufbauendes Beispiel und Ablauf | one knowledge base grows through all sections | – | GDPR, AI Act named only | accepted |
+| 8 | Session 1 | Session 1: Prompt und Context Engineering | – | – | – | accepted |
+| 9 | “Few-shotted for Breakfast” | same | fast practice gains meet a new layer without a manual | few-shot | Karpathy posts 2025, 2026; Brown et al. 2020 (part) | accepted |
+| 10 | Software … für alle !? | same | building and buying become comparable, maintenance decides | – | Litt et al. 2025 | accepted |
+| 11 | LLMs bzw. AI Agents als “Jagged Alien ‘Intelligences’” | Jagged Alien Intelligences | jagged capabilities and model properties decide the way of working | LLM, jagged frontier, confabulation, bias, sycophancy, knowledge cut-off, reasoning | Gans 2026; Shanahan 2023; Farquhar et al. 2024; Gallegos et al. 2024; Sharma et al. 2023; Lindsey et al. 2025; Cheng et al. 2024; Snell et al. 2024 | accepted |
+| 12 | LLM-basierte AI Agents | same | an agent plans and acts with tools towards a goal, with bounded autonomy | AI Agent | Sapkota et al. 2025; Anthropic 2024 | accepted |
+| 13 | AI Harness | same | the harness runs the agent loop and decides what the agent sees and may do | AI Harness, Harness Engineering | Zhong and Zhu 2026; Liu 2026 | accepted |
+| 14 | Claude Code in der Claude Desktop App | same | one harness interface makes the concepts visible | Slash Command, Connector | vendor documentation | accepted |
+| 15 | Hands-on 1: Ein Projekt konfigurieren | Beispiel: ein Projekt konfigurieren | the first prompt, verbatim, and what the agent does | – | own prompt | accepted |
+| 16 | Prompt Engineering ist so 2025! | same | goal, knowledge and success criteria outweigh prompt form | Prompt Engineering | vendor guides; form claim open | accepted |
+| 17 | Markdown | same | Markdown makes structure explicit at low token cost | Markdown, Token, Tokenizer | Gruber 2004; Sennrich et al. 2016; token comparison open | accepted |
+| 18 | Wissensdokument | same | externalised, traceable, curatable knowledge for humans and agents | Wissensdokument | Karpathy 2026; Promptotyping specification; Nonaka open | accepted |
+| 19 | Tool Use: So bedient ein KI-Agent den Rechner | same | the loop of decision, tool call and feedback distinguishes agent from chat | Tool Use | Yao et al. 2023; Anthropic 2024 | accepted |
+| 20 | Die erste Iteration des Dashboards | same | simple, readable technology; slop removed in each iteration | AI Slop | Shaib et al. 2025 | accepted |
+| 21 | Hands-on 1: Follow-Up Prompts | Beispiel: Feedback | self-check and independent review improve the first iteration | Self-Verification, Self-Refine, LLM-as-a-Judge | Madaan et al. 2023; Weng et al. 2023; Zheng et al. 2023 | accepted |
+| 22 | Subagents: ein Reviewer Agent | same | a subagent has its own context and returns only the result | Subagent | vendor documentation; Anthropic 2025 | accepted |
+| 23 | Hands-on 1: Follow-Up Prompts | Beispiel: Refactoring und Kuratieren | self-check applies to code and knowledge, Git makes states recoverable | Refactoring, Kuratieren, Git | Pro Git; refactoring open | accepted |
+| 24 | Context Window managen | same | input and output share the window, performance degrades early, compaction loses talk | Context Window, Context Rot, Context Compression | vendor documentation; Hong et al. 2025 | accepted |
+| 25 | AGENTS.md / CLAUDE.md | same | durable instructions loaded every session, global and per project | AGENTS.md, CLAUDE.md | agents.md; vendor documentation | accepted |
+| 26 | Memory | same | agent-written notes, no place for binding rules | Memory | vendor documentation of both harnesses | accepted |
+| 27, 28 | Skill: Wissensbasis + Kontext → Folien; Hands-on 2 | Beispiel: vom Wissen zum Skill (title to revise) | knowledge becomes a pitch and the proven procedure a skill | – | own prompts | accepted |
+| 29 | Skills: ein Pitch-Skill | same | stored procedural knowledge, loaded on demand | Skill, progressive disclosure | Agent Skills specification; vendor documentation | accepted |
+| 30 | MCP & RAG & Memory | same | four ways to extend an agent beyond its model | MCP, RAG | MCP specification; Lewis et al. 2020 | accepted |
+| 31 | Context Engineering | same | design what stands in the context window, in four stages | Context Engineering | Mei et al. 2025 (part); Anthropic 2025 | draft |
+| 32 | Session 2 | Session 2: Knowledge Engineering | – | – | – | accepted |
+| 33 | Agentic Engineering im Überblick | same | five levels from prompt to factory | Agentic Engineering, Harness, Loop, Factory | scheme and Factory open | accepted |
+| 34 | KI-Governance auf zwei Ebenen | same | data and agent level; Rule of Two as core rule | KI-Governance, Rule of Two, prompt injection | Meta AI 2025; Greshake et al. 2023; Liu 2026; data level open | draft |
+| 35 | Permission Modes und Autonomie | same | modes set autonomy, only deny rules and hooks enforce | Permission Mode | vendor documentation; Feng et al. 2025 | accepted |
+| 36 | Hook: nur im Projektordner arbeiten | same | a hook is enforced, a rule can be overlooked | Hook, Sandbox | vendor documentation; Saltzer and Schroeder 1975 | accepted |
+| 37 | Knowledge Engineering | same | explicit, revisable project knowledge becomes precise requirements | Knowledge Engineering, PIM, Projektmanagement, Wissensmodellierung | Studer et al. 1998; Allen et al. 2023; Jones et al. 2017; PM² guide | draft |
+| 38 | Docling: Vom PDF zum Wissensdokument | same | local conversion preserves structure for distillation | Docling, OCR | Auer et al. 2024; Docling documentation | draft |
+| 39 | Promptotyping Documents | same | knowledge documents by kind of knowledge: declarative, process, action | Promptotyping Documents | Promptotyping specification | draft |
+| 40 | Obsidian | same | Markdown files in a local vault, on three levels of use | Obsidian, Vault | Obsidian help | accepted |
+| 41 | How Steph Ango uses Obsidian | same | one possible style; choose, write down, revise own rules | – | Ango, How I use Obsidian | accepted |
+| 42 | Das Wissensdokument im Vault | same | head, body and relations make the vault queryable | Frontmatter, YAML, Wikilink, Backlink | Obsidian help; YAML 1.2.2 | draft |
+| 43 | Tags und Tag-Taxonomie | same | a controlled vocabulary prevents synonyms and drift | Tag-Taxonomie | NISO Z39.19 | draft |
+| 44 | Maps of Content | same | curated entry points as navigation for agents | Map of Content | LYT MOCs (unchecked) | draft |
+| 45 | Hands-on 3: Die Wissensbasis wird ein Obsidian-Vault | Beispiel: der Vault | three checked steps from folder to vault | – | own prompts | draft |
+| 46 | Kuratieren: Struktur und Inhalt | same | structural curation is checkable, content curation is judgement | Kuratieren | DCC lifecycle (analogy) | draft |
+| 47 | Vault-Governance | same | the vault's rules in files that human and agent read | Vault-Governance | Karpathy 2026; Ango | draft |
+| 48 | Session 3 | Session 3: Agentic Engineering | – | – | – | accepted |
+| 49 | Fancy Research Tools | same | small tools from a maintained knowledge base, bearer per step | Fancy Research Tools | provider page; five steps own | draft |
+| 50 | Loop Engineering | same | design the system that triggers and checks the agent | Loop Engineering | Anthropic 2024, 2025; hooks documentation; term open | draft |
+| 51 | Subagents und Workflows | same | workflows fix the path, agents choose it; more agents cost more | Workflow, Subagent, Dynamic Workflow | Anthropic 2024, 2025, 2026; OpenAI 2026 | accepted |
+| 52 | Determinismus so weit wie möglich ausreizen | same | what a script can do, a script does | deterministisch, probabilistisch | Gao et al. 2023 | draft |
+| 53 | Qualität sichern | same | checks, independent review and human acceptance | LLM-as-a-Judge, Human in the Loop | Zheng et al. 2023; Software Engineering at Google; Wei 2025 | draft |
+| 54 | Hands-on 4: Ein Analysewerkzeug aus Excel-Daten | Beispiel: ein Analysewerkzeug | figures computed by script and checked against a reference | – | Northwind (MIT) | draft |
+| 55 | Ausblick: Vorlagen für die eigene Arbeit | same, last section of Session 3 | four templates as research previews | – | provider repositories | draft |
+| 56 | Anhang | left out | – | – | – | – |
+| 57 | Vibe Coding & Agentic (Knowledge and Research) Engineering | Weiterführend | unchecked generation versus designed and checked agent work | Vibe Coding, Agentic Engineering | Karpathy 2025; Willison 2026; Hassan et al. 2025; Allen et al. 2023 | accepted |
+| 58 | Frontier-LLMs amplifizieren computergestützte Wissensarbeit | Weiterführend | benchmarks, results and positions on self-improvement | Benchmark, Recursive Self-Improvement | Kwa et al. 2025; Jimenez et al. 2024; Merrill et al. 2026; AI 2027 | accepted |
+| 59–62 | CLAUDE.md prompts, commands, compress | left out | – | – | – | accepted |
+| 63 | AI Watermarking | Weiterführend | a watermark is an indication, never proof; AI Act Art. 50 | Watermarking, C2PA | Dathathri et al. 2024; Kirchenbauer et al. 2023; Bui et al. 2023; C2PA; Reg. 2024/1689 and 2026/1744 | draft |
+| – | – | Schluss (own) | knowledge, context and a checking environment meet in one practice | – | – | – |
 
 ## Phases
 

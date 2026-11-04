@@ -1,0 +1,384 @@
+{
+ "presentation": "UFL-Agentic Engineering-Workshop-26",
+ "revisionId": "bitq3xFgoP8IKQ",
+ "slides": [
+  {
+   "n": 1,
+   "id": "h2c7fc6986ae54bd6_0_0",
+   "title": "Intermediate Prompting Agentic Engineering",
+   "status": "accepted"
+  },
+  {
+   "n": 2,
+   "id": "h233dfacb5d8bd9eb_0_326",
+   "title": "Digital Humanities Craft OG",
+   "status": "accepted"
+  },
+  {
+   "n": 3,
+   "id": "g2fd344f368c4a6b4_680",
+   "title": "Vorstellungsrunde",
+   "status": "accepted"
+  },
+  {
+   "n": 4,
+   "id": "h2a76f1c8a73c47f4_4_432",
+   "title": "Materialien",
+   "status": "accepted"
+  },
+  {
+   "n": 5,
+   "id": "h2c7fc6986ae54bd6_12_113",
+   "title": "Lernziele und Ablauf",
+   "status": "accepted"
+  },
+  {
+   "n": 6,
+   "id": "bg_slide",
+   "title": "Begriffe im Workshop",
+   "status": "accepted"
+  },
+  {
+   "n": 7,
+   "id": "h2c7fc6986ae54bd6_12_187",
+   "title": "Aufbauendes Beispiel und Ablauf",
+   "status": "accepted"
+  },
+  {
+   "n": 8,
+   "id": "sec1_slide",
+   "title": "Session 1",
+   "status": "accepted"
+  },
+  {
+   "n": 9,
+   "id": "h2c7fc6986ae54bd6_0_68",
+   "title": "“Few-shotted for Breakfast”",
+   "status": "accepted"
+  },
+  {
+   "n": 10,
+   "id": "h2c7fc6986ae54bd6_28_105",
+   "title": "Software … für alle !?",
+   "status": "accepted"
+  },
+  {
+   "n": 11,
+   "id": "h2c7fc6986ae54bd6_12_95",
+   "title": "LLMs bzw. AI Agents als “ Jagged Alien ‘Intelligences’ ”",
+   "status": "accepted"
+  },
+  {
+   "n": 12,
+   "id": "h2a76f1c8a73c47f4_4_265",
+   "title": "LLM-basierte AI Agents",
+   "status": "accepted"
+  },
+  {
+   "n": 13,
+   "id": "h2a76f1c8a73c47f4_4_195",
+   "title": "AI Harness",
+   "status": "accepted"
+  },
+  {
+   "n": 14,
+   "id": "h2c7fc6986ae54bd6_12_201",
+   "title": "Claude Code in der Claude Desktop App",
+   "status": "accepted"
+  },
+  {
+   "n": 15,
+   "id": "h2a76f1c8a73c47f4_4_2",
+   "title": "Hands-on 1: Ein Projekt konfigurieren",
+   "status": "accepted"
+  },
+  {
+   "n": 16,
+   "id": "h2a76f1c8a73c47f4_4_29",
+   "title": "Prompt Engineering ist so 2025!",
+   "status": "accepted"
+  },
+  {
+   "n": 17,
+   "id": "h2c7fc6986ae54bd6_38_43",
+   "title": "Markdown",
+   "status": "accepted"
+  },
+  {
+   "n": 18,
+   "id": "h2c7fc6986ae54bd6_38_122",
+   "title": "Wissensdokument",
+   "status": "accepted"
+  },
+  {
+   "n": 19,
+   "id": "h2a76f1c8a73c47f4_4_67",
+   "title": "Tool Use: So bedient ein KI-Agent den Rechner",
+   "status": "accepted"
+  },
+  {
+   "n": 20,
+   "id": "h2a76f1c8a73c47f4_4_49",
+   "title": "Die erste Iteration des Dashboards",
+   "status": "accepted"
+  },
+  {
+   "n": 21,
+   "id": "h2a76f1c8a73c47f4_4_80",
+   "title": "Hands-on 1: Follow-Up Prompts",
+   "status": "accepted"
+  },
+  {
+   "n": 22,
+   "id": "h2a76f1c8a73c47f4_4_680",
+   "title": "Subagents: ein Reviewer Agent",
+   "status": "accepted"
+  },
+  {
+   "n": 23,
+   "id": "h2a76f1c8a73c47f4_4_99",
+   "title": "Hands-on 1: Follow-Up Prompts",
+   "status": "accepted"
+  },
+  {
+   "n": 24,
+   "id": "h2a76f1c8a73c47f4_4_600",
+   "title": "Context Window managen",
+   "status": "accepted"
+  },
+  {
+   "n": 25,
+   "id": "h2a76f1c8a73c47f4_4_633",
+   "title": "AGENTS.md / CLAUDE.md",
+   "status": "accepted"
+  },
+  {
+   "n": 26,
+   "id": "mem_slide",
+   "title": "Memory",
+   "status": "accepted"
+  },
+  {
+   "n": 27,
+   "id": "h2a76f1c8a73c47f4_4_869",
+   "title": "Skill: Wissensbasis + Kontext → Folien im eigenen Design",
+   "status": "accepted"
+  },
+  {
+   "n": 28,
+   "id": "hoA_slide",
+   "title": "Hands-on 2: Vom Wissen zum Pitch und zum Skill",
+   "status": "accepted"
+  },
+  {
+   "n": 29,
+   "id": "sk_slide",
+   "title": "Skills: ein Pitch-Skill",
+   "status": "accepted"
+  },
+  {
+   "n": 30,
+   "id": "h2a76f1c8a73c47f4_4_905",
+   "title": "MCP & RAG & Memory",
+   "status": "accepted"
+  },
+  {
+   "n": 31,
+   "id": "ce_slide",
+   "title": "Context Engineering",
+   "status": "draft"
+  },
+  {
+   "n": 32,
+   "id": "sec2_slide",
+   "title": "Session 2",
+   "status": "accepted"
+  },
+  {
+   "n": 33,
+   "id": "h2a76f1c8a73c47f4_4_1259",
+   "title": "Agentic Engineering im Überblick",
+   "status": "accepted"
+  },
+  {
+   "n": 34,
+   "id": "gm_slide",
+   "title": "KI-Governance auf zwei Ebenen",
+   "status": "draft"
+  },
+  {
+   "n": 35,
+   "id": "za_slide",
+   "title": "Permission Modes und Autonomie",
+   "status": "accepted"
+  },
+  {
+   "n": 36,
+   "id": "hk_slide",
+   "title": "Hook: nur im Projektordner arbeiten",
+   "status": "accepted"
+  },
+  {
+   "n": 37,
+   "id": "ke_slide",
+   "title": "Knowledge Engineering",
+   "status": "draft"
+  },
+  {
+   "n": 38,
+   "id": "dl_slide",
+   "title": "Docling: Vom PDF zum Wissensdokument",
+   "status": "draft"
+  },
+  {
+   "n": 39,
+   "id": "pd_slide",
+   "title": "Promptotyping Documents",
+   "status": "draft"
+  },
+  {
+   "n": 40,
+   "id": "h2a76f1c8a73c47f4_4_924",
+   "title": "Obsidian",
+   "status": "accepted"
+  },
+  {
+   "n": 41,
+   "id": "h2a76f1c8a73c47f4_4_933",
+   "title": "How Steph Ango uses Obsidian",
+   "status": "accepted"
+  },
+  {
+   "n": 42,
+   "id": "wv_slide",
+   "title": "Das Wissensdokument im Vault",
+   "status": "draft"
+  },
+  {
+   "n": 43,
+   "id": "tg_slide",
+   "title": "Tags und Tag-Taxonomie",
+   "status": "draft"
+  },
+  {
+   "n": 44,
+   "id": "mc_slide",
+   "title": "Maps of Content",
+   "status": "draft"
+  },
+  {
+   "n": 45,
+   "id": "h3_slide",
+   "title": "Hands-on 3: Die Wissensbasis wird ein Obsidian-Vault",
+   "status": "draft"
+  },
+  {
+   "n": 46,
+   "id": "ku_slide",
+   "title": "Kuratieren: Struktur und Inhalt",
+   "status": "draft"
+  },
+  {
+   "n": 47,
+   "id": "vg_slide",
+   "title": "Vault-Governance",
+   "status": "draft"
+  },
+  {
+   "n": 48,
+   "id": "sec3_slide",
+   "title": "Session 3",
+   "status": "accepted"
+  },
+  {
+   "n": 49,
+   "id": "fr_slide",
+   "title": "Fancy Research Tools",
+   "status": "draft"
+  },
+  {
+   "n": 50,
+   "id": "lp_slide",
+   "title": "Loop Engineering",
+   "status": "draft"
+  },
+  {
+   "n": 51,
+   "id": "sw_slide",
+   "title": "Subagents und Workflows",
+   "status": "accepted"
+  },
+  {
+   "n": 52,
+   "id": "dt_slide",
+   "title": "Determinismus so weit wie möglich ausreizen",
+   "status": "draft"
+  },
+  {
+   "n": 53,
+   "id": "qg_slide",
+   "title": "Qualität sichern",
+   "status": "draft"
+  },
+  {
+   "n": 54,
+   "id": "h4_slide",
+   "title": "Hands-on 4: Ein Analysewerkzeug aus Excel-Daten",
+   "status": "draft"
+  },
+  {
+   "n": 55,
+   "id": "au_slide",
+   "title": "Ausblick: Vorlagen für die eigene Arbeit",
+   "status": "draft"
+  },
+  {
+   "n": 56,
+   "id": "h2a76f1c8a73c47f4_4_120",
+   "title": "Anhang",
+   "status": "accepted"
+  },
+  {
+   "n": 57,
+   "id": "h2a76f1c8a73c47f4_4_125",
+   "title": "Vibe Coding & Agentic (Knowledge and Research) Engineering",
+   "status": "accepted"
+  },
+  {
+   "n": 58,
+   "id": "h2a76f1c8a73c47f4_4_717",
+   "title": "Frontier-LLMs amplifizieren computergestützte Wissensarbeit",
+   "status": "accepted"
+  },
+  {
+   "n": 59,
+   "id": "h2a76f1c8a73c47f4_4_1122",
+   "title": "CLAUDE.md: Regeln für den Vault",
+   "status": "accepted"
+  },
+  {
+   "n": 60,
+   "id": "h2a76f1c8a73c47f4_4_1128",
+   "title": "CLAUDE.md optimieren",
+   "status": "accepted"
+  },
+  {
+   "n": 61,
+   "id": "h2a76f1c8a73c47f4_4_1133",
+   "title": "Commands in Claude Code (Auswahl)",
+   "status": "accepted"
+  },
+  {
+   "n": 62,
+   "id": "h2a76f1c8a73c47f4_4_1187",
+   "title": "Compress the Vault",
+   "status": "accepted"
+  },
+  {
+   "n": 63,
+   "id": "h2a76f1c8a73c47f4_4_1252",
+   "title": "AI Watermarking",
+   "status": "draft"
+  }
+ ]
+}
