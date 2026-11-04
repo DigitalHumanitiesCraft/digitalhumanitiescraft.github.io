@@ -19,12 +19,15 @@ Taken by the operator on 2026-11-04:
 - Once accepted, the post replaces the Full Lecture Notes of the teaching line (repository knowledge-context-agentic-engineering, `script/full-lecture-notes-de.md`) as the canonical long text. The Lecture Notes card on the KCAE page then points to the post, and the naming rule for the Full Lecture Notes in that repository's `CLAUDE.md` changes in the same step.
 - No duplicate texts across the site. The tutorial post "Ein Promptotyping-Projekt anlegen" was removed for that reason (commit 26e1a8e). The Promptotyping section of the new post places the method and points to the Promptotyping paper.
 
-Open, with recommendation:
+Taken on 2026-11-04 following the recommendations:
 
-2. Language. Recommendation: German first, like the deck. An English version is a later, separate step.
-3. Appendix slides. Recommendation: Vibe Coding, Frontier-LLMs and AI Watermarking as a short section "Weiterführend" before the close; the operational appendix slides (CLAUDE.md prompts, commands, compress the vault) stay out.
-4. Images. Recommendation: own graphics and the CC BY 4.0 figure from Dathathri et al. (2024) with licence statement. No screenshots of third-party videos or slides.
-5. Pending deck changes that alter the structure: the term overview slide "Begriffe im Workshop" after "Lernziele und Ablauf", and the slide "Subagents und Workflows" in session 3. Both were drafted in chat on 2026-11-04 and are not yet built.
+- The post is written in German first, like the deck. An English version is a later, separate step.
+- Vibe Coding, Frontier-LLMs and AI Watermarking form a short section "Weiterführend" before the close. The operational appendix slides (CLAUDE.md prompts, commands, compress the vault) stay out.
+- Images are own graphics and the CC BY 4.0 figure from Dathathri et al. (2024) with licence statement. No screenshots of third-party videos or slides.
+
+Open:
+
+- Two pending deck slides alter the structure: the term overview "Begriffe im Workshop" after "Lernziele und Ablauf", and "Subagents und Workflows" in session 3. Both were drafted in chat on 2026-11-04. They are built or dropped before the outline (phase 4) is fixed.
 
 ## Treatment rules
 
