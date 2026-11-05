@@ -85,7 +85,7 @@ The column agki-dh gives the item key in the Zotero group agki-dh (read through 
 
 | Term | Source | Read | Quote check | agki-dh |
 |---|---|---|---|---|
-| Fancy research tools | Digital Humanities Craft OG (n.d.). fancy (research) tools! | full | confirmed | new |
+| fancy (research) tools & workflows | Digital Humanities Craft OG (n.d.). fancy (research) tools & workflows | full | open, the page was renamed and its lede rewritten on 2026-11-05, the passages read on 2026-11-04 need a new check after the deploy | new |
 | Promptotyping | Digital Humanities Craft OG (n.d.). Promptotyping | full | confirmed | new |
 | Evaluator-optimizer and stopping conditions | Anthropic (2024-12-19). Building effective agents | full | confirmed | new |
 | Hard-wired check the agent cannot skip | Anthropic (n.d.). Automate actions with hooks; Hooks reference | full | confirmed | new |
@@ -141,7 +141,7 @@ These terms of the outline have no source whose text was read and checked. The p
 - The sequence of steps of knowledge modelling attributed to Russell and Norvig (2020). The book was not accessible.
 - A general definition of OCR, beyond Docling's own use of it.
 - A scholarly definition of recursive self-improvement. Good (1965) could not be opened, and AI 2027 is a scenario.
-- The five-step path of fancy research tools and the split into deterministic and probabilistic tasks, both the provider's own framing.
+- The five-step path of fancy (research) tools & workflows and the split into deterministic and probabilistic tasks, both the provider's own framing.
 - Maps of Content. The originator's page was read by the agent but could not be checked here.
 - Software für alle has a source (malleable software essay), but the question of who maintains a self-built tool is the workshop's own.
 

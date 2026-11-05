@@ -354,12 +354,12 @@ Sources: Karpathy (2026); Ango (n.d.).
 
 Divider.
 
-### Fancy Research Tools
-<!-- slides: fr_slide -->
+### fancy (research) tools & workflows
+<!-- slides: fr_slide; renamed -->
 
-Core claim: fancy research tools are small research tools that coding agents build from a maintained knowledge base, mostly static browser applications, in five steps with a named bearer for each. A finding from checking changes the knowledge base before the code.
+Core claim: fancy (research) tools & workflows are small research tools and workflows that coding agents build from a maintained knowledge base, the tools mostly static browser applications, in five steps with a named bearer for each. A finding from checking changes the knowledge base before the code.
 
-Terms: Fancy Research Tools.
+Terms: fancy (research) tools & workflows.
 Sources: the provider's page dhcraft.org/fancy-research-tools (own source, copy rules CR-01 to CR-07 apply).
 
 ### Loop Engineering

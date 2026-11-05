@@ -96,7 +96,7 @@ One chapter per level-3 section of `outline.md`, plus the post's own opening and
 | `0313-beispiel-der-vault.md` | Beispiel: der Vault | planned |
 | `0314-kuratieren-struktur-und-inhalt.md` | Kuratieren: Struktur und Inhalt | planned |
 | `0315-vault-governance.md` | Vault-Governance | planned |
-| `0401-fancy-research-tools.md` | Fancy Research Tools | planned |
+| `0401-fancy-research-tools.md` | fancy (research) tools & workflows | planned |
 | `0402-loop-engineering.md` | Loop Engineering | planned |
 | `0403-subagents-und-workflows.md` | Subagents und Workflows | planned |
 | `0404-determinismus-so-weit-wie-moeglich-ausreizen.md` | Determinismus so weit wie möglich ausreizen | planned |

@@ -85,7 +85,7 @@ Slide numbers follow the deck as exported on 2026-11-04 (`deck-inventory.md`, 63
 | 46 | Kuratieren: Struktur und Inhalt | same | structural curation is checkable, content curation is judgement | Kuratieren | DCC lifecycle (analogy) | draft |
 | 47 | Vault-Governance | same | the vault's rules in files that human and agent read | Vault-Governance | Karpathy 2026; Ango | draft |
 | 48 | Session 3 | Session 3: Agentic Engineering | – | – | – | accepted |
-| 49 | Fancy Research Tools | same | small tools from a maintained knowledge base, bearer per step | Fancy Research Tools | provider page; five steps own | draft |
+| 49 | Fancy Research Tools | fancy (research) tools & workflows (page renamed 2026-11-05) | small tools and workflows from a maintained knowledge base, bearer per step | fancy (research) tools & workflows | provider page; five steps own | draft |
 | 50 | Loop Engineering | same | design the system that triggers and checks the agent | Loop Engineering | Anthropic 2024, 2025; hooks documentation; term open | draft |
 | 51 | Subagents und Workflows | same | workflows fix the path, agents choose it; more agents cost more | Workflow, Subagent, Dynamic Workflow | Anthropic 2024, 2025, 2026; OpenAI 2026 | accepted |
 | 52 | Determinismus so weit wie möglich ausreizen | same | what a script can do, a script does | deterministisch, probabilistisch | Gao et al. 2023 | draft |
