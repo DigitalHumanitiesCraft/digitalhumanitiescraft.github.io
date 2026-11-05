@@ -1,6 +1,6 @@
 """Check that every supporting quote in the research files occurs in the text behind its access URLs.
 
-Usage: python scripts/kcae-blogpost/verify_quotes.py knowledge/kcae-blogpost/research/*.md > verify.tsv
+Usage: python scripts/kce-blogpost/verify_quotes.py knowledge/kce-blogpost/research/*.md > verify.tsv
 A quote counts as found when its normalised form is a substring of the normalised page text, as near
 when at least 80 per cent of its word 5-grams occur. Pages that render only in a browser yield no text.
 """
@@ -19,7 +19,7 @@ from pathlib import Path
 sys.stdout.reconfigure(encoding="utf-8")
 # Fetched pages are cached outside the repository, they are third-party text.
 CACHE = Path(
-    os.environ.get("QUOTE_CACHE", Path(tempfile.gettempdir()) / "kcae-quote-cache")
+    os.environ.get("QUOTE_CACHE", Path(tempfile.gettempdir()) / "kce-quote-cache")
 )
 CACHE.mkdir(parents=True, exist_ok=True)
 UA = {"User-Agent": "Mozilla/5.0 (research quote check)"}

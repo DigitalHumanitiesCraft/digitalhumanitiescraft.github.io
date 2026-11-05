@@ -1,5 +1,5 @@
 ---
-title: "Grounding plan: Grounded Vault instance for the KCAE blog post"
+title: "Grounding plan: Grounded Vault instance for the KCE blog post"
 created: 2026-11-04
 status: draft
 related: [plan.md, outline.md, sources.md]
@@ -11,8 +11,8 @@ The post is written inside its own instance of the Grounded Vault template (`gro
 
 ## Place
 
-- Local path `C:\Users\Chrisi\Documents\GitHub\DHCraft\kcae-blogpost-vault`, beside the other DHCraft repositories and the precedent instance `DHCraft/promptotyping-paper/grounded-vault`.
-- A separate private GitHub repository `DigitalHumanitiesCraft/kcae-blogpost-vault`. Creating it, pushing and any publication stay with the operator.
+- Local path `C:\Users\Chrisi\Documents\GitHub\DHCraft\kce-blogpost-vault`, beside the other DHCraft repositories and the precedent instance `DHCraft/promptotyping-paper/grounded-vault`.
+- A separate private GitHub repository `DigitalHumanitiesCraft/kce-blogpost-vault`. Creating it, pushing and any publication stay with the operator.
 - The site repository receives only the exported post. `00_sources` holds third-party originals whose rights are not cleared for publication, so the instance is never public.
 - Instantiation copies the template's files without its git history, `git init`, fills the placeholders, removes the template-only files (SETUP.md step 5) and commits once.
 
@@ -20,8 +20,8 @@ The post is written inside its own instance of the Grounded Vault template (`gro
 
 | Marker | Value |
 |---|---|
-| `{{PROJECT_NAME}}` | KCAE Blog Post Vault |
-| `{{REPOSITORY}}` | DigitalHumanitiesCraft/kcae-blogpost-vault |
+| `{{PROJECT_NAME}}` | KCE Blog Post Vault |
+| `{{REPOSITORY}}` | DigitalHumanitiesCraft/kce-blogpost-vault |
 | `{{DATE}}` | the instantiation date |
 
 ## Class B values
@@ -35,7 +35,7 @@ The post is written inside its own instance of the Grounded Vault template (`gro
 | `{{LANGUAGE}}` | German | decision of 2026-11-04, German first |
 | `{{VERIFICATION_ROLE}}` | The author, Christopher Pollin (Digital Humanities Craft OG), who alone sets `verified` | as in the precedent instance |
 | `{{REVIEW_MECHANISM}}` | Adversarial machine review by a subagent with fresh context that sees only the exported pairs, cut with `tools/review.py emit` and booked with `tools/review.py judge`, each batch under `checks/` recording the reviewer model used | as in the precedent instance |
-| `{{STYLE_SHEET}}` | The operator's writing-style rules govern the prose. Front matter, citation and Dublin Core blocks and the footnote form follow `src/content/blog/Asymmetric-Amplification.md` in dhcraft-site. Terms follow the slide "Begriffe im Workshop" and the KCAE glossary `knowledge/terms.md`. Prompts stay verbatim as block quotes. | `plan.md`, treatment rules |
+| `{{STYLE_SHEET}}` | The operator's writing-style rules govern the prose. Front matter, citation and Dublin Core blocks and the footnote form follow `src/content/blog/Asymmetric-Amplification.md` in dhcraft-site. Terms follow the slide "Begriffe im Workshop" and the KCE glossary `knowledge/terms.md`. Prompts stay verbatim as block quotes. | `plan.md`, treatment rules |
 | `{{HARNESS_RULES}}` | Agents may run `uv run python tools/validate.py`, the test suite and the export script unasked, and commit locally with explicit paths. Pushes, repository creation and publication stay with the operator. No source enters `00_sources` before its full text was read and checked against the Zotero group agki-dh. | operator's standing git and research rules |
 
 ## Chain
@@ -45,7 +45,7 @@ The post is written inside its own instance of the Grounded Vault template (`gro
 - `20_distillates` holds one distillate per source with the passages the post uses.
 - `30_assertions` holds one file per claim of the post, filed under one topic MOC.
 - `40_output` holds one chapter file per post section in deck order, named by the register below.
-- An export script, to be written in the instance, concatenates the chapters into `src/content/blog/<slug>.md` of dhcraft-site, turns `Grounded in` footnotes into reader footnotes and keeps the slide markers as HTML comments, so `scripts/kcae-blogpost/check-structure.mjs` runs against the finished post as well.
+- An export script, to be written in the instance, concatenates the chapters into `src/content/blog/<slug>.md` of dhcraft-site, turns `Grounded in` footnotes into reader footnotes and keeps the slide markers as HTML comments, so `scripts/kce-blogpost/check-structure.mjs` runs against the finished post as well.
 
 Production starts with the first production cycle of SETUP.md, one source carried from `00_sources` to one paragraph, before the remaining sources are ingested.
 

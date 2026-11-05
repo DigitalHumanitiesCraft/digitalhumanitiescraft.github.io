@@ -1,19 +1,19 @@
 ---
-title: "Sources for the KCAE blog post"
+title: "Sources for the KCE blog post"
 created: 2026-11-04
 status: draft
 related: [plan.md, outline.md, grounding.md, research/session-1.md, research/session-2.md, research/session-3.md, research/weiterfuehrend.md]
 ---
 
-# Sources for the KCAE blog post
+# Sources for the KCE blog post
 
 The research sweep of 2026-11-04 ran one research agent per workshop session and one for the opening and "Weiterführend". Each agent searched primary sources with full-text access for the terms of its section and recorded, per term, the source, what it read, a supporting passage of at most 30 words and the divergence from the workshop wording. Their records are in `research/` and remain agent output.
 
-The main session then checked every supporting passage against the source text. `scripts/kcae-blogpost/verify_quotes.py` fetches each access URL and tests whether the normalised passage occurs in the page or PDF text. Passages that failed this test were checked by hand, against the PDFs the agents had fetched, the official help repository of Obsidian on GitHub, or the page opened in a browser (Nature, EUR-Lex, PMC). The check establishes that each passage stands in its source. It does not establish that the whole source was read, which the column Read reports from the agent's own record, and it leaves the judgement whether a passage supports the post's claim to the writing phase and to the operator's verification.
+The main session then checked every supporting passage against the source text. `scripts/kce-blogpost/verify_quotes.py` fetches each access URL and tests whether the normalised passage occurs in the page or PDF text. Passages that failed this test were checked by hand, against the PDFs the agents had fetched, the official help repository of Obsidian on GitHub, or the page opened in a browser (Nature, EUR-Lex, PMC). The check establishes that each passage stands in its source. It does not establish that the whole source was read, which the column Read reports from the agent's own record, and it leaves the judgement whether a passage supports the post's claim to the writing phase and to the operator's verification.
 
 The column agki-dh gives the item key in the Zotero group agki-dh (read through the local Zotero API on 2026-11-04) or "new". No entry was added to Zotero.
 
-Since 2026-11-05 the vault DHCraft/kcae-blogpost-vault is the record of the sources the post uses. Each source has a distillate with its reading extent, its quotations checked character for character against the raw text (`tools/quote_check.py`) and its divergences in the Appraisal, and a CSL record in `references/`. This table stays as the record of the research sweep of 2026-11-04. The claim check of the deck of 2026-11-05 against the distillates is in `deck-claimcheck.md`.
+Since 2026-11-05 the vault DHCraft/kce-blogpost-vault is the record of the sources the post uses. Each source has a distillate with its reading extent, its quotations checked character for character against the raw text (`tools/quote_check.py`) and its divergences in the Appraisal, and a CSL record in `references/`. This table stays as the record of the research sweep of 2026-11-04. The claim check of the deck of 2026-11-05 against the distillates is in `deck-claimcheck.md`.
 
 ## Source table
 
@@ -189,7 +189,7 @@ The research agents reported these divergences. The two AI Act points were check
 - Computational Thinking. The working definition follows Cuny, Snyder and Wing (cited via Wing 2011) in formulating a problem and its solution, which answers the critique of Tedre and Denning (2016) that issuing commands is no computational thinking. No source places the three ways of working on a scale of computational thinking. The axis label therefore names checking and recorded project knowledge.
 - Neighbouring work for later sections, agent reports not yet checked here. Hassan et al. (2025, preprint) describe durable structured artefacts as contracts and institutional memory for agents. Zigler (2026, VibeX workshop) proposes externalising tacit knowledge into Markdown before implementation. Koch (2026, preprint) scales required evidence and human sign-off with risk levels.
 - Promptotyping paper. Version 1.0 is titled "… through Knowledge, Context, and Agentic Engineering", earlier deck citations read "with Context and Agentic Engineering".
-- METR time horizons. arXiv:2503.14499 is first-authored by Kwa, titled "Measuring AI Ability to Complete Long Software Tasks". The KCAE glossary's entry "Kinniment et al. (2025)" needs correcting.
+- METR time horizons. arXiv:2503.14499 is first-authored by Kwa, titled "Measuring AI Ability to Complete Long Software Tasks". The KCE glossary's entry "Kinniment et al. (2025)" needs correcting.
 - The Chroma context-rot report moved to https://www.trychroma.com/research/context-rot.
 - The workshop's `data/README.md` describes a different Session 3 task than Hands-on 4 in the lecture notes, with the same Excel files.
 

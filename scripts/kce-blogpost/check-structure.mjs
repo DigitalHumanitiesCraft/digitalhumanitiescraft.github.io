@@ -1,4 +1,4 @@
-// Compares the UFL workshop deck with the structure of the KCAE blog post, either its outline or the
+// Compares the UFL workshop deck with the structure of the KCE blog post, either its outline or the
 // finished post. Every section heading that carries a slide marker must match the deck title of its
 // first slide, every deck slide must be accounted for exactly once, and the slides must appear in deck
 // order. Sections without a marker are the post's own (opening, close) and are only listed.
@@ -8,13 +8,13 @@
 //   <!-- slides: <slideId> ...; renamed -->               deliberate new heading, reported but accepted
 //   <!-- omitted: <slideId> ... -->                       slides deliberately left out of the post
 //
-//   node scripts/kcae-blogpost/check-structure.mjs [file.md ...]
-// Defaults to knowledge/kcae-blogpost/outline.md. Exit code 1 on any error.
+//   node scripts/kce-blogpost/check-structure.mjs [file.md ...]
+// Defaults to knowledge/kce-blogpost/outline.md. Exit code 1 on any error.
 import { readFileSync } from "node:fs";
 
 const files = process.argv.slice(2);
-if (!files.length) files.push("knowledge/kcae-blogpost/outline.md");
-const deck = JSON.parse(readFileSync("knowledge/kcae-blogpost/deck-slides.json", "utf8")).slides;
+if (!files.length) files.push("knowledge/kce-blogpost/outline.md");
+const deck = JSON.parse(readFileSync("knowledge/kce-blogpost/deck-slides.json", "utf8")).slides;
 const byId = new Map(deck.map((s) => [s.id, s]));
 
 // Typographic variants on the slides (curly quotes, spacing before punctuation, soft breaks) are not

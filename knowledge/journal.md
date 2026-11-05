@@ -131,11 +131,11 @@ Der Beitrag „Ein Promptotyping-Projekt anlegen“ (`src/content/blog/Was-ist-P
 Das KUG-Skriptum im Repo knowledge-context-agentic-engineering zitiert die alte Adresse noch und landet jetzt auf der Blogübersicht.
 
 
-## 2026-11-04 KCAE-Blogpost: Inventar, Gliederung, Quellen
+## 2026-11-04 KCE-Blogpost: Inventar, Gliederung, Quellen
 
 ### Ergebnis
 
-Für den Blogpost zu Knowledge, Context and Agentic Engineering liegen in `knowledge/kcae-blogpost/` das Inventar des UFL-Decks mit Folientexten, Sprechernotizen, Slide-IDs und Abnahmestatus (`deck-inventory.md`, `deck-slides.json`), die Gliederung zur Abnahme (`outline.md`), die erweiterte Zuordnungstabelle in `plan.md`, der Plan der Grounded-Vault-Instanz (`grounding.md`) und die geprüfte Quellenliste (`sources.md`, Rechercheprotokolle in `research/`). `scripts/kcae-blogpost/` enthält den Deck-Export, die Strukturprüfung gegen das Deck und die Zitatprüfung gegen die Quelltexte.
+Für den Blogpost zu Knowledge, Context and Agentic Engineering liegen in `knowledge/kce-blogpost/` das Inventar des UFL-Decks mit Folientexten, Sprechernotizen, Slide-IDs und Abnahmestatus (`deck-inventory.md`, `deck-slides.json`), die Gliederung zur Abnahme (`outline.md`), die erweiterte Zuordnungstabelle in `plan.md`, der Plan der Grounded-Vault-Instanz (`grounding.md`) und die geprüfte Quellenliste (`sources.md`, Rechercheprotokolle in `research/`). `scripts/kce-blogpost/` enthält den Deck-Export, die Strukturprüfung gegen das Deck und die Zitatprüfung gegen die Quelltexte.
 
 ### Entscheidungen
 

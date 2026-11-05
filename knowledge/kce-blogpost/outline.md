@@ -8,7 +8,7 @@ related: [plan.md, deck-inventory.md, deck-slides.json, sources.md, grounding.md
 
 # Outline for acceptance
 
-Phase 4 of `plan.md`, rebuilt on 2026-11-05 for deck revision Vgc4dbeUAt_ykg (84 slides). The headings below are the headings of the post, in German as the post will be. Under each heading stands its slide marker (checked by `scripts/kcae-blogpost/check-structure.mjs`), the core claim, the terms it defines and the sources it rests on. Sources name distillates of the Grounded Vault instance `DHCraft/kcae-blogpost-vault` by slug. "Pending" means a distillate is being written, "open" means no read source. A section on a slide that carries the draft marker gets assertions only and no running text.
+Phase 4 of `plan.md`, rebuilt on 2026-11-05 for deck revision Vgc4dbeUAt_ykg (84 slides). The headings below are the headings of the post, in German as the post will be. Under each heading stands its slide marker (checked by `scripts/kce-blogpost/check-structure.mjs`), the core claim, the terms it defines and the sources it rests on. Sources name distillates of the Grounded Vault instance `DHCraft/kce-blogpost-vault` by slug. "Pending" means a distillate is being written, "open" means no read source. A section on a slide that carries the draft marker gets assertions only and no running text.
 
 The deck has no divider slide for Session 1, so the post adds its own level-2 header. The appendix contributes only the sections decided for "Weiterführend", and the post ends with its own close.
 
@@ -431,7 +431,7 @@ Sources: pollin-2026-promptotyping; Pollin (2026) paper.
 
 Slide 58, accepted. Core claim: The hands-ons map onto the phases of Promptotyping (preparation, exploration, distillation, implementation, verification), and the documents produced fall into declarative, process and action documents.
 
-Terms: Declarative, Process, Action Documents
+Terms: declarative knowledge documents, process knowledge documents, agent instruction documents (names after the Promptotyping paper 1.0; Declarative, Process and Action Documents are the short names of the site, decision of 2026-11-05)
 Sources: dhcraft-2026-promptotyping-convention; dhcraft-2026-promptotyping-glossary (class now named Knowledge Document).
 
 ### Loop Engineering

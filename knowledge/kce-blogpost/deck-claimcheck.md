@@ -7,11 +7,11 @@ related: [deck-inventory.md, sources.md, outline.md]
 
 # Claim check of the UFL deck, revision Vgc4dbeUAt_ykg
 
-Two checking agents compared every substantive statement of the deck with the distillates of the vault DHCraft/kcae-blogpost-vault on 2026-11-05. The main session checked the entries marked falsch by sample against the distillates. The list went to the session that edits the slides. Entries are German, as the deck is.
+Two checking agents compared every substantive statement of the deck with the distillates of the vault DHCraft/kce-blogpost-vault on 2026-11-05. The main session checked the entries marked falsch by sample against the distillates. The list went to the session that edits the slides. Entries are German, as the deck is.
 
 # Claim Check Folien 1 bis 42
 
-Geprüft gegen alle Distillate in `kcae-blogpost-vault/20_distillates/` (publications und documents) im Stand vom 2026-11-05 abends, einschließlich der während der Prüfung hinzugekommenen Distillate (hong-2025-context-rot, eu-2024-ai-act, eu-2026-digital-omnibus-ai, langchain-2026-agent-harness, anthropic-2026-prompting-best-practices, anthropic-2026-token-counting, karpathy-2025-vibe-coding, karpathy-2025-never-felt-behind, karpathy-2026-few-shotted-for-breakfast, arcprize, simplebench), dazu `sources.md` § Divergences und § Terms without a read source. Für die Folien 36 und 20 wurde zusätzlich die Markdown-Repräsentation in `10_markdown/documents/` eingesehen, um festzustellen, ob die Quelle eine im Distillat fehlende Aussage enthält. Aussagen, die die Distillate vollständig tragen, sind nicht aufgeführt. Folien ohne Befund: 1 bis 4, 7, 10, 12, 13, 23, 26 bis 28, 31, 35, 38, 41, 42.
+Geprüft gegen alle Distillate in `kce-blogpost-vault/20_distillates/` (publications und documents) im Stand vom 2026-11-05 abends, einschließlich der während der Prüfung hinzugekommenen Distillate (hong-2025-context-rot, eu-2024-ai-act, eu-2026-digital-omnibus-ai, langchain-2026-agent-harness, anthropic-2026-prompting-best-practices, anthropic-2026-token-counting, karpathy-2025-vibe-coding, karpathy-2025-never-felt-behind, karpathy-2026-few-shotted-for-breakfast, arcprize, simplebench), dazu `sources.md` § Divergences und § Terms without a read source. Für die Folien 36 und 20 wurde zusätzlich die Markdown-Repräsentation in `10_markdown/documents/` eingesehen, um festzustellen, ob die Quelle eine im Distillat fehlende Aussage enthält. Aussagen, die die Distillate vollständig tragen, sind nicht aufgeführt. Folien ohne Befund: 1 bis 4, 7, 10, 12, 13, 23, 26 bis 28, 31, 35, 38, 41, 42.
 
 Für Folie 7 tragen die neuen Karpathy-Distillate die zitierten Posts vollständig, für Folie 10 trägt Liu (2026) zusammen mit LangChain (2026, s3) die Harness-Definition, für Folie 18 trägt hong-2025-context-rot den Begriff Context Rot.
 
@@ -400,7 +400,7 @@ Für Folie 7 tragen die neuen Karpathy-Distillate die zitierten Posts vollständ
 - Vorschlag: "Obsidian nutzt standardmäßig Wikilinks. Wo Interoperabilität zählt, empfiehlt die Hilfe Markdown-Links."
 # Claim check, Folien 43 bis 84
 
-Geprüft gegen `kcae-blogpost-vault/20_distillates/` im Stand von 2026-11-05, 19:20 (einschließlich der am Abend ergänzten Destillate zu AI Act, Digital Omnibus, Karpathy 2025, ARC-AGI-3, SimpleBench und LangChain 2026) sowie gegen `sources.md` § Divergences und § Terms without a read source. Ausgelassen sind Hands-on-Prompts, eigene Messungen und Werkbeschreibungen des Operators, sofern sie als seine Praxis gerahmt sind, reine Literaturhinweise ohne Aussage und Aussagen, die die Destillate vollständig tragen. Mehrere gleichartige Befehls- oder Listenangaben einer Folie sind in einem Eintrag gebündelt, wo sie dieselbe Belegsituation haben.
+Geprüft gegen `kce-blogpost-vault/20_distillates/` im Stand von 2026-11-05, 19:20 (einschließlich der am Abend ergänzten Destillate zu AI Act, Digital Omnibus, Karpathy 2025, ARC-AGI-3, SimpleBench und LangChain 2026) sowie gegen `sources.md` § Divergences und § Terms without a read source. Ausgelassen sind Hands-on-Prompts, eigene Messungen und Werkbeschreibungen des Operators, sofern sie als seine Praxis gerahmt sind, reine Literaturhinweise ohne Aussage und Aussagen, die die Destillate vollständig tragen. Mehrere gleichartige Befehls- oder Listenangaben einer Folie sind in einem Eintrag gebündelt, wo sie dieselbe Belegsituation haben.
 
 ### Folie 43: Frontier-LLMs amplifizieren computergestützte Wissensarbeit
 - Aussage: "Recursive Self-Improvement ist sehr wahrscheinlich"
