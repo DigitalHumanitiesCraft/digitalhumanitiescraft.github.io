@@ -103,7 +103,7 @@ One chapter per level-3 section of `outline.md`, plus the post's own opening and
 | `0405-qualitaet-sichern.md` | Qualität sichern | planned |
 | `0406-beispiel-ein-analysewerkzeug.md` | Beispiel: ein Analysewerkzeug | planned |
 | `0407-ausblick-vorlagen-fuer-die-eigene-arbeit.md` | Ausblick: Vorlagen für die eigene Arbeit | planned |
-| `0501-vibe-coding-agentic-knowledge-and-research-engin.md` | Vibe Coding & Agentic (Knowledge and Research) Engineering | planned |
+| `0501-vibe-coding-agentic-engineering-und-promptotyping.md` | Vibe Coding, Agentic Engineering und Promptotyping | planned |
 | `0502-frontier-llms-amplifizieren-computergestuetzte-w.md` | Frontier-LLMs amplifizieren computergestützte Wissensarbeit | planned |
 | `0503-ai-watermarking.md` | AI Watermarking | planned |
 | `0600-schluss.md` | Schluss (own) | planned |

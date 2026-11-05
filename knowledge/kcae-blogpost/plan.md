@@ -93,7 +93,7 @@ Slide numbers follow the deck as exported on 2026-11-04 (`deck-inventory.md`, 63
 | 54 | Hands-on 4: Ein Analysewerkzeug aus Excel-Daten | Beispiel: ein Analysewerkzeug | figures computed by script and checked against a reference | – | Northwind (MIT) | draft |
 | 55 | Ausblick: Vorlagen für die eigene Arbeit | same, last section of Session 3 | four templates as research previews | – | provider repositories | draft |
 | 56 | Anhang | left out | – | – | – | – |
-| 57 | Vibe Coding & Agentic (Knowledge and Research) Engineering | Weiterführend | unchecked generation versus designed and checked agent work | Vibe Coding, Agentic Engineering | Karpathy 2025; Willison 2026; Hassan et al. 2025; Allen et al. 2023 | accepted |
+| 57 | Vibe Coding, Agentic Engineering und Promptotyping (formerly Vibe Coding & Agentic (Knowledge and Research) Engineering) | Weiterführend | Computational Thinking as the ability, three ways of working that demand increasing checking and recorded project knowledge | Computational Thinking, Vibe Coding, Agentic Engineering, Promptotyping | Wing 2006, 2008; Shute et al. 2017; Karpathy 2025; Willison 2025, 2026; Pollin 2026 | accepted |
 | 58 | Frontier-LLMs amplifizieren computergestützte Wissensarbeit | Weiterführend | benchmarks, results and positions on self-improvement | Benchmark, Recursive Self-Improvement | Kwa et al. 2025; Jimenez et al. 2024; Merrill et al. 2026; AI 2027 | accepted |
 | 59–62 | CLAUDE.md prompts, commands, compress | left out | – | – | – | accepted |
 | 63 | AI Watermarking | Weiterführend | a watermark is an indication, never proof; AI Act Art. 50 | Watermarking, C2PA | Dathathri et al. 2024; Kirchenbauer et al. 2023; Bui et al. 2023; C2PA; Reg. 2024/1689 and 2026/1744 | draft |

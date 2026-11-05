@@ -416,13 +416,13 @@ Own section header, three short subsections.
 
 <!-- omitted: h2a76f1c8a73c47f4_4_120 -->
 
-### Vibe Coding & Agentic (Knowledge and Research) Engineering
-<!-- slides: h2a76f1c8a73c47f4_4_125 -->
+### Vibe Coding, Agentic Engineering und Promptotyping
+<!-- slides: h2a76f1c8a73c47f4_4_125; renamed -->
 
-Core claim: vibe coding accepts generated code largely unchecked, agentic engineering designs agent-based development with humans setting requirements and checking results, and agentic (knowledge and research) engineering is the proposed working term for research workflows built on documented project knowledge.
+Core claim: Computational Thinking is the ability to formulate, abstract and decompose a problem and its solution so that an executing agent can carry it out, and to judge whether the result holds. An LLM fills gaps silently where a compiler once enforced precision, so this discipline now has to come from the person. Vibe coding, agentic engineering and Promptotyping are three ways of working that differ in how much checking and recorded project knowledge they demand. Vibe coding takes over generated code unread and suits work where little is at stake. Agentic engineering has coding agents write, run and revise code while people provide tools, specify problems, weigh solutions and check the result. Promptotyping builds on agentic engineering, checks its project knowledge against the sources and leaves scholarly validation with the researchers. The axis describes what a way of working demands, the stakes sentence covers only the step from vibe coding to agentic engineering.
 
-Terms: Vibe Coding, Agentic Engineering, Agentic (Knowledge and Research) Engineering (marked as proposed working term).
-Sources: Karpathy (2025); Willison (2026); Hassan et al. (2025); Allen, Stork and Groth (2023); the post "Haters gonna hate" (internal link).
+Terms: Computational Thinking (working definition in the line of Wing 2006 and 2008 and Shute et al. 2017, marked as such), Vibe Coding, Agentic Engineering, Promptotyping. The former working term "Agentic (Knowledge and Research) Engineering" is dropped, because its description duplicates Promptotyping.
+Sources: Wing (2006); Wing (2008); Shute, Sun and Asbell-Clarke (2017); Karpathy (2025); Willison (2025); Willison (2026); Pollin (2026), Promptotyping paper version 1.0. Hassan et al. (2025) only as a scholarly neighbour for durable artefacts as contracts. The slide text and speaker notes accepted in the session of 2026-11-05 are the wording basis. The deck shows the section in Session 2, and a preceding Computational Thinking slide is planned. The section takes its own heading once that slide exists and `deck-slides.json` is re-exported.
 
 ### Frontier-LLMs amplifizieren computergestützte Wissensarbeit
 <!-- slides: h2a76f1c8a73c47f4_4_717 -->
