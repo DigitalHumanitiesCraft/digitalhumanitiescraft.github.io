@@ -11,8 +11,7 @@ citation:
   container-title: "Digital Humanities Craft"
   URL: "https://dhcraft.org/excellence/blog/Vibe-Coding"
   language: "de"
-  abstract: "test"
-  
+
 dublin_core:
   creator: "Christopher Pollin"
   publisher: "Digital Humanities Craft"
