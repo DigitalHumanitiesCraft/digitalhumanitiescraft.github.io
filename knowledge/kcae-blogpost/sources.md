@@ -11,7 +11,9 @@ The research sweep of 2026-11-04 ran one research agent per workshop session and
 
 The main session then checked every supporting passage against the source text. `scripts/kcae-blogpost/verify_quotes.py` fetches each access URL and tests whether the normalised passage occurs in the page or PDF text. Passages that failed this test were checked by hand, against the PDFs the agents had fetched, the official help repository of Obsidian on GitHub, or the page opened in a browser (Nature, EUR-Lex, PMC). The check establishes that each passage stands in its source. It does not establish that the whole source was read, which the column Read reports from the agent's own record, and it leaves the judgement whether a passage supports the post's claim to the writing phase and to the operator's verification.
 
-The column agki-dh gives the item key in the Zotero group agki-dh (read through the local Zotero API on 2026-11-04) or "new". No entry was added to Zotero. Sources stay in this list until the Grounded Vault instance exists, and only then enter its `00_sources` (see `grounding.md`).
+The column agki-dh gives the item key in the Zotero group agki-dh (read through the local Zotero API on 2026-11-04) or "new". No entry was added to Zotero.
+
+Since 2026-11-05 the vault DHCraft/kcae-blogpost-vault is the record of the sources the post uses. Each source has a distillate with its reading extent, its quotations checked character for character against the raw text (`tools/quote_check.py`) and its divergences in the Appraisal, and a CSL record in `references/`. This table stays as the record of the research sweep of 2026-11-04. The claim check of the deck of 2026-11-05 against the distillates is in `deck-claimcheck.md`.
 
 ## Source table
 
