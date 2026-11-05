@@ -144,3 +144,13 @@ Für den Blogpost zu Knowledge, Context and Agentic Engineering liegen in `knowl
 ### Offen
 
 Abnahme der Gliederung und der Vault-Parameter durch den Operator. Begriffe ohne gelesene Quelle und nur teilweise gelesene Quellen stehen in `sources.md`, ebenso Abweichungen zwischen Skriptum und Quellen, darunter die Übergangsfrist für Art. 50 AI Act aus Verordnung (EU) 2026/1744. Kein Eintrag in Zotero.
+
+## 2026-11-05 KCE-Blogpost: Vault befüllt, Fließtext geschrieben, maschinell geprüft
+
+### Ergebnis
+
+Die Grounded-Vault-Instanz `DHCraft/kce-blogpost-vault` (lokal, ohne Remote) trägt den Blogpost. Sie enthält 109 Destillate mit zeichengenau geprüften Zitaten, 634 atomare Assertions und 53 Kapitel für alle Abschnitte auf abgenommenen Folien des Deckstands vom 5. November 2026. Alle 1553 Prüfpaare bestehen die maschinelle Prüfung, und alle drei Dokumentarten stehen auf `validated`. Die Verifikation liegt beim Operator. `uv run python tools/export_post.py` setzt die Kapitel zu `generated/post-draft.md` zusammen. Das Strukturprüfskript `scripts/kce-blogpost/check-structure.mjs` meldet darauf keine Abweichung in Reihenfolge und Titeln, nur die ausgelassenen und die Entwurf-Folien fehlen.
+
+### Offen
+
+Eröffnung und Schluss werden zuletzt geschrieben. Für die Abschnitte auf Entwurf-Folien (Das Wissensdokument im Vault, Aufbau des Vaults, Docling, Loop Engineering, AI Watermarking) liegen nur Assertions vor. Die Begriffe ohne gelesene Quelle stehen als Posits in den Kapiteln. Übernahme in `src/content/blog/`, Push und Veröffentlichung bleiben beim Operator.
