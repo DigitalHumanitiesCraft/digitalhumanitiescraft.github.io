@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-02
-updated: 2026-10-21
+updated: 2026-11-05
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -21,7 +21,7 @@ The brief for an image-generating agent that produces the illustrations of the m
 
 ## Current task
 
-Dormant since 2026-10-21, when Research Mission Control was withdrawn from the page and its images left `public/` ([ADR-017](specification.md#adr-017-page-slimmed-to-offer-examples-methods-and-contact)). Resume it only when the operator brings the method back. The task was to revise the Research Mission Control infographic into a version 4 without the "Lane" boxes. Start from `knowledge/fancy-research-tools/image-prompts/method-research-mission-control-infographic-v3.png` and its prompt log. Remove the thin group frames around agent and result and the label "Lane". Keep all other labels, the layout, the role exchange and delegation arrows, the direct connection from the Independent Verification Agent to the User, the undirected access lines from the Repository and the white ground. Save the result as `method-research-mission-control-infographic-v4.png` with its prompt log after [Delivery](#delivery). Change no other file and do not commit or push.
+None. The operator writes a new task here when a method image is to be made or revised. The last brief, a version 4 of the Research Mission Control infographic, became dormant when that method was withdrawn on 2026-10-21 ([ADR-017](specification.md#adr-017-page-slimmed-to-offer-examples-methods-and-contact)), and its wording stands in this document at commit 800eff1.
 
 ## Series in use
 

@@ -69,6 +69,6 @@ Generated images appear only on the method cards, under [ADR-012](specification.
 
 The section on this page in `CLAUDE.md` at the root of the site repository applies this document through these rules.
 
-- No eyebrows, no decorative counters, no standing explanatory prose, also where a model such as dhcraft.org uses them ([ADR-006](specification.md#adr-006-house-rules-over-the-dhcraftorg-pattern)).
+- No eyebrows, no decorative counters, no standing explanatory prose, also where a model such as dhcraft.org uses them ([ADR-006](specification.md#adr-006-house-rules-over-the-dhcraftorg-pattern)). The one sentence that opens `#methoden` is the single exception ([ADR-018](specification.md#adr-018-page-renamed-to-tools-and-workflows)).
 - Colours come from site tokens or the local tokens on `main.fancy`. A new token goes to the page root unless the site needs it too.
 - No runtime CDN, no analytics and no third-party request in the page content.

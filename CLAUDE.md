@@ -38,7 +38,7 @@ The content rules CR-01 to CR-07 in `specification.md` bind every text on the pa
 
 `design.md` is the source of values.
 
-- No eyebrows, no decorative counters, no standing explanatory prose, also where dhcraft.org uses kicker labels.
+- No eyebrows, no decorative counters, no standing explanatory prose, also where dhcraft.org uses kicker labels. The one sentence that opens `#methoden` is the single exception (ADR-018).
 - Colours come from site tokens or the local tokens on `main.fancy`, components consume `var()` only.
 - No runtime CDN, no analytics, no third-party request in the page content.
 
