@@ -1,6 +1,6 @@
 {
  "presentation": "UFL-Agentic Engineering-Workshop-26",
- "revisionId": "bitq3xFgoP8IKQ",
+ "revisionId": "Vgc4dbeUAt_ykg",
  "slides": [
   {
    "n": 1,
@@ -34,351 +34,477 @@
   },
   {
    "n": 6,
-   "id": "bg_slide",
-   "title": "Begriffe im Workshop",
-   "status": "accepted"
-  },
-  {
-   "n": 7,
    "id": "h2c7fc6986ae54bd6_12_187",
    "title": "Aufbauendes Beispiel und Ablauf",
    "status": "accepted"
   },
   {
-   "n": 8,
-   "id": "sec1_slide",
-   "title": "Session 1",
-   "status": "accepted"
-  },
-  {
-   "n": 9,
+   "n": 7,
    "id": "h2c7fc6986ae54bd6_0_68",
    "title": "“Few-shotted for Breakfast”",
    "status": "accepted"
   },
   {
-   "n": 10,
+   "n": 8,
    "id": "h2c7fc6986ae54bd6_28_105",
-   "title": "Software … für alle !?",
+   "title": "fancy (research) tools & workflows",
    "status": "accepted"
   },
   {
-   "n": 11,
+   "n": 9,
    "id": "h2c7fc6986ae54bd6_12_95",
    "title": "LLMs bzw. AI Agents als “ Jagged Alien ‘Intelligences’ ”",
    "status": "accepted"
   },
   {
-   "n": 12,
-   "id": "h2a76f1c8a73c47f4_4_265",
-   "title": "LLM-basierte AI Agents",
-   "status": "accepted"
-  },
-  {
-   "n": 13,
-   "id": "h2a76f1c8a73c47f4_4_195",
-   "title": "AI Harness",
-   "status": "accepted"
-  },
-  {
-   "n": 14,
+   "n": 10,
    "id": "h2c7fc6986ae54bd6_12_201",
    "title": "Claude Code in der Claude Desktop App",
    "status": "accepted"
   },
   {
-   "n": 15,
-   "id": "h2a76f1c8a73c47f4_4_2",
-   "title": "Hands-on 1: Ein Projekt konfigurieren",
-   "status": "accepted"
-  },
-  {
-   "n": 16,
+   "n": 11,
    "id": "h2a76f1c8a73c47f4_4_29",
    "title": "Prompt Engineering ist so 2025!",
    "status": "accepted"
   },
   {
-   "n": 17,
+   "n": 12,
+   "id": "h51448df817bc677_0_5",
+   "title": "Hands-on 1: Webrecherche und Wissensdokumente",
+   "status": "accepted"
+  },
+  {
+   "n": 13,
+   "id": "h51448df817bc677_0_54",
+   "title": "Hands-on 1: Ergebnis eines Durchgangs",
+   "status": "accepted"
+  },
+  {
+   "n": 14,
    "id": "h2c7fc6986ae54bd6_38_43",
    "title": "Markdown",
    "status": "accepted"
   },
   {
+   "n": 15,
+   "id": "h51448df817bc677_0_41",
+   "title": "AI Agent & Tool Use",
+   "status": "accepted"
+  },
+  {
+   "n": 16,
+   "id": "h51448df817bc677_0_31",
+   "title": "Subagents",
+   "status": "accepted"
+  },
+  {
+   "n": 17,
+   "id": "h51448df817bc677_0_106",
+   "title": "Hands-On 2: Wissensdokumente destillieren",
+   "status": "accepted"
+  },
+  {
    "n": 18,
-   "id": "h2c7fc6986ae54bd6_38_122",
-   "title": "Wissensdokument",
-   "status": "accepted"
-  },
-  {
-   "n": 19,
-   "id": "h2a76f1c8a73c47f4_4_67",
-   "title": "Tool Use: So bedient ein KI-Agent den Rechner",
-   "status": "accepted"
-  },
-  {
-   "n": 20,
-   "id": "h2a76f1c8a73c47f4_4_49",
-   "title": "Die erste Iteration des Dashboards",
-   "status": "accepted"
-  },
-  {
-   "n": 21,
-   "id": "h2a76f1c8a73c47f4_4_80",
-   "title": "Hands-on 1: Follow-Up Prompts",
-   "status": "accepted"
-  },
-  {
-   "n": 22,
-   "id": "h2a76f1c8a73c47f4_4_680",
-   "title": "Subagents: ein Reviewer Agent",
-   "status": "accepted"
-  },
-  {
-   "n": 23,
-   "id": "h2a76f1c8a73c47f4_4_99",
-   "title": "Hands-on 1: Follow-Up Prompts",
-   "status": "accepted"
-  },
-  {
-   "n": 24,
-   "id": "h2a76f1c8a73c47f4_4_600",
+   "id": "h51448df817bc677_0_130",
    "title": "Context Window managen",
    "status": "accepted"
   },
   {
-   "n": 25,
+   "n": 19,
    "id": "h2a76f1c8a73c47f4_4_633",
    "title": "AGENTS.md / CLAUDE.md",
    "status": "accepted"
   },
   {
-   "n": 26,
-   "id": "mem_slide",
-   "title": "Memory",
+   "n": 20,
+   "id": "h51448df817bc677_0_157",
+   "title": "Hands-On 3: Wissensbasis nutzen",
    "status": "accepted"
   },
   {
-   "n": 27,
-   "id": "h2a76f1c8a73c47f4_4_869",
-   "title": "Skill: Wissensbasis + Kontext → Folien im eigenen Design",
-   "status": "accepted"
-  },
-  {
-   "n": 28,
-   "id": "hoA_slide",
-   "title": "Hands-on 2: Vom Wissen zum Pitch und zum Skill",
-   "status": "accepted"
-  },
-  {
-   "n": 29,
-   "id": "sk_slide",
-   "title": "Skills: ein Pitch-Skill",
-   "status": "accepted"
-  },
-  {
-   "n": 30,
-   "id": "h2a76f1c8a73c47f4_4_905",
-   "title": "MCP & RAG & Memory",
-   "status": "accepted"
-  },
-  {
-   "n": 31,
-   "id": "ce_slide",
-   "title": "Context Engineering",
-   "status": "draft"
-  },
-  {
-   "n": 32,
-   "id": "sec2_slide",
-   "title": "Session 2",
-   "status": "accepted"
-  },
-  {
-   "n": 33,
-   "id": "h2a76f1c8a73c47f4_4_1259",
-   "title": "Agentic Engineering im Überblick",
-   "status": "accepted"
-  },
-  {
-   "n": 34,
+   "n": 21,
    "id": "gm_slide",
    "title": "KI-Governance auf zwei Ebenen",
-   "status": "draft"
+   "status": "accepted"
   },
   {
-   "n": 35,
+   "n": 22,
    "id": "za_slide",
    "title": "Permission Modes und Autonomie",
    "status": "accepted"
   },
   {
+   "n": 23,
+   "id": "gm2_slide",
+   "title": "Autonomie und Zugriff",
+   "status": "accepted"
+  },
+  {
+   "n": 24,
+   "id": "h51448df817bc677_0_213",
+   "title": "AI Slop & De-Slopification",
+   "status": "accepted"
+  },
+  {
+   "n": 25,
+   "id": "h51448df817bc677_0_247",
+   "title": "Skills: ein PDF-Skill",
+   "status": "accepted"
+  },
+  {
+   "n": 26,
+   "id": "h51448df817bc677_0_180",
+   "title": "Zwischenfazit",
+   "status": "accepted"
+  },
+  {
+   "n": 27,
+   "id": "h51448df817bc677_0_257",
+   "title": "Session 2",
+   "status": "accepted"
+  },
+  {
+   "n": 28,
+   "id": "h2a76f1c8a73c47f4_4_2",
+   "title": "Hands-on 4: Wissensdashboard",
+   "status": "accepted"
+  },
+  {
+   "n": 29,
+   "id": "h2a76f1c8a73c47f4_4_49",
+   "title": "Die erste Iteration des Dashboards",
+   "status": "accepted"
+  },
+  {
+   "n": 30,
+   "id": "h2a76f1c8a73c47f4_4_80",
+   "title": "Hands-on 4: Follow-Up Prompts",
+   "status": "accepted"
+  },
+  {
+   "n": 31,
+   "id": "h51448df817bc677_0_330",
+   "title": "Agentic Governance Workspace",
+   "status": "accepted"
+  },
+  {
+   "n": 32,
+   "id": "ct_slide",
+   "title": "Computational Thinking",
+   "status": "accepted"
+  },
+  {
+   "n": 33,
+   "id": "h51448df817bc677_0_1695",
+   "title": "Vibe Coding, Agentic Engineering und Promptotyping",
+   "status": "accepted"
+  },
+  {
+   "n": 34,
+   "id": "h51448df817bc677_0_822",
+   "title": "Wissensmodellierung",
+   "status": "accepted"
+  },
+  {
+   "n": 35,
+   "id": "h51448df817bc677_0_1730",
+   "title": "Agentisches Wissensmanagement",
+   "status": "accepted"
+  },
+  {
    "n": 36,
-   "id": "hk_slide",
-   "title": "Hook: nur im Projektordner arbeiten",
-   "status": "accepted"
-  },
-  {
-   "n": 37,
-   "id": "ke_slide",
-   "title": "Knowledge Engineering",
-   "status": "draft"
-  },
-  {
-   "n": 38,
-   "id": "dl_slide",
-   "title": "Docling: Vom PDF zum Wissensdokument",
-   "status": "draft"
-  },
-  {
-   "n": 39,
-   "id": "pd_slide",
-   "title": "Promptotyping Documents",
-   "status": "draft"
-  },
-  {
-   "n": 40,
-   "id": "h2a76f1c8a73c47f4_4_924",
-   "title": "Obsidian",
-   "status": "accepted"
-  },
-  {
-   "n": 41,
    "id": "h2a76f1c8a73c47f4_4_933",
    "title": "How Steph Ango uses Obsidian",
    "status": "accepted"
   },
   {
-   "n": 42,
+   "n": 37,
+   "id": "h51448df817bc677_0_1600",
+   "title": "Git und GitHub",
+   "status": "accepted"
+  },
+  {
+   "n": 38,
+   "id": "h51448df817bc677_0_324",
+   "title": "Hands-on 5: Wissens-Vault bauen",
+   "status": "accepted"
+  },
+  {
+   "n": 39,
    "id": "wv_slide",
    "title": "Das Wissensdokument im Vault",
    "status": "draft"
   },
   {
-   "n": 43,
-   "id": "tg_slide",
-   "title": "Tags und Tag-Taxonomie",
-   "status": "draft"
-  },
-  {
-   "n": 44,
-   "id": "mc_slide",
-   "title": "Maps of Content",
-   "status": "draft"
-  },
-  {
-   "n": 45,
-   "id": "h3_slide",
-   "title": "Hands-on 3: Die Wissensbasis wird ein Obsidian-Vault",
-   "status": "draft"
-  },
-  {
-   "n": 46,
-   "id": "ku_slide",
-   "title": "Kuratieren: Struktur und Inhalt",
-   "status": "draft"
-  },
-  {
-   "n": 47,
+   "n": 40,
    "id": "vg_slide",
-   "title": "Vault-Governance",
+   "title": "Aufbau des Vaults",
    "status": "draft"
   },
   {
-   "n": 48,
-   "id": "sec3_slide",
+   "n": 41,
+   "id": "h51448df817bc677_0_338",
+   "title": "Mit dem Vault arbeiten",
+   "status": "accepted"
+  },
+  {
+   "n": 42,
+   "id": "h51448df817bc677_0_564",
    "title": "Session 3",
    "status": "accepted"
   },
   {
-   "n": 49,
-   "id": "fr_slide",
-   "title": "Fancy Research Tools",
-   "status": "draft"
-  },
-  {
-   "n": 50,
-   "id": "lp_slide",
-   "title": "Loop Engineering",
-   "status": "draft"
-  },
-  {
-   "n": 51,
-   "id": "sw_slide",
-   "title": "Subagents und Workflows",
-   "status": "accepted"
-  },
-  {
-   "n": 52,
-   "id": "dt_slide",
-   "title": "Determinismus so weit wie möglich ausreizen",
-   "status": "draft"
-  },
-  {
-   "n": 53,
-   "id": "qg_slide",
-   "title": "Qualität sichern",
-   "status": "draft"
-  },
-  {
-   "n": 54,
-   "id": "h4_slide",
-   "title": "Hands-on 4: Ein Analysewerkzeug aus Excel-Daten",
-   "status": "draft"
-  },
-  {
-   "n": 55,
-   "id": "au_slide",
-   "title": "Ausblick: Vorlagen für die eigene Arbeit",
-   "status": "draft"
-  },
-  {
-   "n": 56,
-   "id": "h2a76f1c8a73c47f4_4_120",
-   "title": "Anhang",
-   "status": "accepted"
-  },
-  {
-   "n": 57,
-   "id": "h2a76f1c8a73c47f4_4_125",
-   "title": "Vibe Coding & Agentic (Knowledge and Research) Engineering",
-   "status": "accepted"
-  },
-  {
-   "n": 58,
+   "n": 43,
    "id": "h2a76f1c8a73c47f4_4_717",
    "title": "Frontier-LLMs amplifizieren computergestützte Wissensarbeit",
    "status": "accepted"
   },
   {
-   "n": 59,
-   "id": "h2a76f1c8a73c47f4_4_1122",
-   "title": "CLAUDE.md: Regeln für den Vault",
+   "n": 44,
+   "id": "ae_slide",
+   "title": "Agentic Engineering: was das Modell umgibt und was es davon sieht",
    "status": "accepted"
   },
   {
+   "n": 45,
+   "id": "h2a76f1c8a73c47f4_4_905",
+   "title": "Model Context Protocol (MCP)",
+   "status": "accepted"
+  },
+  {
+   "n": 46,
+   "id": "h51448df817bc677_0_551",
+   "title": "Agentic Search: suchen wie im Terminal",
+   "status": "accepted"
+  },
+  {
+   "n": 47,
+   "id": "h6a_slide",
+   "title": "Hands-on 6: Eine Anfrage mit Excel-Daten",
+   "status": "accepted"
+  },
+  {
+   "n": 48,
+   "id": "h6b_slide",
+   "title": "Hands-on 6: Die Daten im Dashboard",
+   "status": "accepted"
+  },
+  {
+   "n": 49,
+   "id": "h51448df817bc677_0_613",
+   "title": "Subagents",
+   "status": "accepted"
+  },
+  {
+   "n": 50,
+   "id": "qs_slide",
+   "title": "Qualität sichern: Skript, wo möglich, Urteil, wo nötig",
+   "status": "accepted"
+  },
+  {
+   "n": 51,
+   "id": "h51448df817bc677_0_397",
+   "title": "Test Driven Development (TDD)",
+   "status": "accepted"
+  },
+  {
+   "n": 52,
+   "id": "hk_slide",
+   "title": "Hook: nur im Projektordner arbeiten",
+   "status": "accepted"
+  },
+  {
+   "n": 53,
+   "id": "dl_slide",
+   "title": "Docling: Dokumente als Markdown",
+   "status": "draft"
+  },
+  {
+   "n": 54,
+   "id": "h51448df817bc677_0_469",
+   "title": "Open Models: das Modell im eigenen Haus",
+   "status": "accepted"
+  },
+  {
+   "n": 55,
+   "id": "lw_slide",
+   "title": "Eigene Pipelines: der Agent baut, das lokale Modell arbeitet",
+   "status": "accepted"
+  },
+  {
+   "n": 56,
+   "id": "h51448df817bc677_0_1687",
+   "title": "",
+   "status": "accepted"
+  },
+  {
+   "n": 57,
+   "id": "h51448df817bc677_0_651",
+   "title": "https://dhcraft.org/Promptotyping",
+   "status": "accepted"
+  },
+  {
+   "n": 58,
+   "id": "ptc_slide",
+   "title": "Was Sie gemacht haben: ein Durchlauf Promptotyping",
+   "status": "accepted"
+  },
+  {
+   "n": 59,
+   "id": "lp_slide",
+   "title": "Loop Engineering",
+   "status": "draft"
+  },
+  {
    "n": 60,
-   "id": "h2a76f1c8a73c47f4_4_1128",
-   "title": "CLAUDE.md optimieren",
+   "id": "h51448df817bc677_0_1715",
+   "title": "Research Mission Control",
    "status": "accepted"
   },
   {
    "n": 61,
+   "id": "sbv_slide",
+   "title": "Second Brain Vault",
+   "status": "accepted"
+  },
+  {
+   "n": 62,
+   "id": "gvt_slide",
+   "title": "Grounded Vault",
+   "status": "accepted"
+  },
+  {
+   "n": 63,
+   "id": "aep_slide",
+   "title": "Agentic Edition Pipeline",
+   "status": "accepted"
+  },
+  {
+   "n": 64,
+   "id": "ad_slide",
+   "title": "Asymmetrische Amplifikation: KI verstärkt, was schon da ist",
+   "status": "accepted"
+  },
+  {
+   "n": 65,
+   "id": "h2a76f1c8a73c47f4_4_120",
+   "title": "Anhang",
+   "status": "accepted"
+  },
+  {
+   "n": 66,
+   "id": "pd_slide",
+   "title": "Promptotyping Documents",
+   "status": "draft"
+  },
+  {
+   "n": 67,
+   "id": "h51448df817bc677_0_286",
+   "title": "Vibe Coding & Agentic (Knowledge and Research) Engineering",
+   "status": "accepted"
+  },
+  {
+   "n": 68,
    "id": "h2a76f1c8a73c47f4_4_1133",
    "title": "Commands in Claude Code (Auswahl)",
    "status": "accepted"
   },
   {
-   "n": 62,
-   "id": "h2a76f1c8a73c47f4_4_1187",
-   "title": "Compress the Vault",
-   "status": "accepted"
-  },
-  {
-   "n": 63,
+   "n": 69,
    "id": "h2a76f1c8a73c47f4_4_1252",
    "title": "AI Watermarking",
    "status": "draft"
+  },
+  {
+   "n": 70,
+   "id": "h51448df817bc677_0_732",
+   "title": "Scholar-Centred Design und Requirements Engineering",
+   "status": "accepted"
+  },
+  {
+   "n": 71,
+   "id": "h51448df817bc677_0_740",
+   "title": "Promptotyping: Exploring Vibe Coding before it was cool",
+   "status": "accepted"
+  },
+  {
+   "n": 72,
+   "id": "h51448df817bc677_0_750",
+   "title": "Vibe Coding",
+   "status": "accepted"
+  },
+  {
+   "n": 73,
+   "id": "h51448df817bc677_0_971",
+   "title": "A2A (Agent to Agent)",
+   "status": "accepted"
+  },
+  {
+   "n": 74,
+   "id": "h51448df817bc677_0_1041",
+   "title": "Agent Skill",
+   "status": "accepted"
+  },
+  {
+   "n": 75,
+   "id": "h51448df817bc677_0_1112",
+   "title": "AI Agent Begriffe",
+   "status": "accepted"
+  },
+  {
+   "n": 76,
+   "id": "h51448df817bc677_0_1180",
+   "title": "Model Routing",
+   "status": "accepted"
+  },
+  {
+   "n": 77,
+   "id": "h51448df817bc677_0_1249",
+   "title": "AI Agents gibt es schon länger als LLMs",
+   "status": "accepted"
+  },
+  {
+   "n": 78,
+   "id": "h51448df817bc677_0_1327",
+   "title": "Mapping Mobile Musicians Mobilität und Musiktheaterwissen im Graz der Nachkriegszeit am Beispiel der Sängerin Ira Malaniuk",
+   "status": "accepted"
+  },
+  {
+   "n": 79,
+   "id": "h51448df817bc677_0_1396",
+   "title": "“I know things”",
+   "status": "accepted"
+  },
+  {
+   "n": 80,
+   "id": "h51448df817bc677_0_1465",
+   "title": "Warum Wissen explizit festgehalten werden muss",
+   "status": "accepted"
+  },
+  {
+   "n": 81,
+   "id": "h51448df817bc677_0_1532",
+   "title": "Persona Engineering: “You are a …”",
+   "status": "accepted"
+  },
+  {
+   "n": 82,
+   "id": "h51448df817bc677_0_1605",
+   "title": "Was bedeutet “AI / Vibe / Agentic … Coding”?",
+   "status": "accepted"
+  },
+  {
+   "n": 83,
+   "id": "h51448df817bc677_0_1613",
+   "title": "AI Coding Literacy? – Ein Vorschlag",
+   "status": "accepted"
+  },
+  {
+   "n": 84,
+   "id": "h51448df817bc677_0_1619",
+   "title": "Computational Thinking",
+   "status": "accepted"
   }
  ]
 }

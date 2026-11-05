@@ -7,7 +7,7 @@ related: [plan.md, outline.md, sources.md]
 
 # Grounding plan
 
-The post is written inside its own instance of the Grounded Vault template (`grounded-vault/SETUP.md`). The instance has not been created yet. SETUP.md classes nine parameters as project decisions (class B) that are taken before any file is filled, and its first-session prompt asks the operator for each of them. This document therefore proposes every class B value, so that instantiation needs one acceptance and then runs mechanically.
+The post is written inside its own instance of the Grounded Vault template (`grounded-vault/SETUP.md`). The instance was created on 2026-11-04 at the place below with the class B values of this document, which the operator's instruction to implement the plan in full adopted. Its journal records the instantiation decisions, its `knowledge/state.md` carries the chapter register below.
 
 ## Place
 
@@ -24,7 +24,7 @@ The post is written inside its own instance of the Grounded Vault template (`gro
 | `{{REPOSITORY}}` | DigitalHumanitiesCraft/kcae-blogpost-vault |
 | `{{DATE}}` | the instantiation date |
 
-## Proposed class B values
+## Class B values
 
 | Marker | Proposal | Reason |
 |---|---|---|
@@ -57,53 +57,61 @@ One chapter per level-3 section of `outline.md`, plus the post's own opening and
 |---|---|---|
 | `0100-eroeffnung.md` | Eröffnung (own) | planned |
 | `0101-lernziele-und-ablauf.md` | Lernziele und Ablauf | planned |
-| `0102-begriffe-im-workshop.md` | Begriffe im Workshop | planned |
-| `0103-aufbauendes-beispiel-und-ablauf.md` | Aufbauendes Beispiel und Ablauf | planned |
+| `0102-aufbauendes-beispiel-und-ablauf.md` | Aufbauendes Beispiel und Ablauf | planned |
 | `0201-few-shotted-for-breakfast.md` | „Few-shotted for Breakfast“ | planned |
-| `0202-software-fuer-alle.md` | Software … für alle!? | planned |
+| `0202-fancy-research-tools-workflows.md` | fancy (research) tools & workflows | planned |
 | `0203-jagged-alien-intelligences.md` | Jagged Alien Intelligences | planned |
-| `0204-llm-basierte-ai-agents.md` | LLM-basierte AI Agents | planned |
-| `0205-ai-harness.md` | AI Harness | planned |
-| `0206-claude-code-in-der-claude-desktop-app.md` | Claude Code in der Claude Desktop App | planned |
-| `0207-beispiel-ein-projekt-konfigurieren.md` | Beispiel: ein Projekt konfigurieren | planned |
-| `0208-prompt-engineering-ist-so-2025.md` | Prompt Engineering ist so 2025! | planned |
-| `0209-markdown.md` | Markdown | planned |
-| `0210-wissensdokument.md` | Wissensdokument | planned |
-| `0211-tool-use-so-bedient-ein-ki-agent-den-rechner.md` | Tool Use: So bedient ein KI-Agent den Rechner | planned |
-| `0212-die-erste-iteration-des-dashboards.md` | Die erste Iteration des Dashboards | planned |
-| `0213-beispiel-feedback.md` | Beispiel: Feedback | planned |
-| `0214-subagents-ein-reviewer-agent.md` | Subagents: ein Reviewer Agent | planned |
-| `0215-beispiel-refactoring-und-kuratieren.md` | Beispiel: Refactoring und Kuratieren | planned |
-| `0216-context-window-managen.md` | Context Window managen | planned |
-| `0217-agents-md-claude-md.md` | AGENTS.md / CLAUDE.md | planned |
-| `0218-memory.md` | Memory | planned |
-| `0219-beispiel-vom-wissen-zum-skill.md` | Beispiel: vom Wissen zum Skill | planned |
-| `0220-skills-ein-pitch-skill.md` | Skills: ein Pitch-Skill | planned |
-| `0221-mcp-rag-memory.md` | MCP & RAG & Memory | planned |
-| `0222-context-engineering.md` | Context Engineering | planned |
-| `0301-agentic-engineering-im-ueberblick.md` | Agentic Engineering im Überblick | planned |
-| `0302-ki-governance-auf-zwei-ebenen.md` | KI-Governance auf zwei Ebenen | planned |
-| `0303-permission-modes-und-autonomie.md` | Permission Modes und Autonomie | planned |
-| `0304-hook-nur-im-projektordner-arbeiten.md` | Hook: nur im Projektordner arbeiten | planned |
-| `0305-knowledge-engineering.md` | Knowledge Engineering | planned |
-| `0306-docling-vom-pdf-zum-wissensdokument.md` | Docling: Vom PDF zum Wissensdokument | planned |
-| `0307-promptotyping-documents.md` | Promptotyping Documents | planned |
-| `0308-obsidian.md` | Obsidian | planned |
+| `0204-claude-code-in-der-claude-desktop-app.md` | Claude Code in der Claude Desktop App | planned |
+| `0205-prompt-engineering-ist-so-2025.md` | Prompt Engineering ist so 2025! | planned |
+| `0206-beispiel-webrecherche-und-wissensdokumente.md` | Beispiel: Webrecherche und Wissensdokumente | planned |
+| `0207-markdown.md` | Markdown | planned |
+| `0208-ai-agent-tool-use.md` | AI Agent & Tool Use | planned |
+| `0209-subagents.md` | Subagents | planned |
+| `0210-beispiel-wissensdokumente-destillieren.md` | Beispiel: Wissensdokumente destillieren | planned |
+| `0211-context-window-managen.md` | Context Window managen | planned |
+| `0212-agents-md-claude-md.md` | AGENTS.md / CLAUDE.md | planned |
+| `0213-beispiel-wissensbasis-nutzen.md` | Beispiel: Wissensbasis nutzen | planned |
+| `0214-ki-governance-auf-zwei-ebenen.md` | KI-Governance auf zwei Ebenen | planned |
+| `0215-permission-modes-und-autonomie.md` | Permission Modes und Autonomie | planned |
+| `0216-autonomie-und-zugriff.md` | Autonomie und Zugriff | planned |
+| `0217-ai-slop-de-slopification.md` | AI Slop & De-Slopification | planned |
+| `0218-skills-ein-pdf-skill.md` | Skills: ein PDF-Skill | planned |
+| `0219-zwischenfazit.md` | Zwischenfazit | planned |
+| `0301-beispiel-wissensdashboard.md` | Beispiel: Wissensdashboard | planned |
+| `0302-die-erste-iteration-des-dashboards.md` | Die erste Iteration des Dashboards | planned |
+| `0303-beispiel-follow-up-prompts-zum-dashboard.md` | Beispiel: Follow-Up Prompts zum Dashboard | planned |
+| `0304-agentic-governance-workspace.md` | Agentic Governance Workspace | planned |
+| `0305-computational-thinking.md` | Computational Thinking | planned |
+| `0306-vibe-coding-agentic-engineering-und-promptotypin.md` | Vibe Coding, Agentic Engineering und Promptotyping | planned |
+| `0307-wissensmodellierung.md` | Wissensmodellierung | planned |
+| `0308-agentisches-wissensmanagement.md` | Agentisches Wissensmanagement | planned |
 | `0309-how-steph-ango-uses-obsidian.md` | How Steph Ango uses Obsidian | planned |
-| `0310-das-wissensdokument-im-vault.md` | Das Wissensdokument im Vault | planned |
-| `0311-tags-und-tag-taxonomie.md` | Tags und Tag-Taxonomie | planned |
-| `0312-maps-of-content.md` | Maps of Content | planned |
-| `0313-beispiel-der-vault.md` | Beispiel: der Vault | planned |
-| `0314-kuratieren-struktur-und-inhalt.md` | Kuratieren: Struktur und Inhalt | planned |
-| `0315-vault-governance.md` | Vault-Governance | planned |
-| `0401-fancy-research-tools.md` | fancy (research) tools & workflows | planned |
-| `0402-loop-engineering.md` | Loop Engineering | planned |
-| `0403-subagents-und-workflows.md` | Subagents und Workflows | planned |
-| `0404-determinismus-so-weit-wie-moeglich-ausreizen.md` | Determinismus so weit wie möglich ausreizen | planned |
-| `0405-qualitaet-sichern.md` | Qualität sichern | planned |
-| `0406-beispiel-ein-analysewerkzeug.md` | Beispiel: ein Analysewerkzeug | planned |
-| `0407-ausblick-vorlagen-fuer-die-eigene-arbeit.md` | Ausblick: Vorlagen für die eigene Arbeit | planned |
-| `0501-vibe-coding-agentic-engineering-und-promptotyping.md` | Vibe Coding, Agentic Engineering und Promptotyping | planned |
-| `0502-frontier-llms-amplifizieren-computergestuetzte-w.md` | Frontier-LLMs amplifizieren computergestützte Wissensarbeit | planned |
-| `0503-ai-watermarking.md` | AI Watermarking | planned |
+| `0310-git-und-github.md` | Git und GitHub | planned |
+| `0311-beispiel-wissens-vault-bauen.md` | Beispiel: Wissens-Vault bauen | planned |
+| `0312-das-wissensdokument-im-vault.md` | Das Wissensdokument im Vault | planned |
+| `0313-aufbau-des-vaults.md` | Aufbau des Vaults | planned |
+| `0314-mit-dem-vault-arbeiten.md` | Mit dem Vault arbeiten | planned |
+| `0401-frontier-llms-amplifizieren-computergestuetzte-w.md` | Frontier-LLMs amplifizieren computergestützte Wissensarbeit | planned |
+| `0402-agentic-engineering-was-das-modell-umgibt-und-wa.md` | Agentic Engineering: was das Modell umgibt und was es davon sieht | planned |
+| `0403-model-context-protocol-mcp.md` | Model Context Protocol (MCP) | planned |
+| `0404-agentic-search-suchen-wie-im-terminal.md` | Agentic Search: suchen wie im Terminal | planned |
+| `0405-beispiel-eine-anfrage-mit-excel-daten.md` | Beispiel: Eine Anfrage mit Excel-Daten | planned |
+| `0406-beispiel-die-daten-im-dashboard.md` | Beispiel: Die Daten im Dashboard | planned |
+| `0407-subagents-agent-teams-und-dynamic-workflows.md` | Subagents, Agent Teams und Dynamic Workflows | planned |
+| `0408-qualitaet-sichern-skript-wo-moeglich-urteil-wo-n.md` | Qualität sichern: Skript, wo möglich, Urteil, wo nötig | planned |
+| `0409-test-driven-development-tdd.md` | Test Driven Development (TDD) | planned |
+| `0410-hook-nur-im-projektordner-arbeiten.md` | Hook: nur im Projektordner arbeiten | planned |
+| `0411-docling-dokumente-als-markdown.md` | Docling: Dokumente als Markdown | planned |
+| `0412-open-models-das-modell-im-eigenen-haus.md` | Open Models: das Modell im eigenen Haus | planned |
+| `0413-eigene-pipelines-der-agent-baut-das-lokale-model.md` | Eigene Pipelines: der Agent baut, das lokale Modell arbeitet | planned |
+| `0414-promptotyping.md` | Promptotyping | planned |
+| `0415-was-sie-gemacht-haben-ein-durchlauf-promptotypin.md` | Was Sie gemacht haben: ein Durchlauf Promptotyping | planned |
+| `0416-loop-engineering.md` | Loop Engineering | planned |
+| `0417-research-mission-control.md` | Research Mission Control | planned |
+| `0418-second-brain-vault.md` | Second Brain Vault | planned |
+| `0419-grounded-vault.md` | Grounded Vault | planned |
+| `0420-agentic-edition-pipeline.md` | Agentic Edition Pipeline | planned |
+| `0421-asymmetrische-amplifikation-ki-verstaerkt-was-sc.md` | Asymmetrische Amplifikation: KI verstärkt, was schon da ist | planned |
+| `0501-vibe-coding-agentic-knowledge-and-research-engin.md` | Vibe Coding & Agentic (Knowledge and Research) Engineering | planned |
+| `0502-ai-watermarking.md` | AI Watermarking | planned |
 | `0600-schluss.md` | Schluss (own) | planned |

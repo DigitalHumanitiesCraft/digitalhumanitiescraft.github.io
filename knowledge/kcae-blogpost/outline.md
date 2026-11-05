@@ -1,447 +1,519 @@
 ---
 title: "Outline: Knowledge, Context and Agentic Engineering as a blog post"
 created: 2026-11-04
+updated: 2026-11-05
 status: draft
 related: [plan.md, deck-inventory.md, deck-slides.json, sources.md, grounding.md]
 ---
 
 # Outline for acceptance
 
-Phase 4 of `plan.md`. The headings below are the headings of the post, in German as the post will be. Under each heading stands its slide marker (checked by `scripts/kcae-blogpost/check-structure.mjs`), the core claim the section has to carry, the terms it defines and the sources it rests on. Source status per term, including what was read only in part and what has no read source, is in `sources.md`. "Open" below means no read and checked source yet. No running text before acceptance.
+Phase 4 of `plan.md`, rebuilt on 2026-11-05 for deck revision Vgc4dbeUAt_ykg (84 slides). The headings below are the headings of the post, in German as the post will be. Under each heading stands its slide marker (checked by `scripts/kcae-blogpost/check-structure.mjs`), the core claim, the terms it defines and the sources it rests on. Sources name distillates of the Grounded Vault instance `DHCraft/kcae-blogpost-vault` by slug. "Pending" means a distillate is being written, "open" means no read source. A section on a slide that carries the draft marker gets assertions only and no running text.
 
-Deviation from the mapping table in `plan.md`: "Ausblick: Vorlagen für die eigene Arbeit" stays the last section of Session 3, where it sits in the deck, and the post gets its own close after "Weiterführend". The script enforces deck order, and the close carries no slide.
+The deck has no divider slide for Session 1, so the post adds its own level-2 header. The appendix contributes only the sections decided for "Weiterführend", and the post ends with its own close.
 
 <!-- omitted: h2c7fc6986ae54bd6_0_0 h233dfacb5d8bd9eb_0_326 g2fd344f368c4a6b4_680 h2a76f1c8a73c47f4_4_432 -->
 
-Slides 1–4 (title, DHCraft, Vorstellungsrunde, Materialien) are workshop logistics. The opening links the deck, the teaching line website and the Zotero group agki-dh, which is all the reader needs from them.
+Slides 1–4 (title, DHCraft, Vorstellungsrunde, Materialien) are workshop logistics. The opening links the deck, the teaching line website, the glossary and the Zotero group agki-dh, which is all the reader needs from them.
 
 ## Eröffnung
 
-Own section, no slide. Core claim: working with LLM-based AI agents has shifted from writing single prompts to designing the knowledge, context and environment in which an agent works, and the post follows a two-day workshop through that shift with one running example. It names the workshop (Uni for Life, University of Graz, 9 and 10 November 2026), links the deck and states that hands-on prompts stay verbatim. Points to the Promptotyping paper for the method and to Asymmetric Amplification for the broader argument, without repeating either.
+Own section, no slide. Working with LLM-based AI agents has shifted from writing single prompts to designing the knowledge, context and environment in which an agent works, and the post follows the two-day workshop (Uni for Life, University of Graz, 9 and 10 November 2026) through that shift with one running example. Hands-on prompts stay verbatim. Points to the Promptotyping paper for the method and to Asymmetric Amplification for the broader argument, without repeating either. Written last.
 
 ### Lernziele und Ablauf
 <!-- slides: h2c7fc6986ae54bd6_12_113 -->
 
-Core claim: the workshop divides agentic work into three areas, each with one learning goal (explain how LLM, agent and harness interact and steer the agent; build and maintain project knowledge an agent can rely on; plan agentic workflows, check their results and transfer them). Times and Zoom drop out.
+Slide 5, accepted. Core claim: Agentic engineering lets AI agents work while people set goal, limits and acceptance, and it is approached through four disciplines: prompt engineering (goal, constraints, intermediate steps), context engineering (what the agent has in front of it at each step), knowledge engineering (project knowledge in documents that human and agent read, check and continue) and harness engineering (tools, permissions and checks). Times drop out.
 
-Terms: Prompt and Context Engineering, Knowledge Engineering, Agentic Engineering as section names only.
-Sources: none needed.
-
-### Begriffe im Workshop
-<!-- slides: bg_slide -->
-
-Core claim: the terms fall into four areas, with the LLM underneath all of them and governance across all of them. The section works as the post's term index and links each term to the section that defines it.
-
-Terms: the full term list of the slide.
-Sources: none here, each term is sourced where it is defined.
+Terms: Agentic Engineering, Prompt Engineering, Context Engineering, Knowledge Engineering, Harness Engineering (overview only).
+Sources: The slide's source is a video. The four disciplines are the workshop's framing, posit. Definitions are sourced in their sections.
 
 ### Aufbauendes Beispiel und Ablauf
 <!-- slides: h2c7fc6986ae54bd6_12_187 -->
 
-Core claim: one knowledge base on agentic engineering and governance with a browser interface grows across all sections, so each concept is shown at the point where the example needs it. Two standing rules: the most expensive models are unnecessary for the exercises, and personal or sensitive data (GDPR) and uses regulated by the EU AI Act need care.
+Slide 6, accepted. Core claim: One knowledge base on agentic engineering and governance with a browser interface grows step by step across the post. Care is needed with personal and sensitive data (GDPR) and uses that fall under the EU AI Act. Model and quota advice drops out.
 
-Terms: none new.
-Sources: GDPR and AI Act only as named regulations (Regulation (EU) 2016/679, Regulation (EU) 2024/1689), open.
+Terms: none new
+Sources: Regulation (EU) 2024/1689 named only (eu-2024-ai-act once distilled).
 
-## Session 1: Prompt und Context Engineering
-<!-- slides: sec1_slide; renamed -->
+## Session 1
 
-Divider. One sentence on what the session covers.
+Own header, the deck has no divider slide for Session 1.
 
 ### „Few-shotted for Breakfast“
 <!-- slides: h2c7fc6986ae54bd6_0_68 -->
 
-Core claim: practitioners at the frontier report that projects that took weeks now take a morning, and at the same time describe a new layer of abstraction (agents, subagents, context, memory, permissions, skills, hooks, MCP) that comes without a manual. The section opens Session 1 with that tension.
+Slide 7, accepted. Core claim: Practitioners at the frontier report that projects of weeks now take a morning, and describe a new layer of abstraction (agents, subagents, context, memory, permissions, skills, hooks, MCP) without a manual.
 
-Terms: few-shot (only as the pun's origin, defined under Prompt Engineering).
-Sources: the two posts quoted in the speaker notes (Karpathy, 26 December 2025 and 1 November 2026); Brown et al. (2020) for "few-shot", read in part.
+Terms: few-shot (origin of the pun)
+Sources: Karpathy posts of 26 December 2025 and 1 November 2026 (weiterfuehrend package); brown-2020-few-shot-learners.
 
-### Software … für alle!?
+### fancy (research) tools & workflows
 <!-- slides: h2c7fc6986ae54bd6_28_105 -->
 
-Core claim: when an agent builds software from a description, buying standard software and building a small tool for one's own needs become comparable options, and the deciding question moves to who maintains and checks the tool afterwards.
+Slide 8, accepted. Core claim: Small research tools and workflows that coding agents build from a maintained knowledge base, mostly static browser applications. The slide lists the provider's own tools as examples.
 
-Terms: none new.
-Sources: Litt et al. (2025), malleable software. The maintenance question is the workshop's own.
+Terms: fancy (research) tools & workflows
+Sources: dhcraft-2026-fancy-research-tools (provider's own page, copy rules CR-01 to CR-07 apply).
 
 ### Jagged Alien Intelligences
 <!-- slides: h2c7fc6986ae54bd6_12_95; renamed -->
 
-Core claim: LLM capabilities are jagged, strong on some hard tasks and weak on some easy ones, and their properties (probabilistic output, confabulation, bias, opacity, sycophancy, a world model of their own, knowledge cut-off, no continual learning, reasoning as extra tokens) decide how to work with them.
+Slide 9, accepted. Core claim: LLM capabilities are uneven, and their properties (probabilistic output, confabulation, bias, opacity, sycophancy, a world model of their own, tool use, context window, knowledge cut-off without continual learning, reasoning as extra tokens) decide how to work with them.
 
-Terms: LLM, jagged frontier, confabulation, bias, sycophancy, knowledge cut-off, reasoning model.
-Sources: Gans (2026); Shanahan (2023); Farquhar et al. (2024) and Ji et al. (2023); Gallegos et al. (2024); Sharma et al. (2023); Lindsey et al. (2025); Cheng et al. (2024); Snell et al. (2024). Dell'Acqua et al. (2026) has no accessible full text and stays out until read. Summerfield (2025) not checked.
-
-### LLM-basierte AI Agents
-<!-- slides: h2a76f1c8a73c47f4_4_265 -->
-
-Core claim: an AI agent uses an LLM to plan and choose actions, including tool calls, towards a set goal, feeds execution results back into its next steps and has bounded autonomy.
-
-Terms: AI Agent.
-Sources: Sapkota, Roumeliotis and Karkee (2025); Anthropic (2024). Xu et al. (2025) has no accessible full text.
-
-### AI Harness
-<!-- slides: h2a76f1c8a73c47f4_4_195 -->
-
-Core claim: the harness is the software layer that runs the agent loop around a model, manages context and state, coordinates model calls and tools and enforces permissions and stop conditions, which is why the same model behaves differently in different harnesses.
-
-Terms: AI Harness, Harness Engineering.
-Sources: Zhong and Zhu (2026); Liu (2026); a practitioner anatomy of the agent harness (LangChain, 2026).
+Terms: LLM, Jaggedness, Konfabulation, Bias, Sycophancy, Knowledge Cut-off, Reasoning
+Sources: gans-2026-jagged-intelligence; shanahan-2023-talking-about-llms; farquhar-2024-semantic-entropy; ji-2023-hallucination-survey; gallegos-2024-bias-fairness; sharma-2023-sycophancy; lindsey-2025-biology-llm; cheng-2024-dated-data; wu-2024-continual-learning; snell-2024-test-time-compute. Dell'Acqua et al. (2026) cited on the slide has no accessible full text. Summerfield (2025) not read.
 
 ### Claude Code in der Claude Desktop App
 <!-- slides: h2c7fc6986ae54bd6_12_201 -->
 
-Core claim: the interface of one concrete harness makes the concepts visible (tool calls in the transcript, slash commands, connectors, model and effort choice, permission mode, usage and context display). Product details are dated to November 2026.
+Slide 10, accepted. Core claim: An AI harness is the software around an LLM that runs the agent loop, provides context and tools and enforces limits. The interface of one harness makes the concepts visible (tool calls, slash commands, connectors, model and effort choice, permission mode, usage and context display), dated to November 2026.
 
-Terms: Slash Command, Connector, Plugin (short).
-Sources: vendor documentation (permission modes, context window), dated November 2026.
-
-### Beispiel: ein Projekt konfigurieren
-<!-- slides: h2a76f1c8a73c47f4_4_2; renamed -->
-
-Core claim: the first prompt of the running example, verbatim, sets task, constraints, clarifying questions, milestones and register. It is constructed to bundle the workshop's strategies. The reader watches which tools the agent calls, when it asks back and when it stops.
-
-Terms: none new.
-Sources: none, the prompt is the operator's own.
+Terms: AI Harness, Slash Command, Connector
+Sources: zhong-2026-harness-engineering; liu-2026-agent-harness; anthropic-2026-explore-context-window; anthropic-2026-permission-modes.
 
 ### Prompt Engineering ist so 2025!
 <!-- slides: h2a76f1c8a73c47f4_4_29 -->
 
-Core claim: the prompt decomposes into task, constraints, context built by questions, process control by milestones, and audience and style. With current models the form of a prompt matters less than goal, knowledge and success criteria, and quality increasingly comes from context and from the environment that steers and checks the work.
+Slide 11, accepted. Core claim: The first prompt of the running example, decomposed into task, constraints, context built by questions, process control by milestones and register. Quality comes increasingly from context and from the environment that steers and checks the work.
 
-Terms: Prompt Engineering, few-shot examples, Context Engineering (forward reference), Harness Engineering (forward reference).
-Sources: vendor prompting guides for success criteria and few-shot examples. The claim on the form of a prompt and the strategies of clarifying questions and milestones are open.
+Terms: Prompt Engineering
+Sources: Prompting docs (session-1 package, pending); the claim on the form of a prompt is open.
+
+### Beispiel: Webrecherche und Wissensdokumente
+<!-- slides: h51448df817bc677_0_5 h51448df817bc677_0_54; renamed -->
+
+Slide 12, 13, accepted. Core claim: The first hands-on, verbatim: an empty folder, a session with access to it, the prompt, and what happens (tool calls, questions, stops). The result of one run shows the folders the prompt set and the files the agent added on its own.
+
+Terms: none new
+Sources: Own prompts, posit.
 
 ### Markdown
 <!-- slides: h2c7fc6986ae54bd6_38_43 -->
 
-Core claim: Markdown expresses document structure in plain text with few characters, which costs an LLM far fewer tokens than Word XML for the same structure. Tokens are the units LLMs process and are the measure of cost and context, and the tokenizer depends on the model.
+Slide 14, accepted. Core claim: Markdown expresses document structure in plain text with few characters. Tokens are the units LLMs process and the measure of cost and context, the tokenizer depends on the model.
 
-Terms: Markdown, Token, Tokenizer.
-Sources: Gruber (2004); Sennrich, Haddow and Birch (2016); vendor token-counting documentation. The token comparison with Word XML is open and is best shown by an own measurement.
+Terms: Markdown, Token, Tokenizer
+Sources: sennrich-2016-subword-units; Gruber (2004) and token counting docs pending. The token comparison with Word XML is open.
 
-### Wissensdokument
-<!-- slides: h2c7fc6986ae54bd6_38_122 -->
+### AI Agent & Tool Use
+<!-- slides: h51448df817bc677_0_41 -->
 
-Core claim: a knowledge document is a structured record of externalised knowledge, distilled from sources, data or experience for reuse by humans and agents, with statements traceable to evidence and assumptions made explicit. A good one is readable for both, compact, in an open format and curatable. In the example it is `knowledge/project.md`.
+Slide 15, accepted. Core claim: An AI agent is a system in which an LLM chooses the next action step by step towards a set goal, including tool calls that software outside the model executes. The result feeds the next decision.
 
-Terms: Wissensdokument, externalised knowledge.
-Sources: Karpathy (2026), LLM Wiki; the Promptotyping specification for the document notion. Nonaka (1994) has no accessible full text.
+Terms: AI Agent, Tool Use
+Sources: anthropic-2024-building-effective-agents (document); sapkota-2025-agents-vs-agentic-ai; yao-2023-react.
 
-### Tool Use: So bedient ein KI-Agent den Rechner
-<!-- slides: h2a76f1c8a73c47f4_4_67 -->
+### Subagents
+<!-- slides: h51448df817bc677_0_31 -->
 
-Core claim: on a plain request the agent decides its own steps (list, change directory, read) and each result determines the next. This loop of decision, tool call and feedback distinguishes an agent from a chat.
+Slide 16, accepted. Core claim: A subagent receives a bounded task from another agent, works with its own context window, instructions, tools and model, and returns only the result. It suits large, bounded tasks and independent review.
 
-Terms: Tool Use.
-Sources: Yao et al. (2023), ReAct; Anthropic (2024).
+Terms: Subagent, LLM-as-a-Judge
+Sources: anthropic-2026-custom-subagents; zheng-2023-llm-as-a-judge; anthropic-2025-multi-agent-research.
 
-### Die erste Iteration des Dashboards
-<!-- slides: h2a76f1c8a73c47f4_4_49 -->
+### Beispiel: Wissensdokumente destillieren
+<!-- slides: h51448df817bc677_0_106; renamed -->
 
-Core claim: the dashboard consists of HTML, CSS, JavaScript and JSON served by a local server. Simple technology is a deliberate choice, because small tools that can be read and checked serve non-developers best. Generic interface elements that LLMs add unasked (AI slop) are removed in every iteration.
+Slide 17, accepted. Core claim: The second hands-on, verbatim: guiding questions, distillation of every source by subagents, revision of knowledge/, and a curation round. A knowledge document is defined here.
 
-Terms: AI Slop, De-Slopification (marked as working term), local server.
-Sources: Shaib et al. (2025) for slop in text, applied here to interfaces.
-
-### Beispiel: Feedback
-<!-- slides: h2a76f1c8a73c47f4_4_80; renamed -->
-
-Core claim: a first iteration is rarely finished. Asking the model to check its own result uses self-verification and self-refinement, and a subagent acting as reviewer gives an independent judgement (LLM-as-a-Judge). Prompts verbatim.
-
-Terms: Self-Verification, Self-Refine, LLM-as-a-Judge.
-Sources: Madaan et al. (2023); Weng et al. (2023); Zheng et al. (2023).
-
-### Subagents: ein Reviewer Agent
-<!-- slides: h2a76f1c8a73c47f4_4_680 -->
-
-Core claim: a subagent is a separate agent instance with its own context window, instructions and tools. The main agent delegates and receives only the result, which pays off for output-heavy, self-contained or independently checked tasks. A custom subagent is a Markdown file with a short header, shown verbatim.
-
-Terms: Subagent.
-Sources: vendor documentation on subagents; Anthropic (2025) on multi-agent research.
-
-### Beispiel: Refactoring und Kuratieren
-<!-- slides: h2a76f1c8a73c47f4_4_99; renamed -->
-
-Core claim: the same self-checking applies to code (refactoring) and to knowledge (curation), because LLM output always carries noise. Versioning with Git makes every state recoverable. Prompts verbatim.
-
-Terms: Refactoring, Kuratieren (first mention, defined in Session 2), Git.
-Sources: Pro Git for version control. Refactoring is open.
+Terms: Wissensdokument, Destillieren, Kuratieren
+Sources: karpathy-2026-llm-wiki (document); dhcraft-2026-promptotyping-convention.
 
 ### Context Window managen
-<!-- slides: h2a76f1c8a73c47f4_4_600 -->
+<!-- slides: h51448df817bc677_0_130 -->
 
-Core claim: input and output share the context window, and performance degrades with input length long before the window is full (context rot). Compaction replaces the history by a summary and can lose what existed only in conversation, which is why durable knowledge belongs in documents.
+Slide 18, accepted. Core claim: Input and output share the context window, performance degrades with input length long before it is full, and compaction can lose what existed only in conversation.
 
-Terms: Context Window, Context Rot, Context Compression.
-Sources: vendor context-window documentation; Hong, Troynikov and Huber (2025); vendor documentation for compaction.
+Terms: Context Window, Context Rot, /context, /compact
+Sources: anthropic-2026-explore-context-window; anthropic-2025-effective-context-engineering (document); context rot report (pending).
 
 ### AGENTS.md / CLAUDE.md
 <!-- slides: h2a76f1c8a73c47f4_4_633 -->
 
-Core claim: AGENTS.md and CLAUDE.md hold durable instructions (purpose, rules, pointers to knowledge) that the harness loads at every session and after compaction, on a global and a project level. Both examples verbatim.
+Slide 19, accepted. Core claim: Markdown files with durable instructions that the harness loads at every session and after compaction, on a global and a project level.
 
-Terms: AGENTS.md, CLAUDE.md.
-Sources: agents.md; vendor memory documentation.
+Terms: AGENTS.md, CLAUDE.md, /init
+Sources: agents-md (document); anthropic-2026-claude-code-memory.
 
-### Memory
-<!-- slides: mem_slide -->
+### Beispiel: Wissensbasis nutzen
+<!-- slides: h51448df817bc677_0_157; renamed -->
 
-Core claim: memory consists of notes the agent derives from the work itself and reloads later. Binding rules belong in CLAUDE.md or AGENTS.md, because memory is maintained by the agent.
+Slide 20, accepted. Core claim: The third hands-on, verbatim: answering only from knowledge/ and sources/ with the file for every statement. Agents retrieve by searching the terminal with full-text search and regular expressions.
 
-Terms: Memory.
-Sources: vendor documentation of both harnesses. The slide's storage path and switch for the second harness need correcting (`sources.md`).
-
-### Beispiel: vom Wissen zum Skill
-<!-- slides: h2a76f1c8a73c47f4_4_869 hoA_slide; renamed -->
-
-Core claim: the second hands-on transfers the collected knowledge to one's own organisation in four steps (guiding question by interview, content in the chat before a file, design feedback, the proven procedure saved as a skill). Releasing content before the file saves tokens. Slide 27 (Skill: Wissensbasis + Kontext → Folien) is merged here as its motivation.
-
-Terms: none new.
-Sources: none, prompts are the operator's own. The heading needs a title without the "Vom X zum Y" formula before writing (writing-style rule).
-
-### Skills: ein Pitch-Skill
-<!-- slides: sk_slide -->
-
-Core claim: a skill is stored procedural knowledge, a `SKILL.md` with optional scripts and templates. The harness loads only its description until a task matches (progressive disclosure), unlike CLAUDE.md, which applies in every session. An agent-written skill is checked like any agent product.
-
-Terms: Skill, progressive disclosure.
-Sources: Agent Skills specification; vendor skills documentation.
-
-### MCP & RAG & Memory
-<!-- slides: h2a76f1c8a73c47f4_4_905 -->
-
-Core claim: an agent gains knowledge and abilities beyond its model in four ways, skills, external services over the Model Context Protocol, retrieval-augmented generation and memory.
-
-Terms: MCP, RAG.
-Sources: Model Context Protocol specification; Lewis et al. (2020) for RAG in its original sense.
-
-### Context Engineering
-<!-- slides: ce_slide -->
-
-Core claim: context engineering designs what stands in the context window (instructions, knowledge, tools, memory, the request), selected and condensed so the LLM works reliably in limited space. The four stages acquire, process, manage and apply follow the survey by Mei et al. (2025) and are filled with the methods the session has already used.
-
-Terms: Context Engineering, retrieval without vector database, distillation, context compression, multi-agent context isolation.
-Sources: Mei et al. (2025), read in part; Anthropic (2025) on context engineering.
-
-## Session 2: Knowledge Engineering
-<!-- slides: sec2_slide; renamed -->
-
-Divider.
-
-### Agentic Engineering im Überblick
-<!-- slides: h2a76f1c8a73c47f4_4_1259 -->
-
-Core claim: agentic engineering has five levels (prompt, knowledge and context, harness, loop, factory), and the post moves through them in this order.
-
-Terms: Agentic Engineering, Harness, Loop, Factory.
-Sources: the deck uses a video, which cannot anchor a definition. Zhong and Zhu (2026) for harness and Anthropic (2024) for loop cover two levels, the scheme as a whole and Factory are open.
+Terms: Retrieval
+Sources: anthropic-2025-effective-context-engineering (document) for agentic retrieval.
 
 ### KI-Governance auf zwei Ebenen
 <!-- slides: gm_slide -->
 
-Core claim: governance for agents concerns data and the agent itself, with five questions on both levels (visibility, classification, jurisdiction, access, evidence). The core rule is the Rule of Two, at most two of processing untrusted content, accessing private data and changing state or communicating externally, otherwise a human decides.
+Slide 21, accepted. Core claim: Governance for agents concerns data and the agent itself, with questions of visibility, classification, jurisdiction, access and evidence on both levels.
 
-Terms: KI-Governance, Rule of Two, prompt injection.
-Sources: Meta AI (2025); Greshake et al. (2023) for prompt injection; Liu (2026) for the agent level. The data level and its five questions are open.
+Terms: KI-Governance
+Sources: The slide's source is a video. Liu (2026) covers the agent level only. The data level and its five questions are open.
 
 ### Permission Modes und Autonomie
 <!-- slides: za_slide -->
 
-Core claim: permission modes set what an agent does without asking, from plan to bypass, and thereby answer the governance question of autonomy. A classifier judges risk in auto mode, but only a deny rule or a hook enforces a boundary.
+Slide 22, accepted. Core claim: Claude Code works with the user's rights, and the permission mode sets what the agent does without asking. In auto mode a classifier judges actions and can err, a fixed boundary needs a rule in the settings, and some areas are never changed without asking.
 
-Terms: Permission Mode, autonomy level, classifier.
-Sources: vendor documentation; Feng, McDonald and Zhang (2025) for levels of autonomy.
+Terms: Permission Mode, Autonomie
+Sources: anthropic-2026-permission-modes; feng-2025-levels-of-autonomy.
 
-### Hook: nur im Projektordner arbeiten
-<!-- slides: hk_slide -->
+### Autonomie und Zugriff
+<!-- slides: gm2_slide -->
 
-Core claim: a hook is a script the harness runs on an event and that can block a tool call. A rule in CLAUDE.md can be overlooked, a hook is enforced, within limits (shell commands bypass a file-tool hook, full protection needs a sandbox). Configuration verbatim.
+Slide 23, accepted. Core claim: Autonomy and access of an agent as governance dimensions of the harness, after the UNU Macau technology report.
 
-Terms: Hook, Sandbox, least privilege.
-Sources: vendor hooks and sandboxing documentation; Saltzer and Schroeder (1975).
+Terms: Rule of Two, Prompt Injection (if the slide's figure carries them)
+Sources: liu-2026-agent-harness; meta-2025-agents-rule-of-two (document); greshake-2023-indirect-prompt-injection.
 
-### Knowledge Engineering
-<!-- slides: ke_slide -->
+### AI Slop & De-Slopification
+<!-- slides: h51448df817bc677_0_213 -->
 
-Core claim: knowledge engineering builds and maintains explicit, revisable project knowledge about data, purpose and decisions. Because a frontier LLM implements only as precisely as its specification, domain understanding turns into requirements. Three established fields contribute, personal information management, project management and knowledge modelling.
+Slide 24, accepted. Core claim: AI slop is low-quality AI-generated content, and even good results carry traces of it when taken over unchecked. De-slopification recognises and removes these traces before passing a result on.
 
-Terms: Knowledge Engineering, Personal Information Management, Projektmanagement, Wissensmodellierung.
-Sources: Studer, Benjamins and Fensel (1998); Allen, Stork and Groth (2023); Jones et al. (2017); the PM² guide of the European Commission in place of Kuster et al. (2022), which has no accessible full text. The step sequence after Russell and Norvig (2020) is open.
+Terms: AI Slop, De-Slopification
+Sources: shaib-2025-ai-slop (text only, applied to interfaces as an extension).
 
-### Docling: Vom PDF zum Wissensdokument
-<!-- slides: dl_slide -->
+### Skills: ein PDF-Skill
+<!-- slides: h51448df817bc677_0_247 -->
 
-Core claim: Docling converts documents locally into structured Markdown or JSON, preserving headings, reading order and tables, and so performs the knowledge-acquisition step, with a human choosing the source and checking the distillate.
+Slide 25, accepted. Core claim: A skill is stored procedural knowledge, a Markdown file with name and description in the header and the instructions below, optionally with scripts. The harness loads only the description until a task matches, unlike CLAUDE.md.
 
-Terms: Docling, OCR, DoclingDocument.
-Sources: Auer et al. (2024); Docling documentation.
+Terms: Skill, progressive disclosure
+Sources: agentskills-2026-specification; anthropic-2026-agent-skills-overview.
 
-### Promptotyping Documents
-<!-- slides: pd_slide -->
+### Zwischenfazit
+<!-- slides: h51448df817bc677_0_180 -->
 
-Core claim: Promptotyping documents are knowledge documents classified by the kind of knowledge they carry, declarative, process and action documents, and the reader has met all three in Session 1. The section places the classification and links the paper.
+Slide 26, accepted. Core claim: Recap of Session 1 as a term map (LLM, agent and harness, prompt, knowledge and context engineering, governance) with the session's open questions for the reader.
 
-Terms: Promptotyping Documents, Declarative, Process and Action Documents.
-Sources: the Promptotyping specification (convention and glossary); the paper once published. The specification now names the class Knowledge Document, which the heading has to reflect.
+Terms: none new
+Sources: Recap, posit.
 
-### Obsidian
-<!-- slides: h2a76f1c8a73c47f4_4_924 -->
+## Session 2
+<!-- slides: h51448df817bc677_0_257 -->
 
-Core claim: Obsidian stores notes as Markdown files in a local folder, the vault, and a vault works on three levels, personal information, project work and knowledge structure from informal links to formal modelling.
+Divider.
 
-Terms: Obsidian, Vault.
-Sources: Obsidian help pages.
+### Beispiel: Wissensdashboard
+<!-- slides: h2a76f1c8a73c47f4_4_2; renamed -->
+
+Slide 28, accepted. Core claim: The fourth hands-on, verbatim: a plan with milestones for a dashboard over the knowledge base, a static single-page application generated from knowledge/ and sources/ by a script.
+
+Terms: Implementierungsplan, Meilenstein
+Sources: Own prompt, posit.
+
+### Die erste Iteration des Dashboards
+<!-- slides: h2a76f1c8a73c47f4_4_49 -->
+
+Slide 29, accepted. Core claim: The page consists of HTML, CSS, JavaScript and data that a script generates, and opens by double-click. Small tools whose results one can check oneself may be vibe coded at one's own responsibility.
+
+Terms: Vibe Coding (first mention)
+Sources: Own example; vibe coding sourced in its section.
+
+### Beispiel: Follow-Up Prompts zum Dashboard
+<!-- slides: h2a76f1c8a73c47f4_4_80; renamed -->
+
+Slide 30, accepted. Core claim: Feedback, self-verification and self-refinement, a subagent as LLM-as-a-Judge, refactoring and bringing knowledge/ up to date, verbatim.
+
+Terms: Self-Verification, Self-Refine, LLM-as-a-Judge, Refactoring
+Sources: madaan-2023-self-refine; weng-2023-self-verification; zheng-2023-llm-as-a-judge.
+
+### Agentic Governance Workspace
+<!-- slides: h51448df817bc677_0_330 -->
+
+Slide 31, accepted. Core claim: A worked example of the provider: the dashboard pattern grown into a governance workspace.
+
+Terms: none new
+Sources: Provider's own page, link only.
+
+### Computational Thinking
+<!-- slides: ct_slide -->
+
+Slide 32, accepted. Core claim: Computational Thinking is the ability to formulate, abstract and decompose a problem and its solution so that an executing agent can carry it out, and to judge whether the result holds. An LLM fills gaps silently where a compiler once enforced precision. Agents increasingly decompose, formulating and checking stay with the human.
+
+Terms: Computational Thinking (working definition in the line of Wing 2006 and 2008 and Shute et al. 2017, marked as such)
+Sources: Wing (2006); Wing (2008); Shute, Sun and Asbell-Clarke (2017), as recorded by the operator's session of 2026-11-05 in sources.md; not yet distilled into the vault.
+
+### Vibe Coding, Agentic Engineering und Promptotyping
+<!-- slides: h51448df817bc677_0_1695 -->
+
+Slide 33, accepted. Core claim: Vibe coding, agentic engineering and Promptotyping are three ways of working that differ in how much checking and recorded project knowledge they demand. Vibe coding takes over generated code unread and suits work where little is at stake. Agentic engineering has coding agents write, run and revise code while people provide tools, specify problems, weigh solutions and check the result. Promptotyping builds on agentic engineering, checks its project knowledge against the sources and leaves scholarly validation with the researchers.
+
+Terms: Vibe Coding, Agentic Engineering, Promptotyping
+Sources: Karpathy (2025) vibe coding post; willison-2026-agentic-engineering; Willison (2025); Pollin (2026), Promptotyping paper version 1.0; pollin-2026-promptotyping; hassan-2025-agentic-software-engineering as neighbour. Operator's section of 2026-11-05.
+
+### Wissensmodellierung
+<!-- slides: h51448df817bc677_0_822 -->
+
+Slide 34, accepted. Core claim: Three established fields contribute to knowledge engineering: knowledge modelling (identify, represent and make queryable the concepts of a domain), personal information management (handling one's own information across formats and places, core problem fragmentation) and project management.
+
+Terms: Wissensmodellierung, Personal Information Management, Projektmanagement
+Sources: studer-1998-knowledge-engineering; allen-2023-knowledge-engineering-llms; jones-2017-personal-information-management; european-commission-2023-pm2-guide. The step sequence after Russell and Norvig is open.
+
+### Agentisches Wissensmanagement
+<!-- slides: h51448df817bc677_0_1730 -->
+
+Slide 35, accepted. Core claim: Obsidian stores notes as Markdown files in a local folder, the vault, so a coding agent can read and edit them directly. Links, tags and folders form relations adaptable to a domain, and the vault serves knowledge modelling, personal information and project management.
+
+Terms: Obsidian, Vault
+Sources: obsidian-2026-create-vault; obsidian-2026-internal-links; obsidian-2026-properties.
 
 ### How Steph Ango uses Obsidian
 <!-- slides: h2a76f1c8a73c47f4_4_933 -->
 
-Core claim: the vault style of Obsidian's chief executive (one vault, few folders, plural categories and tags, ISO dates, many links) is one possible style, and its main lesson is to choose, write down and revise one's own rules. The post names him as cited author of the linked text.
+Slide 36, accepted. Core claim: The vault style of Obsidian's chief executive is one possible style, minimalist and link-based, and a starting point for one's own rules. Named as cited author of the linked text.
 
-Terms: none new.
-Sources: Ango, "How I use Obsidian" (stephango.com/vault).
+Terms: none new
+Sources: ango-how-i-use-obsidian (document). His role is not stated in his text.
+
+### Git und GitHub
+<!-- slides: h51448df817bc677_0_1600 -->
+
+Slide 37, accepted. Core claim: Git records every state of a project, a commit saves a state with a message, a tag marks a released state, and GitHub hosts repositories. Every agent step becomes traceable and reversible. Push and publication stay with the human.
+
+Terms: Git, Commit, Tag, GitHub, Push
+Sources: chacon-2014-pro-git; anthropic-2025-long-running-harnesses.
+
+### Beispiel: Wissens-Vault bauen
+<!-- slides: h51448df817bc677_0_324; renamed -->
+
+Slide 38, accepted. Core claim: The fifth hands-on, verbatim: the folder becomes an Obsidian vault in three prompts (plan, build, curate). The more complex a project, the more knowledge structure it needs, which is the workshop's thesis.
+
+Terms: none new
+Sources: Own prompts, posit.
 
 ### Das Wissensdokument im Vault
 <!-- slides: wv_slide -->
 
-Core claim: in the vault a knowledge document gains a head (YAML front matter that makes the vault queryable) and relations (wikilinks and backlinks), around a body of one concept per file. Example verbatim.
+Slide 39, draft. Core claim: In the vault a knowledge document gains a head (YAML front matter), tags from a controlled vocabulary and relations (wikilinks under Related).
 
-Terms: Frontmatter, YAML, Wikilink, Backlink.
-Sources: Obsidian help on properties, links and backlinks; YAML 1.2.2.
+Terms: Frontmatter, YAML, Tag-Taxonomie, Wikilink
+Sources: obsidian-2026-properties; yaml-2021-yaml-1-2-2; niso-2005-z39-19; obsidian-2026-internal-links; obsidian-2026-backlinks.
 
-### Tags und Tag-Taxonomie
-<!-- slides: tg_slide -->
-
-Core claim: tags are combinable attributes across folders, and a tag taxonomy is a controlled vocabulary of non-overlapping categories, which prevents synonyms, typos and uneven granularity. Maturity belongs in `status`.
-
-Terms: Tag, Tag-Taxonomie, controlled vocabulary.
-Sources: ANSI/NISO Z39.19-2005 (R2010).
-
-### Maps of Content
-<!-- slides: mc_slide -->
-
-Core claim: a map of content is a curated entry point that lists related documents with one line each and can be nested. For agents MOCs are navigation infrastructure, because a larger vault does not fit the context window.
-
-Terms: Map of Content, HOME.md.
-Sources: Linking Your Thinking, MOCs (defn), read by the research agent and not yet checked here.
-
-### Beispiel: der Vault
-<!-- slides: h3_slide; renamed -->
-
-Core claim: the third hands-on turns the knowledge base into a vault in three checked steps (analyse, create, check). Prompts verbatim.
-
-Terms: none new.
-Sources: none.
-
-### Kuratieren: Struktur und Inhalt
-<!-- slides: ku_slide -->
-
-Core claim: curation is the ongoing care of the vault, and structural curation (front matter, tags, links, MOCs) is easy to check and undo, while content curation (wording, duplicates, contradictions) rests on judgement and is hard to undo. Prompts verbatim.
-
-Terms: Kuratieren, strukturelle und inhaltliche Kuration.
-Sources: DCC Curation Lifecycle Model (Higgins, 2008), as an analogy.
-
-### Vault-Governance
+### Aufbau des Vaults
 <!-- slides: vg_slide -->
 
-Core claim: vault governance makes the rules of the vault explicit in files that human and agent both read (CLAUDE.md for topography, HOME.md, TAG-TAXONOMY.md, ACTIVE-WORK.md), next to harness governance, which rules what the agent may do. Karpathy (2026) describes the same pattern for an LLM-maintained wiki.
+Slide 40, draft. Core claim: HOME.md, ACTIVE-WORK.md, TAG-TAXONOMY.md and CLAUDE.md structure the vault. A map of content is an entry point that gathers links to related documents and serves agents as navigation, because a larger vault does not fit the context window.
 
-Terms: Vault-Governance, Topografie.
-Sources: Karpathy (2026); Ango (n.d.).
+Terms: Map of Content, Vault-Governance
+Sources: lyt-2026-mocs; karpathy-2026-llm-wiki (document).
 
-## Session 3: Agentic Engineering
-<!-- slides: sec3_slide; renamed -->
+### Mit dem Vault arbeiten
+<!-- slides: h51448df817bc677_0_338 -->
+
+Slide 41, accepted. Core claim: What one does with a vault and an agent: find, link, integrate, ask, find connections, continue work, curate.
+
+Terms: Kuratieren
+Sources: higgins-2008-dcc-curation-lifecycle as analogy; otherwise own practice, posit.
+
+## Session 3
+<!-- slides: h51448df817bc677_0_564 -->
 
 Divider.
-
-### fancy (research) tools & workflows
-<!-- slides: fr_slide; renamed -->
-
-Core claim: fancy (research) tools & workflows are small research tools and workflows that coding agents build from a maintained knowledge base, the tools mostly static browser applications, in five steps with a named bearer for each. A finding from checking changes the knowledge base before the code.
-
-Terms: fancy (research) tools & workflows.
-Sources: the provider's page dhcraft.org/fancy-research-tools (own source, copy rules CR-01 to CR-07 apply).
-
-### Loop Engineering
-<!-- slides: lp_slide -->
-
-Core claim: loop engineering designs the system that triggers and checks the agent instead of prompting it by hand (trigger, agent, hard-wired check script, inner retry loop, human release), and every trigger multiplies requests, so stop conditions and limits are part of the design.
-
-Terms: Loop Engineering, trigger, stop condition.
-Sources: Anthropic (2024) evaluator-optimizer pattern; vendor hooks documentation; Anthropic (2025) on long-running harnesses. The term itself is open.
-
-### Subagents und Workflows
-<!-- slides: sw_slide -->
-
-Core claim: workflows orchestrate LLMs and tools along predefined code paths, agents direct their own process. In practice subagents, dynamic workflows and parallel sessions occur. More agents cost more tokens and pay off only for parallelisable tasks.
-
-Terms: Workflow, Subagent, Dynamic Workflow, parallel sessions.
-Sources: Anthropic (2024, 2025, 2026); OpenAI (2026).
-
-### Determinismus so weit wie möglich ausreizen
-<!-- slides: dt_slide -->
-
-Core claim: tasks with exactly one right answer go to code, scripts and formulas, tasks that need judgement go to LLM or human. The LLM writes the script and does not calculate itself.
-
-Terms: deterministisch, probabilistisch.
-Sources: Gao et al. (2023), PAL, for the computation side. The split of tasks is the workshop's own.
-
-### Qualität sichern
-<!-- slides: qg_slide -->
-
-Core claim: quality comes from fitting checks, independent review and human acceptance, through four mechanisms (independent review by LLM-as-a-Judge, human in the process, turning found errors into permanent checks, rights and releases staying with the human).
-
-Terms: LLM-as-a-Judge, Human in the Loop, regression test.
-Sources: Zheng et al. (2023); Software Engineering at Google, ch. 11; Wei (2025).
-
-### Beispiel: ein Analysewerkzeug
-<!-- slides: h4_slide; renamed -->
-
-Core claim: the fourth hands-on builds an analysis tool from the Northwind sample data in three checked steps (understand data, build with all figures computed by a script, check every figure against a reference). Prompts verbatim.
-
-Terms: none new.
-Sources: Microsoft sql-server-samples, Northwind (MIT licence at repository level).
-
-### Ausblick: Vorlagen für die eigene Arbeit
-<!-- slides: au_slide -->
-
-Core claim: four templates from ongoing work (Second Brain Vault, Grounded Vault, Research Mission Control, Promptotyping) show the concepts in larger systems. They are research previews whose productive fitness is checked in one's own project. Links only after the method pages are published (plan dependency).
-
-Terms: none new.
-Sources: the provider's repositories.
-
-## Weiterführend
-
-Own section header, three short subsections.
-
-<!-- omitted: h2a76f1c8a73c47f4_4_120 -->
-
-### Vibe Coding, Agentic Engineering und Promptotyping
-<!-- slides: h2a76f1c8a73c47f4_4_125; renamed -->
-
-Core claim: Computational Thinking is the ability to formulate, abstract and decompose a problem and its solution so that an executing agent can carry it out, and to judge whether the result holds. An LLM fills gaps silently where a compiler once enforced precision, so this discipline now has to come from the person. Vibe coding, agentic engineering and Promptotyping are three ways of working that differ in how much checking and recorded project knowledge they demand. Vibe coding takes over generated code unread and suits work where little is at stake. Agentic engineering has coding agents write, run and revise code while people provide tools, specify problems, weigh solutions and check the result. Promptotyping builds on agentic engineering, checks its project knowledge against the sources and leaves scholarly validation with the researchers. The axis describes what a way of working demands, the stakes sentence covers only the step from vibe coding to agentic engineering.
-
-Terms: Computational Thinking (working definition in the line of Wing 2006 and 2008 and Shute et al. 2017, marked as such), Vibe Coding, Agentic Engineering, Promptotyping. The former working term "Agentic (Knowledge and Research) Engineering" is dropped, because its description duplicates Promptotyping.
-Sources: Wing (2006); Wing (2008); Shute, Sun and Asbell-Clarke (2017); Karpathy (2025); Willison (2025); Willison (2026); Pollin (2026), Promptotyping paper version 1.0. Hassan et al. (2025) only as a scholarly neighbour for durable artefacts as contracts. The slide text and speaker notes accepted in the session of 2026-11-05 are the wording basis. The deck shows the section in Session 2, and a preceding Computational Thinking slide is planned. The section takes its own heading once that slide exists and `deck-slides.json` is re-exported.
 
 ### Frontier-LLMs amplifizieren computergestützte Wissensarbeit
 <!-- slides: h2a76f1c8a73c47f4_4_717 -->
 
-Core claim: benchmarks measure what models solve and where they fail, research results and incidents show capabilities and control problems under specific conditions, and the slide holds recursive self-improvement very likely. The section presents positions and links Asymmetric Amplification for the full argument.
+Slide 43, accepted. Core claim: Benchmarks measure what models solve and where they fail, research results and incidents show capabilities and control problems under specific conditions, and the slide holds recursive self-improvement very likely.
 
-Terms: Benchmark, Recursive Self-Improvement, Frontier-LLM.
-Sources: Kwa et al. (2025); Jimenez et al. (2024); Merrill et al. (2026); the ARC-AGI-3 and SimpleBench pages; AI 2027 as scenario. A scholarly definition of recursive self-improvement is open.
+Terms: Benchmark, Recursive Self-Improvement
+Sources: kwa-2025-time-horizons; jimenez-2024-swe-bench; merrill-2026-terminal-bench; ARC-AGI-3 and SimpleBench (pending); kokotajlo-2025-ai-2027 as scenario. A scholarly definition of recursive self-improvement is open.
 
-<!-- omitted: h2a76f1c8a73c47f4_4_1122 h2a76f1c8a73c47f4_4_1128 h2a76f1c8a73c47f4_4_1133 h2a76f1c8a73c47f4_4_1187 -->
+### Agentic Engineering: was das Modell umgibt und was es davon sieht
+<!-- slides: ae_slide -->
+
+Slide 44, accepted. Core claim: Context engineering and harness engineering together shape what surrounds the model and what of it enters the context window: project files, memory and skills on one side, harness, tools, permissions and hooks on the other, each with what is loaded at start and what on demand.
+
+Terms: Context Engineering, Harness Engineering, Memory
+Sources: mei-2025-context-engineering-survey; anthropic-2025-effective-context-engineering (document); anthropic-2026-claude-code-memory; openai-2026-memories; agentskills-2026-specification; zhong-2026-harness-engineering.
+
+### Model Context Protocol (MCP)
+<!-- slides: h2a76f1c8a73c47f4_4_905 -->
+
+Slide 45, accepted. Core claim: MCP is an open standard through which an LLM is connected to other programs and data sources, which offer tools, resources and prompts through an MCP server.
+
+Terms: MCP, Tool, Resource, Prompt
+Sources: mcp-2025-specification.
+
+### Agentic Search: suchen wie im Terminal
+<!-- slides: h51448df817bc677_0_551 -->
+
+Slide 46, accepted. Core claim: For a Markdown knowledge base a coding agent mostly needs no vector database. RAG splits documents in advance and retrieves by similarity, agentic search greps for words and patterns and reads the files found.
+
+Terms: RAG, Agentic Search, Vektordatenbank
+Sources: lewis-2020-rag; anthropic-2025-effective-context-engineering (document).
+
+### Beispiel: Eine Anfrage mit Excel-Daten
+<!-- slides: h6a_slide; renamed -->
+
+Slide 47, accepted. Core claim: The sixth hands-on, first part, verbatim: a request with four Excel files arrives, the agent reads the vault's rules and checks the request against its own governance. Personal data were removed from the material.
+
+Terms: none new
+Sources: Own prompts; microsoft-2026-northwind-pubs and microsoft-2026-sql-server-samples-license for the data.
+
+### Beispiel: Die Daten im Dashboard
+<!-- slides: h6b_slide; renamed -->
+
+Slide 48, accepted. Core claim: The sixth hands-on, second part, verbatim: a data view planned in plan mode and every figure recomputed against the Excel files.
+
+Terms: none new
+Sources: Own prompts; gao-2023-pal for script-computed figures.
+
+### Subagents, Agent Teams und Dynamic Workflows
+<!-- slides: h51448df817bc677_0_613; renamed -->
+
+Slide 49, accepted. Core claim: A main agent hands subtasks to helpers with their own context window, agent teams coordinate independent sessions through a shared task list, and dynamic workflows let a script fix the process and steer many subagents. More agents cost more tokens.
+
+Terms: Subagent, Agent Team, Dynamic Workflow
+Sources: anthropic-2026-custom-subagents; anthropic-2026-dynamic-workflows; anthropic-2025-multi-agent-research; anthropic-2026-cross-session-messaging; openai-2026-codex-subagents; anthropic-2024-building-effective-agents (document). Agent teams docs not distilled.
+
+### Qualität sichern: Skript, wo möglich, Urteil, wo nötig
+<!-- slides: qs_slide -->
+
+Slide 50, accepted. Core claim: Deterministic checks (computing by script, every found error becomes a test, hooks, versioning) and judgement (review by a second agent, human acceptance, release by the human). What a script can check, a script checks.
+
+Terms: deterministisch, probabilistisch, Review, Abnahme
+Sources: gao-2023-pal; bender-2020-testing-overview; zheng-2023-llm-as-a-judge; wei-2025-asymmetry-of-verification; chacon-2014-pro-git.
+
+### Test Driven Development (TDD)
+<!-- slides: h51448df817bc677_0_397 -->
+
+Slide 51, accepted. Core claim: In test-driven development the test exists before the code, first failing, then passing. For coding agents tests prevent non-working and unneeded code.
+
+Terms: Test Driven Development
+Sources: Willison, Red/green TDD (not distilled); bender-2020-testing-overview.
+
+### Hook: nur im Projektordner arbeiten
+<!-- slides: hk_slide -->
+
+Slide 52, accepted. Core claim: A hook is a script the harness runs on an event and that can block a tool call. A rule in CLAUDE.md is read by the agent, a hook is enforced by the harness, within limits.
+
+Terms: Hook, Sandbox
+Sources: anthropic-2026-hooks-reference; anthropic-2026-hooks-guide; anthropic-2026-sandboxing (the sandbox is no complete isolation boundary).
+
+### Docling: Dokumente als Markdown
+<!-- slides: dl_slide -->
+
+Slide 53, draft. Core claim: Docling converts documents locally into structured Markdown or JSON and preserves headings, reading order and tables.
+
+Terms: Docling, OCR
+Sources: auer-2024-docling-technical-report; docling-2026-documentation.
+
+### Open Models: das Modell im eigenen Haus
+<!-- slides: h51448df817bc677_0_469 -->
+
+Slide 54, accepted. Core claim: Open-weight models can be downloaded and run on own hardware, which keeps data local and allows adaptation, at the cost of capability and of hardware and operation.
+
+Terms: Open-Weight-Modell, Boring AI
+Sources: Open, no source distilled.
+
+### Eigene Pipelines: der Agent baut, das lokale Modell arbeitet
+<!-- slides: lw_slide -->
+
+Slide 55, accepted. Core claim: Three pipelines that a coding agent built and measured, running locally with a check script and human release.
+
+Terms: none new
+Sources: Provider's own measurements, posit with open evidence question.
+
+### Promptotyping
+<!-- slides: h51448df817bc677_0_1687 h51448df817bc677_0_651; renamed -->
+
+Slide 56, 57, accepted. Core claim: Promptotyping is a working practice that translates research data and their contexts into artefacts that fit the questions and ways of working of researchers. The section places the practice and links the paper and the two introduction videos.
+
+Terms: Promptotyping
+Sources: pollin-2026-promptotyping; Pollin (2026) paper.
+
+### Was Sie gemacht haben: ein Durchlauf Promptotyping
+<!-- slides: ptc_slide -->
+
+Slide 58, accepted. Core claim: The hands-ons map onto the phases of Promptotyping (preparation, exploration, distillation, implementation, verification), and the documents produced fall into declarative, process and action documents.
+
+Terms: Declarative, Process, Action Documents
+Sources: dhcraft-2026-promptotyping-convention; dhcraft-2026-promptotyping-glossary (class now named Knowledge Document).
+
+### Loop Engineering
+<!-- slides: lp_slide -->
+
+Slide 59, draft. Core claim: Loop engineering designs the system that triggers and checks the agent instead of prompting it by hand (trigger, agent, check script, human release).
+
+Terms: Loop Engineering
+Sources: anthropic-2024-building-effective-agents (document); anthropic-2026-hooks-guide; anthropic-2025-long-running-harnesses. The term itself is open.
+
+### Research Mission Control
+<!-- slides: h51448df817bc677_0_1715 -->
+
+Slide 60, accepted. Core claim: Roles and handovers for several agents and work strands, a research preview of the provider.
+
+Terms: none new
+Sources: dhcraft-2026-research-mission-control.
+
+### Second Brain Vault
+<!-- slides: sbv_slide -->
+
+Slide 61, accepted. Core claim: A maintained Obsidian vault holds ideas, reading and relations between projects, project repositories hold their knowledge in knowledge/, and the agent follows explicit references between both.
+
+Terms: none new
+Sources: pollin-2026-second-brain-vault.
+
+### Grounded Vault
+<!-- slides: gvt_slide -->
+
+Slide 62, accepted. Core claim: An architecture for knowledge bases in which every substantive statement carries a machine-readable anchor to its source, as a chain of five checkable layers. The architecture claims nothing about truth, the result is an audit object.
+
+Terms: Provenienz
+Sources: dhcraft-2026-grounded-vault.
+
+### Agentic Edition Pipeline
+<!-- slides: aep_slide -->
+
+Slide 63, accepted. Core claim: A repository template for digital editions in which a knowledge base records the edition's decisions and scripts, prompts and data contracts run the steps. Research preview.
+
+Terms: none new
+Sources: Provider's repository, not distilled.
+
+### Asymmetrische Amplifikation: KI verstärkt, was schon da ist
+<!-- slides: ad_slide -->
+
+Slide 64, accepted. Core claim: The same systems amplify existing capabilities and deficits: whoever can check results gains autonomy, whoever cannot becomes dependent. A field experiment shows a counter-finding for tasks inside the frontier. Closing discussion of the workshop.
+
+Terms: Asymmetric Amplification
+Sources: Asymmetric Amplification (own post, link); Dell'Acqua et al. (2026) has no accessible full text, so the counter-finding is open.
+
+## Weiterführend
+
+Own section header, two short subsections from the appendix.
+
+<!-- omitted: h2a76f1c8a73c47f4_4_120 pd_slide -->
+
+Slide 65 is the appendix divider. Slide 66 (Promptotyping Documents) is carried by the section on slide 58.
+
+### Vibe Coding & Agentic (Knowledge and Research) Engineering
+<!-- slides: h51448df817bc677_0_286 -->
+
+Slide 67, accepted. Core claim: The appendix slide keeps the earlier term definitions. The post replaces them by the section on slide 33 and keeps here only what slide 33 does not cover. The working term Agentic (Knowledge and Research) Engineering is dropped (operator decision of 2026-11-05).
+
+Terms: none new
+Sources: See slide 33.
+
+<!-- omitted: h2a76f1c8a73c47f4_4_1133 -->
+
+Slide 68 (commands) is operational.
 
 ### AI Watermarking
 <!-- slides: h2a76f1c8a73c47f4_4_1252 -->
 
-Core claim: text watermarks bias token sampling with a secret key and are detected statistically, more reliably for longer texts and weakened by paraphrase, while image watermarks hide a bit string in the pixels that a decoder reads from a single image. A watermark is an indication and never proof. Art. 50 AI Act requires machine-readable marking of synthetic content from 2 August 2026, for systems already on the market from 2 December 2026 (Regulation (EU) 2026/1744). Figure: Dathathri et al. (2024), Fig. 1, CC BY 4.0.
+Slide 69, draft. Core claim: Text watermarks bias token choice with a secret key and are detected statistically, weakened by paraphrase, image watermarks hide a bit string that a decoder reads back. A watermark is an indication and never proof. Art. 50 AI Act requires machine-readable marking from 2 August 2026, for systems already on the market from 2 December 2026 (Regulation (EU) 2026/1744). Figure: Dathathri et al. (2024), Fig. 1, CC BY 4.0.
 
-Terms: Watermarking, C2PA.
-Sources: Dathathri et al. (2024), licence of Fig. 1 confirmed on the article page; Kirchenbauer et al. (2023); Bui et al. (2023), which does not support removal by targeted attacks; C2PA specification 2.2; Regulation (EU) 2024/1689, Art. 50, Art. 113 and recital 133; Regulation (EU) 2026/1744.
+Terms: Watermarking, C2PA
+Sources: dathathri-2024-synthid-text; kirchenbauer-2023-watermark; bui-2023-trustmark; c2pa-2025-specification-2-2; the two EU regulations (pending).
+
+<!-- omitted: h51448df817bc677_0_732 h51448df817bc677_0_740 h51448df817bc677_0_750 h51448df817bc677_0_971 h51448df817bc677_0_1041 h51448df817bc677_0_1112 h51448df817bc677_0_1180 h51448df817bc677_0_1249 h51448df817bc677_0_1327 h51448df817bc677_0_1396 h51448df817bc677_0_1465 h51448df817bc677_0_1532 h51448df817bc677_0_1605 h51448df817bc677_0_1613 h51448df817bc677_0_1619 -->
+
+Slides 70–84 are appendix material outside the post: requirements engineering, early Promptotyping and vibe coding slides, A2A, agent skill, term list, model routing, the history of agents, a project example, two slides on explicit knowledge, persona engineering, AI coding literacy and a second Computational Thinking slide. Their content either duplicates a main section or lies outside the decided scope of "Weiterführend".
 
 ## Schluss
 
-Own section, no slide. Core claim: the three areas meet in one practice, knowledge maintained by humans, context designed for the agent and an environment that checks the agent's work, with release and responsibility staying with the human. The close links the teaching line, the Zotero group and the templates, and invites reuse under CC BY 4.0.
+Own section, no slide. Knowledge, context and a checking environment meet in one practice, with release and responsibility staying with the human. Links the teaching line, the Zotero group and the templates, and invites reuse under CC BY 4.0. Written last.
