@@ -45,7 +45,7 @@ const githubMark =
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="wrap">
           <div class="hero-text">
-            <h1 id="hero-title">fancy (research) tools<span class="bang">!</span></h1>
+            <h1 id="hero-title">fancy (research) tools <span class="amp">&amp;</span> workflows</h1>
             <p class="accent-line">{t.heroLine}</p>
             <p class="lede">{t.lede}</p>
             <div class="actions">
@@ -126,6 +126,7 @@ const githubMark =
       <section class="section tinted" id="methoden" aria-labelledby="methoden-title">
         <div class="wrap">
           <h2 id="methoden-title" class="section-title">{t.methodsTitle}</h2>
+          <p class="section-intro">{t.methodsIntro}</p>
           <ul class="methods" role="list">
             {
               f.methods.map((m) => (
@@ -290,8 +291,17 @@ const githubMark =
     margin-block-end: var(--space-l);
   }
 
-  .bang {
+  .amp {
     color: var(--purple);
+  }
+
+  /* The one sentence that ties the methods to the examples above, by operator decision of 2026-11-05. */
+  .section-intro {
+    margin-block: calc(var(--space-s) - var(--space-l)) var(--space-l);
+    max-inline-size: var(--measure);
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color: var(--text-muted);
   }
 
   /* The hero takes the height of its text, a minimum height left an empty band below the buttons. */

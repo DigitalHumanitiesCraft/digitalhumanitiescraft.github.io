@@ -1,12 +1,12 @@
 ---
 title: Specification
 project:
-  name: fancy (research) tools!
+  name: fancy (research) tools & workflows
   repository: https://github.com/DigitalHumanitiesCraft/digitalhumanitiescraft.github.io
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-10-21
+updated: 2026-11-05
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -26,7 +26,7 @@ What the page must do, which rules its copy follows and which decisions hold. Re
 
 ### Functional requirements
 
-- FR-01: The first screen says what fancy (research) tools are and leads to a conversation. Acceptance: hero with title, the line "Agentic Engineering für alle, die mit Wissen arbeiten.", a lede that names tools built with coding agents, mostly static applications in the browser without a server, and workshops and training as the way a team learns to develop them further, and the buttons "Ins Gespräch kommen" and "Unser Angebot", visible without scrolling at 1440 by 900.
+- FR-01: The first screen says what fancy (research) tools & workflows are and leads to a conversation. Acceptance: hero with title, the line "Agentic Engineering für alle, die mit Wissen arbeiten.", a lede that names applications and workflows built with coding agents, the applications mostly static in the browser without a server, and workshops and training as the way a team learns to develop them further, and the buttons "Ins Gespräch kommen" and "Unser Angebot", visible without scrolling at 1440 by 900.
 - FR-02: Every tool and method shows its function, maturity and repository. Acceptance: each entry carries a [maturity chip](INDEX.md#maturity-chip), each Forschungsvorschau or Experiment the not-finished note, each entry with code a [repository link](INDEX.md#repository-link), and every external link answers HTTP 200 in the link check of [testing](testing.md).
 - FR-03: A visitor can get in touch in two ways. Acceptance: a conversation path "Problem oder Idee besprechen" with prefilled e-mail and telephone and a material path "Material schicken" with a prefilled e-mail, both in the section `#kontakt`, the e-mail address shown once below both.
 - FR-04: Every section, offer, tool and method is addressable. Acceptance: unique fragment identifiers, the sections `#angebot`, `#werkzeuge`, `#methoden` and `#kontakt`, the offer blocks `#lernen`, `#gemeinsam`, `#bauen` and `#kosten`, each tool and each method by the anchor listed in [data](data.md#tools). `#kosten` stays stable, because the contact text of the home page links it.
@@ -97,8 +97,8 @@ The page runs in this order.
 
 1. Hero with title, the accent line, lede and the buttons Ins Gespräch kommen and Unser Angebot. The right half stays empty.
 2. `#angebot`, titled Angebot, with the cards Lernen, Gemeinsam entwickeln and Im Auftrag entwickeln and the block Kosten.
-3. `#werkzeuge`, titled Beispiele zum Ausprobieren, with coOCR/HTR, teiCrafter, CorrespExplorer, SZD-HTR and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one paragraph ending with the not-finished note where it applies, and one row with maturity chip, the button Werkzeug öffnen (Demo ansehen for teiCrafter) and the links Repository and Video where one exists.
-4. `#methoden`, titled Methoden und Frameworks, with Promptotyping, Grounded Vault and Agentic Edition Pipeline, each with a generated infographic, one sentence, maturity chip and its links.
+3. `#werkzeuge`, titled Beispiele zum Ausprobieren, with coOCR/HTR, teiCrafter, CorrespExplorer, SZD OCR/HTR Pipeline and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one paragraph ending with the not-finished note where it applies, and one row with maturity chip, the button Werkzeug öffnen (Demo ansehen for teiCrafter) and the links Repository and Video where one exists.
+4. `#methoden`, titled Methoden und Frameworks, opened by one sentence saying that the tools above are built with these methods and workflows, with Promptotyping, Grounded Vault and Agentic Edition Pipeline, each with a generated infographic, one sentence, maturity chip and its links.
 5. `#kontakt`, titled Ins Gespräch kommen, with the paths Problem oder Idee besprechen and Material schicken, and the e-mail address.
 
 ## Decisions
@@ -234,7 +234,7 @@ Effect. Source PNGs stay local and out of Git, their prompt logs are committed. 
 
 ### ADR-013 Positioning as an agentic engineering offer
 
-Amended by [ADR-017](#adr-017-page-slimmed-to-offer-examples-methods-and-contact). The block on models and data left the page, the lede now says what fancy (research) tools are, and empowerment through workshops and training leads the offer. The name, the three ways of working and the billing rule still hold.
+Amended by [ADR-017](#adr-017-page-slimmed-to-offer-examples-methods-and-contact). The block on models and data left the page, the lede now says what fancy (research) tools are, and empowerment through workshops and training leads the offer. The three ways of working and the billing rule still hold. The name changed with [ADR-018](#adr-018-page-renamed-to-tools-and-workflows).
 
 Context. The page offered custom tools and adaptable research tools. On 2026-10-02 the operator decided to present it as the offer for agentic engineering, building on an older internal concept "Prompt Engineering as a Service" and on research into terms and comparable offers. dhcraft.org already listed training and consulting on its excellence page and linked this page only from its research software card.
 
@@ -289,3 +289,13 @@ Choice. The page keeps four sections after the hero, `#angebot`, `#werkzeuge`, `
 Reason. A visitor should learn in one screen what the tools are and that the team learns to build them, then try the examples and get in touch. Everything that explained the working method in advance is better said in the conversation. The layout changes follow the reviews and remove uneven grids, an empty band below the hero buttons and duplicate content.
 
 Effect. FR-01 to FR-05, the stories of Epic 1 and the scope list follow the new page, and [design](design.md) keeps the removed principles only as history. The anchors `#qualitaet`, `#vorgehen` and `#modelle` no longer exist, `#kosten` stays for the link from the home page. CR-04 allows the general term language models in the costs block. The facts that left the page are marked in [data](data.md#provider). The example policy is recorded with the candidates in [data](data.md#candidates-kept-off-the-page), and a new example needs a check of its content licence and, for client work, the project's consent before it enters the page.
+
+### ADR-018 Page renamed to tools and workflows
+
+Context. The page shows five examples, coOCR/HTR, teiCrafter, CorrespExplorer, the SZD OCR/HTR Pipeline and the Stefan-Zweig-Bibliographie, which are tools and workflows, and three methods with which they are built. Its name spoke of tools only, and the methods section left its relation to the examples to the reader. The slide on the offer in the workshop deck for 9 and 10 November 2026 carries the new title.
+
+Choice. On 2026-11-05 the operator renamed the page to "fancy (research) tools & workflows". Title, Open Graph title, share images, meta description, lede, privacy titles, mail subjects, the navigation pill and every link text on dhcraft.org that names the page carry the new name. The hero title marks the ampersand in purple, where the exclamation mark stood before. The section `#methoden` keeps its heading Methoden und Frameworks and opens with one sentence saying that the tools above are built with these methods and workflows. The example SZD-HTR carries the name of the tool itself, SZD OCR/HTR Pipeline. The addresses `/fancy-research-tools/` and `/en/fancy-research-tools/`, all anchors and the image file names stay.
+
+Reason. The page shows tools and workflows, and its name should say so. The sentence in `#methoden` ties the methods to the examples they produce.
+
+Effect. The opening sentence of `#methoden` is a deliberate exception to the rule against standing explanatory prose ([ADR-006](#adr-006-house-rules-over-the-dhcraftorg-pattern)). The longer pill needs about 1165 pixels in the German header, so the site navigation folds into its menu button below 1240 pixels instead of 1120, the gap between its links shrinks from 26 to 20 pixels, the brand keeps one line above the fold, and the pill may wrap inside the open menu on phones. The meta description drops the clause on browser applications to stay within search snippet length, the lede keeps it.

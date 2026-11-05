@@ -14,7 +14,7 @@ const t = {
     formatsTitle: 'Weiterbildung und Beratung',
     promptoTitle: 'Promptotyping',
     promptoText:
-      'Promptotyping ist eine Methode des Context Engineering, die Forschungsartefakte mit KI-Agenten aus einer gepflegten Wissensbasis heraus entwickelt. Wir vermitteln sie in Workshops und setzen sie in Projekten ein, wenn sie zum Vorhaben passt, neben anderen Methoden unter <a href="/fancy-research-tools/">fancy (research) tools</a>.',
+      'Promptotyping ist eine Methode des Context Engineering, die Forschungsartefakte mit KI-Agenten aus einer gepflegten Wissensbasis heraus entwickelt. Wir vermitteln sie in Workshops und setzen sie in Projekten ein, wenn sie zum Vorhaben passt, neben anderen Methoden unter <a href="/fancy-research-tools/">fancy (research) tools &amp; workflows</a>.',
     promptoSpec: 'Die Methodenspezifikation',
     promptoArticle: 'Grundlagentext im Wissenschaftsportal L.I.S.A. der Gerda Henkel Stiftung',
     promptoSkill: 'Promptotyping-Skill auf GitHub',
@@ -25,7 +25,7 @@ const t = {
     formatsTitle: 'Training and consulting',
     promptoTitle: 'Promptotyping',
     promptoText:
-      'Promptotyping is a context engineering method that develops research artefacts with AI agents from a maintained knowledge base. We teach it in workshops and use it in projects where it fits, alongside other methods described under <a href="/en/fancy-research-tools/">fancy (research) tools</a>.',
+      'Promptotyping is a context engineering method that develops research artefacts with AI agents from a maintained knowledge base. We teach it in workshops and use it in projects where it fits, alongside other methods described under <a href="/en/fancy-research-tools/">fancy (research) tools &amp; workflows</a>.',
     promptoSpec: 'The method specification',
     promptoArticle: 'Foundational article on the L.I.S.A. science portal of the Gerda Henkel Foundation',
     promptoSkill: 'Promptotyping skill on GitHub',

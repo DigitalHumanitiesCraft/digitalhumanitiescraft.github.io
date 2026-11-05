@@ -1,7 +1,7 @@
 ---
 title: Plan
 project:
-  name: fancy (research) tools!
+  name: fancy (research) tools & workflows
   repository: https://github.com/DigitalHumanitiesCraft/digitalhumanitiescraft.github.io
 status: active
 language: en

@@ -1,4 +1,4 @@
-// Inhalte der Unterseite "fancy (research) tools!". Die Wissensbasis mit Entscheidungen zu Wortlaut,
+// Inhalte der Unterseite "fancy (research) tools & workflows". Die Wissensbasis mit Entscheidungen zu Wortlaut,
 // Reifegraden und Bildern liegt in knowledge/fancy-research-tools/ dieses Repos, die Skripte für
 // Bildschirmfotos und Prüfungen in scripts/fancy-research-tools/. Textänderungen zuerst dort klären.
 
@@ -106,15 +106,15 @@ const offerHrefs = ['#excellence', '#kontakt', '#werkzeuge'];
 
 const text = {
   de: {
-    title: 'fancy (research) tools! | Digital Humanities Craft',
-    ogTitle: 'fancy (research) tools!',
+    title: 'fancy (research) tools & workflows | Digital Humanities Craft',
+    ogTitle: 'fancy (research) tools & workflows',
     description:
-      'Forschungswerkzeuge, mit Coding-Agenten gebaut und meist ohne Server im Browser lauffähig. In Workshops und Trainings lernt Ihr Team, sie selbst weiterzuentwickeln.',
+      'Forschungswerkzeuge und Workflows, mit Coding-Agenten gebaut. In Workshops und Trainings lernt Ihr Team, sie selbst weiterzuentwickeln.',
     ogLocale: 'de_AT',
     ogImageAlt:
-      'Kopfbereich der Seite fancy (research) tools! mit dem Titel, der Zeile Agentic Engineering für alle, die mit Wissen arbeiten, und dem Knopf Ins Gespräch kommen',
+      'Kopfbereich der Seite fancy (research) tools & workflows mit dem Titel, der Zeile Agentic Engineering für alle, die mit Wissen arbeiten, und dem Knopf Ins Gespräch kommen',
     heroLine: 'Agentic Engineering für alle, die mit Wissen arbeiten.',
-    lede: 'fancy (research) tools sind Werkzeuge für die Arbeit mit Wissen, entwickelt mit Coding-Agenten. Meist sind es eigenständige statische Anwendungen, die ohne Server im Browser laufen, andere Lösungen sind möglich. In Workshops und Trainings lernt Ihr Team, solche Werkzeuge selbst weiterzuentwickeln.',
+    lede: 'fancy (research) tools & workflows sind Anwendungen und Workflows für die Arbeit mit Wissen, entwickelt mit Coding-Agenten. Die Anwendungen laufen meist statisch und ohne Server im Browser, andere Lösungen sind möglich. In Workshops und Trainings lernt Ihr Team, sie selbst weiterzuentwickeln.',
     heroCta: 'Ins Gespräch kommen',
     heroOffer: 'Unser Angebot',
     offerTitle: 'Angebot',
@@ -157,8 +157,8 @@ const text = {
         solution: 'Zeigt Briefmetadaten aus CMIF als Karte, Zeitleiste und Netzwerk, damit sichtbar wird, wer wem wann von wo schrieb.',
       },
       {
-        title: 'SZD-HTR',
-        alt: 'Statistikansicht von SZD-HTR mit der Verteilung der Objekte nach Prüfstufe und den Gründen, aus denen Objekte zur Sichtung vorgemerkt sind.',
+        title: 'SZD OCR/HTR Pipeline',
+        alt: 'Statistikansicht der SZD OCR/HTR Pipeline mit der Verteilung der Objekte nach Prüfstufe und den Gründen, aus denen Objekte zur Sichtung vorgemerkt sind.',
         solution: 'Transkribiert einen ganzen Nachlass und vermerkt an jedem Objekt, ob Maschine, Agent oder Mensch es geprüft hat.',
       },
       {
@@ -168,6 +168,7 @@ const text = {
       },
     ],
     methodsTitle: 'Methoden und Frameworks',
+    methodsIntro: 'Die Werkzeuge oben entstehen mit diesen Methoden und Workflows.',
     methodCaption: 'Generiert mit gpt-image',
     methods: [
       {
@@ -193,24 +194,24 @@ const text = {
     talkTitle: 'Problem oder Idee besprechen',
     talkText: 'Erzählen Sie uns, welches Problem Sie beschäftigt oder welche Idee Sie haben. Gemeinsam finden wir heraus, was funktioniert.',
     talkMail:
-      'mailto:office@dhcraft.org?subject=Gespr%C3%A4ch%20zu%20fancy%20(research)%20tools&body=Worum%20geht%20es%2C%20ein%20Problem%2C%20eine%20Idee%2C%20ein%20Vorhaben%3F%0A%0AWelches%20Material%20oder%20welche%20Daten%20gibt%20es%3F%0A%0AWelcher%20Budgetrahmen%20ist%20vorgesehen%3F%0A',
+      'mailto:office@dhcraft.org?subject=Gespr%C3%A4ch%20zu%20fancy%20(research)%20tools%20%26%20workflows&body=Worum%20geht%20es%2C%20ein%20Problem%2C%20eine%20Idee%2C%20ein%20Vorhaben%3F%0A%0AWelches%20Material%20oder%20welche%20Daten%20gibt%20es%3F%0A%0AWelcher%20Budgetrahmen%20ist%20vorgesehen%3F%0A',
     talkMailLabel: 'E-Mail schreiben',
     docsTitle: 'Material schicken',
     docsText:
       'Schicken Sie uns Material, Daten, Gedanken oder Ideen. Wir sehen sie uns an und besprechen mit Ihnen, was sich daraus machen lässt.',
-    docsMail: 'mailto:office@dhcraft.org?subject=Material%20f%C3%BCr%20fancy%20(research)%20tools',
+    docsMail: 'mailto:office@dhcraft.org?subject=Material%20f%C3%BCr%20fancy%20(research)%20tools%20%26%20workflows',
     docsMailLabel: 'Material senden',
   },
   en: {
-    title: 'fancy (research) tools! | Digital Humanities Craft',
-    ogTitle: 'fancy (research) tools!',
+    title: 'fancy (research) tools & workflows | Digital Humanities Craft',
+    ogTitle: 'fancy (research) tools & workflows',
     description:
-      'Research tools built with coding agents, mostly running in the browser without a server. In workshops and training your team learns to develop them further.',
+      'Research tools and workflows built with coding agents. In workshops and training your team learns to develop them further.',
     ogLocale: 'en_GB',
     ogImageAlt:
-      'Header of the page fancy (research) tools! with its title, the line Agentic engineering for everyone who works with knowledge, and the button Get in touch',
+      'Header of the page fancy (research) tools & workflows with its title, the line Agentic engineering for everyone who works with knowledge, and the button Get in touch',
     heroLine: 'Agentic engineering for everyone who works with knowledge.',
-    lede: 'fancy (research) tools are applications for working with knowledge, built with coding agents. Most are standalone static applications that run in the browser without a server, though other solutions are possible. In workshops and training your team learns to develop such tools further itself.',
+    lede: 'fancy (research) tools & workflows are applications and workflows for working with knowledge, built with coding agents. Most of the applications run statically in the browser without a server, though other solutions are possible. In workshops and training your team learns to develop them further itself.',
     heroCta: 'Get in touch',
     heroOffer: 'What we offer',
     offerTitle: 'What we offer',
@@ -253,8 +254,8 @@ const text = {
         solution: 'Shows letter metadata from CMIF as a map, a timeline and a network, so that it becomes visible who wrote to whom, when and from where.',
       },
       {
-        title: 'SZD-HTR',
-        alt: 'Statistics view of SZD-HTR with the distribution of objects by checking tier and the reasons why objects are marked for review.',
+        title: 'SZD OCR/HTR Pipeline',
+        alt: 'Statistics view of the SZD OCR/HTR Pipeline with the distribution of objects by checking tier and the reasons why objects are marked for review.',
         solution: 'Transcribes an entire estate and records for every object whether a machine, an agent or a human has checked it.',
       },
       {
@@ -264,6 +265,7 @@ const text = {
       },
     ],
     methodsTitle: 'Methods and frameworks',
+    methodsIntro: 'The tools above are built with these methods and workflows.',
     methodCaption: 'Generated with gpt-image',
     methods: [
       {
@@ -289,19 +291,19 @@ const text = {
     talkTitle: 'Talk about a problem or idea',
     talkText: 'Tell us which problem is on your mind or which idea you have. Together we find out what works.',
     talkMail:
-      'mailto:office@dhcraft.org?subject=Conversation%20about%20fancy%20(research)%20tools&body=What%20is%20it%20about%2C%20a%20problem%2C%20an%20idea%2C%20a%20project%3F%0A%0AWhat%20material%20or%20data%20is%20there%3F%0A%0AWhat%20budget%20is%20envisaged%3F%0A',
+      'mailto:office@dhcraft.org?subject=Conversation%20about%20fancy%20(research)%20tools%20%26%20workflows&body=What%20is%20it%20about%2C%20a%20problem%2C%20an%20idea%2C%20a%20project%3F%0A%0AWhat%20material%20or%20data%20is%20there%3F%0A%0AWhat%20budget%20is%20envisaged%3F%0A',
     talkMailLabel: 'Write an e-mail',
     docsTitle: 'Send material',
     docsText: 'Send us material, data, thoughts or ideas. We look through them and discuss with you what can be made of them.',
-    docsMail: 'mailto:office@dhcraft.org?subject=Material%20for%20fancy%20(research)%20tools',
+    docsMail: 'mailto:office@dhcraft.org?subject=Material%20for%20fancy%20(research)%20tools%20%26%20workflows',
     docsMailLabel: 'Send material',
   },
 };
 
 const privacy = {
   de: {
-    title: 'Datenschutz | fancy (research) tools!',
-    description: 'Datenschutzerklärung der Seite fancy (research) tools! der Digital Humanities Craft OG.',
+    title: 'Datenschutz | fancy (research) tools & workflows',
+    description: 'Datenschutzerklärung der Seite fancy (research) tools & workflows der Digital Humanities Craft OG.',
     h1: 'Datenschutz',
     note: '',
     date: 'Stand 1. Oktober 2026',
@@ -341,8 +343,8 @@ const privacy = {
     ],
   },
   en: {
-    title: 'Privacy | fancy (research) tools!',
-    description: 'Privacy statement of the page fancy (research) tools! by Digital Humanities Craft OG.',
+    title: 'Privacy | fancy (research) tools & workflows',
+    description: 'Privacy statement of the page fancy (research) tools & workflows by Digital Humanities Craft OG.',
     h1: 'Privacy',
     note: 'The German version of this statement is the binding one.',
     date: 'As of 1 October 2026',

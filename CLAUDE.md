@@ -2,7 +2,7 @@
 
 The site of Digital Humanities Craft OG, built with Astro, see `README.md`. Commit messages in English, imperative mood, staging specific paths. The blog's editorial journal is `knowledge/journal.md`.
 
-## fancy (research) tools!
+## fancy (research) tools & workflows
 
 The subpage at `/fancy-research-tools/` and `/en/fancy-research-tools/` is the agentic engineering offer. Its knowledge base, image prompt logs and scripts live in this repository since 2026-10-03, see ADR-015 in `knowledge/fancy-research-tools/specification.md`. Document names below refer to `knowledge/fancy-research-tools/`.
 

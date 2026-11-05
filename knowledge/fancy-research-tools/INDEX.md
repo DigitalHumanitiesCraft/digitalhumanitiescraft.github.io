@@ -1,13 +1,13 @@
 ---
 title: Index
 project:
-  name: fancy (research) tools!
+  name: fancy (research) tools & workflows
   repository: https://github.com/DigitalHumanitiesCraft/digitalhumanitiescraft.github.io
 status: draft
 language: en
 version: 0.1
 created: 2026-10-01
-updated: 2026-10-21
+updated: 2026-11-05
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -21,7 +21,7 @@ template:
 related: [project, specification, data, design, method-images, testing, plan, handoff, journal]
 ---
 
-This knowledge base serves anyone who changes "fancy (research) tools!", the agentic engineering offer of Digital Humanities Craft OG, published as a subpage of dhcraft.org. The page, its knowledge, the prompt logs of its generated images and the scripts that retake its images and check it all live in the dhcraft.org site repository, which builds and deploys the page. The schema version above is kept here once and inherited by every other document.
+This knowledge base serves anyone who changes "fancy (research) tools & workflows", the agentic engineering offer of Digital Humanities Craft OG, published as a subpage of dhcraft.org and named "fancy (research) tools!" until 2026-11-05 ([ADR-018](specification.md#adr-018-page-renamed-to-tools-and-workflows)). The page, its knowledge, the prompt logs of its generated images and the scripts that retake its images and check it all live in the dhcraft.org site repository, which builds and deploys the page. The schema version above is kept here once and inherited by every other document.
 
 ## Documents
 
@@ -50,7 +50,7 @@ All zones lie in the site repository, DigitalHumanitiesCraft/digitalhumanitiescr
 - `src/components/fancy/FancyPage.astro` renders the page with its scoped styles, `src/components/fancy/FancyPrivacy.astro` the privacy statement.
 - `src/pages/fancy-research-tools/` and `src/pages/en/fancy-research-tools/` hold the route files.
 - `public/fancy-research-tools/img/` holds the published screenshots, method images and the share images per language.
-- `astro.config.mjs` holds the redirects from the former English addresses, `src/components/Nav.astro` the navigation item, a pill labelled "fancy (research) tools".
+- `astro.config.mjs` holds the redirects from the former English addresses, `src/components/Nav.astro` the navigation item, a pill labelled "fancy (research) tools & workflows".
 
 The former repository DigitalHumanitiesCraft/fancy-research-tools keeps the earlier standalone page and the history of these documents up to 2026-10-03 ([ADR-015](specification.md#adr-015-knowledge-and-scripts-move-into-the-site-repository)). Commit [8648a35](https://github.com/DigitalHumanitiesCraft/fancy-research-tools/tree/8648a35) is its last published state, commit [54a6fff](https://github.com/DigitalHumanitiesCraft/fancy-research-tools/tree/54a6fff) holds the five design variants.
 

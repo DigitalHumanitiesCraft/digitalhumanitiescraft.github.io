@@ -43,8 +43,11 @@ const recipes = {
     await wait(page, 1500);
     await page.locator("#config-start-btn").click();
     await page.waitForURL(/explore/, { timeout: 60000 });
-    await wait(page, 3000);
-    await page.getByText("Timeline", { exact: true }).first().click();
+    // The demo opens an introductory tour that intercepts every click. Skipping it holds for the session.
+    await page.getByText("Ueberspringen", { exact: true }).click({ timeout: 15000 });
+    // The view bar shows icons only, so the timeline opens by its address. The address needs the dataset
+    // the demo has just loaded into the session, without it the tool returns to its start page.
+    await page.goto("https://dhcraft.org/CorrespExplorer/explore.html?view=timeline&demo=true", { waitUntil: "networkidle" });
     await wait(page, 4000);
   },
   // The statistics view shows the checking tiers and no facsimile, whose image rights lie with the archive.

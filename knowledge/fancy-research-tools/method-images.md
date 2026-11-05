@@ -1,7 +1,7 @@
 ---
 title: Method images
 project:
-  name: fancy (research) tools!
+  name: fancy (research) tools & workflows
   repository: https://github.com/DigitalHumanitiesCraft/digitalhumanitiescraft.github.io
 status: draft
 language: en

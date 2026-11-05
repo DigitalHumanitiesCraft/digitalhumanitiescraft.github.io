@@ -46,7 +46,7 @@ const iconOrder = ['ai', 'consult', 'teach', 'web', 'data', 'partner'];
 const t = {
   de: {
     navServices: 'Angebot',
-    navFancy: 'fancy (research) tools',
+    navFancy: 'fancy (research) tools & workflows',
     navProjects: 'Projekte',
     navWebinars: 'Weiterbildung',
     navNews: 'Blog',
@@ -68,7 +68,7 @@ const t = {
     blogAll: 'Alle Beiträge',
     videosAll: 'Alle Videos',
     contactTitle: 'Kontakt',
-    contactSub: 'Beschreiben Sie uns kurz Ihr Vorhaben, Ihre Daten und Ihren Budgetrahmen. Wie wir Aufträge abrechnen, steht unter <a href="/fancy-research-tools/#kosten">fancy (research) tools</a>.',
+    contactSub: 'Beschreiben Sie uns kurz Ihr Vorhaben, Ihre Daten und Ihren Budgetrahmen. Wie wir Aufträge abrechnen, steht unter <a href="/fancy-research-tools/#kosten">fancy (research) tools &amp; workflows</a>.',
     contactCta: 'Kontakt aufnehmen',
     contactPlace: 'Kainbach bei Graz, Österreich',
     footerPlace: 'Kainbach bei Graz',
@@ -85,7 +85,7 @@ const t = {
   },
   en: {
     navServices: 'Services',
-    navFancy: 'fancy (research) tools',
+    navFancy: 'fancy (research) tools & workflows',
     navProjects: 'Work',
     navWebinars: 'Training',
     navNews: 'Blog',
@@ -107,7 +107,7 @@ const t = {
     blogAll: 'All posts',
     videosAll: 'All videos',
     contactTitle: 'Contact',
-    contactSub: 'Briefly describe your project, your data and your budget. How we bill our work is described under <a href="/en/fancy-research-tools/#kosten">fancy (research) tools</a>.',
+    contactSub: 'Briefly describe your project, your data and your budget. How we bill our work is described under <a href="/en/fancy-research-tools/#kosten">fancy (research) tools &amp; workflows</a>.',
     contactCta: 'Get in touch',
     contactPlace: 'Kainbach near Graz, Austria',
     footerPlace: 'Kainbach near Graz',
@@ -133,7 +133,7 @@ const servicesText = {
     },
     {
       title: 'KI-Beratung und Agentic Engineering',
-      text: 'Beratung zum Einsatz generativer KI in Institutionen. Werkzeuge, Workflows und Wissensbasen entwickeln wir mit Coding-Agenten im Auftrag, gemeinsam mit Ihrem Team oder im Training, beschrieben unter <a href="/fancy-research-tools/">fancy (research) tools</a>.',
+      text: 'Beratung zum Einsatz generativer KI in Institutionen. Werkzeuge, Workflows und Wissensbasen entwickeln wir mit Coding-Agenten im Auftrag, gemeinsam mit Ihrem Team oder im Training, beschrieben unter <a href="/fancy-research-tools/">fancy (research) tools &amp; workflows</a>.',
     },
     {
       title: 'Lehre, Schools und Curricula',
@@ -159,7 +159,7 @@ const servicesText = {
     },
     {
       title: 'AI consulting and agentic engineering',
-      text: 'Consulting on the use of generative AI in institutions. We develop tools, workflows and knowledge bases with coding agents on commission, together with your team or in training, as described under <a href="/en/fancy-research-tools/">fancy (research) tools</a>.',
+      text: 'Consulting on the use of generative AI in institutions. We develop tools, workflows and knowledge bases with coding agents on commission, together with your team or in training, as described under <a href="/en/fancy-research-tools/">fancy (research) tools &amp; workflows</a>.',
     },
     {
       title: 'Teaching, schools and curricula',

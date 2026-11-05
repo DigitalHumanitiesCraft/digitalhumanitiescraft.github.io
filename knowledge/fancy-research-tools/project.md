@@ -1,12 +1,12 @@
 ---
 title: Project
 project:
-  name: fancy (research) tools!
+  name: fancy (research) tools & workflows
   repository: https://github.com/DigitalHumanitiesCraft/digitalhumanitiescraft.github.io
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-10-21
+updated: 2026-11-05
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -26,11 +26,11 @@ knowledge-sources:
     Open Graph protocol: https://ogp.me/
 ---
 
-"fancy (research) tools!" is the offer of Digital Humanities Craft OG for agentic engineering. fancy (research) tools are tools for working with knowledge, built with coding agents, mostly standalone static applications that run in the browser without a server, with other solutions possible. The offer addresses research and cultural heritage institutions as well as companies and public administration. Its main idea is empowerment, teams learn in workshops and training to develop such tools further themselves. Development together with the client's team or on commission follows, with support after handover on request. The provider's own tools and methods serve as examples to try.
+"fancy (research) tools & workflows" is the offer of Digital Humanities Craft OG for agentic engineering. fancy (research) tools & workflows are applications and workflows for working with knowledge, built with coding agents. The applications mostly run statically in the browser without a server, with other solutions possible. The offer addresses research and cultural heritage institutions as well as companies and public administration. Its main idea is empowerment, teams learn in workshops and training to develop them further themselves. Development together with the client's team or on commission follows, with support after handover on request. The provider's own tools and workflows serve as examples to try, and the methods they are built with stand beside them.
 
 ## Location
 
-The page is a subpage of dhcraft.org, at https://dhcraft.org/fancy-research-tools/ in German and https://dhcraft.org/en/fancy-research-tools/ in English, with privacy statements at `/fancy-research-tools/datenschutz/` and `/en/fancy-research-tools/privacy/`. The site navigation reaches it through a pill labelled "fancy (research) tools". The footer, the contact text, the consulting card in `content.ts` and the Promptotyping box in `excellence.ts` of the site link it. The decision is [ADR-014](specification.md#adr-014-the-page-moves-into-the-dhcraftorg-site).
+The page is a subpage of dhcraft.org, at https://dhcraft.org/fancy-research-tools/ in German and https://dhcraft.org/en/fancy-research-tools/ in English, with privacy statements at `/fancy-research-tools/datenschutz/` and `/en/fancy-research-tools/privacy/`. The site navigation reaches it through a pill labelled "fancy (research) tools & workflows". The footer, the contact text, the consulting card in `content.ts` and the Promptotyping box in `excellence.ts` of the site link it. The decision is [ADR-014](specification.md#adr-014-the-page-moves-into-the-dhcraftorg-site).
 
 ## Material basis
 
@@ -38,7 +38,7 @@ The page states facts that already exist elsewhere and cites them. Provider and 
 
 ## Context
 
-The name comes from a remark in a chat about a colleague's prompted markup editor for an edition project. That editor showed the pattern the page offers, a tool shaped around the person doing most of the work. The page began on 2026-10-01 as a standalone service page for custom and adaptable research tools. On 2026-10-02 it became the offer for agentic engineering ([ADR-013](specification.md#adr-013-positioning-as-an-agentic-engineering-offer)) and moved into the dhcraft.org site ([ADR-014](specification.md#adr-014-the-page-moves-into-the-dhcraftorg-site)). The [journal](journal.md) records the steps.
+The name comes from a remark in a chat about a colleague's prompted markup editor for an edition project. That editor showed the pattern the page offers, a tool shaped around the person doing most of the work. The page began on 2026-10-01 as a standalone service page for custom and adaptable research tools. On 2026-10-02 it became the offer for agentic engineering ([ADR-013](specification.md#adr-013-positioning-as-an-agentic-engineering-offer)) and moved into the dhcraft.org site ([ADR-014](specification.md#adr-014-the-page-moves-into-the-dhcraftorg-site)). On 2026-11-05 the operator renamed it from "fancy (research) tools!" to "fancy (research) tools & workflows", because the examples are tools and workflows ([ADR-018](specification.md#adr-018-page-renamed-to-tools-and-workflows)). The [journal](journal.md) records the steps.
 
 ## Purpose
 

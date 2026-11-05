@@ -1,7 +1,7 @@
 ---
 title: Journal
 project:
-  name: fancy (research) tools!
+  name: fancy (research) tools & workflows
   repository: https://github.com/DigitalHumanitiesCraft/digitalhumanitiescraft.github.io
 method:
   name: Promptotyping
@@ -9,7 +9,7 @@ method:
 status: active
 language: en
 created: 2026-10-01
-updated: 2026-10-21
+updated: 2026-11-05
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 template:
@@ -193,3 +193,9 @@ The curated backward-looking provenance index of the project. Current facts and 
 - Source: operator feedback on the local preview
 - Target: tool and method cards and the contact section in `src/components/fancy/FancyPage.astro`, the about keys in `src/i18n/fancy.ts`
 - Result: every card reads title, one paragraph with the not-finished note appended, and one row with maturity chip, button and links. The block Wer wir sind left the page. Verified by build, `tsc`, `check.cjs` and screenshots at 1440 and 390 px.
+
+### 2026-11-05 integrated Page renamed to tools and workflows
+
+- Source: operator decision of 2026-11-05, handed over by the session that updates the vault and the workshop deck for 9 and 10 November 2026
+- Target: `src/i18n/fancy.ts`, `src/i18n/content.ts`, `src/i18n/excellence.ts`, `src/components/fancy/FancyPage.astro`, `src/components/Nav.astro`, the share images, `scripts/fancy-research-tools/shoot-tools.cjs`, `CLAUDE.md`, `AGENTS.md`, [ADR-018](specification.md#adr-018-page-renamed-to-tools-and-workflows) and the documents of this knowledge base
+- Result: the page is called fancy (research) tools & workflows in title, metadata, share images, hero, lede, mail subjects, privacy statements, navigation pill and every link text of the site that names it. `#methoden` opens with the sentence that the tools above are built with these methods and workflows, and SZD-HTR reads SZD OCR/HTR Pipeline. The navigation folds below 1240 pixels with 20 pixels between its links, the brand stays on one line above that width, and the pill wraps in the open phone menu. The CorrespExplorer recipe skips the introductory tour and opens the timeline by its address, after the view bar lost its text labels. A test run into a scratch folder produced the timeline, the published screenshot was not retaken. Verified by `npm run build`, `tsc --noEmit`, the syntax check, `check.cjs` with `LINKS=1` passing every page check, with LinkedIn answering 403 to the script and 200 to a browser user agent and GitHub answering 504 once and 200 on a repeat, and a scan of `dist/` that found no content from `knowledge/`. Not pushed.
