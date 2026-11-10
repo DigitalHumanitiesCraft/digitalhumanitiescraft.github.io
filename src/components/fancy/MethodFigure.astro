@@ -18,10 +18,21 @@ const sbv = de
   ? { vault: 'Vault', session: 'Agentensitzung', repo: 'Projekt-Repository', k: 'Wissen', r: 'Regeln', s: 'Stand', c: 'Code und Daten', read: 'Lesen', work: 'Arbeiten', curate: 'Kuratieren', reads: 'liest', writes: 'schreibt', link: 'Das Repo Directory verbindet jedes Projekt mit knowledge/' }
   : { vault: 'Vault', session: 'Agent session', repo: 'Project repository', k: 'Knowledge', r: 'Rules', s: 'State', c: 'Code and data', read: 'Read', work: 'Work', curate: 'Curate', reads: 'reads', writes: 'writes', link: 'Repo Directory links each project to its knowledge/' };
 
-// The steps follow the workflow table in the README of the Agentic Edition Pipeline.
+// The stations follow the workflow table in the README of the Agentic Edition Pipeline: page images,
+// transcription, quality assessment and base TEI are run by the agent, viewing with correction and the
+// publication gate rest with people, and corrections are written back into the repository files.
 const aep = de
-  ? { agent: 'KI-Agent mit Projektwissen führt den Ablauf aus', s: ['Digitalisat', 'Transkription', 'Qualitätsprüfung', 'Basis-TEI', 'Ansicht und Korrektur', 'Veröffentlichung'], team: 'Redaktionsteam prüft und nimmt ab' }
-  : { agent: 'AI agent with project knowledge runs the workflow', s: ['Page images', 'Transcription', 'Quality assessment', 'Base TEI', 'Viewing and correction', 'Publication'], team: 'Editorial team reviews and accepts' };
+  ? { s: ['Bilder', 'Transkription', 'Qualität', 'TEI', 'Prüfung', 'Freigabe'], agent: 'KI-Agent führt aus', team: 'Redaktionsteam prüft', back: 'Korrektur', result: 'Ergebnis', out: ['TEI-XML', 'Statische Leseansicht'], kb: 'Projektwissen', kbSub: 'Entscheidungen der Edition' }
+  : { s: ['Images', 'Transcription', 'Quality', 'TEI', 'Review', 'Release'], agent: 'AI agent runs the steps', team: 'Editorial team reviews', back: 'Correction', result: 'Result', out: ['TEI XML', 'Static reading view'], kb: 'Project knowledge', kbSub: 'decisions of the edition' };
+// One small icon per station, drawn around the origin.
+const aepIcons = [
+  'M-11,-9 H11 V9 H-11 Z M-11,5 L-4,-2 L1,3 L5,-1 L11,5',
+  'M-10,-7 H10 M-10,-1 H10 M-10,5 H4',
+  'M-10,6 A10,10 0 0 1 10,6 M0,6 L5,-3',
+  'M-4,-7 L-11,0 L-4,7 M4,-7 L11,0 L4,7',
+  'M-12,0 C-6,-9 6,-9 12,0 C6,9 -6,9 -12,0 Z M-3,0 A3,3 0 1 0 3,0 A3,3 0 1 0 -3,0',
+  'M-9,0 L-3,7 L10,-7',
+];
 
 const chain = ['Output', 'Assertions', 'Distillates', 'Markdown representations', 'Sources'];
 const checks = [
@@ -159,27 +170,34 @@ const ladder = ['grounded', 'validated', 'verified'];
   {
     id === 'm-aep' && (
       <g>
-        <rect class="box b" x="12" y="14" width="576" height="42" rx="10" />
-        <text class="t" x="300" y="41" text-anchor="middle">{aep.agent}</text>
+        <path class="ln b" d="M26,98 V88 H374 V98" />
+        <text class="h sm" x="200" y="76" text-anchor="middle">{aep.agent}</text>
+        <path class="ln p" d="M426,98 V88 H574 V98" />
+        <text class="h sm" x="500" y="76" text-anchor="middle">{aep.team}</text>
+
         {aep.s.map((name, i) => (
           <g>
-            <rect class={`box ${i > 3 ? 'p' : ''}`} x={12 + (i % 3) * 198} y={i < 3 ? 92 : 204} width="180" height="58" rx="10" />
-            <text class="h sm" x={102 + (i % 3) * 198} y={i < 3 ? 127 : 239} text-anchor="middle">{name}</text>
+            <circle class={`box ${i < 4 ? 'b' : 'p'}`} cx={50 + i * 100} cy="150" r="26" />
+            <path class="ln ic" d={aepIcons[i]} transform={`translate(${50 + i * 100},150)`} />
+            <text class="w" x={50 + i * 100} y="198" text-anchor="middle">{name}</text>
+            {i < 5 && <path class="ln" d={`M${78 + i * 100},150 H${122 + i * 100}`} marker-end={`url(#${id}-a)`} />}
           </g>
         ))}
-        <g class="ln" marker-end={`url(#${id}-a)`}>
-          <path d="M192,121 H208" />
-          <path d="M390,121 H406" />
-          <path d="M498,150 V177 H102 V202" />
-          <path d="M192,233 H208" />
-          <path d="M390,233 H406" />
-          <path d="M300,306 V264" />
-          <path d="M498,306 V264" />
-        </g>
-        <rect class="box p" x="210" y="306" width="378" height="46" rx="10" />
-        <circle class="ln" cx="238" cy="323" r="5" />
-        <path class="ln" d="M229,340 C229,331 247,331 247,340" />
-        <text class="t" x="414" y="335" text-anchor="middle">{aep.team}</text>
+
+        <path class="ln p" d="M450,208 C450,240 350,240 350,210" marker-end={`url(#${id}-a)`} />
+        <text class="s" x="400" y="252" text-anchor="middle">{aep.back}</text>
+
+        <rect class="box o" x="12" y="276" width="236" height="62" rx="10" />
+        <text class="h sm" x="28" y="302">{aep.kb}</text>
+        <text class="s" x="28" y="323">{aep.kbSub}</text>
+        <path class="ln o dash" d="M14,274 V98" />
+
+        <path class="ln" d="M550,208 V272" marker-end={`url(#${id}-a)`} />
+        <text class="h sm" x="300" y="268">{aep.result}</text>
+        <rect class="box g" x="300" y="278" width="102" height="44" rx="8" />
+        <text class="t sm" x="351" y="305" text-anchor="middle">{aep.out[0]}</text>
+        <rect class="box g" x="412" y="278" width="176" height="44" rx="8" />
+        <text class="t sm" x="500" y="305" text-anchor="middle">{aep.out[1]}</text>
       </g>
     )
   }
@@ -235,6 +253,25 @@ const ladder = ['grounded', 'validated', 'verified'];
     stroke: currentColor;
     stroke-width: 1.8;
   }
+
+  .w {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 13.5px;
+  }
+
+  .t.sm {
+    font-size: 14.5px;
+  }
+
+  .ic {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .ln.b { stroke: var(--fg-blue); }
+  .ln.p { stroke: var(--fg-purple); }
+  .ln.o { stroke: var(--fg-orange); }
 
   .dash {
     stroke-dasharray: 6 5;

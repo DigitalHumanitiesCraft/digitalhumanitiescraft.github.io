@@ -38,7 +38,8 @@ const toolsBase: { id: string; img: string; open: string; code: string; video?: 
   {
     id: 't-tei',
     img: 'teicrafter',
-    open: 'https://dhcraft.org/teiCrafter/editor.html',
+    // The deep link opens the editor with its one public example, without it the editor starts empty.
+    open: 'https://dhcraft.org/teiCrafter/editor.html#example=szd',
     code: 'https://github.com/DigitalHumanitiesCraft/teiCrafter',
     maturity: 'experiment',
   },
@@ -160,19 +161,19 @@ const text = {
       },
       {
         title: 'teiCrafter',
-        alt: 'teiCrafter mit lesbarem Brieftext und markierten Personen und Orten links und dem Register der erwähnten Personen und Orte rechts.',
+        alt: 'teiCrafter mit einem Brief von Stefan Zweig aus dem Jahr 1901. Links steht der lesbare Brieftext Zeile für Zeile, rechts das Faksimile der Briefseite.',
         solution: 'Eine Vorlage zum Forken, aus der Sie Ihr eigenes Werkzeug zur Erfassung von TEI-Daten entwickeln. Sie zeigt lesbaren Text statt Tags und prüft beim Speichern gegen das Schema.',
         licence: 'Code MIT',
       },
       {
         title: 'CorrespExplorer',
-        alt: 'CorrespExplorer mit einer Zeitleiste der Briefe eines Demonstrationsbestands, farbig nach Sprache, und Filtern am linken Rand.',
+        alt: 'CorrespExplorer mit der Karte der Korrespondenz des Hugo Schuchardt Archivs. Kreise über Europa zeigen die Zahl der Briefe je Absendeort, eine Legende die Briefsprachen, am linken Rand stehen Zeitraum und Sprachfilter.',
         solution: 'Zeigt Briefmetadaten aus CMIF als Karte, Zeitleiste und Netzwerk, damit sichtbar wird, wer wem wann von wo schrieb.',
-        licence: 'Code MIT',
+        licence: 'Code MIT, Beispieldaten CC BY 4.0',
       },
       {
         title: 'SZD OCR/HTR Pipeline',
-        alt: 'Statistikansicht der SZD OCR/HTR Pipeline mit der Verteilung der Objekte nach Prüfstufe und den Gründen, aus denen Objekte zur Sichtung vorgemerkt sind.',
+        alt: 'SZD OCR/HTR Pipeline mit einem handschriftlichen Brief von Stefan Zweig aus dem Juni 1939. Links steht das Faksimile, rechts die Transkription Zeile für Zeile, darunter der Vermerk Geprüft.',
         solution: 'Transkribiert die digitalisierten Objekte eines Nachlasses und vermerkt an jedem Objekt, ob es nur maschinell transkribiert, von einem Agenten geprüft oder von Menschen geprüft ist.',
         licence: 'Code MIT',
       },
@@ -203,7 +204,7 @@ const text = {
       },
       {
         title: 'Agentic Edition Pipeline',
-        alt: 'Agentic Edition Pipeline als Ablauf vom Digitalisat über Transkription, Qualitätsprüfung und Basis-TEI zu Ansicht und Korrektur und zur Veröffentlichung. Ein KI-Agent mit Projektwissen führt den Ablauf aus, das Redaktionsteam prüft bei Ansicht und Korrektur und nimmt vor der Veröffentlichung ab.',
+        alt: 'Agentic Edition Pipeline in einer Reihe von den Bildern über Transkription, Qualität und TEI zu Prüfung und Freigabe. Die ersten vier Schritte führt ein KI-Agent mit dem Projektwissen der Edition aus, Prüfung und Freigabe liegen beim Redaktionsteam, und Korrekturen gehen zurück in die Daten. Das Ergebnis sind TEI-XML und eine statische Leseansicht.',
         solution: 'Die Agentic Edition Pipeline führt Digitalisate über Transkription und Prüfung zu TEI und einer statischen Leseansicht.',
       },
     ],
@@ -264,19 +265,19 @@ const text = {
       },
       {
         title: 'teiCrafter',
-        alt: 'teiCrafter with readable letter text and marked persons and places on the left and the register of the persons and places mentioned on the right.',
+        alt: 'teiCrafter with a letter by Stefan Zweig of 1901. The readable letter text stands line by line on the left, the facsimile of the page on the right.',
         solution: 'A template to fork and develop into your own tool for capturing TEI data. It shows readable text instead of tags and validates against the schema on saving.',
         licence: 'Code MIT',
       },
       {
         title: 'CorrespExplorer',
-        alt: 'CorrespExplorer with a timeline of the letters in a demonstration collection, coloured by language, and filters along the left edge.',
+        alt: 'CorrespExplorer with the map of the correspondence of the Hugo Schuchardt Archiv. Circles across Europe show the number of letters per place of sending, a legend the languages of the letters, and the left edge holds the period and language filters.',
         solution: 'Shows letter metadata from CMIF as a map, a timeline and a network, so that it becomes visible who wrote to whom, when and from where.',
-        licence: 'Code MIT',
+        licence: 'Code MIT, sample data CC BY 4.0',
       },
       {
         title: 'SZD OCR/HTR Pipeline',
-        alt: 'Statistics view of the SZD OCR/HTR Pipeline with the distribution of objects by checking tier and the reasons why objects are marked for review.',
+        alt: 'SZD OCR/HTR Pipeline with a handwritten letter by Stefan Zweig of June 1939. The facsimile stands on the left, the transcription line by line on the right, and the note Geprüft, checked, below.',
         solution: 'Transcribes the digitised objects of an estate and records for every object whether it is machine-transcribed only, checked by an agent or checked by a human.',
         licence: 'Code MIT',
       },
@@ -307,7 +308,7 @@ const text = {
       },
       {
         title: 'Agentic Edition Pipeline',
-        alt: 'Agentic Edition Pipeline as a workflow from page images via transcription, quality assessment and base TEI to viewing and correction and to publication. An AI agent with project knowledge runs the workflow, the editorial team reviews at viewing and correction and accepts before publication.',
+        alt: 'Agentic Edition Pipeline in one row from images via transcription, quality and TEI to review and release. An AI agent runs the first four steps with the project knowledge of the edition, review and release rest with the editorial team, and corrections return to the data. The result is TEI XML and a static reading view.',
         solution: 'The Agentic Edition Pipeline takes digital copies through transcription and review to TEI and a static reading view.',
       },
     ],
