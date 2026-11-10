@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-11-05
+updated: 2026-11-10
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -20,7 +20,7 @@ template:
 related: [project, specification, testing, method-images]
 ---
 
-The facts the page states about its provider, tools, methods and images, with the source each fact is taken from. Every link in the tables answered HTTP 200 on the check date given. The page text and the structured tool and method data stand in `src/i18n/fancy.ts`, and a change of a fact starts here and is then carried there.
+The facts the page states about its provider, tools, methods and images, with the source each fact is taken from. Every link the page gives answered HTTP 200 on 2026-11-10. Licence, maturity and description of every tool and method were checked against the default branch of its repository on the same day. The page text and the structured tool and method data stand in `src/i18n/fancy.ts`, and a change of a fact starts here and is then carried there.
 
 ## Provider
 
@@ -47,15 +47,15 @@ Facts withdrawn from the page on 2026-10-21 with [ADR-017](specification.md#adr-
 
 ## Tools
 
-The anchor is the fragment identifier on the page. Links checked on 2026-10-01 unless a later date is given.
+The anchor is the fragment identifier on the page. The licence column names what the repository's licence file and README state, and the page shows it in the row of each tool.
 
 | Tool | Anchor | Maturity on the page | Demo | Repository | Licence | Maturity source |
 |---|---|---|---|---|---|---|
-| coOCR/HTR | `#t-coocr` | Experiment | https://dhcraft.org/co-ocr-htr/ | https://github.com/DigitalHumanitiesCraft/co-ocr-htr | CC BY 4.0 | https://dhcraft.org/co-ocr-htr/knowledge.html |
-| teiCrafter | `#t-tei` | Experiment | https://dhcraft.org/teiCrafter/editor.html | https://github.com/DigitalHumanitiesCraft/teiCrafter | MIT | https://github.com/DigitalHumanitiesCraft/teiCrafter/blob/main/knowledge/INDEX.md |
-| CorrespExplorer | `#t-corresp` | Laufende Demo | https://dhcraft.org/CorrespExplorer/ | https://github.com/DigitalHumanitiesCraft/CorrespExplorer | MIT, docs CC BY 4.0 | https://dhcraft.org/CorrespExplorer/vault.html |
-| SZD OCR/HTR Pipeline | `#t-szd` | Experiment | https://chpollin.github.io/szd-htr-ocr-pipeline/ | https://github.com/chpollin/szd-htr-ocr-pipeline | MIT, facsimiles with the Literaturarchiv Salzburg via GAMS | https://github.com/chpollin/szd-htr-ocr-pipeline/blob/main/knowledge/INDEX.md, state from its README (experimental sub-project, four checking tiers recorded per object, tier 0 implemented end to end), checked on 2026-11-05 |
-| Stefan-Zweig-Bibliographie (Klawiter-Rescue) | `#t-klawiter` | Bestand gesichert | https://chpollin.github.io/klawiter-rescue/ | https://github.com/chpollin/klawiter-rescue | MIT, data CC BY 4.0 | https://github.com/chpollin/klawiter-rescue/blob/main/knowledge/status.md, checked on 2026-10-02 |
+| coOCR/HTR | `#t-coocr` | Experiment | https://dhcraft.org/co-ocr-htr/ | https://github.com/DigitalHumanitiesCraft/co-ocr-htr | CC BY 4.0 for the whole repository, code included. Whether the code returns to MIT is open, see [plan](plan.md#open-points) | https://github.com/DigitalHumanitiesCraft/co-ocr-htr/blob/main/README.md, which calls the tool a research preview in beta. The page says Experiment by [ADR-016](specification.md#adr-016-uniform-links-no-ability-icons-research-mission-control-withdrawn) |
+| teiCrafter | `#t-tei` | Experiment | https://dhcraft.org/teiCrafter/editor.html | https://github.com/DigitalHumanitiesCraft/teiCrafter | MIT for code, no licence declared for documentation | https://github.com/DigitalHumanitiesCraft/teiCrafter/blob/main/knowledge/INDEX.md and the README, which calls the tool a research preview. The page says Experiment by ADR-016 |
+| CorrespExplorer | `#t-corresp` | Laufende Demo | https://dhcraft.org/CorrespExplorer/ | https://github.com/DigitalHumanitiesCraft/CorrespExplorer | MIT, docs CC BY 4.0 | https://github.com/DigitalHumanitiesCraft/CorrespExplorer/blob/main/README.md |
+| SZD OCR/HTR Pipeline | `#t-szd` | Experiment | https://chpollin.github.io/szd-htr-ocr-pipeline/ | https://github.com/chpollin/szd-htr-ocr-pipeline | MIT for code, documentation CC BY 4.0. The rights in the facsimiles and in the transcriptions derived from them remain with the Literaturarchiv Salzburg | https://github.com/chpollin/szd-htr-ocr-pipeline/blob/main/knowledge/INDEX.md, state from its README (experimental sub-project, four checking tiers recorded per object, tier 0 implemented end to end), checked on 2026-11-05 |
+| Stefan-Zweig-Bibliographie (Klawiter-Rescue) | `#t-klawiter` | Bestand gesichert | https://chpollin.github.io/klawiter-rescue/ | https://github.com/chpollin/klawiter-rescue | MIT, documentation and data CC BY 4.0 | https://github.com/chpollin/klawiter-rescue/blob/main/knowledge/status.md |
 
 The Stefan-Zweig-Bibliographie row also links the video https://youtu.be/KG35VGVctJw. The teiCrafter button reads Demo ansehen, because teiCrafter is offered as a template to fork. Tools and methods with the maturity Forschungsvorschau or Experiment carry the note that they are not finished. The page links the maturity source only through the repository, which holds the tool's knowledge base.
 
@@ -73,15 +73,26 @@ All published images lie in `public/fancy-research-tools/img/` of the site repos
 
 | File | Shows | Rights basis |
 |---|---|---|
-| `coocr-htr-*.webp` | coOCR/HTR with a printed page of 1617 from the bundled sample | own tool, historical print |
-| `teicrafter-*.webp` | teiCrafter with the bundled synthetic letter | own tool, synthetic text |
+| `coocr-htr-*.webp` | coOCR/HTR with a printed page of 1617 from the bundled sample | own tool, print of 1617. The tool's repository records neither the source of the scan nor its terms of use, see [plan](plan.md#open-points) |
+| `teicrafter-*.webp` | teiCrafter with a synthetic letter from `docs/data/editor/zbz-hersch-synthetic.xml` of a teiCrafter clone, dropped into the editor by the screenshot recipe. The public demo offers one other example in its menu | own tool, synthetic text |
 | `correspexplorer-*.webp` | CorrespExplorer timeline of the synthetic demo dataset | own tool, synthetic data |
 | `szd-htr-*.webp` | SZD OCR/HTR Pipeline statistics view with checking tiers and review reasons | own tool, no facsimile shown, because the image rights lie with the archive |
-| `klawiter-*.webp` | start page of the Stefan Zweig Bibliography | own tool, data CC BY 4.0 |
+| `klawiter-*.webp` | start page of the Stefan Zweig Bibliography with search, the overview of how the data is built and the sections of the bibliography | own tool, data CC BY 4.0 |
 | `method-*.webp` | infographics of Promptotyping, Grounded Vault and the Agentic Edition Pipeline, series infographic-v3. The Research Mission Control images left the repository's `public/` on 2026-10-21 | generated with gpt-image through Codex on 2026-10-02, exact model version not reported, prompt logs in `image-prompts/method-*-infographic-v3.txt` beside this document, see [method images](method-images.md) |
+| `video/fancy-research-tools-workflows.mp4`, its poster and its English captions | the advert video of the page in 1280 by 720, see [Advert video](#advert-video) | picture rendered from code in the repository `dhcraft-promo`, music generated with ACE-Step 1.5, fonts under the SIL Open Font License, logo from the brand assets |
 | `og.jpg`, `og-en.jpg` | hero of the German and the English page for link previews, 1200 by 630 | rendered by `scripts/fancy-research-tools/shoot-og.cjs` from the site preview on 2026-11-05 |
 
-Tool screenshots are taken by `scripts/fancy-research-tools/shoot-tools.cjs` at double pixel density from the live demos, each recipe choosing a state of the real tool without altering its interface. The coOCR/HTR link points to the demo root and never to individual samples. The logo and favicon of the page belong to the site.
+All five tool screenshots were retaken on 2026-11-10. Tool screenshots are taken by `scripts/fancy-research-tools/shoot-tools.cjs` at double pixel density from the live demos, each recipe choosing a state of the real tool without altering its interface. The coOCR/HTR link points to the demo root and never to individual samples. The logo and favicon of the page belong to the site.
+
+## Advert video
+
+The hero carries one advert video, produced in the local repository `dhcraft-promo` (folder `fancy-research-tools/`, knowledge in its `knowledge/advert-videos.md`). `fancyAdvert` in `src/i18n/fancy.ts` holds its paths and the address of the upload on YouTube. The built page shows the video once that address is entered, the development server always. The file is served by the site, so playing it makes no third-party request, and the link to YouTube is an ordinary link.
+
+| Fact | Source |
+|---|---|
+| 88 seconds, sung in English, label "AI-generated music, code-rendered visuals" on every frame | `dhcraft-promo/fancy-research-tools/timeline.js` and `making.txt` |
+| Every claim on screen comes from the English page text, the code and the knowledge base stay with the client, call to action Get in touch | `src/i18n/fancy.ts` |
+| Captions hold the sung lyrics at the measured word onsets | `dhcraft-promo/fancy-research-tools/captions.en.vtt` |
 
 ## Candidates kept off the page
 

@@ -7,7 +7,7 @@ status: draft
 language: en
 version: 0.1
 created: 2026-10-01
-updated: 2026-11-05
+updated: 2026-11-10
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -50,6 +50,7 @@ All zones lie in the site repository, DigitalHumanitiesCraft/digitalhumanitiescr
 - `src/components/fancy/FancyPage.astro` renders the page with its scoped styles, `src/components/fancy/FancyPrivacy.astro` the privacy statement.
 - `src/pages/fancy-research-tools/` and `src/pages/en/fancy-research-tools/` hold the route files.
 - `public/fancy-research-tools/img/` holds the published screenshots, method images and the share images per language.
+- `public/fancy-research-tools/video/` holds the advert video with its poster and captions. Its production sources lie in the local repository `dhcraft-promo`, see [data](data.md#advert-video).
 - `astro.config.mjs` holds the redirects from the former English addresses, `src/components/Nav.astro` the navigation item, a pill labelled "fancy (research) tools & workflows".
 
 The former repository DigitalHumanitiesCraft/fancy-research-tools keeps the earlier standalone page and the history of these documents up to 2026-10-03 ([ADR-015](specification.md#adr-015-knowledge-and-scripts-move-into-the-site-repository)). Commit [8648a35](https://github.com/DigitalHumanitiesCraft/fancy-research-tools/tree/8648a35) is its last published state, commit [54a6fff](https://github.com/DigitalHumanitiesCraft/fancy-research-tools/tree/54a6fff) holds the five design variants.

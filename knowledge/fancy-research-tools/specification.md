@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-11-05
+updated: 2026-11-10
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -26,8 +26,8 @@ What the page must do, which rules its copy follows and which decisions hold. Re
 
 ### Functional requirements
 
-- FR-01: The first screen says what fancy (research) tools & workflows are and leads to a conversation. Acceptance: hero with title, the line "Agentic Engineering für alle, die mit Wissen arbeiten.", a lede that names applications and workflows built with coding agents, the applications mostly static in the browser without a server, and workshops and training as the way a team learns to develop them further, and the buttons "Ins Gespräch kommen" and "Unser Angebot", visible without scrolling at 1440 by 900.
-- FR-02: Every tool and method shows its function, maturity and repository. Acceptance: each entry carries a [maturity chip](INDEX.md#maturity-chip), each Forschungsvorschau or Experiment the not-finished note, each entry with code a [repository link](INDEX.md#repository-link), and every external link answers HTTP 200 in the link check of [testing](testing.md).
+- FR-01: The first screen says what fancy (research) tools & workflows are and leads to a conversation. Acceptance: hero with title, the line "Agentic Engineering für alle, die mit Wissen arbeiten.", a lede that names applications and workflows built with coding agents, the applications mostly static in the browser without a server, and workshops and training as the way a team learns to develop them further, and the buttons "Ins Gespräch kommen" and "Unser Angebot", visible without scrolling at 1440 by 900. Where the page shows the advert video, it stands beside this text from 64rem width and below it on narrower screens ([ADR-019](#adr-019-advert-video-in-the-hero-and-licence-in-the-tool-rows)).
+- FR-02: Every tool and method shows its function, maturity and repository, every tool also its licence. Acceptance: each tool row states the licence recorded in [data](data.md#tools), each entry carries a [maturity chip](INDEX.md#maturity-chip), each Forschungsvorschau or Experiment the not-finished note, each entry with code a [repository link](INDEX.md#repository-link), and every external link answers HTTP 200 in the link check of [testing](testing.md).
 - FR-03: A visitor can get in touch in two ways. Acceptance: a conversation path "Problem oder Idee besprechen" with prefilled e-mail and telephone and a material path "Material schicken" with a prefilled e-mail, both in the section `#kontakt`, the e-mail address shown once below both.
 - FR-04: Every section, offer, tool and method is addressable. Acceptance: unique fragment identifiers, the sections `#angebot`, `#werkzeuge`, `#methoden` and `#kontakt`, the offer blocks `#lernen`, `#gemeinsam`, `#bauen` and `#kosten`, each tool and each method by the anchor listed in [data](data.md#tools). `#kosten` stays stable, because the contact text of the home page links it.
 - FR-05: Ways of working and billing are stated. Acceptance: the section `#angebot` names learning, developing together and commissioned development, with learning first, and the block `#kosten` states billing after [CR-05](#content-rules) and that model use may add costs.
@@ -40,7 +40,7 @@ What the page must do, which rules its copy follows and which decisions hold. Re
 
 - NFR-01: Accessibility at WCAG 2.2 level AA. Measure: axe reports no violation at 1440 and 320 pixels on the page and the privacy statement in both languages, and every keyboard stop shows a focus outline and stays visible.
 - NFR-02: Reflow without horizontal scrolling. Measure: no document overflow at 320 pixels.
-- NFR-03: The page content makes no third-party request and needs no script. Measure: every `src` and `href` of stylesheets, scripts, fonts and images on the page and the privacy statement in both languages points to dhcraft.org. The site navigation brings its own script for the menu button, which the decision [ADR-014](#adr-014-the-page-moves-into-the-dhcraftorg-site) accepts.
+- NFR-03: The page content makes no third-party request and needs no script. The advert video is a file of the site with native controls, and YouTube is reached by a link only. Measure: every `src` and `href` of stylesheets, scripts, fonts and images on the page and the privacy statement in both languages points to dhcraft.org. The site navigation brings its own script for the menu button, which the decision [ADR-014](#adr-014-the-page-moves-into-the-dhcraftorg-site) accepts.
 - NFR-04: The copy follows the content rules. Measure: both languages hold against [CR-01 to CR-07](#content-rules) on reading.
 
 ### Content rules
@@ -95,9 +95,9 @@ Derivation:
 
 The page runs in this order.
 
-1. Hero with title, the accent line, lede and the buttons Ins Gespräch kommen and Unser Angebot. The right half stays empty.
+1. Hero with title, the accent line, lede and the buttons Ins Gespräch kommen and Unser Angebot. The right half holds the advert video once its YouTube address is entered and stays empty until then.
 2. `#angebot`, titled Angebot, with the cards Lernen, Gemeinsam entwickeln and Im Auftrag entwickeln and the block Kosten.
-3. `#werkzeuge`, titled Beispiele zum Ausprobieren, with coOCR/HTR, teiCrafter, CorrespExplorer, SZD OCR/HTR Pipeline and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one paragraph ending with the not-finished note where it applies, and one row with maturity chip, the button Werkzeug öffnen (Demo ansehen for teiCrafter) and the links Repository and Video where one exists.
+3. `#werkzeuge`, titled Beispiele zum Ausprobieren, with coOCR/HTR, teiCrafter, CorrespExplorer, SZD OCR/HTR Pipeline and Stefan-Zweig-Bibliographie. Each row carries a screenshot, title, one paragraph ending with the not-finished note where it applies, and one row with maturity chip, the button Werkzeug öffnen (Demo ansehen for teiCrafter), the links Repository and Video where one exists, and the licence.
 4. `#methoden`, titled Methoden und Frameworks, opened by one sentence saying that the tools above are built with these methods and workflows, with Promptotyping, Grounded Vault and Agentic Edition Pipeline, each with a generated infographic, one sentence, maturity chip and its links.
 5. `#kontakt`, titled Ins Gespräch kommen, with the paths Problem oder Idee besprechen and Material schicken, and the e-mail address.
 
@@ -301,3 +301,15 @@ Choice. On 2026-11-05 the operator renamed the page to "fancy (research) tools &
 Reason. The page shows tools and workflows, and its name should say so. The sentence in `#methoden` ties the methods to the examples they produce.
 
 Effect. The opening sentence of `#methoden` is a deliberate exception to the rule against standing explanatory prose ([ADR-006](#adr-006-house-rules-over-the-dhcraftorg-pattern)). The longer pill needs about 1165 pixels in the German header, so the site navigation folds into its menu button below 1240 pixels instead of 1120, the gap between its links shrinks from 26 to 20 pixels, the brand keeps one line above the fold, and the pill may wrap inside the open menu on phones. The meta description drops the clause on browser applications to stay within search snippet length, the lede keeps it.
+
+### ADR-019 Advert video in the hero and licence in the tool rows
+
+Status: proposed by the session of 2026-11-10 on the operator's commission to finish the advert video and integrate it on the page, built locally, awaiting the operator's acceptance.
+
+Context. The operator decided on 2026-10-21 that one advert video is made for the page and embedded on it. The shared design ground of the DHCraft method sites of 2026-11-10 gives every such site a main figure after the title and a statement of the terms of reuse. The page is an offer with several tools, so the seven parts of a method site fit it only in part.
+
+Choice. The advert video stands in the right half of the hero, which was empty, as a video file of the site with native controls, a poster, English captions of the sung lyrics and a caption that labels the music as generated and the picture as rendered from code. A link to the upload on YouTube stands beside that caption. `fancyAdvert.youtube` in `src/i18n/fancy.ts` switches the video on, so the built page shows it once the address of the upload is entered. Every tool row states the licence of the tool after its links. The page takes no further part of the method site structure. Formal definitions, a reuse list with commands and a citation belong to the method sites the page links, and limits are carried by the maturity chip and the not-finished note.
+
+Reason. A file served by the site plays without a request to a third party, so NFR-03 and the privacy statement hold unchanged, and the page needs no consent step and no script. The licence is the one fact of reuse a visitor needs before opening a repository.
+
+Effect. The video file is published with the site as soon as it is pushed, also while the page does not show it. The site layout, navigation, footer and the light-only theme of [ADR-011](#adr-011-one-design-after-dhcraftorg) stay as they are.

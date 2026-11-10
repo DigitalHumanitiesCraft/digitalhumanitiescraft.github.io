@@ -4,7 +4,7 @@ import Nav from '../Nav.astro';
 import Footer from '../Footer.astro';
 import type { Lang } from '../../i18n/content';
 import { getContent } from '../../i18n/content';
-import { getFancyContent, fancyIcons, fancyPaths } from '../../i18n/fancy';
+import { getFancyContent, fancyAdvert, fancyIcons, fancyPaths } from '../../i18n/fancy';
 
 interface Props {
   lang: Lang;
@@ -17,7 +17,9 @@ const { t: site } = getContent(lang);
 const f = getFancyContent(lang);
 const t = f.t;
 const homeHref = lang === 'de' ? '/' : '/en/';
-const unfinished = (maturity: string) => maturity === 'preview' || maturity === 'experiment';
+// The built page shows the advert once its YouTube address is entered, the development server always.
+const showAdvert = Boolean(fancyAdvert.youtube) || import.meta.env.DEV;
+const unfinished =(maturity: string) => maturity === 'preview' || maturity === 'experiment';
 const isRepo = (href: string) => href.startsWith('https://github.com/');
 const githubMark =
   '<path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/>';
@@ -53,6 +55,20 @@ const githubMark =
               <a class="button" href="#angebot">{t.heroOffer}</a>
             </div>
           </div>
+          {
+            showAdvert && (
+              <figure class="advert" id="video">
+                <video controls preload="none" playsinline poster={fancyAdvert.poster} width="1920" height="1080" aria-label={t.advertLabel}>
+                  <source src={fancyAdvert.file} type="video/mp4" />
+                  <track kind="captions" srclang="en" label={t.advertCaptions} src={fancyAdvert.captions} />
+                </video>
+                <figcaption>
+                  {t.advertCaption}
+                  {fancyAdvert.youtube && <a href={fancyAdvert.youtube}>{t.advertYoutube}</a>}
+                </figcaption>
+              </figure>
+            )
+          }
         </div>
       </section>
 
@@ -113,6 +129,7 @@ const githubMark =
                           {t.toolCode}
                         </a>
                         {tool.video && <a href={tool.video}>{t.toolVideo}</a>}
+                        <span class="licence">{tool.licence}</span>
                       </div>
                     </div>
                   </article>
@@ -321,9 +338,47 @@ const githubMark =
     filter: blur(30px);
   }
 
-  /* Text in the left half, the right side stays empty. */
+  /* Text in the left half. The right half holds the advert video where the page shows one and stays empty otherwise. */
   .hero-text {
     max-inline-size: 36rem;
+  }
+
+  .hero .wrap {
+    display: grid;
+    gap: var(--space-l);
+    align-items: center;
+  }
+
+  @media (min-width: 64rem) {
+    .hero .wrap:has(.advert) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    }
+  }
+
+  .advert video {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius);
+    background: var(--ink-deep);
+    box-shadow: 0 0 0 1px var(--rule), var(--shadow);
+  }
+
+  /* The player keeps focus while its inner controls are operated, so the ring shows on plain focus too. */
+  .advert video:focus,
+  .advert video:focus-within {
+    outline: 3px solid var(--purple);
+    outline-offset: 3px;
+  }
+
+  .advert figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    margin-block-start: var(--space-xs);
+    font-size: var(--step--1);
+    color: var(--text-muted);
   }
 
   .hero h1,
@@ -573,6 +628,12 @@ const githubMark =
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
+  }
+
+  /* The licence of the example, a fact for reuse and no link. */
+  .licence {
+    color: var(--text-muted);
+    font-weight: 400;
   }
 
   .repo-icon {

@@ -14,6 +14,7 @@ Read `knowledge/fancy-research-tools/INDEX.md` first, then its `handoff.md`, the
 
 - Copy, links and maturity of tools and methods: `src/i18n/fancy.ts`, after the facts in `data.md`. German and English stand in the same file and change together.
 - Look and markup: `src/components/fancy/FancyPage.astro`, after `design.md`.
+- Advert video: `fancyAdvert` in `src/i18n/fancy.ts` holds its paths and the YouTube address that switches it on, the files lie in `public/fancy-research-tools/video/` and come from the repository `dhcraft-promo`.
 - Privacy statement: `privacy` in `src/i18n/fancy.ts`, rendered by `src/components/fancy/FancyPrivacy.astro`.
 - Screenshots, share image and encoded method images: the scripts in `scripts/fancy-research-tools/`, which write into `public/fancy-research-tools/img/`.
 - Method image prompts: `knowledge/fancy-research-tools/image-prompts/`, after `method-images.md`. Commit the `.txt` prompt logs, never the PNG files.

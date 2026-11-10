@@ -100,6 +100,18 @@ const methodsBase: { id: string; img: string; maturity: Maturity; links: string[
   },
 ];
 
+/**
+ * The advert video in the hero. The page shows it once `youtube` holds the address of the upload,
+ * the development server shows it always. The file, its poster and its captions lie in
+ * public/fancy-research-tools/video/ and are served by the site, so playing it makes no third-party request.
+ */
+export const fancyAdvert = {
+  youtube: '',
+  file: '/fancy-research-tools/video/fancy-research-tools-workflows.mp4',
+  poster: '/fancy-research-tools/video/fancy-research-tools-workflows-poster.webp',
+  captions: '/fancy-research-tools/video/fancy-research-tools-workflows.en.vtt',
+};
+
 const offerIcons: FancyIcon[] = ['learn', 'together', 'build'];
 const offerIds = ['lernen', 'gemeinsam', 'bauen'];
 const offerHrefs = ['#excellence', '#kontakt', '#werkzeuge'];
@@ -117,6 +129,10 @@ const text = {
     lede: 'fancy (research) tools & workflows sind Anwendungen und Workflows für die Arbeit mit Wissen, entwickelt mit Coding-Agenten. Die Anwendungen laufen meist statisch und ohne Server im Browser, andere Lösungen sind möglich. In Workshops und Trainings lernt Ihr Team, sie selbst weiterzuentwickeln.',
     heroCta: 'Ins Gespräch kommen',
     heroOffer: 'Unser Angebot',
+    advertLabel: 'Video zu fancy (research) tools & workflows, 88 Sekunden, englisch gesungen',
+    advertCaption: 'Musik KI-generiert, Bilder aus Code gerendert.',
+    advertCaptions: 'Englischer Liedtext',
+    advertYoutube: 'Auf YouTube ansehen',
     offerTitle: 'Angebot',
     offers: [
       { title: 'Lernen', text: 'In Workshops und Trainings arbeitet Ihr Team selbst mit Coding-Agenten und lernt, Werkzeuge wie die unten gezeigten zu bauen und anzupassen.', link: 'Formate ansehen' },
@@ -138,33 +154,38 @@ const text = {
     toolOpen: 'Werkzeug öffnen',
     toolCode: 'Repository',
     toolVideo: 'Video',
-    previewNote: 'Noch nicht fertig. Zum Ausprobieren gedacht, Ergebnisse bitte vor jeder Weiterverwendung prüfen.',
+    previewNote: 'Noch nicht fertig und zum Ausprobieren gedacht. Ergebnisse sind vor jeder Weiterverwendung zu prüfen.',
     tools: [
       {
         title: 'coOCR/HTR',
         alt: 'coOCR/HTR mit dem Scan einer Druckseite links, der erkannten Transkription in der Mitte und dem Prüfbereich rechts.',
-        solution: 'Erkennt den Text alter Drucke und Handschriften und lässt jede Lesung am Seitenbild prüfen.',
+        solution: 'Erkennt den Text alter Drucke und Handschriften und stellt jede Lesung zur Prüfung neben das Seitenbild.',
+        licence: 'CC BY 4.0',
       },
       {
         title: 'teiCrafter',
         openLabel: 'Demo ansehen',
         alt: 'teiCrafter mit lesbarem Brieftext und markierten Personen und Orten links und dem Register der erwähnten Personen und Orte rechts.',
         solution: 'Eine Vorlage zum Forken, aus der Sie Ihr eigenes Werkzeug zur Erfassung von TEI-Daten entwickeln. Sie zeigt lesbaren Text statt Tags und prüft beim Speichern gegen das Schema.',
+        licence: 'Code MIT',
       },
       {
         title: 'CorrespExplorer',
         alt: 'CorrespExplorer mit einer Zeitleiste der Briefe eines Demonstrationsbestands, farbig nach Sprache, und Filtern am linken Rand.',
         solution: 'Zeigt Briefmetadaten aus CMIF als Karte, Zeitleiste und Netzwerk, damit sichtbar wird, wer wem wann von wo schrieb.',
+        licence: 'Code MIT',
       },
       {
         title: 'SZD OCR/HTR Pipeline',
         alt: 'Statistikansicht der SZD OCR/HTR Pipeline mit der Verteilung der Objekte nach Prüfstufe und den Gründen, aus denen Objekte zur Sichtung vorgemerkt sind.',
-        solution: 'Transkribiert einen ganzen Nachlass und vermerkt an jedem Objekt, ob Maschine, Agent oder Mensch es geprüft hat.',
+        solution: 'Transkribiert die digitalisierten Objekte eines Nachlasses und vermerkt an jedem Objekt, ob es nur maschinell transkribiert, von einem Agenten geprüft oder von Menschen geprüft ist.',
+        licence: 'Code MIT',
       },
       {
         title: 'Stefan-Zweig-Bibliographie',
-        alt: 'Oberfläche der Stefan-Zweig-Bibliographie mit Suche über alle Einträge und einer Gliederung nach Werken, Rezeption und Ausgaben.',
+        alt: 'Startseite der Stefan-Zweig-Bibliographie mit Suchfeld, einer Übersicht zum Aufbau der Daten aus Wiki-Seiten und Publikationen und der Gliederung in Abschnitte von den Gesammelten Werken bis zur Sekundärliteratur.',
         solution: 'Überführt eine Bibliographie aus einem stillgelegten Wiki in Forschungsdaten, in denen jede Angabe auf ihre Quellseite verweist.',
+        licence: 'Code MIT, Daten CC BY 4.0',
       },
     ],
     methodsTitle: 'Methoden und Frameworks',
@@ -214,6 +235,10 @@ const text = {
     lede: 'fancy (research) tools & workflows are applications and workflows for working with knowledge, built with coding agents. Most of the applications run statically in the browser without a server, though other solutions are possible. In workshops and training your team learns to develop them further itself.',
     heroCta: 'Get in touch',
     heroOffer: 'What we offer',
+    advertLabel: 'Video about fancy (research) tools & workflows, 88 seconds, sung in English',
+    advertCaption: 'AI-generated music, code-rendered visuals.',
+    advertCaptions: 'English lyrics',
+    advertYoutube: 'Watch on YouTube',
     offerTitle: 'What we offer',
     offers: [
       { title: 'Learn', text: 'In workshops and training your team works with coding agents itself and learns to build and adapt tools like the ones shown below.', link: 'See formats' },
@@ -235,33 +260,38 @@ const text = {
     toolOpen: 'Open tool',
     toolCode: 'Repository',
     toolVideo: 'Video',
-    previewNote: 'Not finished yet. Meant for trying out, please check results before reusing them.',
+    previewNote: 'Not finished yet and meant for trying out. Results need checking before any reuse.',
     tools: [
       {
         title: 'coOCR/HTR',
         alt: 'coOCR/HTR with the scan of a printed page on the left, the recognised transcription in the middle and the review panel on the right.',
-        solution: 'Recognises the text of early printed books and manuscripts and lets every reading be checked against the page image.',
+        solution: 'Recognises the text of early printed books and manuscripts and sets every reading beside the page image for checking.',
+        licence: 'CC BY 4.0',
       },
       {
         title: 'teiCrafter',
         openLabel: 'View demo',
         alt: 'teiCrafter with readable letter text and marked persons and places on the left and the register of the persons and places mentioned on the right.',
         solution: 'A template to fork and develop into your own tool for capturing TEI data. It shows readable text instead of tags and validates against the schema on saving.',
+        licence: 'Code MIT',
       },
       {
         title: 'CorrespExplorer',
         alt: 'CorrespExplorer with a timeline of the letters in a demonstration collection, coloured by language, and filters along the left edge.',
         solution: 'Shows letter metadata from CMIF as a map, a timeline and a network, so that it becomes visible who wrote to whom, when and from where.',
+        licence: 'Code MIT',
       },
       {
         title: 'SZD OCR/HTR Pipeline',
         alt: 'Statistics view of the SZD OCR/HTR Pipeline with the distribution of objects by checking tier and the reasons why objects are marked for review.',
-        solution: 'Transcribes an entire estate and records for every object whether a machine, an agent or a human has checked it.',
+        solution: 'Transcribes the digitised objects of an estate and records for every object whether it is machine-transcribed only, checked by an agent or checked by a human.',
+        licence: 'Code MIT',
       },
       {
         title: 'Stefan Zweig Bibliography',
-        alt: 'Interface of the Stefan Zweig Bibliography with a search across all entries and a breakdown by works, reception and editions.',
+        alt: 'Start page of the Stefan Zweig Bibliography with a search field, an overview of how the data is built from wiki pages and publications, and the sections from Collected Works to Secondary Literature.',
         solution: 'Moves a bibliography out of a decommissioned wiki into research data in which every statement points to its source page.',
+        licence: 'Code MIT, data CC BY 4.0',
       },
     ],
     methodsTitle: 'Methods and frameworks',
