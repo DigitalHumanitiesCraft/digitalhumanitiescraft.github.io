@@ -105,7 +105,7 @@ const methodsBase: { id: 'm-pt' | 'm-gv' | 'm-sbv' | 'm-aep'; maturity: Maturity
 export const fancyAdvert = {
   // false takes the video off the page. The hero then holds its text alone, as before 2026-11-10.
   show: true,
-  youtube: '',
+  youtube: 'https://youtu.be/3rtfRfjcrqw',
   file: '/fancy-research-tools/video/fancy-research-tools-workflows.mp4',
   poster: '/fancy-research-tools/video/fancy-research-tools-workflows-poster.webp',
   captions: '/fancy-research-tools/video/fancy-research-tools-workflows.en.vtt',
