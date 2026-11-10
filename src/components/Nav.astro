@@ -13,8 +13,6 @@ interface Props {
 const { lang, altPath, homeHref = '' } = Astro.props;
 const { t } = getContent(lang);
 const a = (id: string) => `${homeHref}#${id}`;
-// Das Label bleibt in content.ts, nur der Klammerteil bekommt im Pill eine eigene Auszeichnung.
-const [fancyHead, fancyTail] = t.navFancy.split('(research)');
 ---
 
 <header class="nav">
@@ -33,9 +31,7 @@ const [fancyHead, fancyTail] = t.navFancy.split('(research)');
       <a href={a('projects')}>{t.navProjects}</a>
       <a href={a('team')}>Team</a>
       <a href={a('blog')}>{t.navNews}</a>
-      <a href={lang === 'de' ? '/fancy-research-tools/' : '/en/fancy-research-tools/'} class="fancy">
-        <span class="hex fancy-hex" aria-hidden="true"></span><span>{fancyHead}<span class="fancy-paren">(research)</span>{fancyTail}</span>
-      </a>
+      <a href={lang === 'de' ? '/fancy-research-tools/' : '/en/fancy-research-tools/'} class="fancy">{t.navFancy}</a>
       <a href={a('contact')} class="btn btn-solid cta">{t.navContact}</a>
       <div class="lang-toggle">
         {
@@ -161,39 +157,6 @@ const [fancyHead, fancyTail] = t.navFancy.split('(research)');
     padding: 9px 18px;
   }
 
-  /* The offer page gets its own mark in the header, a pill with a border in the colours of the watercolour logo. */
-  .links a.fancy {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 15px 7px 11px;
-    border: 1.5px solid transparent;
-    border-radius: 999px;
-    background:
-      linear-gradient(var(--paper), var(--paper)) padding-box,
-      linear-gradient(100deg, var(--purple), var(--blue-deep) 55%, var(--green)) border-box;
-    font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    transition: box-shadow 0.15s ease;
-  }
-
-  .links a.fancy:hover {
-    color: var(--ink);
-    box-shadow: 0 6px 18px rgba(138, 79, 163, 0.22);
-  }
-
-  .fancy-paren {
-    font-weight: 400;
-    color: var(--purple);
-  }
-
-  .fancy-hex {
-    width: 11px;
-    height: 12px;
-    background: linear-gradient(160deg, var(--pink), var(--blue-deep) 60%, var(--lime));
-  }
-
   .links a.cta:hover {
     color: #fff;
   }
@@ -235,7 +198,7 @@ const [fancyHead, fancyTail] = t.navFancy.split('(research)');
     }
   }
 
-  /* 1240 statt 900: Marke, Links und der Pill "fancy (research) tools & workflows" brauchen auf
+  /* 1240 statt 900: Marke, Links und der Eintrag "fancy (research) tools & workflows" brauchen auf
      Deutsch in einer Zeile etwa 1165px plus Seitenrand, darunter würde der Sprachumschalter abgeschnitten */
   @media (max-width: 1240px) {
     .menu-btn {
@@ -268,13 +231,9 @@ const [fancyHead, fancyTail] = t.navFancy.split('(research)');
       width: 100%;
     }
 
-    /* The long page name may wrap inside the pill on phones instead of running past the screen edge. */
+    /* The long page name may wrap on phones instead of running past the screen edge. */
     .links.open a.fancy {
-      width: auto;
-      max-width: 100%;
       white-space: normal;
-      padding: 8px 16px 8px 12px;
-      margin-top: 6px;
     }
 
     .links.open a.cta {

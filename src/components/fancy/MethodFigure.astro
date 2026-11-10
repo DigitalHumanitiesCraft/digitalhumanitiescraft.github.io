@@ -15,7 +15,7 @@ const de = lang === 'de';
 
 // Second Brain Vault keeps a German and an English figure, the terms below are taken from both.
 const sbv = de
-  ? { vault: 'Vault', session: 'Agentensitzung', repo: 'Projekt-Repository', k: 'Wissen', r: 'Regeln', s: 'Stand', c: 'Code und Daten', read: 'Lesen', work: 'Arbeiten', curate: 'Kuratieren', reads: 'liest', writes: 'schreibt', link: 'Das Repo Directory verbindet jedes Projekt mit knowledge/' }
+  ? { vault: 'Vault', session: 'Agentensitzung', repo: 'Projekt-Repository', k: 'Wissen', r: 'Regeln', s: 'Stand', c: 'Code und Daten', read: 'Lesen', work: 'Arbeiten', curate: 'Kuratieren', reads: 'liest', writes: 'schreibt', link: 'Das Repo-Verzeichnis verbindet jedes Projekt mit knowledge/' }
   : { vault: 'Vault', session: 'Agent session', repo: 'Project repository', k: 'Knowledge', r: 'Rules', s: 'State', c: 'Code and data', read: 'Read', work: 'Work', curate: 'Curate', reads: 'reads', writes: 'writes', link: 'Repo Directory links each project to its knowledge/' };
 
 // The stations follow the workflow table in the README of the Agentic Edition Pipeline: page images,
@@ -34,11 +34,19 @@ const aepIcons = [
   'M-9,0 L-3,7 L10,-7',
 ];
 
-const chain = ['Output', 'Assertions', 'Distillates', 'Markdown representations', 'Sources'];
+// Promptotyping keeps its own terms in English on both pages: the four forms of work, Promptotype and
+// knowledge curation. The other labels follow the language of the page.
+const pt = de
+  ? { who: 'Forschende', direct: 'leiten', validate: 'prüfen', artefact: 'Artefakt', knowledge: 'Projektwissen', data: 'Forschungsdaten' }
+  : { who: 'Researchers', direct: 'direct', validate: 'validate', artefact: 'Artefact', knowledge: 'Project Knowledge', data: 'Research Data' };
+
+// Grounded Vault names its layers in German on its own German page. The three checks and the status
+// values grounded, validated and verified stay as the method writes them.
+const chain = de ? ['Output', 'Assertions', 'Destillate', 'Markdown-Fassungen', 'Quellen'] : ['Output', 'Assertions', 'Distillates', 'Markdown representations', 'Sources'];
 const checks = [
-  { c: 'b', h: 'Validation', s: 'a script' },
-  { c: 'o', h: 'Machine review', s: 'a second LLM' },
-  { c: 'g', h: 'Verification', s: 'a person' },
+  { c: 'b', h: 'Validation', s: de ? 'ein Skript' : 'a script' },
+  { c: 'o', h: 'Machine review', s: de ? 'ein zweites LLM' : 'a second LLM' },
+  { c: 'g', h: 'Verification', s: de ? 'eine Person' : 'a person' },
 ];
 const ladder = ['grounded', 'validated', 'verified'];
 ---
@@ -56,11 +64,11 @@ const ladder = ['grounded', 'validated', 'verified'];
         <circle class="box" cx="300" cy="30" r="18" />
         <circle class="ln" cx="300" cy="25" r="5" />
         <path class="ln" d="M291,41 C291,33 309,33 309,41" />
-        <text class="s" x="300" y="66" text-anchor="middle">Researchers</text>
+        <text class="s" x="300" y="66" text-anchor="middle">{pt.who}</text>
         <path class="ln" d="M282,30 H187 V76" marker-end={`url(#${id}-a)`} />
         <path class="ln" d="M318,30 H484 V88" marker-end={`url(#${id}-a)`} />
-        <text class="s" x="234" y="21" text-anchor="middle">direct</text>
-        <text class="s" x="402" y="21" text-anchor="middle">validate</text>
+        <text class="s" x="234" y="21" text-anchor="middle">{pt.direct}</text>
+        <text class="s" x="402" y="21" text-anchor="middle">{pt.validate}</text>
 
         <rect class="frame g" x="10" y="78" width="354" height="250" rx="12" />
         <rect class="box g" x="18" y="96" width="160" height="56" rx="28" />
@@ -85,9 +93,9 @@ const ladder = ['grounded', 'validated', 'verified'];
         <rect class="box" x="404" y="132" width="156" height="46" rx="6" />
         <rect class="box b" x="404" y="190" width="156" height="46" rx="6" />
         <rect class="box" x="404" y="248" width="156" height="46" rx="6" />
-        <text class="t" x="482" y="161" text-anchor="middle">Artefact</text>
-        <text class="t" x="482" y="219" text-anchor="middle">Project Knowledge</text>
-        <text class="t" x="482" y="277" text-anchor="middle">Research Data</text>
+        <text class="t" x="482" y="161" text-anchor="middle">{pt.artefact}</text>
+        <text class="t" x="482" y="219" text-anchor="middle">{pt.knowledge}</text>
+        <text class="t" x="482" y="277" text-anchor="middle">{pt.data}</text>
         <path class="ln" d="M364,170 H388" marker-end={`url(#${id}-a)`} />
         <path class="ln" d="M482,330 V352 H187 V330" marker-end={`url(#${id}-a)`} />
         <text class="s" x="334" y="346" text-anchor="middle">knowledge curation</text>
@@ -185,19 +193,19 @@ const ladder = ['grounded', 'validated', 'verified'];
         ))}
 
         <path class="ln p" d="M450,208 C450,240 350,240 350,210" marker-end={`url(#${id}-a)`} />
-        <text class="s" x="400" y="252" text-anchor="middle">{aep.back}</text>
+        <text class="s" x="400" y="250" text-anchor="middle">{aep.back}</text>
 
-        <rect class="box o" x="12" y="276" width="236" height="62" rx="10" />
-        <text class="h sm" x="28" y="302">{aep.kb}</text>
-        <text class="s" x="28" y="323">{aep.kbSub}</text>
-        <path class="ln o dash" d="M14,274 V98" />
+        <rect class="box o" x="12" y="282" width="236" height="62" rx="10" />
+        <text class="h sm" x="28" y="308">{aep.kb}</text>
+        <text class="s" x="28" y="329">{aep.kbSub}</text>
+        <path class="ln o dash" d="M14,280 V98" />
 
-        <path class="ln" d="M550,208 V272" marker-end={`url(#${id}-a)`} />
-        <text class="h sm" x="300" y="268">{aep.result}</text>
-        <rect class="box g" x="300" y="278" width="102" height="44" rx="8" />
-        <text class="t sm" x="351" y="305" text-anchor="middle">{aep.out[0]}</text>
-        <rect class="box g" x="412" y="278" width="176" height="44" rx="8" />
-        <text class="t sm" x="500" y="305" text-anchor="middle">{aep.out[1]}</text>
+        <path class="ln" d="M550,208 V292" marker-end={`url(#${id}-a)`} />
+        <text class="h sm" x="300" y="290">{aep.result}</text>
+        <rect class="box g" x="300" y="300" width="102" height="44" rx="8" />
+        <text class="t sm" x="351" y="327" text-anchor="middle">{aep.out[0]}</text>
+        <rect class="box g" x="412" y="300" width="176" height="44" rx="8" />
+        <text class="t sm" x="500" y="327" text-anchor="middle">{aep.out[1]}</text>
       </g>
     )
   }

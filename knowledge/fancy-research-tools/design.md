@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-11-10
+updated: 2026-11-11
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -47,7 +47,7 @@ The page uses the tokens of the site and adds local ones only where the site has
 5. Method cards show a figure above these levels, a simplified card version of the method's own main figure as inline SVG with the fonts of the page and the four hues of the DHCraft mark, green, blue, orange and purple, on white. The figures are not linked, the method page is the first link of the card.
 6. Maturity chips follow the hues of the mark. Im Einsatz and Bestand gesichert are green, Laufende Demo blue, Experiment and Forschungsvorschau orange. Purple stays with links and actions. The word carries the meaning, the colour repeats it.
 8. Contact: two cards with even padding, Problem oder Idee besprechen with the buttons E-Mail schreiben and telephone, Material schicken with the button Material senden. The e-mail address stands once below both. The block Wer wir sind left the page on 2026-10-21, the home page carries the team.
-9. Layout: each tool row places screenshot and text side by side once the row is wider than 52rem, alternating sides, and stacks them below. Offers run in one column below 56rem and in three above, the four methods in one column below 48rem and in two above, so that no grid leaves a single card in a second row. The site navigation folds into a menu button below 1240 pixels, where the German header with the pill fancy (research) tools & workflows no longer fits in one line. In the open menu on phones the pill may wrap.
+9. Layout: each tool row places screenshot and text side by side once the row is wider than 52rem, alternating sides, and stacks them below. Offers run in one column below 56rem and in three above, the four methods in one column below 48rem and in two above, so that no grid leaves a single card in a second row. The site navigation folds into a menu button below 1240 pixels, where the German header with the entry fancy (research) tools & workflows no longer fits in one line. The entry is an ordinary navigation entry in the type, size and spacing of the others since 2026-11-11. Until then it was a pill with a gradient border and a hexagon of its own, which the operator found out of line with the other entries. In the open menu on phones the entry may wrap.
 10. Method figures are not linked. Their accessible name describes terms and flow in words.
 11. Motion: buttons lift slightly on hover only when the user allows motion. The video never starts by itself and loads nothing before it is played.
 12. Language: the site navigation switches between the German and the English page.
@@ -57,6 +57,7 @@ The page uses the tokens of the site and adds local ones only where the site has
 Kept verbatim as requirements and read before every rebuild.
 
 - 2026-11-10, on the hero video: "das Video finde ich sehr gut."
+- 2026-11-11, on the German page and its header, as passed on by the coordinating session: the figures of Promptotyping and Grounded Vault are labelled in English and those of Second Brain Vault and the Agentic Edition Pipeline in German, each language version is to be uniform while the methods' own terms stay English. Repo Directory is Repo-Verzeichnis in German. The label Korrektur sits too close to the heading Ergebnis. The navigation entry fancy (research) tools & workflows looks different from the other entries and from the button Kontakt as a pill with a coloured gradient border and its own mark, and is to fit in as an ordinary entry.
 - 2026-11-10, on the published page, as passed on by the coordinating session: the CorrespExplorer screenshot with the small demo dataset and the bar chart is too weak, he wants a clearly more impressive one with a really good dataset and visualisation. The SZD card shows the statistics page, small and pale, and should show what makes the tool, facsimile and transcription side by side with the checking status, cropped so that the writing is readable on the card. The new figure of the Agentic Edition Pipeline is pale and schematic and does not show what is special about the pipeline. It should be one clear way from left to right without a break into two rows, stations with a small icon and one word, a visible difference between what the agent does and where people check, the return of the correction as one arrow and the result recognisable as a result.
 - 2026-11-10, on the section Methoden und Frameworks, as passed on by the coordinating session: he sees too many levels there again. A card held image, the line "Generiert mit gpt-image", title, description, a status mark, a main button and below it a row of two to four text links. Every entry is to have at most three levels and its references one form, on the whole page, the examples included. The generated images are to give way to the main figures programmed that day, Second Brain Vault is to join as a method card, and the Agentic Edition Pipeline is to get a new hand-written figure in the same style.
 

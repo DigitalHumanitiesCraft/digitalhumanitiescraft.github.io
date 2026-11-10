@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-11-10
+updated: 2026-11-11
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -83,7 +83,9 @@ The cards show hand-written SVG figures in `src/components/fancy/MethodFigure.as
 | Second Brain Vault | `docs/images/second-brain-figure-de.svg` and `second-brain-figure.svg` of the local clone `second-brain-vault` | vault, agent session and project repository with their blocks, the three steps, reading and writing, the Repo Directory |
 | Agentic Edition Pipeline | none exists. Drawn from the workflow table and the section on models and methods in the README of the repository, redrawn on 2026-11-10 after the operator found the first version pale and schematic | one row of six stations with an icon and one word each, the four the agent runs in blue and the two that rest with the editorial team in purple, the return of corrections as one arrow, the project knowledge in orange and the result, TEI XML and a static reading view, in green |
 
-Language. The terms of Promptotyping and Grounded Vault stay English on both language versions, because both methods fix them in English. Second Brain Vault and the Agentic Edition Pipeline are German on the German page and English on the English page, because Second Brain Vault keeps both versions of its figure.
+Language. Each language version of the page labels all four figures in its own language, by the operator's correction of 2026-11-11. The methods' own terms stay English on both versions: Preparation, Exploration, Distillation, Implementation, Promptotype and knowledge curation in Promptotyping, and in Grounded Vault the layers Output and Assertions, the three checks Validation, Machine review and Verification, whose naming is an open decision of the operator, and the status values grounded, validated and verified. The German figure of Grounded Vault takes Destillate, Markdown-Fassungen and Quellen from the method's own German page, the German figure of Second Brain Vault says Repo-Verzeichnis.
+
+The arrow knowledge curation of the Promptotyping card ends at the lower edge of the frame of the four forms of work. In figure 1 of the manuscript repository (`figures/figure-1-promptotyping-practice.svg`, read on 2026-11-11) the arrow ends at Distillation, and the description of that figure says that what checking and use reveal returns to Distillation. Whether the card follows it is with the operator.
 
 ## Images
 

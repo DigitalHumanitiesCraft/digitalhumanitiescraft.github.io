@@ -194,12 +194,12 @@ const text = {
       },
       {
         title: 'Grounded Vault',
-        alt: 'Grounded Vault als Kette von Output über Assertions, Distillates und Markdown representations zu den Sources, daneben die drei Prüfungen Validation durch ein Skript, Machine review durch ein zweites LLM und Verification durch eine Person, darunter die Stufen grounded, validated und verified.',
+        alt: 'Grounded Vault als Kette von Output über Assertions, Destillate und Markdown-Fassungen zu den Quellen, daneben die drei Prüfungen Validation durch ein Skript, Machine review durch ein zweites LLM und Verification durch eine Person, darunter die Stufen grounded, validated und verified.',
         solution: 'Grounded Vault führt jede tragende Aussage eines Berichts über einen prüfbaren Anker bis zur Quellstelle.',
       },
       {
         title: 'Second Brain Vault',
-        alt: 'Second Brain Vault mit drei Spalten. Die Agentensitzung liest Wissen und Regeln aus dem Vault und aus dem Projekt-Repository, arbeitet und kuratiert, und schreibt in beide zurück. Das Repo Directory verbindet jedes Projekt mit seinem Ordner knowledge.',
+        alt: 'Second Brain Vault mit drei Spalten. Die Agentensitzung liest Wissen und Regeln aus dem Vault und aus dem Projekt-Repository, arbeitet und kuratiert, und schreibt in beide zurück. Das Repo-Verzeichnis verbindet jedes Projekt mit seinem Ordner knowledge.',
         solution: 'Second Brain Vault ist eine Vorlage für einen Obsidian-Vault, den man gemeinsam mit einem KI-Agenten pflegt, mit Regeln, Verfahren und Prüfungen, die den Bestand konsistent halten.',
       },
       {
