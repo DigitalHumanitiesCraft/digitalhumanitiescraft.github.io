@@ -14,7 +14,7 @@ Read `knowledge/fancy-research-tools/INDEX.md` first, then its `handoff.md`, the
 
 - Copy, links and maturity of tools and methods: `src/i18n/fancy.ts`, after the facts in `data.md`. German and English stand in the same file and change together.
 - Look and markup: `src/components/fancy/FancyPage.astro`, after `design.md`.
-- Advert video: `fancyAdvert` in `src/i18n/fancy.ts` holds its paths and the YouTube address that switches it on, the files lie in `public/fancy-research-tools/video/` and come from the repository `dhcraft-promo`.
+- Advert video: `fancyAdvert` in `src/i18n/fancy.ts` holds its paths and the YouTube address that adds the link below it, the files lie in `public/fancy-research-tools/video/` and come from the repository `dhcraft-promo`.
 - Privacy statement: `privacy` in `src/i18n/fancy.ts`, rendered by `src/components/fancy/FancyPrivacy.astro`.
 - Screenshots, share image and encoded method images: the scripts in `scripts/fancy-research-tools/`, which write into `public/fancy-research-tools/img/`.
 - Method image prompts: `knowledge/fancy-research-tools/image-prompts/`, after `method-images.md`. Commit the `.txt` prompt logs, never the PNG files.
@@ -32,7 +32,8 @@ The content rules CR-01 to CR-07 in `specification.md` bind every text on the pa
 - Never invent prices, promises, conditions or client names.
 - Write in a formal scholarly register, with traceability, provenance and reuse as terms, no dash or colon as connector, no trailing negation, no ornamental triad, no marketing adjectives.
 - Take maturity from the tool's own knowledge base, record source and check date in `data.md`, and verify every link answers HTTP 200.
-- Tool rows show real screenshots from `scripts/fancy-research-tools/shoot-tools.cjs`. Generated images appear only on the method cards and follow `design.md#generated-images`.
+- Tool rows show real screenshots from `scripts/fancy-research-tools/shoot-tools.cjs`. Method cards show the code figures of `src/components/fancy/MethodFigure.astro`, derived from each method's own main figure as recorded in `data.md`. The page carries no generated image.
+- Every tool row and method card has at most three levels of text, title with maturity, one paragraph, one row of text links in one form (ADR-020).
 - Knowledge documents name third parties by role and institution, never by personal name.
 
 ### Design rules

@@ -57,15 +57,33 @@ The anchor is the fragment identifier on the page. The licence column names what
 | SZD OCR/HTR Pipeline | `#t-szd` | Experiment | https://chpollin.github.io/szd-htr-ocr-pipeline/ | https://github.com/chpollin/szd-htr-ocr-pipeline | MIT for code, documentation CC BY 4.0. The rights in the facsimiles and in the transcriptions derived from them remain with the Literaturarchiv Salzburg | https://github.com/chpollin/szd-htr-ocr-pipeline/blob/main/knowledge/INDEX.md, state from its README (experimental sub-project, four checking tiers recorded per object, tier 0 implemented end to end), checked on 2026-11-05 |
 | Stefan-Zweig-Bibliographie (Klawiter-Rescue) | `#t-klawiter` | Bestand gesichert | https://chpollin.github.io/klawiter-rescue/ | https://github.com/chpollin/klawiter-rescue | MIT, documentation and data CC BY 4.0 | https://github.com/chpollin/klawiter-rescue/blob/main/knowledge/status.md |
 
-The Stefan-Zweig-Bibliographie row also links the video https://youtu.be/KG35VGVctJw. The teiCrafter button reads Demo ansehen, because teiCrafter is offered as a template to fork. Tools and methods with the maturity Forschungsvorschau or Experiment carry the note that they are not finished. The page links the maturity source only through the repository, which holds the tool's knowledge base.
+The Stefan-Zweig-Bibliographie row also links the video https://youtu.be/KG35VGVctJw. Every tool row links Demo öffnen, Repository and Video where one exists. Tools and methods with the maturity Forschungsvorschau or Experiment carry the note that they are not finished. The page links the maturity source only through the repository, which holds the tool's knowledge base.
 
 ## Methods and frameworks
 
-| Method | Anchor | Maturity on the page | Page | Repository | Maturity source |
-|---|---|---|---|---|---|
-| Promptotyping | `#m-pt` | Im Einsatz | https://dhcraft.org/Promptotyping/, the videos Teil 1 https://youtu.be/8sUe4Jkh3uQ and Teil 2 https://youtu.be/hd_a-NBO_S4 and the article https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin, checked on 2026-10-21 | https://github.com/DigitalHumanitiesCraft/Promptotyping | the method page, article and repository |
-| Grounded Vault | `#m-gv` | Im Einsatz | https://dhcraft.org/grounded-vault/ and the video https://youtu.be/K1sZBOUSZ_0 | https://github.com/DigitalHumanitiesCraft/grounded-vault | the project page, video and repository |
-| Agentic Edition Pipeline | `#m-aep` | Forschungsvorschau | video https://youtu.be/krL-xMxTa_c | https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline | the video and repository |
+Each method card links its method page, its repository and one video, in this order and only where they exist. Every address answered HTTP 200 on 2026-11-10.
+
+| Method | Anchor | Maturity on the page | Method page | Repository | Video | Maturity source |
+|---|---|---|---|---|---|---|
+| Promptotyping | `#m-pt` | Im Einsatz | https://dhcraft.org/Promptotyping/ | https://github.com/DigitalHumanitiesCraft/Promptotyping | https://youtu.be/8sUe4Jkh3uQ | the method page and repository. The second video https://youtu.be/hd_a-NBO_S4 and the article https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin left the card on 2026-11-10 and are reached from the method page |
+| Grounded Vault | `#m-gv` | Im Einsatz | https://dhcraft.org/grounded-vault/ | https://github.com/DigitalHumanitiesCraft/grounded-vault | https://youtu.be/K1sZBOUSZ_0 | the project page, video and repository |
+| Second Brain Vault | `#m-sbv` | Im Einsatz | https://chpollin.github.io/second-brain-vault/ | https://github.com/chpollin/second-brain-vault | none | the README of the repository, which describes a template whose structure its author uses as a personal research environment. The repository states no maturity word of its own. Text and documentation CC BY 4.0, code MIT |
+| Agentic Edition Pipeline | `#m-aep` | Forschungsvorschau | none | https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline | https://youtu.be/krL-xMxTa_c | the README, research preview, version 0.10.0 |
+
+The local clones of Promptotyping, Grounded Vault and Second Brain Vault held unpushed revisions of their method pages on 2026-11-10. The addresses above exist in public, and the figures the cards are derived from appear on those pages only after their repositories are pushed.
+
+### Method figures
+
+The cards show hand-written SVG figures in `src/components/fancy/MethodFigure.astro`, inline in the page so that they carry its fonts. Each is a simplified card version of the method's own main figure and shows its terms only. The method repositories were read and not changed.
+
+| Card | Source figure, read on 2026-11-10 | What the card version keeps |
+|---|---|---|
+| Promptotyping | `assets/img/promptotyping-practice.svg` of the local clone `Promptotyping` | researchers who direct and validate, the four forms of work in the order of a first pass, the promptotype made of artefact, project knowledge and research data, knowledge curation |
+| Grounded Vault | `docs/images/grounded-vault-provenance-chain.svg` of the local clone `grounded-vault` | the chain from Output to Sources, the three checks with who performs them, the status ladder |
+| Second Brain Vault | `docs/images/second-brain-figure-de.svg` and `second-brain-figure.svg` of the local clone `second-brain-vault` | vault, agent session and project repository with their blocks, the three steps, reading and writing, the Repo Directory |
+| Agentic Edition Pipeline | none exists. Drawn from the workflow table and the section on models and methods in the README of the repository | page images, transcription, quality assessment, base TEI, viewing and correction, publication, the agent that runs the workflow, the editorial team at viewing and correction and at publication |
+
+Language. The terms of Promptotyping and Grounded Vault stay English on both language versions, because both methods fix them in English. Second Brain Vault and the Agentic Edition Pipeline are German on the German page and English on the English page, because Second Brain Vault keeps both versions of its figure.
 
 ## Images
 
@@ -78,7 +96,7 @@ All published images lie in `public/fancy-research-tools/img/` of the site repos
 | `correspexplorer-*.webp` | CorrespExplorer timeline of the synthetic demo dataset | own tool, synthetic data |
 | `szd-htr-*.webp` | SZD OCR/HTR Pipeline statistics view with checking tiers and review reasons | own tool, no facsimile shown, because the image rights lie with the archive |
 | `klawiter-*.webp` | start page of the Stefan Zweig Bibliography with search, the overview of how the data is built and the sections of the bibliography | own tool, data CC BY 4.0 |
-| `method-*.webp` | infographics of Promptotyping, Grounded Vault and the Agentic Edition Pipeline, series infographic-v3. The Research Mission Control images left the repository's `public/` on 2026-10-21 | generated with gpt-image through Codex on 2026-10-02, exact model version not reported, prompt logs in `image-prompts/method-*-infographic-v3.txt` beside this document, see [method images](method-images.md) |
+| none | the generated method infographics `method-*.webp` left `public/` on 2026-11-10, replaced by the [method figures](#method-figures). Their prompt logs stay in `image-prompts/` | not published |
 | `video/fancy-research-tools-workflows.mp4`, its poster and its English captions | the advert video of the page in 1280 by 720, see [Advert video](#advert-video) | picture rendered from code in the repository `dhcraft-promo`, music generated with ACE-Step 1.5, fonts under the SIL Open Font License, logo from the brand assets |
 | `og.jpg`, `og-en.jpg` | hero of the German and the English page for link previews, 1200 by 630 | rendered by `scripts/fancy-research-tools/shoot-og.cjs` from the site preview on 2026-11-05 |
 
@@ -86,7 +104,7 @@ All five tool screenshots were retaken on 2026-11-10. Tool screenshots are taken
 
 ## Advert video
 
-The hero carries one advert video, produced in the local repository `dhcraft-promo` (folder `fancy-research-tools/`, knowledge in its `knowledge/advert-videos.md`). `fancyAdvert` in `src/i18n/fancy.ts` holds its paths and the address of the upload on YouTube. The built page shows the video once that address is entered, the development server always. The file is served by the site, so playing it makes no third-party request, and the link to YouTube is an ordinary link.
+The hero carries one advert video, produced in the local repository `dhcraft-promo` (folder `fancy-research-tools/`, knowledge in its `knowledge/advert-videos.md`). `fancyAdvert` in `src/i18n/fancy.ts` holds its paths and the address of the upload on YouTube. The operator accepted the video on 2026-11-10, and the page shows it. The address of the upload adds a link below the video once it is entered. The file is served by the site, so playing it makes no third-party request, and the link to YouTube is an ordinary link.
 
 | Fact | Source |
 |---|---|

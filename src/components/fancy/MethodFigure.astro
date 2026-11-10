@@ -1,0 +1,276 @@
+---
+// Card versions of the main figures of the four methods, hand-written as inline SVG so that they carry
+// the fonts and tokens of the page. Each is a simplified reading of the method's own figure and shows
+// only its terms. Sources and decisions on language are recorded in knowledge/fancy-research-tools/data.md.
+import type { Lang } from '../../i18n/content';
+
+interface Props {
+  id: 'm-pt' | 'm-gv' | 'm-sbv' | 'm-aep';
+  lang: Lang;
+  label: string;
+}
+
+const { id, lang, label } = Astro.props;
+const de = lang === 'de';
+
+// Second Brain Vault keeps a German and an English figure, the terms below are taken from both.
+const sbv = de
+  ? { vault: 'Vault', session: 'Agentensitzung', repo: 'Projekt-Repository', k: 'Wissen', r: 'Regeln', s: 'Stand', c: 'Code und Daten', read: 'Lesen', work: 'Arbeiten', curate: 'Kuratieren', reads: 'liest', writes: 'schreibt', link: 'Das Repo Directory verbindet jedes Projekt mit knowledge/' }
+  : { vault: 'Vault', session: 'Agent session', repo: 'Project repository', k: 'Knowledge', r: 'Rules', s: 'State', c: 'Code and data', read: 'Read', work: 'Work', curate: 'Curate', reads: 'reads', writes: 'writes', link: 'Repo Directory links each project to its knowledge/' };
+
+// The steps follow the workflow table in the README of the Agentic Edition Pipeline.
+const aep = de
+  ? { agent: 'KI-Agent mit Projektwissen führt den Ablauf aus', s: ['Digitalisat', 'Transkription', 'Qualitätsprüfung', 'Basis-TEI', 'Ansicht und Korrektur', 'Veröffentlichung'], team: 'Redaktionsteam prüft und nimmt ab' }
+  : { agent: 'AI agent with project knowledge runs the workflow', s: ['Page images', 'Transcription', 'Quality assessment', 'Base TEI', 'Viewing and correction', 'Publication'], team: 'Editorial team reviews and accepts' };
+
+const chain = ['Output', 'Assertions', 'Distillates', 'Markdown representations', 'Sources'];
+const checks = [
+  { c: 'b', h: 'Validation', s: 'a script' },
+  { c: 'o', h: 'Machine review', s: 'a second LLM' },
+  { c: 'g', h: 'Verification', s: 'a person' },
+];
+const ladder = ['grounded', 'validated', 'verified'];
+---
+
+<svg class="fig" viewBox="0 0 600 375" role="img" aria-label={label}>
+  <defs>
+    <marker id={`${id}-a`} viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path d="M1,1 L11,6 L1,11 Z" class="tip" />
+    </marker>
+  </defs>
+
+  {
+    id === 'm-pt' && (
+      <g>
+        <circle class="box" cx="300" cy="30" r="18" />
+        <circle class="ln" cx="300" cy="25" r="5" />
+        <path class="ln" d="M291,41 C291,33 309,33 309,41" />
+        <text class="s" x="300" y="66" text-anchor="middle">Researchers</text>
+        <path class="ln" d="M282,30 H187 V76" marker-end={`url(#${id}-a)`} />
+        <path class="ln" d="M318,30 H484 V88" marker-end={`url(#${id}-a)`} />
+        <text class="s" x="234" y="21" text-anchor="middle">direct</text>
+        <text class="s" x="402" y="21" text-anchor="middle">validate</text>
+
+        <rect class="frame g" x="10" y="78" width="354" height="250" rx="12" />
+        <rect class="box g" x="18" y="96" width="160" height="56" rx="28" />
+        <rect class="box g" x="196" y="96" width="160" height="56" rx="28" />
+        <rect class="box g" x="196" y="254" width="160" height="56" rx="28" />
+        <rect class="box g" x="18" y="254" width="160" height="56" rx="28" />
+        <text class="h" x="98" y="130" text-anchor="middle">Preparation</text>
+        <text class="h" x="276" y="130" text-anchor="middle">Exploration</text>
+        <text class="h" x="276" y="288" text-anchor="middle">Distillation</text>
+        <text class="h" x="98" y="288" text-anchor="middle">Implementation</text>
+        <g class="ln" marker-end={`url(#${id}-a)`}>
+          <path d="M178,124 H194" />
+          <path d="M276,152 V252" />
+          <path d="M196,282 H180" />
+          <path d="M98,254 V154" />
+        </g>
+
+        <rect class="box o" x="406" y="104" width="184" height="224" rx="12" />
+        <rect class="box o" x="398" y="96" width="184" height="224" rx="12" />
+        <rect class="box o" x="390" y="88" width="184" height="224" rx="12" />
+        <text class="h" x="482" y="118" text-anchor="middle">Promptotype</text>
+        <rect class="box" x="404" y="132" width="156" height="46" rx="6" />
+        <rect class="box b" x="404" y="190" width="156" height="46" rx="6" />
+        <rect class="box" x="404" y="248" width="156" height="46" rx="6" />
+        <text class="t" x="482" y="161" text-anchor="middle">Artefact</text>
+        <text class="t" x="482" y="219" text-anchor="middle">Project Knowledge</text>
+        <text class="t" x="482" y="277" text-anchor="middle">Research Data</text>
+        <path class="ln" d="M364,170 H388" marker-end={`url(#${id}-a)`} />
+        <path class="ln" d="M482,330 V352 H187 V330" marker-end={`url(#${id}-a)`} />
+        <text class="s" x="334" y="346" text-anchor="middle">knowledge curation</text>
+      </g>
+    )
+  }
+
+  {
+    id === 'm-gv' && (
+      <g>
+        {chain.map((name, i) => (
+          <g>
+            <rect class="box" x="12" y={16 + i * 58} width="300" height="44" rx="8" />
+            <text class="h" x="28" y={44 + i * 58}>{name}</text>
+            {i < chain.length - 1 && <path class="ln" d={`M162,${60 + i * 58} V${72 + i * 58}`} marker-end={`url(#${id}-a)`} />}
+          </g>
+        ))}
+        {checks.map((c, i) => (
+          <g>
+            <rect class={`box ${c.c}`} x="340" y={16 + i * 94} width="248" height="82" rx="10" />
+            <text class="h" x="358" y={48 + i * 94}>{c.h}</text>
+            <text class="t" x="358" y={74 + i * 94}>{c.s}</text>
+          </g>
+        ))}
+        {ladder.map((name, i) => (
+          <g>
+            <rect class={`box ${['', 'b', 'g'][i]}`} x={12 + i * 218} y="322" width="140" height="36" rx="18" />
+            <text class="m" x={82 + i * 218} y="346" text-anchor="middle">{name}</text>
+            {i < ladder.length - 1 && <path class="ln" d={`M${154 + i * 218},340 H${228 + i * 218}`} marker-end={`url(#${id}-a)`} />}
+          </g>
+        ))}
+      </g>
+    )
+  }
+
+  {
+    id === 'm-sbv' && (
+      <g>
+        <text class="h" x="10" y="26">{sbv.vault}</text>
+        <text class="h" x="300" y="26" text-anchor="middle">{sbv.session}</text>
+        <text class="h" x="590" y="26" text-anchor="end">{sbv.repo}</text>
+
+        <rect class="box" x="10" y="40" width="170" height="250" rx="10" />
+        <rect class="box" x="428" y="48" width="162" height="250" rx="10" />
+        <rect class="box" x="420" y="40" width="162" height="250" rx="10" />
+        {[sbv.k, sbv.r, sbv.s].map((name, i) => (
+          <g>
+            <rect class={`bar ${['g', 'o', 'p'][i]}`} x="10" y={58 + i * 80} width="7" height="54" />
+            <text class="t" x="32" y={92 + i * 80}>{name}</text>
+          </g>
+        ))}
+        {[sbv.k, sbv.r, sbv.c].map((name, i) => (
+          <g>
+            {i < 2 && <rect class={`bar ${['g', 'o'][i]}`} x="420" y={58 + i * 80} width="7" height="54" />}
+            <text class="t" x="442" y={92 + i * 80}>{name}</text>
+          </g>
+        ))}
+        {[sbv.read, sbv.work, sbv.curate].map((name, i) => (
+          <g>
+            <rect class={`box ${i === 1 ? 'p' : ''}`} x="210" y={48 + i * 86} width="180" height="62" rx="10" />
+            <circle class="ln" cx="234" cy={79 + i * 86} r="12" />
+            <text class="n" x="234" y={84 + i * 86} text-anchor="middle">{i + 1}</text>
+            <text class="h" x="256" y={85 + i * 86}>{name}</text>
+          </g>
+        ))}
+        <g class="ln" marker-end={`url(#${id}-a)`}>
+          <path d="M300,110 V132" />
+          <path d="M300,196 V218" />
+          <path d="M180,79 H208" />
+          <path d="M420,79 H392" />
+          <path d="M210,251 H182" />
+          <path d="M390,251 H418" />
+        </g>
+        <path class="ln dash" d="M95,290 V322 H501 V300" marker-end={`url(#${id}-a)`} />
+        <text class="s" x="300" y="348" text-anchor="middle">{sbv.link}</text>
+      </g>
+    )
+  }
+
+  {
+    id === 'm-aep' && (
+      <g>
+        <rect class="box b" x="12" y="14" width="576" height="42" rx="10" />
+        <text class="t" x="300" y="41" text-anchor="middle">{aep.agent}</text>
+        {aep.s.map((name, i) => (
+          <g>
+            <rect class={`box ${i > 3 ? 'p' : ''}`} x={12 + (i % 3) * 198} y={i < 3 ? 92 : 204} width="180" height="58" rx="10" />
+            <text class="h sm" x={102 + (i % 3) * 198} y={i < 3 ? 127 : 239} text-anchor="middle">{name}</text>
+          </g>
+        ))}
+        <g class="ln" marker-end={`url(#${id}-a)`}>
+          <path d="M192,121 H208" />
+          <path d="M390,121 H406" />
+          <path d="M498,150 V177 H102 V202" />
+          <path d="M192,233 H208" />
+          <path d="M390,233 H406" />
+          <path d="M300,306 V264" />
+          <path d="M498,306 V264" />
+        </g>
+        <rect class="box p" x="210" y="306" width="378" height="46" rx="10" />
+        <circle class="ln" cx="238" cy="323" r="5" />
+        <path class="ln" d="M229,340 C229,331 247,331 247,340" />
+        <text class="t" x="414" y="335" text-anchor="middle">{aep.team}</text>
+      </g>
+    )
+  }
+</svg>
+
+<style>
+  /* Strokes and tints are the four hues of the DHCraft mark as the method figures use them. */
+  .fig {
+    display: block;
+    inline-size: 100%;
+    block-size: auto;
+    color: var(--ink);
+    --fg-green: #5c9e4a;
+    --fg-blue: #4a7ab8;
+    --fg-orange: #b8701a;
+    --fg-purple: #8a4fa3;
+  }
+
+  text {
+    fill: currentColor;
+    font-family: var(--font-body);
+    font-size: 16px;
+  }
+
+  .h {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 17px;
+  }
+
+  .h.sm {
+    font-size: 14.5px;
+  }
+
+  .s {
+    font-size: 14px;
+    fill: rgba(30, 39, 73, 0.74);
+  }
+
+  .m {
+    font-family: ui-monospace, 'Cascadia Mono', Consolas, Menlo, monospace;
+    font-size: 15px;
+  }
+
+  .n {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  .ln {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+  }
+
+  .dash {
+    stroke-dasharray: 6 5;
+  }
+
+  .tip {
+    fill: #fff;
+    stroke: var(--ink);
+    stroke-width: 1.5;
+  }
+
+  .box {
+    fill: #fff;
+    stroke: currentColor;
+    stroke-width: 1.8;
+  }
+
+  .frame {
+    fill: none;
+    stroke-width: 1.3;
+    stroke-dasharray: 7 6;
+  }
+
+  .bar {
+    stroke: none;
+  }
+
+  .g { stroke: var(--fg-green); }
+  .b { stroke: var(--fg-blue); }
+  .o { stroke: var(--fg-orange); }
+  .p { stroke: var(--fg-purple); }
+  .box.g { fill: #eef4ec; }
+  .box.b { fill: #edf2f8; }
+  .box.o { fill: #fbf3e6; }
+  .box.p { fill: #f5eef8; }
+  .bar.g { fill: var(--fg-green); }
+  .bar.o { fill: var(--fg-orange); }
+  .bar.p { fill: var(--fg-purple); }
+</style>

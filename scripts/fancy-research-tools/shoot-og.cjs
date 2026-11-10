@@ -15,9 +15,9 @@ const base = process.env.BASE || "http://localhost:4399";
   for (const [url, file] of [["/fancy-research-tools/", "og.jpg"], ["/en/fancy-research-tools/", "og-en.jpg"]]) {
     const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, reducedMotion: "reduce" });
     await page.goto(base + url, { waitUntil: "networkidle" });
-    // The floating back-to-top button of the site does not belong in a preview image, and a smaller
-    // hero padding keeps the buttons inside the 630 pixels the image has.
-    await page.addStyleTag({ content: ".to-top { display: none !important; } .hero { padding-block: 2.5rem !important; }" });
+    // The floating back-to-top button of the site does not belong in a preview image. The video is left
+    // out, so that the image shows the name and what the offer is in full width.
+    await page.addStyleTag({ content: ".to-top, .advert { display: none !important; } .hero { padding-block: 5rem !important; } .hero .wrap { grid-template-columns: 1fr !important; }" });
     await page.screenshot({ path: path.join(site, "public", "fancy-research-tools", "img", file), type: "jpeg", quality: 85 });
     await page.close();
   }

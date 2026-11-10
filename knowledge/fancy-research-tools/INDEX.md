@@ -47,6 +47,7 @@ All zones lie in the site repository, DigitalHumanitiesCraft/digitalhumanitiescr
 - `knowledge/fancy-research-tools/image-prompts/` holds the prompt logs (`*.txt`) of the generated method images. The source PNGs beside them stay local and are kept out of Git by `.gitignore`.
 - `scripts/fancy-research-tools/` holds the scripts that take the tool screenshots, encode chosen images, render the share image and run the browser checks against the preview build, see [testing](testing.md).
 - `src/i18n/fancy.ts` holds all copy in German and English, the structured data of tools and methods, the privacy statements and the routes.
+- `src/components/fancy/MethodFigure.astro` holds the four method figures as inline SVG.
 - `src/components/fancy/FancyPage.astro` renders the page with its scoped styles, `src/components/fancy/FancyPrivacy.astro` the privacy statement.
 - `src/pages/fancy-research-tools/` and `src/pages/en/fancy-research-tools/` hold the route files.
 - `public/fancy-research-tools/img/` holds the published screenshots, method images and the share images per language.
@@ -72,7 +73,7 @@ This knowledge base follows the Promptotyping Documents convention, kept in the 
 
 ### Repository link
 
-The link \"Repository\" with the GitHub mark at every tool and method whose code is on GitHub. Every link to github.com on the tool and method rows carries the same mark and label.
+The text link labelled Repository at every tool and method, the second link of an entry's link row. It carried the GitHub mark until 2026-11-10.
 
 Used in [data](data.md), [specification](specification.md#requirements).
 

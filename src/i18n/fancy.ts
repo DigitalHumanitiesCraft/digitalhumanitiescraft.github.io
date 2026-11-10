@@ -22,7 +22,7 @@ const maturityClass: Record<Maturity, string> = {
   preview: 'm-preview',
   demo: 'm-rc',
   secured: 'm-use',
-  experiment: 'm-experiment',
+  experiment: 'm-preview',
 };
 
 const img = (name: string) => `/fancy-research-tools/img/${name}`;
@@ -66,43 +66,39 @@ const toolsBase: { id: string; img: string; open: string; code: string; video?: 
   },
 ];
 
-const methodsBase: { id: string; img: string; maturity: Maturity; links: string[] }[] = [
+// Every method links its page, its repository and one video, in this order and only where they exist.
+const methodsBase: { id: 'm-pt' | 'm-gv' | 'm-sbv' | 'm-aep'; maturity: Maturity; page?: string; code: string; video?: string }[] = [
   {
     id: 'm-pt',
-    img: 'method-promptotyping',
     maturity: 'use',
-    links: [
-      'https://dhcraft.org/Promptotyping/',
-      'https://github.com/DigitalHumanitiesCraft/Promptotyping',
-      'https://youtu.be/8sUe4Jkh3uQ',
-      'https://youtu.be/hd_a-NBO_S4',
-      'https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin',
-    ],
+    page: 'https://dhcraft.org/Promptotyping/',
+    code: 'https://github.com/DigitalHumanitiesCraft/Promptotyping',
+    video: 'https://youtu.be/8sUe4Jkh3uQ',
   },
   {
     id: 'm-gv',
-    img: 'method-grounded-vault',
     maturity: 'use',
-    links: [
-      'https://dhcraft.org/grounded-vault/',
-      'https://github.com/DigitalHumanitiesCraft/grounded-vault',
-      'https://youtu.be/K1sZBOUSZ_0',
-    ],
+    page: 'https://dhcraft.org/grounded-vault/',
+    code: 'https://github.com/DigitalHumanitiesCraft/grounded-vault',
+    video: 'https://youtu.be/K1sZBOUSZ_0',
+  },
+  {
+    id: 'm-sbv',
+    maturity: 'use',
+    page: 'https://chpollin.github.io/second-brain-vault/',
+    code: 'https://github.com/chpollin/second-brain-vault',
   },
   {
     id: 'm-aep',
-    img: 'method-agentic-edition-pipeline',
     maturity: 'preview',
-    links: [
-      'https://youtu.be/krL-xMxTa_c',
-      'https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline',
-    ],
+    code: 'https://github.com/DigitalHumanitiesCraft/agentic-edition-pipeline',
+    video: 'https://youtu.be/krL-xMxTa_c',
   },
 ];
 
 /**
- * The advert video in the hero. The page shows it once `youtube` holds the address of the upload,
- * the development server shows it always. The file, its poster and its captions lie in
+ * The advert video in the hero, accepted by the operator on 2026-11-10. `youtube` holds the address of
+ * the upload once it exists and adds a link below the video. The file, its poster and its captions lie in
  * public/fancy-research-tools/video/ and are served by the site, so playing it makes no third-party request.
  */
 export const fancyAdvert = {
@@ -124,13 +120,10 @@ const text = {
       'Forschungswerkzeuge und Workflows, mit Coding-Agenten gebaut. In Workshops und Trainings lernt Ihr Team, sie selbst weiterzuentwickeln.',
     ogLocale: 'de_AT',
     ogImageAlt:
-      'Kopfbereich der Seite fancy (research) tools & workflows mit dem Titel, der Zeile Agentic Engineering für alle, die mit Wissen arbeiten, und dem Knopf Ins Gespräch kommen',
+      'Kopfbereich der Seite fancy (research) tools & workflows mit dem Titel und der Zeile Agentic Engineering für alle, die mit Wissen arbeiten',
     heroLine: 'Agentic Engineering für alle, die mit Wissen arbeiten.',
     lede: 'fancy (research) tools & workflows sind Anwendungen und Workflows für die Arbeit mit Wissen, entwickelt mit Coding-Agenten. Die Anwendungen laufen meist statisch und ohne Server im Browser, andere Lösungen sind möglich. In Workshops und Trainings lernt Ihr Team, sie selbst weiterzuentwickeln.',
-    heroCta: 'Ins Gespräch kommen',
-    heroOffer: 'Unser Angebot',
     advertLabel: 'Video zu fancy (research) tools & workflows, 88 Sekunden, englisch gesungen',
-    advertCaption: 'Musik KI-generiert, Bilder aus Code gerendert.',
     advertCaptions: 'Englischer Liedtext',
     advertYoutube: 'Auf YouTube ansehen',
     offerTitle: 'Angebot',
@@ -151,9 +144,10 @@ const text = {
       secured: 'Bestand gesichert',
       experiment: 'Experiment',
     },
-    toolOpen: 'Werkzeug öffnen',
+    toolOpen: 'Demo öffnen',
     toolCode: 'Repository',
     toolVideo: 'Video',
+    methodPage: 'Methodenseite',
     previewNote: 'Noch nicht fertig und zum Ausprobieren gedacht. Ergebnisse sind vor jeder Weiterverwendung zu prüfen.',
     tools: [
       {
@@ -164,7 +158,6 @@ const text = {
       },
       {
         title: 'teiCrafter',
-        openLabel: 'Demo ansehen',
         alt: 'teiCrafter mit lesbarem Brieftext und markierten Personen und Orten links und dem Register der erwähnten Personen und Orte rechts.',
         solution: 'Eine Vorlage zum Forken, aus der Sie Ihr eigenes Werkzeug zur Erfassung von TEI-Daten entwickeln. Sie zeigt lesbaren Text statt Tags und prüft beim Speichern gegen das Schema.',
         licence: 'Code MIT',
@@ -190,25 +183,26 @@ const text = {
     ],
     methodsTitle: 'Methoden und Frameworks',
     methodsIntro: 'Die Werkzeuge oben entstehen mit diesen Methoden und Workflows.',
-    methodCaption: 'Generiert mit gpt-image',
     methods: [
       {
         title: 'Promptotyping',
-        alt: 'Promptotyping als Ablauf von Preparation über Exploration und Distillation zu Implementation, alle Schritte verbunden mit dem Project Knowledge, ein Review führt zum Promptotype aus Projektwissen, Daten und Artefakt.',
+        alt: 'Promptotyping als Kreis der vier Arbeitsformen Preparation, Exploration, Distillation und Implementation, den Forschende leiten und dessen Ergebnis sie prüfen. Jede Runde ergibt einen Promptotype aus Artefakt, Projektwissen und Forschungsdaten, und was Prüfung und Gebrauch zeigen, geht als Wissenskuration zurück in die Arbeit.',
         solution: 'Promptotyping entwickelt Forschungsartefakte mit Coding-Agenten aus einer gepflegten Wissensbasis heraus.',
-        links: ['Zur Methode', 'Repository', 'Video Teil 1', 'Video Teil 2', 'Beitrag auf L.I.S.A.'],
       },
       {
         title: 'Grounded Vault',
-        alt: 'Grounded Vault als Kette von Sources über Markdown representation und Distillates zu Assertions und Output, eine grüne Linie verbindet jede Aussage mit ihrer Quellstelle.',
+        alt: 'Grounded Vault als Kette von Output über Assertions, Distillates und Markdown representations zu den Sources, daneben die drei Prüfungen Validation durch ein Skript, Machine review durch ein zweites LLM und Verification durch eine Person, darunter die Stufen grounded, validated und verified.',
         solution: 'Grounded Vault führt jede tragende Aussage eines Berichts über einen prüfbaren Anker bis zur Quellstelle.',
-        links: ['Projektseite', 'Repository', 'Video'],
+      },
+      {
+        title: 'Second Brain Vault',
+        alt: 'Second Brain Vault mit drei Spalten. Die Agentensitzung liest Wissen und Regeln aus dem Vault und aus dem Projekt-Repository, arbeitet und kuratiert, und schreibt in beide zurück. Das Repo Directory verbindet jedes Projekt mit seinem Ordner knowledge.',
+        solution: 'Second Brain Vault ist eine Vorlage für einen Obsidian-Vault, den man gemeinsam mit einem KI-Agenten pflegt, mit Regeln, Verfahren und Prüfungen, die den Bestand konsistent halten.',
       },
       {
         title: 'Agentic Edition Pipeline',
-        alt: 'Agentic Edition Pipeline als Ablauf von Digitized Source über Transcription, Review and Correction und TEI zu Reading and Review, koordiniert von einem AI Agent mit Project Knowledge, die Prüfung liegt beim Editorial Team.',
+        alt: 'Agentic Edition Pipeline als Ablauf vom Digitalisat über Transkription, Qualitätsprüfung und Basis-TEI zu Ansicht und Korrektur und zur Veröffentlichung. Ein KI-Agent mit Projektwissen führt den Ablauf aus, das Redaktionsteam prüft bei Ansicht und Korrektur und nimmt vor der Veröffentlichung ab.',
         solution: 'Die Agentic Edition Pipeline führt Digitalisate über Transkription und Prüfung zu TEI und einer statischen Leseansicht.',
-        links: ['Zum Video', 'Repository'],
       },
     ],
     contactTitle: 'Ins Gespräch kommen',
@@ -230,13 +224,10 @@ const text = {
       'Research tools and workflows built with coding agents. In workshops and training your team learns to develop them further.',
     ogLocale: 'en_GB',
     ogImageAlt:
-      'Header of the page fancy (research) tools & workflows with its title, the line Agentic engineering for everyone who works with knowledge, and the button Get in touch',
+      'Header of the page fancy (research) tools & workflows with its title and the line Agentic engineering for everyone who works with knowledge',
     heroLine: 'Agentic engineering for everyone who works with knowledge.',
     lede: 'fancy (research) tools & workflows are applications and workflows for working with knowledge, built with coding agents. Most of the applications run statically in the browser without a server, though other solutions are possible. In workshops and training your team learns to develop them further itself.',
-    heroCta: 'Get in touch',
-    heroOffer: 'What we offer',
     advertLabel: 'Video about fancy (research) tools & workflows, 88 seconds, sung in English',
-    advertCaption: 'AI-generated music, code-rendered visuals.',
     advertCaptions: 'English lyrics',
     advertYoutube: 'Watch on YouTube',
     offerTitle: 'What we offer',
@@ -257,9 +248,10 @@ const text = {
       secured: 'Data rescued',
       experiment: 'Experiment',
     },
-    toolOpen: 'Open tool',
+    toolOpen: 'Open demo',
     toolCode: 'Repository',
     toolVideo: 'Video',
+    methodPage: 'Method page',
     previewNote: 'Not finished yet and meant for trying out. Results need checking before any reuse.',
     tools: [
       {
@@ -270,7 +262,6 @@ const text = {
       },
       {
         title: 'teiCrafter',
-        openLabel: 'View demo',
         alt: 'teiCrafter with readable letter text and marked persons and places on the left and the register of the persons and places mentioned on the right.',
         solution: 'A template to fork and develop into your own tool for capturing TEI data. It shows readable text instead of tags and validates against the schema on saving.',
         licence: 'Code MIT',
@@ -296,25 +287,26 @@ const text = {
     ],
     methodsTitle: 'Methods and frameworks',
     methodsIntro: 'The tools above are built with these methods and workflows.',
-    methodCaption: 'Generated with gpt-image',
     methods: [
       {
         title: 'Promptotyping',
-        alt: 'Promptotyping as a sequence from Preparation via Exploration and Distillation to Implementation, every step connected to the Project Knowledge, with a review leading to the Promptotype made of project knowledge, data and artefact.',
+        alt: 'Promptotyping as a cycle of the four forms of work Preparation, Exploration, Distillation and Implementation, which researchers direct and whose result they validate. Each round yields a promptotype made of artefact, project knowledge and research data, and what checking and use reveal returns to the work as knowledge curation.',
         solution: 'Promptotyping develops research artefacts with coding agents out of a maintained knowledge base.',
-        links: ['About the method', 'Repository', 'Video part 1', 'Video part 2', 'Article on L.I.S.A.'],
       },
       {
         title: 'Grounded Vault',
-        alt: 'Grounded Vault as a chain from Sources via Markdown representation and Distillates to Assertions and Output, with a green line connecting every statement to its source passage.',
+        alt: 'Grounded Vault as a chain from Output via Assertions, Distillates and Markdown representations to the Sources, beside it the three checks Validation by a script, Machine review by a second LLM and Verification by a person, below it the stages grounded, validated and verified.',
         solution: 'Grounded Vault leads every load-bearing claim in a report through a verifiable anchor back to the source passage.',
-        links: ['Project page', 'Repository', 'Video'],
+      },
+      {
+        title: 'Second Brain Vault',
+        alt: 'Second Brain Vault in three columns. The agent session reads knowledge and rules from the vault and from the project repository, works and curates, and writes back to both. The Repo Directory links each project to its knowledge folder.',
+        solution: 'Second Brain Vault is a template for an Obsidian vault maintained together with an AI agent, with rules, procedures and checks that keep it consistent.',
       },
       {
         title: 'Agentic Edition Pipeline',
-        alt: 'Agentic Edition Pipeline as a sequence from Digitized Source via Transcription, Review and Correction and TEI to Reading and Review, coordinated by an AI Agent with Project Knowledge, with the review resting with the Editorial Team.',
+        alt: 'Agentic Edition Pipeline as a workflow from page images via transcription, quality assessment and base TEI to viewing and correction and to publication. An AI agent with project knowledge runs the workflow, the editorial team reviews at viewing and correction and accepts before publication.',
         solution: 'The Agentic Edition Pipeline takes digital copies through transcription and review to TEI and a static reading view.',
-        links: ['Watch the video', 'Repository'],
       },
     ],
     contactTitle: 'Get in touch',
@@ -442,11 +434,8 @@ export function getFancyContent(lang: Lang) {
     methods: methodsBase.map((b, i) => ({
       ...b,
       ...t.methods[i],
-      src: img(`${b.img}-720.webp`),
-      srcset: `${img(`${b.img}-720.webp`)} 720w, ${img(`${b.img}-1440.webp`)} 1440w`,
       maturityClass: maturityClass[b.maturity],
       maturityLabel: t.maturity[b.maturity],
-      links: b.links.map((href, j) => ({ href, label: t.methods[i].links[j] })),
     })),
   };
 }
