@@ -129,7 +129,7 @@ const servicesText = {
   de: [
     {
       title: 'KI-Weiterbildung',
-      text: 'Weiterbildung zu AI Literacies sowie zu <a href="https://www.youtube.com/@DigitalHumanitiesCraft" target="_blank" rel="noopener">Knowledge und Agentic Engineering</a> für Wissenschaft, Kultur und Wirtschaft. Wir bieten sie als Vortrag, Webinar, Workshop oder als Beitrag zu mehrtägigen Schools an.',
+      text: 'Weiterbildung zu AI Literacies sowie zu <a href="https://www.youtube.com/@DigitalHumanitiesCraft" target="_blank" rel="noopener">Knowledge, Context und Agentic Engineering</a> für Wissenschaft, Kultur und Wirtschaft. Wir bieten sie als Vortrag, Webinar, Workshop oder als Beitrag zu mehrtägigen Schools an.',
     },
     {
       title: 'KI-Beratung und Agentic Engineering',
@@ -155,7 +155,7 @@ const servicesText = {
   en: [
     {
       title: 'AI training',
-      text: 'Training in AI literacies and in <a href="https://www.youtube.com/@DigitalHumanitiesCraft" target="_blank" rel="noopener">knowledge and agentic engineering</a> for research, culture and business. We offer it as a talk, webinar, workshop or as a contribution to multi-day schools.',
+      text: 'Training in AI literacies and in <a href="https://www.youtube.com/@DigitalHumanitiesCraft" target="_blank" rel="noopener">knowledge, context and agentic engineering</a> for research, culture and business. We offer it as a talk, webinar, workshop or as a contribution to multi-day schools.',
     },
     {
       title: 'AI consulting and agentic engineering',

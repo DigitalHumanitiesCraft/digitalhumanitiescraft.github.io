@@ -172,9 +172,9 @@ const text = {
         licence: 'Code MIT, Beispieldaten CC BY 4.0',
       },
       {
-        title: 'SZD OCR/HTR Pipeline',
-        alt: 'SZD OCR/HTR Pipeline mit einem handschriftlichen Brief von Stefan Zweig aus dem Juni 1939. Links steht das Faksimile, rechts die Transkription Zeile für Zeile, darunter der Vermerk Geprüft.',
-        solution: 'Transkribiert die digitalisierten Objekte eines Nachlasses und vermerkt an jedem Objekt, ob es nur maschinell transkribiert, von einem Agenten geprüft oder von Menschen geprüft ist.',
+        title: 'SZD-HTR',
+        alt: 'SZD-HTR mit einem handschriftlichen Brief von Stefan Zweig aus dem Juni 1939. Links steht das Faksimile, rechts die Transkription Zeile für Zeile, darunter der Vermerk Geprüft.',
+        solution: 'Transkription und Prüfung des Nachlasses von Stefan Zweig. Das Werkzeug vermerkt an jedem Objekt, ob es nur maschinell transkribiert, von einem Agenten geprüft oder von Menschen geprüft ist.',
         licence: 'Code MIT',
       },
       {
@@ -276,9 +276,9 @@ const text = {
         licence: 'Code MIT, sample data CC BY 4.0',
       },
       {
-        title: 'SZD OCR/HTR Pipeline',
-        alt: 'SZD OCR/HTR Pipeline with a handwritten letter by Stefan Zweig of June 1939. The facsimile stands on the left, the transcription line by line on the right, and the note Geprüft, checked, below.',
-        solution: 'Transcribes the digitised objects of an estate and records for every object whether it is machine-transcribed only, checked by an agent or checked by a human.',
+        title: 'SZD-HTR',
+        alt: 'SZD-HTR with a handwritten letter by Stefan Zweig of June 1939. The facsimile stands on the left, the transcription line by line on the right, and the note Geprüft, checked, below.',
+        solution: 'Transcription and review of the Stefan Zweig estate. The tool records for every object whether it is machine-transcribed only, checked by an agent or checked by a human.',
         licence: 'Code MIT',
       },
       {

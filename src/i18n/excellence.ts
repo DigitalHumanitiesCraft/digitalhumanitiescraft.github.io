@@ -14,8 +14,8 @@ const t = {
     formatsTitle: 'Weiterbildung und Beratung',
     promptoTitle: 'Promptotyping',
     promptoText:
-      'Promptotyping ist eine Methode des Context Engineering, die Forschungsartefakte mit KI-Agenten aus einer gepflegten Wissensbasis heraus entwickelt. Wir vermitteln sie in Workshops und setzen sie in Projekten ein, wenn sie zum Vorhaben passt, neben anderen Methoden unter <a href="/fancy-research-tools/">fancy (research) tools &amp; workflows</a>.',
-    promptoSpec: 'Die Methodenspezifikation',
+      'Promptotyping ist eine Arbeitspraxis, die Forschungsdaten und ihre Kontexte durch Knowledge Engineering, Context Engineering und Agentic Engineering in Forschungsartefakte übersetzt, die zu den Fragen und Arbeitsweisen der Forschenden passen. Wir vermitteln sie in Workshops und setzen sie in Projekten ein, wenn sie zum Vorhaben passt, neben den Methoden und Frameworks unter <a href="/fancy-research-tools/">fancy (research) tools &amp; workflows</a>.',
+    promptoSpec: 'Die Spezifikation der Arbeitspraxis',
     promptoArticle: 'Grundlagentext im Wissenschaftsportal L.I.S.A. der Gerda Henkel Stiftung',
     promptoSkill: 'Promptotyping-Skill auf GitHub',
     patreonTitle: 'Patreon Membership',
@@ -25,8 +25,8 @@ const t = {
     formatsTitle: 'Training and consulting',
     promptoTitle: 'Promptotyping',
     promptoText:
-      'Promptotyping is a context engineering method that develops research artefacts with AI agents from a maintained knowledge base. We teach it in workshops and use it in projects where it fits, alongside other methods described under <a href="/en/fancy-research-tools/">fancy (research) tools &amp; workflows</a>.',
-    promptoSpec: 'The method specification',
+      'Promptotyping is a working practice that translates research data and their contexts into research artefacts that fit the researchers’ questions and ways of working, through Knowledge Engineering, Context Engineering and Agentic Engineering. We teach it in workshops and use it in projects where it fits, alongside the methods and frameworks described under <a href="/en/fancy-research-tools/">fancy (research) tools &amp; workflows</a>.',
+    promptoSpec: 'The specification of the working practice',
     promptoArticle: 'Foundational article on the L.I.S.A. science portal of the Gerda Henkel Foundation',
     promptoSkill: 'Promptotyping skill on GitHub',
     patreonTitle: 'Patreon Membership',
