@@ -104,7 +104,7 @@ All five tool screenshots were retaken on 2026-11-10. Tool screenshots are taken
 
 ## Advert video
 
-The hero carries one advert video, produced in the local repository `dhcraft-promo` (folder `fancy-research-tools/`, knowledge in its `knowledge/advert-videos.md`). `fancyAdvert` in `src/i18n/fancy.ts` holds its paths and the address of the upload on YouTube. The operator accepted the video on 2026-11-10, and the page shows it. The address of the upload adds a link below the video once it is entered. The file is served by the site, so playing it makes no third-party request, and the link to YouTube is an ordinary link.
+The hero carries one advert video, produced in the local repository `dhcraft-promo` (folder `fancy-research-tools/`, knowledge in its `knowledge/advert-videos.md`). `fancyAdvert` in `src/i18n/fancy.ts` holds its paths, the address of the upload on YouTube and the switch `show`, which takes the video off the page when set to false. The file in `public/fancy-research-tools/video/` is published with the site either way. The operator accepted the video on 2026-11-10, and the page shows it. The address of the upload adds a link below the video once it is entered. The file is served by the site, so playing it makes no third-party request, and the link to YouTube is an ordinary link.
 
 | Fact | Source |
 |---|---|

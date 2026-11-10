@@ -48,7 +48,7 @@ const unfinished = (maturity: string) => maturity === 'preview' || maturity === 
             <p class="lede">{t.lede}</p>
           </div>
           {
-            (
+            fancyAdvert.show && (
               <figure class="advert" id="video">
                 <video controls preload="none" playsinline poster={fancyAdvert.poster} width="1920" height="1080" aria-label={t.advertLabel}>
                   <source src={fancyAdvert.file} type="video/mp4" />

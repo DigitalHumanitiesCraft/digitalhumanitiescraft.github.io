@@ -102,6 +102,8 @@ const methodsBase: { id: 'm-pt' | 'm-gv' | 'm-sbv' | 'm-aep'; maturity: Maturity
  * public/fancy-research-tools/video/ and are served by the site, so playing it makes no third-party request.
  */
 export const fancyAdvert = {
+  // false takes the video off the page. The hero then holds its text alone, as before 2026-11-10.
+  show: true,
   youtube: '',
   file: '/fancy-research-tools/video/fancy-research-tools-workflows.mp4',
   poster: '/fancy-research-tools/video/fancy-research-tools-workflows-poster.webp',
