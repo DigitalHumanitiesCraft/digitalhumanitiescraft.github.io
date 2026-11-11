@@ -6,7 +6,7 @@ project:
 status: active
 language: en
 created: 2026-10-01
-updated: 2026-11-10
+updated: 2026-11-11
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -33,7 +33,6 @@ An offer page on dhcraft.org that visitors find from the site navigation and the
 
 ## Open points
 
-- The upload of the advert video to YouTube and the entry of its address in `fancyAdvert` of `src/i18n/fancy.ts` wait for the operator. The page shows the video without it and gains the link once the address is entered.
 - The method cards derive from figures that the repositories of Promptotyping, Grounded Vault and Second Brain Vault held only locally on 2026-11-10. Until those repositories are pushed, the linked method pages show their earlier figures.
 - coOCR/HTR ships sample images without a recorded source or terms of use, the print of 1617 on the page's screenshot among them. The example policy of [ADR-017](specification.md#adr-017-page-slimmed-to-offer-examples-methods-and-contact) needs either that record in the tool's repository or the operator's decision to keep the example as it is.
 - The SZD OCR/HTR Pipeline and the Stefan-Zweig-Bibliographie rest on holdings of the Literaturarchiv Salzburg. No repository records the archive's consent to their use as examples of a commercial offer, which [CR-06](specification.md#content-rules) asks for where a project stands behind an example.

@@ -6,7 +6,7 @@ project:
 status: draft
 language: en
 created: 2026-10-01
-updated: 2026-11-10
+updated: 2026-11-11
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 method:
@@ -40,7 +40,7 @@ What the page must do, which rules its copy follows and which decisions hold. Re
 
 - NFR-01: Accessibility at WCAG 2.2 level AA. Measure: axe reports no violation at 1440 and 320 pixels on the page and the privacy statement in both languages, and every keyboard stop shows a focus outline and stays visible.
 - NFR-02: Reflow without horizontal scrolling. Measure: no document overflow at 320 pixels.
-- NFR-03: The page content makes no third-party request and needs no script. The advert video is a file of the site with native controls, and YouTube is reached by a link only. Measure: every `src` and `href` of stylesheets, scripts, fonts and images on the page and the privacy statement in both languages points to dhcraft.org. The site navigation brings its own script for the menu button, which the decision [ADR-014](#adr-014-the-page-moves-into-the-dhcraftorg-site) accepts.
+- NFR-03: The page content makes no third-party request and needs no script. YouTube is reached by a link only. Measure: every `src` and `href` of stylesheets, scripts, fonts and images on the page and the privacy statement in both languages points to dhcraft.org. The site navigation brings its own script for the menu button, which the decision [ADR-014](#adr-014-the-page-moves-into-the-dhcraftorg-site) accepts.
 - NFR-04: The copy follows the content rules. Measure: both languages hold against [CR-01 to CR-07](#content-rules) on reading.
 
 ### Content rules
@@ -95,7 +95,7 @@ Derivation:
 
 The page runs in this order.
 
-1. Hero with title, the accent line and lede, and the advert video in the right half.
+1. Hero with title, the accent line and lede.
 2. `#angebot`, titled Angebot, with the cards Lernen, Gemeinsam entwickeln and Im Auftrag entwickeln and the block Kosten.
 3. `#werkzeuge`, titled Beispiele zum Ausprobieren, with coOCR/HTR, teiCrafter, CorrespExplorer, SZD OCR/HTR Pipeline and Stefan-Zweig-Bibliographie. Each row carries a screenshot and three levels, the title with the maturity chip, one paragraph ending with the not-finished note where it applies, and the text links Demo öffnen, Repository and Video where one exists, followed by the licence.
 4. `#methoden`, titled Methoden und Frameworks, opened by one sentence saying that the tools above are built with these methods and workflows, with Promptotyping, Grounded Vault, Second Brain Vault and Agentic Edition Pipeline. Each card carries a figure and the same three levels, with the text links Methodenseite, Repository and Video where they exist.
@@ -304,7 +304,7 @@ Effect. The opening sentence of `#methoden` is a deliberate exception to the rul
 
 ### ADR-019 Advert video in the hero and licence in the tool rows
 
-Status: built on 2026-11-10 on the operator's commission to finish the advert video and integrate it on the page. The operator accepted the video the same day with the words "das Video finde ich sehr gut", after which the page shows it without waiting for the YouTube address. [ADR-020](#adr-020-three-levels-per-entry-and-code-figures-for-four-methods) removed the caption under the video and the button row beside it.
+Status: the video part is ended by [ADR-021](#adr-021-advert-video-removed-from-the-page), the licence in the tool rows stands. Built on 2026-11-10 on the operator's commission to finish the advert video and integrate it on the page. The operator accepted the video the same day with the words "das Video finde ich sehr gut", after which the page shows it without waiting for the YouTube address. [ADR-020](#adr-020-three-levels-per-entry-and-code-figures-for-four-methods) removed the caption under the video and the button row beside it.
 
 Context. The operator decided on 2026-10-21 that one advert video is made for the page and embedded on it. The shared design ground of the DHCraft method sites of 2026-11-10 gives every such site a main figure after the title and a statement of the terms of reuse. The page is an offer with several tools, so the seven parts of a method site fit it only in part.
 
@@ -323,3 +323,13 @@ Choice. Every tool row and every method card has three levels of text, the title
 Reason. One form of link and one place for the maturity let a reader scan every entry the same way. A figure drawn from the method's own figure states the method's terms, which an illustration could only suggest. The contact button of the navigation is visible on every scroll position, so the hero need not repeat it.
 
 Effect. This decision ends [ADR-012](#adr-012-generated-illustrations-for-the-method-cards) for the page and amends [ADR-016](#adr-016-uniform-links-no-ability-icons-research-mission-control-withdrawn), whose GitHub mark at repository links is gone, and FR-01, FR-02 and the scope list. The term Repository link in [INDEX](INDEX.md#repository-link) now names a plain text link. The interface plan of this round lies with the coordinating session's notes of 2026-11-10 and its approved parts are in [design](design.md#interaction-patterns).
+
+### ADR-021 Advert video removed from the page
+
+Status: built on 2026-11-11 on the operator's instruction to remove the video from the page entirely.
+
+Context. [ADR-019](#adr-019-advert-video-in-the-hero-and-licence-in-the-tool-rows) placed one advert video in the right half of the hero. The operator gave no reason with the instruction.
+
+Choice. The page carries no video. The figure in the hero, the object `fancyAdvert` with its switch, the three strings of the player in both languages, the styles of the player and the files in `public/fancy-research-tools/video/` are removed.
+
+Effect. The hero holds its text alone, as before 2026-11-10, and the right half stays empty. The licence in the tool rows of ADR-019 stands. The production sources in `dhcraft-promo` and the upload on YouTube are untouched.

@@ -97,20 +97,6 @@ const methodsBase: { id: 'm-pt' | 'm-gv' | 'm-sbv' | 'm-aep'; maturity: Maturity
   },
 ];
 
-/**
- * The advert video in the hero, accepted by the operator on 2026-11-10. `youtube` holds the address of
- * the upload once it exists and adds a link below the video. The file, its poster and its captions lie in
- * public/fancy-research-tools/video/ and are served by the site, so playing it makes no third-party request.
- */
-export const fancyAdvert = {
-  // false takes the video off the page. The hero then holds its text alone, as before 2026-11-10.
-  show: true,
-  youtube: 'https://youtu.be/3rtfRfjcrqw',
-  file: '/fancy-research-tools/video/fancy-research-tools-workflows.mp4',
-  poster: '/fancy-research-tools/video/fancy-research-tools-workflows-poster.webp',
-  captions: '/fancy-research-tools/video/fancy-research-tools-workflows.en.vtt',
-};
-
 const offerIcons: FancyIcon[] = ['learn', 'together', 'build'];
 const offerIds = ['lernen', 'gemeinsam', 'bauen'];
 const offerHrefs = ['#excellence', '#kontakt', '#werkzeuge'];
@@ -126,9 +112,6 @@ const text = {
       'Kopfbereich der Seite fancy (research) tools & workflows mit dem Titel und der Zeile Agentic Engineering für alle, die mit Wissen arbeiten',
     heroLine: 'Agentic Engineering für alle, die mit Wissen arbeiten.',
     lede: 'fancy (research) tools & workflows sind Anwendungen und Workflows für die Arbeit mit Wissen, entwickelt mit Coding-Agenten. Die Anwendungen laufen meist statisch und ohne Server im Browser, andere Lösungen sind möglich. In Workshops und Trainings lernt Ihr Team, sie selbst weiterzuentwickeln.',
-    advertLabel: 'Video zu fancy (research) tools & workflows, 88 Sekunden, englisch gesungen',
-    advertCaptions: 'Englischer Liedtext',
-    advertYoutube: 'Auf YouTube ansehen',
     offerTitle: 'Angebot',
     offers: [
       { title: 'Lernen', text: 'In Workshops und Trainings arbeitet Ihr Team selbst mit Coding-Agenten und lernt, Werkzeuge wie die unten gezeigten zu bauen und anzupassen.', link: 'Formate ansehen' },
@@ -230,9 +213,6 @@ const text = {
       'Header of the page fancy (research) tools & workflows with its title and the line Agentic engineering for everyone who works with knowledge',
     heroLine: 'Agentic engineering for everyone who works with knowledge.',
     lede: 'fancy (research) tools & workflows are applications and workflows for working with knowledge, built with coding agents. Most of the applications run statically in the browser without a server, though other solutions are possible. In workshops and training your team learns to develop them further itself.',
-    advertLabel: 'Video about fancy (research) tools & workflows, 88 seconds, sung in English',
-    advertCaptions: 'English lyrics',
-    advertYoutube: 'Watch on YouTube',
     offerTitle: 'What we offer',
     offers: [
       { title: 'Learn', text: 'In workshops and training your team works with coding agents itself and learns to build and adapt tools like the ones shown below.', link: 'See formats' },

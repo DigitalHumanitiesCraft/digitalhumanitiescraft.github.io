@@ -9,7 +9,7 @@ method:
 status: active
 language: en
 created: 2026-10-01
-updated: 2026-11-10
+updated: 2026-11-11
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 template:
@@ -235,3 +235,9 @@ The curated backward-looking provenance index of the project. Current facts and 
 - Source: operator feedback of 2026-11-11 on the German page and the site header, recorded in [design](design.md#operator-feedback)
 - Target: `src/components/fancy/MethodFigure.astro`, `src/i18n/fancy.ts`, `src/components/Nav.astro` of the site, [data](data.md#method-figures), [design](design.md#interaction-patterns)
 - Result: the German page labels the figures of Promptotyping and Grounded Vault in German except for the methods' own terms, Second Brain Vault says Repo-Verzeichnis, and the result of the Agentic Edition Pipeline stands clear of the correction label. The offer page is an ordinary entry of the site navigation without pill, gradient or mark, in both languages and in the phone menu. The arrow knowledge curation of the Promptotyping card was compared with figure 1 of the manuscript repository, where it ends at Distillation, and left as it is for the operator's decision. Verified by `npm run build`, `tsc --noEmit`, `check.cjs` with `LINKS=1` against the preview and screenshots of both language versions at 1440 and 390 pixels. Not pushed.
+
+### 2026-11-11 corrected Advert video removed from the page
+
+- Source: operator instruction of 2026-11-11 to remove the video from the page entirely
+- Target: `src/components/fancy/FancyPage.astro`, `src/i18n/fancy.ts`, `public/fancy-research-tools/video/`, `scripts/fancy-research-tools/shoot-og.cjs`, [specification](specification.md#adr-021-advert-video-removed-from-the-page), [data](data.md#advert-video), [design](design.md)
+- Result: the hero holds its text alone, the page has no video element, and the video file, its poster and its captions are no longer served. The production sources in `dhcraft-promo` and the upload on YouTube stay.
