@@ -29,3 +29,22 @@ wöchentlicher Cron die Site neu, damit die Videoliste aktuell bleibt.
 
 Die interaktiven Demos leben im Repo [demos](https://github.com/DigitalHumanitiesCraft/demos)
 und werden unter [dhcraft.org/demos/](https://dhcraft.org/demos/) ausgeliefert.
+
+## Lizenz
+
+Der Code dieses Repositoriums und die Dokumentation in seiner Wurzel stehen unter der
+MIT-Lizenz, siehe [LICENSE](LICENSE). Für die Inhalte gilt sie nicht:
+
+- Die Blogbeiträge in `src/content/blog/` stehen unter der Lizenz, die am jeweiligen
+  Beitrag angegeben ist, derzeit CC BY 4.0. Das schließt ihre Abbildungen in
+  `public/excellence/blog/img/` ein, soweit sie kein Material Dritter zeigen.
+- Die Texte der Seite fancy (research) tools & workflows in `src/i18n/fancy.ts` sowie die
+  Wissensdokumente und Bild-Prompts in `knowledge/fancy-research-tools/` stehen unter
+  CC BY 4.0, siehe `knowledge/fancy-research-tools/project.md`.
+- Alle übrigen Inhalte der Website und dieses Repositoriums sind urheberrechtlich
+  geschützt, alle Rechte vorbehalten.
+- Logo und Markenmaterial von Digital Humanities Craft regelt das Repo
+  [brand-assets](https://github.com/DigitalHumanitiesCraft/brand-assets).
+- Inhalte Dritter bleiben bei ihren Inhabern. Dieses Repositorium lizenziert sie nicht, es
+  gelten die Bedingungen ihrer Inhaber. Das betrifft Logos und Marken, zitierte Abbildungen
+  sowie die Faksimiles, Daten und Karten, die in Screenshots zu sehen sind.
