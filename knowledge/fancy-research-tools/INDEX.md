@@ -18,7 +18,7 @@ template:
   version: 0.4
   url: https://dhcraft.org/Promptotyping/promptotyping-document/index
   alias: https://dhcraft.org/Promptotyping/#promptotyping-document-index
-related: [project, specification, data, design, method-images, testing, plan, handoff, journal]
+related: [project, specification, data, design, method-images, testing, plan, journal]
 ---
 
 This knowledge base serves anyone who changes "fancy (research) tools & workflows", the agentic engineering offer of Digital Humanities Craft OG, published as a subpage of dhcraft.org and named "fancy (research) tools!" until 2026-11-05 ([ADR-018](specification.md#adr-018-page-renamed-to-tools-and-workflows)). The page, its knowledge, the prompt logs of its generated images and the scripts that retake its images and check it all live in the dhcraft.org site repository, which builds and deploys the page. The schema version above is kept here once and inherited by every other document.
@@ -34,8 +34,7 @@ This knowledge base serves anyone who changes "fancy (research) tools & workflow
 | [method images](method-images.md) | Brief | Which images does an image-generating agent produce for the method cards, in which style, and where does it save them? | when a method, the image style or an image task changes |
 | [testing](testing.md) | Quality Assurance | Which checks guard a change, and how are they run against the site? | when a check is added or changes |
 | [plan](plan.md) | Planning | Which accepted work comes next, which points are open? | when work is accepted, done or decided |
-| [handoff](handoff.md) | Handoff | Which received inputs await integration? | on receipt or processing of a point |
-| [journal](journal.md) | Provenance | Which transitions were integrated, rejected or corrected? | after a coherent transition |
+| [journal](journal.md) | Provenance | Which received inputs await integration, and which transitions were integrated, rejected or corrected? | on receipt or processing of a point and after a coherent transition |
 
 The action layer is the section on this page in `CLAUDE.md` at the root of the site repository. `AGENTS.md` there points Codex to it and to the method image brief.
 
@@ -43,7 +42,7 @@ The action layer is the section on this page in `CLAUDE.md` at the root of the s
 
 All zones lie in the site repository, DigitalHumanitiesCraft/digitalhumanitiescraft.github.io, cloned locally as `dhcraft-site`.
 
-- `knowledge/fancy-research-tools/` holds these documents, including `handoff.md` as process inbox.
+- `knowledge/fancy-research-tools/` holds these documents, with the section Open of the journal as process inbox.
 - `knowledge/fancy-research-tools/image-prompts/` holds the prompt logs (`*.txt`) of the generated method images. The source PNGs beside them stay local and are kept out of Git by `.gitignore`.
 - `scripts/fancy-research-tools/` holds the scripts that take the tool screenshots, encode chosen images, render the share image and run the browser checks against the preview build, see [testing](testing.md).
 - `src/i18n/fancy.ts` holds all copy in German and English, the structured data of tools and methods, the privacy statements and the routes.
@@ -58,7 +57,7 @@ The former repository DigitalHumanitiesCraft/fancy-research-tools keeps the earl
 
 ## Reading paths
 
-- Session start: INDEX, then [handoff](handoff.md), then [project](project.md), then the task document.
+- Session start: INDEX, then the section Open of the [journal](journal.md#open), then [project](project.md), then the task document.
 - Changing copy or a tool or method entry: [data](data.md) and the copy rules in [specification](specification.md#content-rules), then `src/i18n/fancy.ts`, then the checks in [testing](testing.md).
 - Changing the look: [design](design.md), then `src/components/fancy/FancyPage.astro`, then [testing](testing.md).
 - Retaking screenshots or the share image: [testing](testing.md#how-to-run) and the scripts in `scripts/fancy-research-tools/`, then the image rows in [data](data.md#images).

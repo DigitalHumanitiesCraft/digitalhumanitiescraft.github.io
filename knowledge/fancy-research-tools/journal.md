@@ -9,7 +9,7 @@ method:
 status: active
 language: en
 created: 2026-10-01
-updated: 2026-11-11
+updated: 2026-11-14
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 template:
@@ -17,12 +17,16 @@ template:
   version: 0.4
   url: https://dhcraft.org/Promptotyping/promptotyping-document/journal
   alias: https://dhcraft.org/Promptotyping/#promptotyping-document-journal
-related: [project, specification, handoff]
+related: [project, specification, plan]
 ---
 
 # Journal
 
-The curated backward-looking provenance index of the project. Current facts and rules stand in the responsible documents, future work in [plan](plan.md), open inputs in [handoff](handoff.md).
+The curated backward-looking provenance index of the project. Current facts and rules stand in the responsible documents, future work in [plan](plan.md), open inputs in the section Open below.
+
+## Open
+
+Nothing open.
 
 ## Entries
 
@@ -241,3 +245,9 @@ The curated backward-looking provenance index of the project. Current facts and 
 - Source: operator instruction of 2026-11-11 to remove the video from the page entirely
 - Target: `src/components/fancy/FancyPage.astro`, `src/i18n/fancy.ts`, `public/fancy-research-tools/video/`, `scripts/fancy-research-tools/shoot-og.cjs`, [specification](specification.md#adr-021-advert-video-removed-from-the-page), [data](data.md#advert-video), [design](design.md)
 - Result: the hero holds its text alone, the page has no video element, and the video file, its poster and its captions are no longer served. The production sources in `dhcraft-promo` and the upload on YouTube stay.
+
+### 2026-11-14 integrated Handoff dissolved into the journal
+
+- Source: the operator's decision of 2026-11-14 that a Promptotyping repository no longer keeps `knowledge/handoff.md` and that the journal opens with what is open
+- Target: this journal, `CLAUDE.md`, [INDEX](INDEX.md)
+- Result: the handoff held no open point, so nothing was carried over. Its process rule, to check source and target, integrate durable content, record the transition here and then remove the point, now applies to the points under Open.

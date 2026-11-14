@@ -8,7 +8,7 @@ The subpage at `/fancy-research-tools/` and `/en/fancy-research-tools/` is the a
 
 ### Knowledge base
 
-Read `knowledge/fancy-research-tools/INDEX.md` first, then its `handoff.md`, then the document the task needs. INDEX lists the storage zones and the reading path per task.
+Read `knowledge/fancy-research-tools/INDEX.md` first, then the section Open at the beginning of its `journal.md`, then the document the task needs. INDEX lists the storage zones and the reading path per task.
 
 ### Where to edit what
 
