@@ -9,7 +9,7 @@ method:
 status: active
 language: en
 created: 2026-10-01
-updated: 2026-11-14
+updated: 2026-11-18
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 template:
@@ -26,7 +26,22 @@ The curated backward-looking provenance index of the project. Current facts and 
 
 ## Open
 
-Nothing open.
+Questions for the operator, each with the recommendation of the session that raised it:
+
+- The arrow knowledge curation of the Promptotyping card ends at the frame of the four working forms, while figure 1 of the manuscript ends it at Distillation (`src/components/fancy/MethodFigure.astro`). Recommendation: end it at Distillation as in the manuscript.
+- The music of the advert video was generated with ACE-Step. The video is no longer on the page, but it stays on YouTube and in the LinkedIn post, so its licence matters there. Recommendation: keep it and name the licence in the upload text in `dhcraft-promo/fancy-research-tools/youtube.md`.
+- The sample images of coOCR/HTR, the print of 1617 on this page's screenshot among them, have no recorded source or terms of use. The same question waits in the coOCR/HTR repository. Recommendation: record the source there or replace the screenshot.
+
+Work without a commission yet:
+
+- ACTIVE-WORK lists for this project the action to put the Agentic Edition Pipeline first on the page and to show SZD-HTR as its example. The page still lists the pipeline as the last method card and SZD-HTR as the fourth tool. No session has been commissioned with it, and it needs an interface plan before building.
+
+Elsewhere, for a vault session:
+
+- The operator file `Vault Operations/Lab/lanes/fancy.md` still lists FANCY-SITE-2026-11-10 as running and reports the state of 2026-11-11. Since then the video left the page, the three commits of klawiter-rescue are on origin, and CorrespExplorer is carried by its own session.
+- In ACTIVE-WORK the entry fancy-research-tools says the video knowledge lies locally in `dhcraft-promo`. That repository is on GitHub and level with origin.
+
+The further open points of the page (rights of the Literaturarchiv Salzburg as an example of an offer, runtime fonts and phone width of the demos, archiving, review state in coOCR/HTR, licence of coOCR/HTR, real cases, AI Act clause) stand in [plan](plan.md#open-points).
 
 ## Entries
 
@@ -251,3 +266,9 @@ Nothing open.
 - Source: the operator's decision of 2026-11-14 that a Promptotyping repository no longer keeps `knowledge/handoff.md` and that the journal opens with what is open
 - Target: this journal, `CLAUDE.md`, [INDEX](INDEX.md)
 - Result: the handoff held no open point, so nothing was carried over. Its process rule, to check source and target, integrate durable content, record the transition here and then remove the point, now applies to the points under Open.
+
+### 2026-11-18 integrated Facsimile question closed, CorrespExplorer interface plan superseded, handoff
+
+- Source: two decisions of the operator of 2026-11-18, passed on by the Research Coordination, and the state report of the same day read against Git
+- Target: this journal, [plan](plan.md#open-points)
+- Result: the facsimiles of letters by Stefan Zweig on the screenshots of teiCrafter and SZD-HTR may be used, so that open point left the plan. The interface plan for CorrespExplorer of 2026-11-10 with its six direction questions is superseded, because the CorrespExplorer session keeps its own plan in that repository's `knowledge/plan.md`. Open was rewritten as the complete list of the state report. All repositories this work touched were level with origin on 2026-11-18.
