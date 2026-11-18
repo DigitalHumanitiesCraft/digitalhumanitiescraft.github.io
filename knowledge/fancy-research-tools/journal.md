@@ -30,7 +30,6 @@ Questions for the operator, each with the recommendation of the session that rai
 
 - The arrow knowledge curation of the Promptotyping card ends at the frame of the four working forms, while figure 1 of the manuscript ends it at Distillation (`src/components/fancy/MethodFigure.astro`). Recommendation: end it at Distillation as in the manuscript.
 - The music of the advert video was generated with ACE-Step. The video is no longer on the page, but it stays on YouTube and in the LinkedIn post, so its licence matters there. Recommendation: keep it and name the licence in the upload text in `dhcraft-promo/fancy-research-tools/youtube.md`.
-- The sample images of coOCR/HTR, the print of 1617 on this page's screenshot among them, have no recorded source or terms of use. The same question waits in the coOCR/HTR repository. Recommendation: record the source there or replace the screenshot.
 
 Work without a commission yet:
 
@@ -269,6 +268,6 @@ The further open points of the page (rights of the Literaturarchiv Salzburg as a
 
 ### 2026-11-18 integrated Facsimile question closed, CorrespExplorer interface plan superseded, handoff
 
-- Source: two decisions of the operator of 2026-11-18, passed on by the Research Coordination, and the state report of the same day read against Git
+- Source: three decisions of the operator of 2026-11-18, passed on by the Research Coordination, and the state report of the same day read against Git
 - Target: this journal, [plan](plan.md#open-points)
-- Result: the facsimiles of letters by Stefan Zweig on the screenshots of teiCrafter and SZD-HTR may be used, so that open point left the plan. The interface plan for CorrespExplorer of 2026-11-10 with its six direction questions is superseded, because the CorrespExplorer session keeps its own plan in that repository's `knowledge/plan.md`. Open was rewritten as the complete list of the state report. All repositories this work touched were level with origin on 2026-11-18.
+- Result: the facsimiles of letters by Stefan Zweig on the screenshots of teiCrafter and SZD-HTR may be used, so that open point left the plan. The sample images of coOCR/HTR may be used as well, as the tool's repository records in commit 7e71412 of `knowledge/IMPROVEMENTS.md`, so the example stays and that open point left the plan too. Terms of use per image are still not recorded there. The interface plan for CorrespExplorer of 2026-11-10 with its six direction questions is superseded, because the CorrespExplorer session keeps its own plan in that repository's `knowledge/plan.md`. Open was rewritten as the complete list of the state report. All repositories this work touched were level with origin on 2026-11-18.
